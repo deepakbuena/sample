@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This marks the account as reviewed and approved after creation from lead conversion.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This marks the account as reviewed and approved after creation from lead conversion.</inlineHelpText>
+    <label>Reviewed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

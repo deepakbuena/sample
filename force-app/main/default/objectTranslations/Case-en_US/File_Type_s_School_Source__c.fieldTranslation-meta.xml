@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- File Type(s): School Source --></label>
+    <name>File_Type_s_School_Source__c</name>
+    <picklistValues>
+        <masterLabel>ACS</masterLabel>
+        <translation><!-- ACS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AES</masterLabel>
+        <translation><!-- AES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citibank</masterLabel>
+        <translation><!-- Citibank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DELQ</masterLabel>
+        <translation><!-- DELQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DEMOG</masterLabel>
+        <translation><!-- DEMOG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DER</masterLabel>
+        <translation><!-- DER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECSI</masterLabel>
+        <translation><!-- ECSI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Great Lakes</masterLabel>
+        <translation><!-- Great Lakes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mohela</masterLabel>
+        <translation><!-- Mohela --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelnet</masterLabel>
+        <translation><!-- Nelnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sallie Mae</masterLabel>
+        <translation><!-- Sallie Mae --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wells Fargo</masterLabel>
+        <translation><!-- Wells Fargo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>XLS</masterLabel>
+        <translation><!-- XLS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

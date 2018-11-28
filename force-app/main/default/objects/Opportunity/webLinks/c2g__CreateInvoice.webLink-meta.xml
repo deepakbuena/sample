@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CreateInvoice</fullName>
+    <availability>online</availability>
+    <description>Creates an Invoice or many Invoices (Recurring Invoices) using VF technology instead of JavaScript one.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Invoice</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/c2g__codaopportunity2invoice?id={!Opportunity.Id}&amp;src=declarativeOpportunity</url>
+</WebLink>

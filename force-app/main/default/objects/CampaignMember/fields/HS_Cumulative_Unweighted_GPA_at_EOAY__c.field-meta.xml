@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HS_Cumulative_Unweighted_GPA_at_EOAY__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>High School Cumulative Unweighted Grade Point Average (GPA), at end of academic year, being reported.</inlineHelpText>
+    <label>HS Cumulative Unweighted GPA at EOAY</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

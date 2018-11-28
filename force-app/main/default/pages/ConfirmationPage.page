@@ -1,0 +1,107 @@
+<apex:page showHeader="false" controller="ConfirmationController">
+   <apex:slds />
+   <style>
+      .slds-scope .desktop_header_bg
+      {
+      text-align:right; 
+      }
+      .slds-scope .desktop_footer_bg
+      {
+      text-align:right;
+      margin-top: 14%; 
+      }
+      .slds-scope .slds-page-header
+      {
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      }
+      .slds-scope .slds-page-header h1
+      {
+      color: #5BC500;
+      font-size: 5rem;
+      } 
+      .slds-scope .slds_wrap
+      {
+      width: 60%;
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      }
+      .slds-scope .slds-page-header p
+      {
+      line-height: 1.7rem;
+      font-size: 20px;
+      font-weight: bold;
+      color: #003763;
+      }
+      .custom_btn {
+      width: 12% !important;
+      border-radius: 8px !important;
+      background: #003763 !important;
+      border: 0px !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      color: #fff !important;
+      }      
+      
+      /* ipad in portrait  */
+      @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : portrait)
+      {
+          .slds-scope .slds_wrap {
+          width: 60%;
+          top: 18%;
+          }
+          .slds-scope .desktop_footer_bg {
+          margin-top: 85%;
+          }
+          .slds-scope .slds-page-header p {
+          line-height: 2.2rem;
+          font-size: 26px;
+          }
+          .custom_btn {
+          width: 18% !important;
+          font-size: 18px !important;
+          line-height: 2 !important;
+          }
+      }
+   </style>
+   <body>
+      <div class="slds-scope">
+         <apex:form >
+            <apex:actionPoller action="{!redirectToSignOn}" rerender="counter" status="counterStatus" interval="30"/>
+            <!-- header -->
+            <div class="desktop_header_bg">
+               <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/green-delta-large.png')}"/>
+            </div>
+            <!-- header -->
+            <div class="slds_wrap">
+               <div class="slds-page-header">
+                  <div class="slds-media">
+                     <div class="slds-media__figure"></div>
+                     <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">All set!</h1>
+                        <p class="slds-text-body_small slds-line-height_reset">If you’re here to meet with an advisor, one will be with you soon. In the meantime,
+                           please hit the “Home” button below to reset this form for the next person.
+                        </p>
+                        <p> Thanks for your help!</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="slds-m-top_large slds-m-left_x-small">
+                  <apex:commandButton action="{!redirectToSignOn}" value="Home" id="submit" styleClass="custom_btn"/>
+               </div>
+            </div>
+            <!-- footer -->
+            <div class="desktop_footer_bg">
+               <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/corner-asa-logo-withBG.png')}"/>
+            </div>
+            <!-- footer -->
+         </apex:form>
+      </div>
+   </body>
+</apex:page>

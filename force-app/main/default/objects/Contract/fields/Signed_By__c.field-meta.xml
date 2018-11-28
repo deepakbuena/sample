@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signed_By__c</fullName>
+    <description>Sr. Staff that have signing abilities</description>
+    <externalId>false</externalId>
+    <label>Signed By</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clara Serpa</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Debra Chromy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Janine Greenwood</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Larry O&#39;Connell</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lauren Rolfe</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Michael Finn</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Paul Combe</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rick Rindini</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Stephen Wong</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

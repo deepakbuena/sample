@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Risk_Lost_Reason__c</fullName>
+    <description>If the rating is = to anything but Stable need to put in a reason why the volume is at risk or lost.</description>
+    <externalId>false</externalId>
+    <label>Secondary Risk/Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Staff Changes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Customer Service Issues</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Outcomes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Product Issues</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unresponsive Staff</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RAE_for_Account__c</fullName>
+    <externalId>false</externalId>
+    <formula>(RFP_Account__r.Regional_Account_Executive__r.FirstName)+ &quot; &quot; + (RFP_Account__r.Regional_Account_Executive__r.LastName)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RAE for Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

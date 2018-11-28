@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Table_Sign__c</fullName>
+    <description>What will they have at the table to represent the Sponsorship</description>
+    <externalId>false</externalId>
+    <label>Table Sign</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sign</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

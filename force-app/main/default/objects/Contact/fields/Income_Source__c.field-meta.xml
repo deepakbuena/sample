@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Income_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Income Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No income</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Signed Statement</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Social Security</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SSI or SSDI</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TAFDC (welfare)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unemployment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Wages/salary</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

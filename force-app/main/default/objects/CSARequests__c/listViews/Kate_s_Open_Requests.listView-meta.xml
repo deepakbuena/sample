@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kate_s_Open_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>CSA_Request__c</columns>
+    <columns>Details__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assigned_to__c</field>
+        <operation>contains</operation>
+        <value>Muir</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <label>Kate&#39;s Open Requests</label>
+</ListView>

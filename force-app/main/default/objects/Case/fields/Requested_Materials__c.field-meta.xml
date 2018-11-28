@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Materials__c</fullName>
+    <externalId>false</externalId>
+    <label>Requested Materials</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STAFF Master Prom Notes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>STAFF Master Prom Notes - Imprint</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>STAFF Compl Directions</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Entr/Exit Counsel Check</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>STAFF School Cert Form</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Budget Worksheet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pre-paid return envels</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Deferment/Forbearance Info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Repayment Worksheet</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

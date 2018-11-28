@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Loss_if_Stage_is_Closed_Lost</fullName>
+    <active>true</active>
+    <description>Check Loss field if Stage = Closed - Lost</description>
+    <errorConditionFormula>RecordTypeId = &#39;0126000000010rU&#39; &amp;&amp; ISPICKVAL( StageName , &quot;Closed - Lost&quot;) &amp;&amp;  Loss__c  = False</errorConditionFormula>
+    <errorDisplayField>Loss__c</errorDisplayField>
+    <errorMessage>Update Loss field if opportunity is Closed - Lost</errorMessage>
+</ValidationRule>

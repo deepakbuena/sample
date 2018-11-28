@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional Program Participation --></label>
+    <name>Additional_Program_Participation__c</name>
+    <picklistValues>
+        <masterLabel>Boston Scholar-Athlete</masterLabel>
+        <translation><!-- Boston Scholar-Athlete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bottom line</masterLabel>
+        <translation><!-- Bottom line --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gear Up</masterLabel>
+        <translation><!-- Gear Up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internship</masterLabel>
+        <translation><!-- Internship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIC</masterLabel>
+        <translation><!-- PIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project GRAD</masterLabel>
+        <translation><!-- Project GRAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roxx Map</masterLabel>
+        <translation><!-- Roxx Map --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer Search</masterLabel>
+        <translation><!-- Summer Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Talented &amp; Gifted</masterLabel>
+        <translation><!-- Talented &amp; Gifted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tenacity</masterLabel>
+        <translation><!-- Tenacity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Upward Bound</masterLabel>
+        <translation><!-- Upward Bound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>uAspire</masterLabel>
+        <translation><!-- uAspire --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

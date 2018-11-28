@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TopicsActiveNoArticles</fullName>
+    <columns>NAME</columns>
+    <columns>PS_TopicSubTitle__c</columns>
+    <columns>PS_TopicCategory__c</columns>
+    <columns>PS_TopicSynopsis_del__c</columns>
+    <columns>Status__c</columns>
+    <columns>PS_ConferenceOffering__c</columns>
+    <columns>PS_TopicAvailableDeliveryFormat__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>PS_TopicAvailableDeliveryFormat__c</field>
+        <operation>notEqual</operation>
+        <value>Article</value>
+    </filters>
+    <label>Topics (Active - No Articles)</label>
+</ListView>

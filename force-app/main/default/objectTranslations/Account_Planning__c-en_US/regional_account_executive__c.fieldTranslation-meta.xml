@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the Regional Account Executive responsible for this account. --></help>
+    <label><!-- Regional Account Executive --></label>
+    <name>regional_account_executive__c</name>
+    <relationshipLabel><!-- Account Planning (Regional Account Executive) --></relationshipLabel>
+</CustomFieldTranslation>

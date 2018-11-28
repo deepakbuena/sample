@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NPI_Provided__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will the Vendor have access to non public information YES/NO</description>
+    <externalId>false</externalId>
+    <label>NPI Access</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

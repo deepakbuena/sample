@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Services__c</fullName>
+    <externalId>false</externalId>
+    <label>Strategic Services</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Endorsed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Key Contact</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Personal Contact</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Receive Ongoing Communication</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

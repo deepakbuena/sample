@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exhibit_A_Acknowledgement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This date reflects when the school acknowledges receipt of the revised Exhibit A in the SALT contract.</inlineHelpText>
+    <label>Exhibit &quot;A&quot; &lt;br&gt;Acknowledgement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

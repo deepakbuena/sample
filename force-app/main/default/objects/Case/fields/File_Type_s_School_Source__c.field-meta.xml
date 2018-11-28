@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Type_s_School_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>File Type(s): School Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DELQ</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DER</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DEMOG</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ACS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AES</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sallie Mae</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Nelnet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Citibank</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mohela</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ECSI</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>XLS</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

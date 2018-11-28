@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnassignedOfferings</fullName>
+    <columns>NAME</columns>
+    <columns>PS_OfferingTopic__c</columns>
+    <columns>PS_OfferingTargetDate__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>PS_OfferingRequestedBy__c</columns>
+    <columns>PS_OfferingRequestedPresenter__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PS_OfferingAssignedTo__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>PS_OfferingTargetDate__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2012</value>
+    </filters>
+    <label>Unassigned Offerings</label>
+    <sharedTo>
+        <group>ASAProfessionalServices</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field will contain the goal which is specific to the Communications plan for Internal parties.
+
+What is important that we share? To whom?, How often?, What mode? --></help>
+    <label><!-- Communications Internal --></label>
+    <name>Comms_Internal__c</name>
+</CustomFieldTranslation>

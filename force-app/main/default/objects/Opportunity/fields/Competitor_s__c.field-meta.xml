@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Deprecated Competitor(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ECMC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Ed Financial Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EverFi/Buttonwood</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid TV</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>I3/Loan Look</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>IGrad</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Inceptia</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TG</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>USA Funds</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

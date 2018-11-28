@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Location__c</fullName>
+    <description>Training event location</description>
+    <externalId>false</externalId>
+    <label>Training City</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Baltimore, MD</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Boston MA (ASA)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Crystal City, VA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Hamden, CT</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Hampton, VA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Hartford, CT</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Las Vegas, NV</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Phoenix, AZ</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tucson, AZ</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Worcester, MA</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

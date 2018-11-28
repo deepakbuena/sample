@@ -1,0 +1,352 @@
+<apex:page controller="MarketShareMap_Ctrl"  >
+
+    <apex:form >
+        <apex:actionFunction action="{!generateTable}" reRender="refreshTable" name="populateTableApex">
+            <apex:param assignTo="{!dateP}" name="dateObj" value=""/>
+            <apex:param assignTo="{!stateP}" name="state" value=""/>
+            <apex:param assignTo="{!fullState}" name="fState" value=""/>
+        </apex:actionFunction>
+        <head>
+            <script>
+                "use strict";
+                var stAcr='';
+                var stFull='';
+                window.onload = setFocus
+                function setFocus() {
+                
+                $("input[id$='fetchdata']").focus();
+                
+                }
+                           
+                $(document).ready(function(){
+                
+                $("span[id$='refreshTable']").hide();
+                $('input[type=button]:visible').removeAttr("disabled");
+                $('input[type=button]:visible').removeClass("btnDisabled");
+                $('input[type=button]:visible').addClass("btn");
+                
+                var pageInfo=getUrlParameter('fromPDF');
+                var dBack=getUrlParameter('qDate');
+                var dSelType=getUrlParameter('qSelType');
+                if(pageInfo==undefined )
+                {
+                    createMap();
+                }
+                else
+                {
+                    $("input[id$='datepicker']").val(dBack);
+                    
+                    var allSelTypes = dSelType.split(';');
+                    var listbox = document.getElementById("{!$Component.componentId:mycomponentid:multiselectPanel}:leftList");
+                    
+                    if (!moveSelectedOptions) {
+                        // Move the selected options in the idFrom listbox to the idTo
+                        // listbox, updating the corresponding strings in idHdnFrom and
+                        // idHdnTo
+                        var moveSelectedOptions = function(idFrom, idTo, idHdnFrom, idHdnTo) {
+                            var listFrom = document.getElementById(idFrom);
+                            var listTo = document.getElementById(idTo);
+                            
+                            for ( var x = 0; x < listTo.options.length; x++) {
+                                listTo.options[x].selected = false;
+                            }
+                
+                            for ( var x = 0; x < listFrom.options.length; x++) {
+                                if (listFrom.options[x].selected == true) {
+                                    listTo.appendChild(listFrom.options[x]);
+                                    x--;
+                                }
+                            }
+                
+                            listTo.focus();
+                    
+                        }
+                    }
+                    
+                    for (var i = 0; i < allSelTypes.length; i++) 
+                    {
+                        var sType = allSelTypes[i];
+                        var find = '%20';
+                        var re = new RegExp(find, 'g');
+                        
+                        sType = sType.replace(re, ' ');
+                        
+                        for(var count=0; count < listbox.options.length; count++) {
+                            if(listbox.options[count].value==sType){
+                                listbox.options[count].selected = true;
+                            }
+                        }
+                    }
+                    
+                    javascript:moveSelectedOptions('{!$Component.componentId:mycomponentid:multiselectPanel}:leftList', 
+                  '{!$Component.componentId:mycomponentid:multiselectPanel}:rightList');
+                    
+                    createMap();
+                }
+                
+                
+                $(".popup").hide();
+                
+                $("input[id$='fetchdata']").on('click', function(){
+                    createMap();
+                });
+                
+                $("input[id$='windowPrint']").on('click',function() {
+                    window.print();
+                    return false;
+                });
+                
+                $("input[id$='printPDF']").on('click', function(event){
+                event.preventDefault();
+                var dateObj=$("input[id$='datepicker']").val();
+                
+                var selectedSchoolTypes = "";
+                   var msVal=document.getElementById("{!$Component.componentId:mycomponentid:multiselectPanel}:rightList");
+                  
+                   if(msVal!=null && msVal!=undefined && msVal!='' && msVal!='undefined'){
+                       for (var i = 0; i < msVal.options.length; i++) {
+                           if(i==0){
+                               selectedSchoolTypes = (msVal.options[i].value);
+                           }else{
+                               selectedSchoolTypes += ";"+(msVal.options[i].value);
+                           }
+                       }
+                   }                
+                var url = "/apex/MarketShareMapPDF?date="+dateObj+"&selType="+selectedSchoolTypes;
+                
+                if(stAcr!='')
+                url+='&st='+stAcr+'&full='+stFull;
+                //url = url;
+                $(location).attr('href',url);
+                return false;
+                });
+                
+                
+                function getUrlParameter(sParam)
+                {
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++) 
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam) 
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+                
+                
+                function createMap(){
+                   $(".popup").fadeIn(500);
+                   $(".cover").fadeTo(500, 0.5);
+                   $("div[id$='map_election']").empty();
+                   $("span[id$='refreshTable']").empty();
+                   var dateObj=$("input[id$='datepicker']").val();
+                   
+                   var selectedSchoolTypes = "";
+                   var msVal=document.getElementById("{!$Component.componentId:mycomponentid:multiselectPanel}:rightList");
+                  
+                   if(msVal!=null && msVal!=undefined && msVal!='' && msVal!='undefined'){
+                       for (var i = 0; i < msVal.options.length; i++) {
+                           if(i==0){
+                               selectedSchoolTypes = (msVal.options[i].value);
+                           }else{
+                               selectedSchoolTypes += ";"+(msVal.options[i].value);
+                           }
+                       }
+                   }
+                   
+                   MarketShareMap_Ctrl.generateMap(dateObj,selectedSchoolTypes,function(result,event){
+                    var tempResult=' ';
+                    if(event.type=='exception')
+                    {
+                         console.log('1 '+ event.message);
+                    }
+                    else if(result!='' && result!=null)
+                    {
+                         tempResult = '{' + result + '}';
+                         loadMap(tempResult );
+                         $(".popup").fadeOut(500);
+                         $(".cover").fadeOut(500);
+                         
+                         
+                        $('input[id$="printPDF"]:visible').removeAttr("disabled");
+                        $('input[id$="printPDF"]:visible').removeClass("btnDisabled");
+                        $('input[id$="printPDF"]:visible').addClass("btn");
+                        
+                        $('input[id$="windowPrint"]:visible').removeAttr("disabled");
+                        $('input[id$="windowPrint"]:visible').removeClass("btnDisabled");
+                        $('input[id$="windowPrint"]:visible').addClass("btn");
+                        
+                       //$("#map_election svg").attr("height", "900");
+                       //$("#map_election svg").attr("width", "900");                        
+                        $("span[id$='theSecond']").text("As of Date : "+$("input[id$='datepicker']").val());
+                
+                    }
+                    else
+                    {
+                         console.log(result);
+                    } 
+                    
+                    },
+                    {escape: false});
+                  }
+                var loadMap=function(f)
+                 {
+                 var t=$.parseJSON(f);
+                 var election = new Datamap({
+                 scope: 'usa',
+                 projection: '',
+                 element: document.getElementById('map_election'),
+                 
+                 geographyConfig: {
+                    highlightBorderColor: '#bada55',
+                    popupTemplate: function(geography, data) {
+                      return '<div class="hoverinfo"><strong>' + geography.properties.name + '</strong> <br />Market Share(%) :' +  data.percent +' </div>'
+                    },
+                    highlightBorderWidth: 3
+                 },
+                  
+                 
+                 
+              setProjection: function(element) {
+                 var projection = d3.geo.albersUsa()
+                 .scale(1000)
+                 .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+                  var path = d3.geo.path().projection(projection);
+                              
+                              return {path: path, projection: projection};
+                            },
+                 fills: {
+                 'Group1': '#00A3E1',
+                 'Group2': '#9F5CC0',
+                 'Group3': '#0367FC',
+                 'Group4': '#FFB81C',
+                 'Group5': '#F168A9',
+                 'Group6': '#5BC500',
+                 'NoData': '#e0e0e0',
+                 defaultFill: '#e0e0e0'
+                },
+                data:t,
+                done: function(datamap) {
+                    datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+                    stAcr=geography.id;
+                    stFull=geography.properties.name;
+                    populateTable(geography.id,stFull);
+                    
+                            
+                });
+                }
+                    
+                });
+                election.labels();
+                }
+                
+                
+                function populateTable(state)
+                {
+                    console.log(state);
+                    var dateObj=$("input[id$='datepicker']").val();
+                    populateTableApex(dateObj,state,stFull);
+                    $("div[id$='CSSTable']").empty();
+                }
+                
+                });
+                
+            </script>
+            <style>
+              
+            </style>
+        </head>
+     
+        <body>
+        
+        <apex:includeScript value="{!URLFOR($Resource.d3,'d3.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.jquery)}" />
+        <apex:includeScript value="{!URLFOR($Resource.UsMap,'UsMap/topojson.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.UsMap,'UsMap/datamaps.all.js')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.UsMap,'UsMap/csstable.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.UsMap,'UsMap/map.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        
+        <div class="cover"></div>
+        <div class="popup">
+            <div class="close"><img src="{!URLFOR($Resource.UsMap,'UsMap/globe.GIF')}" /></div>
+        </div>
+        
+        <apex:image url="{!URLFOR($Resource.UsMap,'UsMap/MapHeaderImage.png')}" width="100%" height="50"/>
+       
+        <br/><br/>
+        
+        <c:MultiselectPicklist leftLabel="Available Type" leftOption="{!allTypes}"  rightLabel="Selected Types" 
+            rightOption="{!selectedTypes}"  id="componentId" size="6" width="150px" />
+        
+        <BR/><BR/>
+        
+        <div class = "SLDS_ASA">
+            <div class="slds-form--horizontal">
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="theFirst">
+                            <label class="slds-form-element__label" for="Date">
+                                As of Date
+                            </label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField id="datepicker" value="{!acc.Contract_End__c}"/>
+                                <apex:commandbutton id="fetchdata" value="Fetch Data" reRender="refreshMap" disabled="true" styleClass="slds-button slds-button--brand"/>
+                                <div role="dialog" id="date-popover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <BR/><BR/>
+            
+            <div class="slds-align--absolute-center">
+                <apex:CommandButton id="A_windowPrint" value="Print" styleClass="slds-button slds-button--brand" disabled="true"/>
+                <apex:commandButton id="AprintPDF" value="Save as PDF" styleClass="slds-button slds-button--brand" rerender="" disabled="true"/>                        
+            </div>
+            
+            <BR/><BR/>
+            <apex:outputPanel id="refreshMap">
+                <apex:outputText id="theSecond" style="font-weight: bold;font-size : large" ></apex:outputText>
+                <div class="map" id="map_election">
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel id="refreshTable">
+                <center>
+                    <apex:outputLabel id="stateLabel"  rendered="{!iF(dList.size!=0,true,false)}" value="Selected State : {!fullState}" style="font-size:large"/>
+                    
+                    <apex:outputLabel id="refreshLable"  rendered="{!iF(dList.size==0,true,false)}" value="No School exists in {!fullState}" styleClass="norows"/>
+                    <apex:outputPanel id="refreshTableinner"  rendered="{!iF(dList.size>0,true,false)}">
+                        <div class="CSSTable" >
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Zipcode</td>
+                                </tr>
+                                <apex:repeat value="{!dList}" var="z" >
+                                    <tr>
+                                        <td>{!z.name}</td>
+                                        <td>{!z.zipcode}</td>
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                        </div>
+                    </apex:outputPanel>
+                </center>
+            </apex:outputPanel>
+            <BR/><BR/>
+            
+            <div class="slds-align--absolute-center">
+                <apex:CommandButton id="B_windowPrint" value="Print" styleClass="slds-button slds-button--brand" disabled="true"/>
+                <apex:commandButton id="BprintPDF" value="Save as PDF" styleClass="slds-button slds-button--brand" rerender="" disabled="true"/>                        
+            </div>
+            
+            </div>
+        </body>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conference_Website__c</fullName>
+    <description>The link to confernence information and/or association url</description>
+    <externalId>false</externalId>
+    <label>Conference Website</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

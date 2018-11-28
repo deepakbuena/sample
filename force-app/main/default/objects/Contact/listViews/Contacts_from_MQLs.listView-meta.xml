@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacts_from_MQLs</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>CONTACT.LEAD_SOURCE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CONTACT.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>MQL</value>
+    </filters>
+    <label>Contacts from MQLs</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+    </sharedTo>
+</ListView>

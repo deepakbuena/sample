@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Served_by_Other_Trio__c</fullName>
+    <externalId>false</externalId>
+    <label>Served by Other Trio/fed</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Upward Bound (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Upward Bound Math-Science (UBMS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Veterans Upward Bound (VUB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Educational Opportunity Centers (EOC)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Gear Up</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Talent Search (TS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Support Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Served by &gt; 1 fed funded program</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (not served by other Trio/Fed)</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>n/a (prior participant) (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No response/Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

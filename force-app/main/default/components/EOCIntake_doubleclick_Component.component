@@ -1,0 +1,314 @@
+<apex:component >
+  <c:CPS_CSS_Component />
+    <style>
+    .modal-open {
+        overflow: hidden
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0
+    }
+
+    .modal.fade .modal-dialog {
+        -webkit-transition: -webkit-transform .3s ease-out;
+        -o-transition: -o-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+        -o-transform: translate(0, -25%);
+        transform: translate(0, -25%)
+    }
+
+    .modal.in .modal-dialog {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    .modal-open .modal {
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 10px
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #999;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        outline: 0;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+    }
+
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: #000
+    }
+
+    .modal-backdrop.fade {
+        filter: alpha(opacity=0);
+        opacity: 0
+    }
+
+    .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .5
+    }
+
+    .modal-header {
+        padding: 15px;
+        border-bottom: 1px solid #e5e5e5
+    }
+
+    .modal-header .close {
+        margin-top: -2px
+    }
+
+    .modal-title {
+        margin: 0;
+        line-height: 1.42857143
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 15px
+    }
+
+    .modal-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5
+    }
+
+    .modal-footer .btn+.btn {
+        margin-bottom: 0;
+        margin-left: 5px
+    }
+
+    .modal-footer .btn-group .btn+.btn {
+        margin-left: -1px
+    }
+
+    .modal-footer .btn-block+.btn-block {
+        margin-left: 0
+    }
+
+    .modal-scrollbar-measure {
+        position: absolute;
+        top: -9999px;
+        width: 50px;
+        height: 50px;
+        overflow: scroll
+    }
+
+    @media (min-width:768px) {
+        .modal-dialog {
+            width: 600px;
+            margin: 30px auto
+        }
+        .modal-content {
+            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+        }
+        .modal-sm {
+            width: 300px
+        }
+    }
+
+    @media (min-width:992px) {
+        .modal-lg {
+            width: 900px
+        }
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto
+    }
+
+    [role=button] {
+        cursor: pointer
+    }
+
+    .prMsg {
+        display: none;
+    }
+
+    .ssnMsg {
+        display: none;
+    }
+
+    @media screen and (min-width: 1920px) {
+        .custom_input_width {
+            width: 45.5% !important;
+        }
+    }
+
+    @media (min-width: 48em) {
+        .slds-scope .slds-form_horizontal .slds-form-element__row .slds-form-element__control {
+            float: left;
+        }
+        .slds-scope .slds-form_horizontal .slds-form-element__row .slds-form-element__label {
+            float: left;
+        }
+    }
+
+    .slds-scope .slds-form_horizontal .slds-form-element__control {
+        width: 45% !important;
+    }
+
+    </style>
+     <script>
+            var $j = jQuery.noConflict(true);
+            var isClicked=false;
+            var digitsOnly = /[1234567890]/g;
+            function checkDoubleSubmit(obj)
+            {
+                if (isClicked)
+                { 
+                    return false; 
+                }
+                else
+                {
+                    if(($j('[id$=genderIdenti]').val()!== "") && ($j('[id$=ethnicity]').val()!=="") && ($j('[id$=maritial]').val()!=="") && ($j('[id$=uscitizen]').val()!=="")
+                    && ($j('[id$=veteranStatus]').val()!=="") && ($j('[id$=school]').val()!=="") && ($j('[id$=ismother4yrscollg]').val()!=="") && ($j('[id$=isfather4yrscollg]').val()!=="")
+                    && ($j('[id$=taxableincome]').val()!=="") && ($j('[id$=householdsize]').val()!=="") && ($j('[id$=householdsize]')!=="" && $j('[id$=householdsize]').length<=2)
+                    && ($j('[id$=otherLearnedAboutProgram]')!=="" && $j('[id$=otherLearnedAboutProgram]').length<=100) && ($j('[id$=schoolOther]')!=="" && $j('[id$=schoolOther]').length<=255) 
+                    && ($j('[id$=careerGoals]')!=="" && $j('[id$=careerGoals]').length<=255) && ($j('[id$=motherGuardian1FirstName]')!=="" && $j('[id$=motherGuardian1FirstName]').length<=25)
+                    && ($j('[id$=motherGuardian1LastName]')!=="" && $j('[id$=motherGuardian1LastName]').length<=25) 
+                    && ($j('[id$=fatherGuardian2FirstName]')!=="" && $j('[id$=fatherGuardian2FirstName]').length<=25) 
+                    && ($j('[id$=fatherGuardian2LastName]')!=="" && $j('[id$=fatherGuardian2LastName]').length<=25)
+                    && ($j('[id$="permanentResidentId"]').val().length<=9)) 
+                    {
+                        var isPRValid = true;
+                        var isSSNValid = true
+                        var usCitizenVal = $j('[id$="uscitizen"]').val();
+                        if (usCitizenVal == 'No') 
+                        {
+                            var prValue = $j('[id$="permanentResidentId"]').val();
+            
+                            if(prValue != "" || typeof prValue != 'undefined')
+                            {
+                                if(prValue.length < 9 && prValue.length != 8 && prValue.length < 8 && prValue.length > 0)
+                                {
+                                    isPRValid=false;
+                                    event.preventDefault();
+                                    $jx('[id$="permanentResidentId"]').addClass("error");
+                                    $jx("[id$='showPRMsg']").css("display", "block");
+                                    $jx("[id$='showPRRequired']").css("display", "none");
+                                }
+                                else if (prValue.length == 9 || prValue.length == 8 || prValue.length == 0)
+                                {
+                                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                                    $jx("[id$='showPRMsg']").css("display", "none");
+                                    $jx("[id$='showPRRequired']").css("display", "none");
+                                    isPRValid = true;
+                                }
+                            }
+                        }
+                        
+                        var ssnValue = $j('[id$="socialSecurityNumber"]').val();
+                        if(ssnValue != "" || typeof ssnValue != 'undefined')
+                        {
+                            if(ssnValue.length < 11 && ssnValue.length != 0)
+                            {
+                                isSSNValid=false;
+                                $jx('[id$="socialSecurityNumber"]').addClass("error");
+                                $jx("[id$='showSSNMsg']").css("display", "block");
+                                event.preventDefault();                                
+                            }
+                            else if (ssnValue.length == 11 ) // DS removed && ssnValue == 0
+                            {
+                                $jx('[id$="socialSecurityNumber"]').removeClass("error");
+                                $jx("[id$='showSSNMsg']").css("display", "none");
+                                isSSNValid=true;
+                            }
+                        }
+     
+                        if (isSSNValid && isPRValid)
+                        {
+                            isClicked=true;
+                            callRegisterLead();
+                            $j(obj).attr("disabled", "disabled");
+                            return true;
+                        }  
+                    }
+                }
+                
+            }
+            
+            function restrictCharacters(myfield, e, restrictionType)
+            {
+                if (!e) var e = window.event
+                if (e.keyCode) code = e.keyCode;
+                else if (e.which) code = e.which;
+                var character = String.fromCharCode(code);
+            
+                // if they pressed esc... remove focus from field...
+                if (code==27) { this.blur(); return false; }
+                
+                // ignore if they are press other keys
+                // strange because code: 39 is the down key AND  key...
+                // and DEL also equals .
+                if (!e.ctrlKey && code!=9 && code!=8 && code!=36 && code!=37 && code!=38 && (code!=39 || (code==39 && character=="'")) && code!=40) {
+                    if (character.match(restrictionType)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                    
+                }
+            }
+            
+            $j(document).userTimeout({
+                session: 60000,
+                logouturl: '{!$Site.BaseSecureUrl}/EOCSignOn',
+                modalTitle: 'Session Timeout',            
+                modalBody: 'Still working on the form? If yes, press OK to continue, otherwise your session will timeout soon and you will lose your changes.  Press EXIT if you want to start from the beginning.',
+                modalStayLoggedBtn: 'OK',
+                modalLogOffBtn: 'EXIT',
+                force: 120000,
+                notify: true
+            });
+        </script>
+</apex:component>

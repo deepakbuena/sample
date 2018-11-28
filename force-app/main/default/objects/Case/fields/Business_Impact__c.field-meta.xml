@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Impact__c</fullName>
+    <description>This field indicates the impact that this testing will have on the business; BD, Ops, LSR and Call Center.</description>
+    <externalId>false</externalId>
+    <label>Business Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Minor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Major</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

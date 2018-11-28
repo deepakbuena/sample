@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MM101_Customized_Resource_Box__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If a school wants customized resources within their instance of SALT Courses check this box and then fill out the SALT Courses Customized Resources Form</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If a school wants customized resources within their instance of SALT Courses check this box and then fill out the SALT Courses Customized Resources Form</inlineHelpText>
+    <label>SALT Courses Customized Resource Box</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

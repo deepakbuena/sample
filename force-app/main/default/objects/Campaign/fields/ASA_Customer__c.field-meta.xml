@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASA_Customer__c</fullName>
+    <description>What division or Team at ASA is marketing running this &quot;Campaign&quot;</description>
+    <externalId>false</externalId>
+    <label>ASA Customer</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lender Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>L&amp;S</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Professional Svcs</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Borrower Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ASA Corportate</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Board of Directors</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Strategic Services</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

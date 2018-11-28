@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BizDev</fullName>
+    <active>false</active>
+    <businessProcess>School Strategy</businessProcess>
+    <description>School Client Opportunity</description>
+    <label>Biz Dev</label>
+    <picklistValues>
+        <picklist>Campus_offices_involved__c</picklist>
+        <values>
+            <fullName>Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrollment Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor_s__c</picklist>
+        <values>
+            <fullName>ECMC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Lakes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Funds</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_SOW__c</picklist>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Status__c</picklist>
+        <values>
+            <fullName>ASA review Client edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreement Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client review ASA edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Submitted to Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Terms__c</picklist>
+        <values>
+            <fullName>1 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Years__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimated_Usage__c</picklist>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Frequency__c</picklist>
+        <values>
+            <fullName>Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-Annually</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BD Rep Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School CM Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show%2FConference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Stage__c</picklist>
+        <values>
+            <fullName>Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partnership_Opportunity__c</picklist>
+        <values>
+            <fullName>Capability %28Member Benefit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content %28Member Benefit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-QSP%3A Performance Based Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QSP%3A Prospective Source</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Loss_Reason__c</picklist>
+        <values>
+            <fullName>Interested%2C but not ready yet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Win_Reason__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Win__c</picklist>
+        <values>
+            <fullName>Debt Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement%2FActivation Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Literacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALT Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Trainings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Debt Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engagement%2FActivation Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Literacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALT Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Trainings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Products_Services__c</picklist>
+        <values>
+            <fullName>Education Debt Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Education%2FMy Money 101</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role__c</picklist>
+        <values>
+            <fullName>BD</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Loss_Reason__c</picklist>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Secondary_Win_Reason__c</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Target Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>When_is_campus_budget_set__c</picklist>
+        <values>
+            <fullName>Apr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sept</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Winning_Competitor__c</picklist>
+        <values>
+            <fullName>AES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSLF %28CT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EdFund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Lakes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inceptia %28NSLP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NELA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHEAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY HESC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIHEAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USA Funds</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

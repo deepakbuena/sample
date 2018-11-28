@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hosting_Partner__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Hosting Partner (e.g. School) for TS or UB.  Can also be used by EOC where value cannot be found in menu field.</inlineHelpText>
+    <label>Hosting Partner</label>
+    <length>120</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

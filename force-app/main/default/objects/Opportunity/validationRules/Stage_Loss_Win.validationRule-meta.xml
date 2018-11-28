@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Loss_Win</fullName>
+    <active>false</active>
+    <description>When stage is changed to closed lost or closed won win/loss analysis field will be required.</description>
+    <errorConditionFormula>AND(ISBLANK(Win_Loss_Analysis__c),OR( ISPICKVAL(StageName, &quot;Closed - Lost&quot;) , ISPICKVAL(StageName, &quot;Closed - Won&quot;)))</errorConditionFormula>
+    <errorDisplayField>Win_Loss_Analysis__c</errorDisplayField>
+    <errorMessage>Please fill win/loss analysis.</errorMessage>
+</ValidationRule>

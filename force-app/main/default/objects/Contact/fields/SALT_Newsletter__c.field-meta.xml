@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALT_Newsletter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>FORMERLY called the School Newsletter field.  When the two newsletters were combined, this field was merged with the Campus Engagement Newsletter field recipients - and then the CEN field was deleted on 1/26/15.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this contact should receive the SALT newsletter please check this box.</inlineHelpText>
+    <label>SALT Newsletter</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

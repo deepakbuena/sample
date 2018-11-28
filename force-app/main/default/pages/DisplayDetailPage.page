@@ -1,0 +1,269 @@
+<apex:page standardController="Annual_Sales_Plan__c" renderAs="pdf" applyHtmlTag="false" applyBodyTag="false" tabStyle="Annual_Sales_Plan__c" showHeader="false"  >
+
+<head>
+     <style>
+        @page{
+            size:landscape;
+        }
+        table.mainHeading{
+            color:#FFFFFF;
+            
+        }
+        
+        table{
+            width:100%;
+        }
+        table.innerTable {
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        
+        table.innerTable td.heading3{
+            background-color:#c6c6c6;
+            color:#000;
+            font-size:10pt;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+            width:150px;
+            text-align:left;
+        }
+        
+        table.innerTable td.heading4{
+            background-color:#c6c6c6;
+            color:#000;
+            font-size:10pt;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+            width:300px;
+            text-align:left;    
+        }
+        
+        table.innerTable td.data{
+            font-size:15px;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        
+        table.innerTable td.dataHeading{
+            font-size:15px;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+            text-align:left;
+        }
+        
+        table.innerTable td.total{
+            font-size:15px;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+            text-align:left;
+        }
+        
+        table.innerTable td.heading2{
+            background-color:#c6c6c6;
+            color:#000;
+            font-size:10pt;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+            text-align:left;
+        }
+        
+        table.subHeading {
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        
+        table.subHeading td.head{
+            font-size:15px;
+            font-weight:bold;
+            vertical-align:top;
+            border:1px solid #000;
+            border-collapse:collapse;
+            text-align:left;
+        }
+        
+        table.subHeading td.head1{
+            font-size:15px;
+            font-weight:bold;
+            vertical-align:top;
+            border:1px solid #000;
+            border-collapse:collapse;
+            width:160px;
+            text-align:left;
+        }
+        
+        table.subHeading td.head2{
+            font-size:15px;
+            font-weight:bold;
+            vertical-align:top;
+            border:1px solid #000;
+            border-collapse:collapse;
+            text-align:left;
+        }
+        
+        table.subHeading td.data{
+            font-size:15px;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        
+        table.subHeading td.data1{
+            font-size:15px;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            font-weight:bold;
+        }
+        table.subHeading td.heading{
+            background-color:#000;
+            color:white;font-size:14pt;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        
+        table.subHeading td.heading1{
+            background-color:red;
+            color:white;font-size:14pt;
+            border:1px solid #000;
+            border-collapse:collapse;
+            vertical-align:top;
+            text-align:left;
+        }
+        table.questionAnswer th{
+            align:left;
+        }
+        textarea{
+            width:350px;
+            
+        }
+        input{
+            width:100px;
+        }
+        
+        table td {padding:2px;}
+        .startTextStyle{
+            font-weight:bold;
+        }
+        .dateFormat{
+            display:none;
+        }
+        body { font-size: 0.9em; }
+    </style>
+
+    </head>
+
+    <apex:pageBlock tabStyle="Annual_Sales_Plan__c">
+    <center><b><apex:outputLabel value="{!Annual_Sales_Plan__c.name}" style="font-size:20px" /></b></center>
+
+        <apex:pageBlockSection title="Annual Sales Plan Detail" columns="2"  > 
+            <apex:outputfield value="{!Annual_Sales_Plan__c.name}"/>
+            <apex:outputfield value="{!Annual_Sales_Plan__c.Owner.name}" label="Owner"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.In_Person_Meetings__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Enrollment_Target__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Regional_Manager__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Enrollment_Actual__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Start_Date__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.End_Date__c}"/>
+       </apex:pageBlockSection>
+       <BR/><BR/>
+       
+        <apex:pageBlockSection title="Opportunities/Membership Objectives and Goals:" columns="1"> 
+            <apex:outputField style="width:400px" value="{!Annual_Sales_Plan__c.Narrative__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q1_Summary__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q2_Summary__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q3_Summary__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q4_Summary__c}"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Competitive Landscape:" columns="1"> 
+            <apex:outputField value="{!Annual_Sales_Plan__c.Initial_Plan_Summary__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q2_Summary_Update__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q3_Summary_Update__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q4_Summary_Update__c}"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Proposed Conference Attendance:" columns="1"> 
+            <apex:include pageName="ProposedConferenceAttendancePage"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Top Target Standard:" columns="1"> 
+            <apex:include pageName="Target_Schools_Page"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Top Target ESSS:" columns="1"> 
+            <apex:include pageName="Target_ESSS_Schools_Page"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Target Aggregators and Associations in Territory:" columns="1"> 
+            <apex:include pageName="Target_Aggregators_Page"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Current Aggregators and Associations in Territory:" columns="1"> 
+            <apex:include pageName="Current_Aggregators_Page"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Current Wins:" columns="1"> 
+            <apex:include pageName="QuarterlyResultsPage"/>
+        </apex:pageBlockSection>
+        <BR/><BR/><BR/><BR/><BR/><BR/>
+        
+        <apex:pageBlockSection title="RFP/RFI’s Expected:" columns="1"> 
+            <apex:include pageName="FscYrResultsPage"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Obstacles:" columns="1"> 
+            <apex:outputField value="{!Annual_Sales_Plan__c.Obstacles_and_Quarterly_Summaries__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q1_Summary_Obstacles__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q2_Summary_Obstacles__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q3_Summary_Obstacles__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.Q4_Summary_Obstacles__c}"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Key Factors Contributing to Success:" columns="1"> 
+            <apex:outputField value="{!Annual_Sales_Plan__c.Key_Factors_Contributing_to_Success__c}"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="Summary:" columns="1"> 
+            <apex:outputField value="{!Annual_Sales_Plan__c.Mid_Year__c}"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.End_Of_Year__c}"/>
+        </apex:pageBlockSection>
+        <BR/><BR/>
+        
+        <apex:pageBlockSection title="System Information" columns="2" showHeader="false" > 
+            <apex:outputField value="{!Annual_Sales_Plan__c.CreatedBy.Name}" label="Created By"/>
+            <apex:outputField value="{!Annual_Sales_Plan__c.LastModifiedBy.Name}" label="Last Modified By"/>
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+    
+
+</apex:page>

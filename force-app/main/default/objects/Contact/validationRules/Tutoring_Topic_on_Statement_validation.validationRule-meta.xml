@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tutoring_Topic_on_Statement_validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>INCLUDES(Statement_of_Need__c,&#39;Tutoring in&#39;) &amp;&amp; ISBLANK(Tutoring_Topic__c)</errorConditionFormula>
+    <errorDisplayField>Tutoring_Topic__c</errorDisplayField>
+    <errorMessage>Please enter Tutoring Topic</errorMessage>
+</ValidationRule>

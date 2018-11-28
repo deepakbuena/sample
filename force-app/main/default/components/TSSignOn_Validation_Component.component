@@ -1,0 +1,437 @@
+<apex:component >
+ <script type="text/javascript">
+         var $j = jQuery.noConflict();
+         $j('[id$=tSSignOnForm]').validate();
+         errorclass: "myerrorclass";
+         
+         $j('[id$=firstname]').rules("add", {
+             required: true,
+             maxlength: 40,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>First Name can not be more than 40 characters"),
+             }
+         });
+         $j('[id$=lastname]').rules("add", {
+             required: true,
+             maxlength: 80,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>Last Name can not be more than 80 characters"),
+             }
+         });
+         $j('[id$=middleInitial]').rules("add", {
+             required: false,
+             maxlength: 25,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>Allow only 25 character"),
+             }
+         });
+         
+         $j('[id$=mobilePhonets]').rules("add", {
+             required: false,
+             phoneUS: true,
+             messages: {
+                 required: "<br/>Required field",
+                 phoneUS: jQuery.validator.format("<br/>Please enter a valid format (nnn) nnn-nnnn"),
+             }
+         });
+         $j('[id$=studentidts]').rules("add", {
+             required: true,
+             maxlength: 6,
+             minlength: 6,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>Student Id must be 6 digits"),
+                 minlength: jQuery.validator.format("<br/>Student Id must be 6 digits"),
+             }
+         });
+         
+         
+         // additional method to validate US phone no
+         jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+             phone_number = phone_number.replace(/\s+/g, "");
+             return this.optional(element) || phone_number.length > 9 &&
+                 phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+         }, "Please enter a valid format (nnn) nnn-nnnn");
+         
+         
+         
+         $j(document).ready(function() {
+             
+             // For middle initial 
+             $j(".txtOnly").keypress(function(e) {
+                 var key = e.keyCode;
+                 if (key >= 48 && key <= 57) {
+                     e.preventDefault();
+                 }
+             });
+         
+             // For email masking
+             $j('[id$="TSEmail"]').blur(function() {
+                 var email = $j(this).val();
+                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                 if (email.length != 0) {
+                     if (re.test(email)) {
+                         $j('.emailmsg').hide();
+                     } else {
+                         $j('.emailmsg').hide();
+                         $j('.error').show();
+                         $j('[id$="TSEmail"]').addClass("error");
+                     }
+                 } else if (email.length == 0) {
+                     $j('.emailmsg').hide();
+                     $j('[id$="TSEmail"]').removeClass("error");
+                 }
+             });
+             
+             // display error msg for invalid birthdate
+             $j(document).on('change', "[id$='txtDate']", function() {
+                 var dtVal = $j(this).val();
+                 console.log(dtVal);
+                 if (isDate(dtVal)) {
+                     $j('.dateerror').hide();
+                     $j('[id$=txtDate]').removeClass("inputerror");
+                     $j('[id$=txtDate]').css('display', 'inline-block');
+                     $j('.requirederror').hide();
+                 }
+                 if (!isDate(dtVal)) {
+                     $j('.dateerror').show();
+                     $j('[id$=txtDate]').removeClass("valid");
+                     $j('[id$=txtDate]').addClass("inputerror");
+                     $j('.requirederror').hide();
+                     event.preventDefault();
+                     
+                 }
+                 if (dtVal.length == 0) {
+                     $j('.dateerror').hide();
+                     $j('[id$=txtDate]').removeClass("inputerror");
+                     $j('[id$=txtDate]').css('display', 'inline-block');
+                     $j('.requirederror').hide();
+                     event.preventDefault();
+                 }
+                 
+                    var fullDate = new Date();
+                    console.log(fullDate);
+                     
+                    var twoDigitMonth = fullDate.getMonth()+1;
+                    
+                    console.log('Month : '+twoDigitMonth);
+                    
+                    if(twoDigitMonth.length==1) { 
+                        twoDigitMonth="0" +twoDigitMonth;
+                    }
+                    
+                    var twoDigitDate = fullDate.getDate()+"";
+                    if(twoDigitDate.length==1) {
+                        twoDigitDate="0" +twoDigitDate;
+                    }
+                    
+                    var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    console.log('Current Date : '+currentDate);
+                    
+                    // Substract 9 years from current date
+                    var newDate = (fullDate.getFullYear() - 9) + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    
+                    // Substract 100 years from current date
+                    var newDate1 = (fullDate.getFullYear() - 100) + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    
+                    // dtVal is the input date by user
+                    if(dtVal >= newDate1 && dtVal < newDate)
+                    {
+                        $j('[id$=validBirthdate]').css('display', 'none');  
+                        $j('[id$=txtDate]').removeClass("birtherror");
+                    } 
+                    else {
+                        $j('[id$=validBirthdate]').css('display', 'inline-block');  
+                        $j('[id$=txtDate]').addClass("birtherror");
+                    }  
+             });
+             
+            
+             
+             // Checking StudentId will only input number value 
+             $j('[id$=studentidts]').on("keypress keyup blur",function (event) {
+               $j(this).val($j(this).val().replace(/[^\d].+/, ""));
+                if ((event.which < 48 || event.which > 57)) {
+                    
+                    event.preventDefault();
+                }
+            });  
+         
+         
+         });
+         
+         // Phone format 
+         var zChar = new Array(' ', '(', ')', '-', '.');
+         var maxphonelength = 13;
+         var phonevalue1;
+         var phonevalue2;
+         var cursorposition;
+         
+         function ParseForNumber1(object) {
+             phonevalue1 = ParseChar(object.value, zChar);
+         }
+         
+         function ParseForNumber2(object) {
+             phonevalue2 = ParseChar(object.value, zChar);
+         }
+         
+         function backspacerUP(object, e) {
+             if (e) {
+                 e = e
+             } else {
+                 e = window.event
+             }
+             if (e.which) {
+                 var keycode = e.which
+             } else {
+                 var keycode = e.keyCode
+             }
+         
+             ParseForNumber1(object)
+         
+             if (keycode >= 48) {
+                 ValidatePhone(object)
+             }
+         }
+         
+         function backspacerDOWN(object, e) {
+             if (e) {
+                 e = e
+             } else {
+                 e = window.event
+             }
+             if (e.which) {
+                 var keycode = e.which
+             } else {
+                 var keycode = e.keyCode
+             }
+             ParseForNumber2(object)
+         }
+         
+         function GetCursorPosition() {
+         
+             var t1 = phonevalue1;
+             var t2 = phonevalue2;
+             var bool = false
+             for (i = 0; i < t1.length; i++) {
+                 if (t1.substring(i, 1) != t2.substring(i, 1)) {
+                     if (!bool) {
+                         cursorposition = i
+                         bool = true
+                     }
+                 }
+             }
+         }
+         
+         function ValidatePhone(object) {
+         
+             var p = phonevalue1
+         
+             p = p.replace(/[^\d]*/gi, "")
+         
+             if (p.length < 3) {
+                 object.value = p
+             } else if (p.length == 3) {
+                 pp = p;
+                 d4 = p.indexOf('(')
+                 d5 = p.indexOf(')')
+                 if (d4 == -1) {
+                     pp = "(" + pp;
+                 }
+                 if (d5 == -1) {
+                     pp = pp + ")";
+                 }
+                 object.value = pp;
+             } else if (p.length > 3 && p.length < 7) {
+                 p = "(" + p;
+                 l30 = p.length;
+                 p30 = p.substring(0, 4);
+                 p30 = p30 + ")"
+         
+                 p31 = p.substring(4, l30);
+                 pp = p30 + p31;
+         
+                 object.value = pp;
+         
+             } else if (p.length >= 7) {
+                 p = "(" + p;
+                 l30 = p.length;
+                 p30 = p.substring(0, 4);
+                 p30 = p30 + ")"
+         
+                 p31 = p.substring(4, l30);
+                 pp = p30 + p31;
+         
+                 l40 = pp.length;
+                 p40 = pp.substring(0, 8);
+                 p40 = p40 + "-"
+         
+                 p41 = pp.substring(8, l40);
+                 ppp = p40 + p41;
+         
+                 object.value = ppp.substring(0, maxphonelength);
+             }
+         
+             GetCursorPosition()
+         
+             if (cursorposition >= 0) {
+                 if (cursorposition == 0) {
+                     cursorposition = 2
+                 } else if (cursorposition <= 2) {
+                     cursorposition = cursorposition + 1
+                 } else if (cursorposition <= 5) {
+                     cursorposition = cursorposition + 2
+                 } else if (cursorposition == 6) {
+                     cursorposition = cursorposition + 2
+                 } else if (cursorposition == 7) {
+                     cursorposition = cursorposition + 4
+                     e1 = object.value.indexOf(')')
+                     e2 = object.value.indexOf('-')
+                     if (e1 > -1 && e2 > -1) {
+                         if (e2 - e1 == 4) {
+                             cursorposition = cursorposition - 1
+                         }
+                     }
+                 } else if (cursorposition < 11) {
+                     cursorposition = cursorposition + 3
+                 } else if (cursorposition == 11) {
+                     cursorposition = cursorposition + 1
+                 } else if (cursorposition >= 12) {
+                     cursorposition = cursorposition
+                 }
+         
+                 var txtRange = object.createTextRange();
+                 txtRange.moveStart("character", cursorposition);
+                 txtRange.moveEnd("character", cursorposition - object.value.length);
+                 txtRange.select();
+             }
+         
+         }
+         
+         function ParseChar(sStr, sChar) {
+             if (sChar.length == null) {
+                 zChar = new Array(sChar);
+             } else zChar = sChar;
+         
+             for (i = 0; i < zChar.length; i++) {
+                 sNewStr = "";
+         
+                 var iStart = 0;
+                 var iEnd = sStr.indexOf(sChar[i]);
+         
+                 while (iEnd != -1) {
+                     sNewStr += sStr.substring(iStart, iEnd);
+                     iStart = iEnd + 1;
+                     iEnd = sStr.indexOf(sChar[i], iStart);
+                 }
+                 sNewStr += sStr.substring(sStr.lastIndexOf(sChar[i]) + 1, sStr.length);
+         
+                 sStr = sNewStr;
+             }
+         
+             return sNewStr;
+         }
+         
+         // Bithdate validation
+         function isDate(txtDate)
+         {
+             var currVal = txtDate;
+             if(currVal == '')
+                 return false;
+             
+             var rxDatePattern = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/; //Declare Regex
+             var dtArray = currVal.match(rxDatePattern); // is format OK?
+             
+             if (dtArray == null) 
+                 return false;
+             
+             //Checks for mm/dd/yyyy format.
+             dtMonth = dtArray[3];
+             dtDay= dtArray[5];
+             dtYear = dtArray[1];        
+             
+             if (dtMonth < 1 || dtMonth > 12) 
+                 return false;
+             else if (dtDay < 1 || dtDay> 31) 
+                 return false;
+             else if ((dtMonth==4 || dtMonth==6 || dtMonth==9 || dtMonth==11) && dtDay ==31) 
+                 return false;
+             else if (dtMonth == 2) 
+             {
+                 var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+                 if (dtDay> 29 || (dtDay ==29 && !isleap)) 
+                         return false;
+             }
+             return true;
+         }
+         
+         
+         // function for validating email and birthdate should not be blank while form submitting    
+         $j('[id$=tSSignOnForm]').submit(function() {
+             
+             var email = $j("[id$='TSEmail']").val();
+             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+             if (re.test(email) || email.length == 0) {
+                 console.log(1);
+             }
+             else if (!re.test(email) && email.length != 0){
+                 $j('[id$="TSEmail"]').addClass("error");
+                 console.log(2);
+                 event.preventDefault();
+             }
+             
+             var dtVal = $j('[id$=txtDate]').val();
+             if (dtVal.length == 0)
+             {
+                 $j('.requirederror').show();
+                 $j('[id$=txtDate]').addClass("inputerror");
+                 event.preventDefault();
+             }
+             if (!isDate(dtVal))
+             {
+                 event.preventDefault();
+             }
+             // BirthDate validtion if input date is less than 9 years or greater than 100 years
+            var fullDate = new Date();
+            console.log(fullDate);
+             
+            var twoDigitMonth = fullDate.getMonth()+1;
+            
+            console.log('Month : '+twoDigitMonth);
+            
+            if(twoDigitMonth.length==1) { 
+                twoDigitMonth="0" +twoDigitMonth;
+            }
+            
+            var twoDigitDate = fullDate.getDate()+"";
+            if(twoDigitDate.length==1) {
+                twoDigitDate="0" +twoDigitDate;
+            }
+            
+            var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDate;
+            console.log('Current Date : '+currentDate);
+            
+            // Substract 9 years from current date
+            var newDate = (fullDate.getFullYear() - 9) + "-" + twoDigitMonth + "-" + twoDigitDate;
+            
+            // Substract 100 years from current date
+            var newDate1 = (fullDate.getFullYear() - 100) + "-" + twoDigitMonth + "-" + twoDigitDate;
+            
+            // dtVal is the input date by user
+            if(dtVal >= newDate1 && dtVal < newDate)
+            {
+                $j('[id$=validBirthdate]').css('display', 'none');  
+                $j('[id$=txtDate]').removeClass("birtherror");
+            } 
+            else {
+               // $j('[id$=validBirthdate]').css('display', 'inline-block');  
+                $j('[id$=txtDate]').addClass("birtherror");
+                event.preventDefault();
+            }  
+             
+         });
+     </script>
+</apex:component>

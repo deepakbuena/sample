@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Account for which the RFP is being processed. --></help>
+    <label><!-- RFP Account --></label>
+    <name>RFP_Account__c</name>
+    <relationshipLabel><!-- RFP Processes --></relationshipLabel>
+</CustomFieldTranslation>

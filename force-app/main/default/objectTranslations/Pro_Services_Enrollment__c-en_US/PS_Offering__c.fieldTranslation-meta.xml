@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the event (or Offering) this individual will be attending. --></help>
+    <label><!-- PS Offering --></label>
+    <name>PS_Offering__c</name>
+    <relationshipLabel><!-- Pro Services Enrollments --></relationshipLabel>
+</CustomFieldTranslation>

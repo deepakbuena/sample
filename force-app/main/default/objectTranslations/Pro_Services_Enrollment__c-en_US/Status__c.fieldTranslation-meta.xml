@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Status of the individual with regard to this specific event (or Offering) --></help>
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Attended</masterLabel>
+        <translation><!-- Attended --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invited</masterLabel>
+        <translation><!-- Invited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registered</masterLabel>
+        <translation><!-- Registered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viewed</masterLabel>
+        <translation><!-- Viewed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

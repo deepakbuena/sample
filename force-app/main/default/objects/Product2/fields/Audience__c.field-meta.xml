@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audience__c</fullName>
+    <description>Training Class  Audience, who is the class ment for and who will benefit</description>
+    <externalId>false</externalId>
+    <label>Training Class  Audience</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Novice Aid Administrator</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Intermediate Aid Administrator</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Experienced Aid Administrator</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bursar/Student Financial Svcs.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Borrowers</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

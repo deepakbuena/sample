@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the code of the Welcome Guide sent to this customer.  The code is located on the back cover of the Guide. --></help>
+    <label><!-- Welcome Guide Code: --></label>
+    <name>Welcome_Guide_Code__c</name>
+</CustomFieldTranslation>

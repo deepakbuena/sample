@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booth_Type__c</fullName>
+    <description>What type of booth will be at the conference</description>
+    <externalId>false</externalId>
+    <label>Booth Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 X 10</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Customized</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>N/A Attending Only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Posters</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Retractable</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tableclothe</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Table Top</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

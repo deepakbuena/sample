@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field will contain the goal which is specific to the Client Manager and is optional.
+What is important that we share? To whom?, How often?, What mode? --></help>
+    <label><!-- Optional Goal --></label>
+    <name>Optional_Goal__c</name>
+</CustomFieldTranslation>

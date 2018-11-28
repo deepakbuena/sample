@@ -1,0 +1,18 @@
+<apex:page controller="EOCFormController">
+  <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>  
+  <apex:stylesheet value="https://www.jqueryscript.net/css/jquerysctipttop.css"/>
+        
+        <apex:includeScript value="{!$Resource.Secure_Mask}"/>
+  <script>
+            //var $jy = jQuery.noConflict(true);
+            //console.log('Version 3: '+$jy.fn.jquery);
+            $(document).ready(function(){
+               $('[id$="socialSecurityNumber"]').securenumbermask({mask:'*',maxlength:11});
+           }); 
+            
+        </script> 
+       <apex:form > 
+        <apex:inputText id="socialSecurityNumber" tabindex="22" value="{!socialSecurityNumber}" label="Social Security Number" styleClass="slds-input ssn" maxlength="11" />
+         </apex:form>                              
+           
+</apex:page>

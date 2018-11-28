@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participant_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Participant Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Continuing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reentry, previously served (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Prior-year (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Transfer (UB/UBMS served by another UB/UBMS)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

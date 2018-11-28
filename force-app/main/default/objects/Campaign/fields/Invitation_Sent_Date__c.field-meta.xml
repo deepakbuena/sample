@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invitation_Sent_Date__c</fullName>
+    <description>The date the invitations went out from ASA</description>
+    <externalId>false</externalId>
+    <label>Invitation Sent Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

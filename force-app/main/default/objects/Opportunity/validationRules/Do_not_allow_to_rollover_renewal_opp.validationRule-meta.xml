@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_not_allow_to_rollover_renewal_opp</fullName>
+    <active>true</active>
+    <errorConditionFormula>Renewal_Opp__c = true &amp;&amp; Rollover__c = true &amp;&amp; isChanged(Rollover__c)</errorConditionFormula>
+    <errorMessage>Renewal opportunities cannot automatically rollover to the next year</errorMessage>
+</ValidationRule>

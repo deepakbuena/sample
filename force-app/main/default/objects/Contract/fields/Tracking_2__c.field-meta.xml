@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tracking_2__c</fullName>
+    <externalId>false</externalId>
+    <label>Tracking-2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email (PDF)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Over-night Mail</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

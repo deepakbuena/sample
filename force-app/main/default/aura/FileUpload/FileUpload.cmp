@@ -1,0 +1,20 @@
+<aura:component controller="FileController" >
+    <aura:attribute name="parentId" type="Id"/>
+    
+    <div class="slds-file-selector slds-file-selector--files">
+      <div class="slds-file-selector__dropzone">	
+        <input type="file" aura:id="file" class="slds-file-selector__input slds-assistive-text" id="file-upload-input-01" aria-describedby="file-selector-id" />
+          <label class="slds-file-selector__body" for="file-upload-input-01">
+          <span class="slds-file-selector__button slds-button slds-button--neutral">
+            Upload Files</span>
+          </label>
+              
+        <ui:button label="Save" press="{!c.save}"/>
+        <!--
+        <div aura:id="uploading" class="notUploading">
+            <img src="/loading.gif" alt="uploading" class="small-spinner" /> Uploading...
+    	</div>
+-->
+    </div>
+    </div>
+</aura:component>

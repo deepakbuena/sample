@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Partner_Request__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - not for the SCHOOL CHANNEL.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - otherwise, leave this field blank.</inlineHelpText>
+    <label>Engagement Partner Request</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

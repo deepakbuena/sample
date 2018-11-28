@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the strategy used to integrate a communication plan that works for all parties.
+
+Calls, face to face visits, email ASA communications, etc. --></help>
+    <label><!-- Customer Comms - External Strategy --></label>
+    <name>Comms_External_Strategy_2__c</name>
+</CustomFieldTranslation>

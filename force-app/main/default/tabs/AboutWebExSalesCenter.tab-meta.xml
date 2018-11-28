@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Help and support for WebEx Sales Center Users</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>About WebEx Sales Center</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom13: Box</motif>
+    <url>https://www.webex.com/webex/webex_salescenter_about.html</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

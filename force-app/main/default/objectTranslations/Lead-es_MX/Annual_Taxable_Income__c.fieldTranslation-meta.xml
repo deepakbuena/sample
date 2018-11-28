@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Annual Taxable Income --></label>
+    <name>Annual_Taxable_Income__c</name>
+    <picklistValues>
+        <masterLabel>$0 – 18,210</masterLabel>
+        <translation><!-- $0 – 18,210 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$18,211 – 24,690</masterLabel>
+        <translation><!-- $18,211 – 24,690 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$24,691 – 31,170</masterLabel>
+        <translation><!-- $24,691 – 31,170 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$31,171 – 37,650</masterLabel>
+        <translation><!-- $31,171 – 37,650 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$37,651 – 44,130</masterLabel>
+        <translation><!-- $37,651 – 44,130 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$44,131 – 50,610</masterLabel>
+        <translation><!-- $44,131 – 50,610 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$50,611 – 57,090</masterLabel>
+        <translation><!-- $50,611 – 57,090 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>$57,091 – 63,570</masterLabel>
+        <translation><!-- $57,091 – 63,570 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Over $63,570</masterLabel>
+        <translation><!-- Over $63,570 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

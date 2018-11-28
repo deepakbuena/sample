@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- After invoicing, updates to next invoice date based on frequency --></help>
+    <label><!-- DNU Next Invoice Date --></label>
+    <name>DNU_Next_Invoice_Date__c</name>
+</CustomFieldTranslation>

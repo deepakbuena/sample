@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categories_Is_Required_Field</fullName>
+    <active>true</active>
+    <description>Categories is a Required Field</description>
+    <errorConditionFormula>ISNULL (Categories)</errorConditionFormula>
+    <errorMessage>Please select a category.</errorMessage>
+</ValidationRule>

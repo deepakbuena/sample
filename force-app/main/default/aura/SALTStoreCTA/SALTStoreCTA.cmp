@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="prefix" type="string" access="global" />
+    <aura:attribute name="linkText" type="string" access="global"/>
+    <aura:attribute name="linkTarget" type="string" access="global" />
+    <aura:attribute name="suffix" type="string" access="global" />
+    <p style="text-align: center;">{!v.prefix}&nbsp;<ui:button press="{!c.fireAnalytics}" label="{!v.linkText}" />{!v.suffix}</p> 
+</aura:component>

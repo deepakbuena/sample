@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zz_Beginning_Balance_Accounts</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Dimension_1__c</columns>
+    <columns>c2g__CODASalesRevenueAccount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.NAME</field>
+        <operation>contains</operation>
+        <value>zz</value>
+    </filters>
+    <label>zz Beginning Balance Accounts</label>
+    <sharedTo>
+        <group>FinancialForce_Team</group>
+    </sharedTo>
+</ListView>

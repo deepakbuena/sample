@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rigorous_Enrollment__c</fullName>
+    <externalId>false</externalId>
+    <label>Rigorous Enrollment</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paid with TS grant funds</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Provided in school with no cost to TS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Provided by partner at no cost to TS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received third-party tuition waivers</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

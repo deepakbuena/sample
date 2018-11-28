@@ -1,0 +1,33 @@
+<apex:page showHeader="false" docType="html-5.0" cache="false">
+    <c:CPS_CSS_Component ></c:CPS_CSS_Component>
+    <body>
+        <div class="slds-scope">
+            <!-- Desktop header -->
+            <div class="desktop_header_bg">
+                <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+            </div>
+            <!-- Desktop header -->
+            <div class="slds_wrap">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                    <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <div class="slds-page-header slds-mobile-width">
+                    <div class="slds-media mobile_heading_margin">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                            <div class="slds-notify_container slds-is-relative">
+                                <div class="slds-notify slds-notify_toast slds-theme_info" role="status">
+                                    <div class="slds-notify__content">
+                                        <h1 class="slds-text-heading_small" style="color:#fff">Link expired</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</apex:page>

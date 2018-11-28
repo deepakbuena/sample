@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Offerings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Offerings</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Credit Union --></label>
+        <name>Credit_Union</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Engagement Partner --></label>
+        <name>Engagement_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- School --></label>
+        <name>School</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must provide a response for NSLDS Files if EDMS = Proactive. --></errorMessage>
+        <name>Proactive_EDMS_Requires_NSLDS_Info</name>
+    </validationRules>
+</CustomObjectTranslation>

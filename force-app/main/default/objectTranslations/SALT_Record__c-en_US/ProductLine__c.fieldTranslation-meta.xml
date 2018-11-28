@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Field  refers specifically to what you sell --></help>
+    <label><!-- Product Line --></label>
+    <name>ProductLine__c</name>
+    <picklistValues>
+        <masterLabel>Premiums</masterLabel>
+        <translation><!-- Premiums --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Printed Materials</masterLabel>
+        <translation><!-- Printed Materials --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Logged In User --></label>
+    <name>Logged_In_User__c</name>
+    <relationshipLabel><!-- Tracking Details (Logged In User) --></relationshipLabel>
+</CustomFieldTranslation>

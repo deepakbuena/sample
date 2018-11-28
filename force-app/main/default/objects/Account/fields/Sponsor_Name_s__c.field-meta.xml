@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsor_Name_s__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the name(s) of sponsor(s) that represent opportunities at this account.</inlineHelpText>
+    <label>Sponsor Name(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

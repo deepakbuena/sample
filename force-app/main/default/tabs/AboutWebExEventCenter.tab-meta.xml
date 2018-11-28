@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>WebEx Event Center is an integrated Web Seminar solution you can access through salesforce.com.</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>About WebEx Event Center</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom18: Form</motif>
+    <url>https://www.webex.com/webex/webex_eventcenter_about.html</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

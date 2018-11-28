@@ -1,0 +1,17 @@
+.THIS .navbg
+{
+   background-color: #012341;
+}
+.THIS.forceCommunityNavigationMenu
+{
+	border-top: 0px solid #aaaaaa;    
+}
+/*.THIS .navigationMenu
+{
+    Display:none;
+}*/
+
+.THIS .cHeaderPanel.navigationMenuWrapper
+{
+    display:none;
+}

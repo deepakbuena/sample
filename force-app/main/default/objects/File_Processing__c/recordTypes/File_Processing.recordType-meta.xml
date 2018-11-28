@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Processing</fullName>
+    <active>true</active>
+    <label>File Processing</label>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>ACS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACS-Perkins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AES%2FPHEAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aspire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cornerstone %28UT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DELQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EdFinancial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EdManage %28SC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granite State %28NH%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Lakes Higher Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KHESLC %28KY%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOHELA %28MO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSLA %28OK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sallie Mae</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSAC %28VT%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>CM Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconciled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reviewed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

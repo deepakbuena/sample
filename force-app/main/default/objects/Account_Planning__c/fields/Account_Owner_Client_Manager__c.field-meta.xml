@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Owner_Client_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field shows the name of the Client Manager for this account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the name of the School Client Manager for this account.</inlineHelpText>
+    <label>Account Owner/Client Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>R00N60000001Y3PlEAK</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

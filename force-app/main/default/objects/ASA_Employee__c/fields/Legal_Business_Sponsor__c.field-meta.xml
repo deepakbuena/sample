@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Business_Sponsor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Business Sponsor for this contract</description>
+    <externalId>false</externalId>
+    <label>Legal Business Sponsor Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Contract Business Sponsor</relationshipLabel>
+    <relationshipName>R00N60000001U2jqEAC</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDAttending__c</fullName>
+    <description>Other Bussinss Development Reps attending the conference</description>
+    <externalId>false</externalId>
+    <label>BD Attending</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alan Ishida</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>William Fortier</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bob Cole</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Brittany Baker</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Caroline Menendez</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Casey Wallen</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Chris Elam</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Christian James</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Christopher Head</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>David Snow</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Den Chou</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Farida Bahadoor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jay Sweeney</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jill Marr</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>John Kelly</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Julie Esau</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Kimberly Gavrilles</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Krystal Windley</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mae St. Julien</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Michael Friedman</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reis Hagerman</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Robert Tosh</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sarah Arslanian</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tanya Tanaro</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tracy Drechsler</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Vince Scalise</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

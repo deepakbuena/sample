@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contracts_Ready_to_Invoice</fullName>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Next_Invoice_Date__c</columns>
+    <columns>CONTRACT.START_DATE</columns>
+    <columns>CONTRACT.END_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Ready_to_Create_Invoice__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ready_to_Create_Invoice__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Ready to Create Invoice</label>
+</ListView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Communications__c</fullName>
+    <description>What type of Communications does this contact recieve.</description>
+    <externalId>false</externalId>
+    <label>Communications</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lender/Servicer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MDHE</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

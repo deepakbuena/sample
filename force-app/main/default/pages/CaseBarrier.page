@@ -1,0 +1,39 @@
+<apex:page standardController="Case" extensions="CaseBarrierController" ShowChat="FALSE" ShowHeader="FALSE" docType="html-5.0">
+    <script>
+        function openWin(url) 
+        {
+        window.location.href='/apex/CaseBarrierMultiPick?id={!$CurrentPage.parameters.id}'; 
+        }
+    </script>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        </head>
+        
+        <body>
+            <div class = "SLDS_ASA">
+                <apex:form id="next">
+                    <div class="bPageBlock brandSecondaryBrd bDetailBlock secondaryPalette">
+                        <div class="pbBody">
+                            <div class="pbSubsection">
+                                <table class="detailList" border="0" cellpadding="20" cellspacing="0" >
+                                    <tbody>
+                                        <tr>
+                                            <td class="labelCol">Barrier &nbsp;</td>
+                                            <td class="dataCol col02" style="padding:4px;">
+                                                <apex:outputLabel id="ShowText" ondblclick="openWin('/apex/CaseBarrierMultiPick?id={!case.id}');" value="{!outputMessage}" rendered="{!show}" />
+                                                <apex:outputPanel rendered="{!showLink}">
+                                                    <div id="div_man" onclick="location.href='/apex/CaseBarrierMultiPick?id={!case.id}'">{!outputMessage}&nbsp;</div>
+                                                </apex:outputPanel>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>     
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </body>
+    </html>
+</apex:page>

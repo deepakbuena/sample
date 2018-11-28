@@ -1,0 +1,3 @@
+<apex:page showHeader="false">
+    <c:CPS_Input_Location />
+</apex:page>

@@ -1,0 +1,277 @@
+<apex:page controller="EventCheckInFormController" action="{!redirectToHome}" showHeader="false" docType="html-5.0" cache="false">
+   <c:EventCheckin_doubleclick_Component />
+   <style>
+   @media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait) 
+   {
+        .slds_mobile_wrap {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+        .form_rounded_corner {
+            border-top-left-radius: 0px !important;
+        }
+        .rounded_corner {
+            border-top-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+            background: #DCDDDE;
+        }
+        .slds-scope .slds-form_horizontal .slds-form-element__control {
+            width: 100% !important;
+        }
+        .form_rounded_corner h1 {
+            padding-left: 0; 
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .custom_btn {
+            font-size: 30px !important;
+            width: 100% !important;
+            border-radius: 0px !important;
+            padding: 2%;
+        }
+        .slds-scope .slds-form_horizontal .slds-form-element {
+            margin-bottom: 2.75rem;
+        }
+        .form_heading
+        {
+                border-top-right-radius: 0px;
+        }
+        .mobile_heading_margin {
+            margin-top: 1% !important;
+        }
+        .slds-scope .slds-form-element__row {
+            padding: 0 5%;
+        }
+    
+    }
+    
+    @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+        .slds_mobile_wrap {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+        .form_rounded_corner {
+            border-top-left-radius: 0px !important;
+        }
+        .rounded_corner {
+            border-top-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+            background: #DCDDDE;
+        }
+        .slds-scope .slds-form_horizontal .slds-form-element__control {
+            width: 100% !important;
+        }
+        .form_rounded_corner h1 {
+            padding-left: 0; 
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .custom_btn {
+            font-size: 30px !important;
+            width: 100% !important;
+            border-radius: 0px !important;
+            padding: 2%;
+        }
+        .slds-scope .slds-form_horizontal .slds-form-element {
+            margin-bottom: 2.75rem;
+        }
+        .form_heading
+        {
+            border-top-right-radius: 0px;
+        }
+        .mobile_heading_margin {
+            margin-top: 1% !important;
+        }
+        .slds-scope .slds-form-element__row {
+            padding: 0 5%;
+        }
+    
+    }
+   
+   </style>
+   <body>
+      <div class="slds-scope">
+         <!-- Desktop header -->
+         <div class="desktop_header_bg">
+            <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+         </div>
+         <!-- Desktop header -->
+         <apex:form id="eventCheckInForm" styleClass="eventCheckInForm" forceSSL="true">
+            <apex:actionFunction name="callCreateRecords" action="{!createRecords}"/>
+            <apex:actionFunction name="callCancelPopUp" action="{!cancelPopUp}"/>
+            <apex:actionFunction name="callOkPopUp" action="{!okPopUp}"/>
+            <div class="slds_wrap">
+               <!-- mobile header -->
+               <div class="mobile_header_bg">
+                  <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+               </div>
+               <!-- mobile header -->
+               <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+                  <div class="slds-notify_container slds-is-relative" id="bb">
+                     <div class="slds-notify slds-notify_toast slds-theme_warning" role="alert" style="width:100%">
+                        <span class="slds-assistive-text">warning</span>
+                        <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                           <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                           </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                           <h2 class="slds-text-heading_small ">
+                              <apex:pageMessages ></apex:pageMessages>
+                           </h2>
+                        </div>
+                     </div>
+                  </div>
+               </apex:outputPanel>
+               <!-- MSG BOX for email and phone -->
+                <div class="slds-notify_container slds-is-relative msgboxdiv" id="msgbox">
+                    <div class="slds-notify slds-notify_toast slds-theme_warning" role="alert" style="width:100%">
+                        <span class="slds-assistive-text">warning</span>
+                        <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                           <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                           </svg>
+                        </span>
+                        <div class="slds-notify__content">
+                           <h2 class="slds-text-heading_small ">
+                              Either email address or phone number is required.
+                           </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- MSG BOX -->
+               <div class="slds-page-header slds-mobile-width">
+                  <div class="slds-media mobile_heading_margin">
+                     <div class="slds-media__figure"></div>
+                     <div class="slds-media__body">
+                        <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Welcome to - {!campaignName}!">Welcome to - {!campaignName}! test record</h1>
+                        <p>Please complete this form to check into the event. If you’ve visited us before, use the “Notes” section for any changes to your contact information.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slds_wrap slds_mobile_wrap slds-m-top_xx-small rounded_corner mobile_heading_margin">
+               <div class="slds-form slds-form_horizontal">
+                  <apex:outputPanel id="popupPanel" rendered="{!showPopup}">
+                     <section role="dialog" tabindex="-1" aria-label="Meaningful description of the modal content" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                           <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                              <p>
+                                 <!--You are already signed in for this event. Click Ok to correct your information or cancel to leave without changing.-->
+                                 You already checked in to this event. Click OK to resubmit under a different name, otherwise Cancel.
+                              </p>
+                           </div>
+                           <footer class="slds-modal__footer">
+                          <!--    <apex:commandButton action="{!okPopUp}" value="Ok" id="okBtn" styleClass="custom_btn" style="width:10%"/>
+                              <apex:commandButton action="{!cancelPopUp}" value="Cancel" id="cancelBtn" styleClass="custom_btn" style="width:10%;margin-left:5px;"/>   -->
+                              
+                              
+                              <apex:commandButton onclick="return okPopUp(this);" value="Ok" id="okBtn" styleClass="custom_btn" style="width:10%"/>
+                              <apex:commandButton onclick="return cancelPopUp(this);" value="Cancel" id="cancelBtn" styleClass="custom_btn" style="width:10%;margin-left:5px;"/>
+                              
+                           </footer>
+                        </div>
+                     </section>
+                     <div class="slds-backdrop slds-backdrop_open"></div>
+                  </apex:outputPanel>
+                  <fieldset class="slds-form-element slds-box rounded_corner">
+                     <div class="slds-form-element__group">
+                        <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                           <h1>
+                              Contact Information
+                           </h1>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="First Name">First Name<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="firstname" value="{!firstName}" label="First Name" styleClass="slds-input" maxlength="40"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="Last Name">Last Name<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="lastname" value="{!lastName}" label="Last Name" styleClass="slds-input" maxlength="80"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="input-id-01">Zip/Postal Code<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="zipcode" value="{!zipCode}" label="ZipCode" styleClass="slds-input"/>
+                                 <span class="ziperror zip_error" id="ziperr">Mailing Zip/Postal Code must be in the correct format: nnnnn or nnnnn-nnnn</span>
+                                 <span id="ziprequirederr" class="ziprequirederror">Required field</span>
+                             </div>  
+                           </div>
+                        </div>  
+                        <apex:outputPanel rendered="{!renderStudentId}">
+                            <div class="slds-form-element__row">
+                               <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                                  <label class="slds-form-element__label" for="Student Id">Student ID<abbr class="slds-required">*</abbr></label>
+                                  <div class="slds-form-element__control">
+                                     <apex:inputText id="studentId" value="{!studentId}" label="Student Id" styleClass="slds-input" maxlength="6"/>
+                                  </div>
+                               </div>
+                            </div>
+                        </apex:outputPanel>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="Birthdate">Date of Birth<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                  <apex:input type="date" id="txtDate" value="{!birthDate}" styleClass="slds-input"/>  
+                                  <span class="dateerror">Invalid Date</span>
+                                 <span id="requirederr" class="requirederror">Required field</span> 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="Email">Email</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="EventEmail" value="{!email}" label="EventEmail" styleClass="slds-input" maxlength="80"/>
+                                 <span class="emailmsg error">Please provide a valid email address</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="Mobile Phone">Mobile Phone</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="mobilePhoneevent" value="{!mobilePhone}" label="Mobile Phone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1" style="margin-bottom:0">
+                              <label class="slds-form-element__label" for="Check In Notes">Notes</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputTextarea id="checkInNotes" value="{!checkInNotes}" label="Check In Notes" styleClass="slds-textarea" />
+                              </div>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </fieldset>
+                  <apex:commandButton onclick="return checkDoubleSubmit(this);" value="Submit" id="SubmitCM" styleClass="custom_btn"/>
+               </div>
+            </div>
+            <div class="slds_wrap slds_mobile_wrap slds-m-top_x-small">
+               <div class="slds-form-element__row slds-m-left_none">
+                  <!--<div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none">
+                     <script src='https://www.google.com/recaptcha/api.js'></script>
+                     <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                     </div>  -->
+                  <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none slds-p-top_none">
+                     
+                      <!-- action="{!createRecords}"  -->
+                  </div>
+               </div>
+            </div>
+         </apex:form>
+      </div>
+   </body>
+   <c:EventCheckin_Validation_Component />
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingActualAttendees__c</fullName>
+    <description>Number of attendees anticipated for this event</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please indicate the number of individuals expected to attend this Offering. Once this Offering has been completed, this field will be updated to indicate the actual number of individuals who attended this Offering.</inlineHelpText>
+    <label>Actual Attendees</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

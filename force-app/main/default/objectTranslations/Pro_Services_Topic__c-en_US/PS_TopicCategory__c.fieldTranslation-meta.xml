@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Category is the general group or thematic area that this Topic falls under. --></help>
+    <label><!-- Category --></label>
+    <name>PS_TopicCategory__c</name>
+    <picklistValues>
+        <masterLabel>ASA Products &amp; Services</masterLabel>
+        <translation><!-- ASA Products &amp; Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus Leadership</masterLabel>
+        <translation><!-- Campus Leadership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Default Prevention and Management</masterLabel>
+        <translation><!-- Default Prevention and Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Literacy for Campus Staff</masterLabel>
+        <translation><!-- Financial Literacy for Campus Staff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Literacy for Students</masterLabel>
+        <translation><!-- Financial Literacy for Students --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regulations &amp; Compliance</masterLabel>
+        <translation><!-- Regulations &amp; Compliance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Specific</masterLabel>
+        <translation><!-- SALT Specific --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

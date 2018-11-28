@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formulas>
+        <name>SetAccountName</name>
+        <dataType>String</dataType>
+        <expression>IF( OR({!$UserRole.Name} == &#39;Counseling Services Manager&#39;,{!$UserRole.Name} == &#39;Counseling Services Counselor&#39;), 
+ 
+  {!Contact_LastName}+ IF( {!Contact_City} == &#39;&#39; , &#39;&#39;, &#39;, &#39;+{!Contact_City}) + IF( {!Contact_State} == &#39;&#39; , &#39;&#39;, &#39;, &#39;+{!Contact_State})+&#39; - AUTOCREATE&#39;
+, 
+  IF( {!Contact_BirthYear} == &#39;&#39; , 
+  {!Contact_LastName}+ &#39;, &#39;+{!Contact_FirstName}, 
+
+  {!Contact_LastName}+ &#39;, &#39;+{!Contact_FirstName}+&#39; (&#39;+{!Contact_BirthYear}+&#39;) Account&#39; )
+)</expression>
+    </formulas>
+    <interviewLabel>Create Account for CPS Contact {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Account for CPS Contact</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Acc</name>
+        <label>Create Acc</label>
+        <locationX>123</locationX>
+        <locationY>179</locationY>
+        <assignRecordIdToReference>AccountId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Update_Contact</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Is_AutoCreated__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>SetAccountName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordCreates>
+    <recordUpdates>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>479</locationX>
+        <locationY>166</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ContactId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <startElementReference>Create_Acc</startElementReference>
+    <variables>
+        <name>AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact_BirthYear</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact_City</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact_FirstName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact_LastName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Contact_State</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

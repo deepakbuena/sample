@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Servicer Access Authorized --></label>
+    <name>Servicer_Access_Auth__c</name>
+    <picklistValues>
+        <masterLabel>ACS</masterLabel>
+        <translation><!-- ACS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACS-Perkins</masterLabel>
+        <translation><!-- ACS-Perkins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AES</masterLabel>
+        <translation><!-- AES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aspire</masterLabel>
+        <translation><!-- Aspire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus Partners-Perkins</masterLabel>
+        <translation><!-- Campus Partners-Perkins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cornerstone</masterLabel>
+        <translation><!-- Cornerstone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECSI</masterLabel>
+        <translation><!-- ECSI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EdManage/SC Student Loan (NFP)</masterLabel>
+        <translation><!-- EdManage/SC Student Loan (NFP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edfinancial</masterLabel>
+        <translation><!-- Edfinancial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Granite State (NFP)</masterLabel>
+        <translation><!-- Granite State (NFP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Great Lakes</masterLabel>
+        <translation><!-- Great Lakes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kentucky (NFP)</masterLabel>
+        <translation><!-- Kentucky (NFP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOHELA</masterLabel>
+        <translation><!-- MOHELA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelnet</masterLabel>
+        <translation><!-- Nelnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oklahoma (NFP)</masterLabel>
+        <translation><!-- Oklahoma (NFP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sallie Mae</masterLabel>
+        <translation><!-- Sallie Mae --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAS</masterLabel>
+        <translation><!-- UAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VSAC (NFP)</masterLabel>
+        <translation><!-- VSAC (NFP) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

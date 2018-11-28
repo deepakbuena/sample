@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_TopicCategory__c</fullName>
+    <description>The category or categories used to group topics together.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Category is the general group or thematic area that this Topic falls under.</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA Products &amp; Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campus Leadership</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Literacy for Campus Staff</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Literacy for Students</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Regulations &amp; Compliance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Default Prevention and Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Specific</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

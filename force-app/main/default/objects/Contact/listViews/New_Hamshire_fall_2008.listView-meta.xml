@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Hamshire_fall_2008</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.ADDRESS2_STREET</columns>
+    <columns>CONTACT.ADDRESS2_CITY</columns>
+    <columns>CONTACT.ADDRESS2_STATE</columns>
+    <columns>CONTACT.ADDRESS2_ZIP</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.ADDRESS2_STATE</field>
+        <operation>equals</operation>
+        <value>NH</value>
+    </filters>
+    <filters>
+        <field>No_Longer_Here__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>New Hampshire Contacts</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+    </sharedTo>
+</ListView>

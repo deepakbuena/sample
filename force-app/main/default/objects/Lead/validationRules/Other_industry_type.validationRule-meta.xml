@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_industry_type</fullName>
+    <active>true</active>
+    <description>Populate other organization type if &#39;Other&#39; selected under Org type</description>
+    <errorConditionFormula>IF( ( ISBLANK( Other_Organization_Type__c ) &amp;&amp; ISPICKVAL( Organization_Type_Industry__c , &quot;Other&quot;)), True, False)</errorConditionFormula>
+    <errorDisplayField>Other_Organization_Type__c</errorDisplayField>
+    <errorMessage>Please populate Other Organization Type</errorMessage>
+</ValidationRule>

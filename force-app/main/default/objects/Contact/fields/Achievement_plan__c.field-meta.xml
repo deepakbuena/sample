@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Achievement_plan__c</fullName>
+    <description>This field is used by both TS and UB for advising purposes.</description>
+    <externalId>false</externalId>
+    <label>Achievement plan</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3 years of Foreign Language</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>3 years of Science</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>4 years of English</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>4 years of Math</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CPA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Honors</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>IB</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

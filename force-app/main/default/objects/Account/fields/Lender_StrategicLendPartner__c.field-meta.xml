@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lender_StrategicLendPartner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if Lender has agreed to the 3 to 1 ratio of consolidation loans in exchange of payment of the default fee.</description>
+    <externalId>false</externalId>
+    <label>Strategic Lend. Partner</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

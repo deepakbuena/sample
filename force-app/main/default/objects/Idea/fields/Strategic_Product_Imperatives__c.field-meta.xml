@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Product_Imperatives__c</fullName>
+    <externalId>false</externalId>
+    <label>Strategic Product Imperatives</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Content Competency</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Educational Outcomes Measurement</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Community Discussion</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Database and User Segmentation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Multi-Channel Service</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

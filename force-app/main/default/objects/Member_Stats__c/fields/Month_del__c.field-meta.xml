@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month_del__c</fullName>
+    <externalId>false</externalId>
+    <formula>DATE( VALUE(LEFT( Month_End__c , 4)) ,VALUE( MID( Month_End__c , 5, 2)) 
+, VALUE( RIGHT(Month_End__c, 2) ))</formula>
+    <label>Month</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

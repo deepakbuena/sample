@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is the name of the site where the offering will be held? (This is used for tracking purposes and to help ensure the ProServices@ASA team member shows up at the correct location.) --></help>
+    <label><!-- Location Name --></label>
+    <name>PS_OfferingLocationName__c</name>
+</CustomFieldTranslation>

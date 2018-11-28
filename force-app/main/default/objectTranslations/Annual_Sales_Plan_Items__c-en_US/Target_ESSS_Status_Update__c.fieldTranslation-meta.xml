@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Target ESSS Status Update --></label>
+    <name>Target_ESSS_Status_Update__c</name>
+    <picklistValues>
+        <masterLabel>Awaiting signed contract</masterLabel>
+        <translation><!-- Awaiting signed contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Providing Proposal</masterLabel>
+        <translation><!-- Providing Proposal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

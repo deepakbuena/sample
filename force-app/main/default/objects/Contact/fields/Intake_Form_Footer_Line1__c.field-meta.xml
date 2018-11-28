@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Form_Footer_Line1__c</fullName>
+    <description>This populates the location-specific footer (line 1) on the printed TS Intake Form (the Drawloop form pulls from this field)</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Intake_Location__c, &quot;TS Boston&quot;),
+&quot;Talent Search Main Office:  American Student Assistance · 100 Cambridge Street, Suite 1600· Boston, MA  02114 · 617.535.2244&quot;
+,IF( ISPICKVAL( Intake_Location__c, &quot;TS Brockton&quot;),
+&quot;Educational Talent Search Office: Brockton High School · 470 Forest Avenue Brockton, MA 02301 · 508.894.4214&quot;
+,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Intake Form Footer Line1</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

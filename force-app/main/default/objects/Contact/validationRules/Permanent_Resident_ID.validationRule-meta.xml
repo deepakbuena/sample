@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permanent_Resident_ID</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(LEN(Resident_Alien_Resident_ID__c) &gt; 1 ,OR(LEN(Resident_Alien_Resident_ID__c) &lt; 8, LEN(Resident_Alien_Resident_ID__c) &gt; 10))</errorConditionFormula>
+    <errorMessage>Permanent Resident ID, if filled, must be 8-9 digits</errorMessage>
+</ValidationRule>

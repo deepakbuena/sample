@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office__c</fullName>
+    <externalId>false</externalId>
+    <label>Office</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Academic Affairs</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Alumni Relations</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Athletics</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bursar</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Business Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campus-Wide</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Enrollment Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Faculty</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First-Year Experience</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Institutional Research</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>President&#39;s Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Residence Life</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Retention Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Scholarship Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Activities</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Affairs</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Government</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Leadership Programming</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TRIO Program</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Veterans Affairs</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

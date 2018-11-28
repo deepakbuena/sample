@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TopicsInDevelopment</fullName>
+    <columns>NAME</columns>
+    <columns>PS_TopicSubTitle__c</columns>
+    <columns>PS_TopicAvailableDeliveryFormat__c</columns>
+    <columns>Status__c</columns>
+    <columns>PS_TopicDescription__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>In Development</value>
+    </filters>
+    <label>Topics (In Development)</label>
+    <sharedTo>
+        <group>ASAProfessionalServices</group>
+    </sharedTo>
+</ListView>

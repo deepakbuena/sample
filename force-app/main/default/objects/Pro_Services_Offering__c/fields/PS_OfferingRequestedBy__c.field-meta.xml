@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingRequestedBy__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Please identify the ASA team member who is requesting this event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please identify the ASA team member who is requesting this event.</inlineHelpText>
+    <label>Requested By (ASA)</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>PS_OfferingRequestedBy</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

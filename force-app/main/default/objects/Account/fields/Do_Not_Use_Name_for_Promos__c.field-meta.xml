@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Use_Name_for_Promos__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If a client’s contract prohibits us from using their name in our promotions.</description>
+    <externalId>false</externalId>
+    <label>Do Not Use Name for Promos</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

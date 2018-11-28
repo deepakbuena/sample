@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity</fullName>
+    <inlineHelpText>For Charter Schools, this field indicates the number of institutions being represented on this Opportunity.
+For For-Profit Schools, this field represents the total number of borrowers for this Opportunity.</inlineHelpText>
+</CustomField>

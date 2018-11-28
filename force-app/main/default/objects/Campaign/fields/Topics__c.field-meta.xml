@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topics__c</fullName>
+    <description>What will be presented at the workshop?</description>
+    <externalId>false</externalId>
+    <label>Topics</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA Overview (Lenders)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Assessing &amp; Addressing Your IT Security</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bringing XML into Focus</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Communicating with Millennial Students</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Developing a Technology Plan</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Emotional Intelligence</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FERPA &amp; GLB Featuring Internet Security</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Go with the Flows</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>How Automated Are You?</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>How Your Personality Impacts Your Team</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Increase FAO Visibility &amp; Impact</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>It&#39;s an E-Signature Kind of World</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Success</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>The Financially Savvy Professional</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>The Top 10 Financial Aid Pitfalls</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Website Usability</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>We’ve Got to Stop Meeting Like This!</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Writing an Effective RFP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>You’ve Got Mail!</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

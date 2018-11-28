@@ -1,0 +1,174 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SaltClientReportController">
+    <aura:registerEvent name="navigate" type="c:SALTClientReportAttEvt"/>
+    <aura:attribute name="canCreate" type="Boolean"/>
+    <aura:attribute name="tbDetails" type="SALTTableWrapper"/>
+    <aura:attribute name="sortedby"   type="string"/>
+    <aura:attribute name="listviews" type="ListView[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <ltng:require styles="/resource/SLDS220_1/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <div class="ConamTechnologies">
+        <div class="slds-page-header slds-page-header--object-home">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container icndown">
+                                <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/custom-sprite/svg/symbols.svg#custom79" 
+                                           category="custom" size="large" name="custom79" />
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-title--caps slds-line-height--reset">SALT CLIENT REPORTS</p>
+                            
+                            <h1 class="slds-page-header__title slds-p-right--x-small">
+                                <span class="slds-truncate">My Salt Reports</span>
+                                <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aura:id="Listview-Dropdown">
+                                   <!-- <button class="slds-button slds-button-icon-border-filled" aria-haspopup="true" title="List View" onclick="{!c.changeListView}">
+                                        <span class="slds-assistive-text">List View</span>
+                                    </button>-->
+                                    <div class="slds-dropdown slds-dropdown--right">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li class="slds-dropdown__item" role="presentation" >
+                                                <a href="javascript:void(0);" role="menuitem" tabindex="0" aura:id="00B32000007WhZoEAK" onclick="{!c.getClientReportByFilter}">
+                                                    <span class="slds-truncate" >All</span>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="slds-dropdown__item" role="presentation">
+                                                <a href="javascript:void(0);" role="menuitem" tabindex="1" aura:id="00B32000007WjIeEAK" onclick="{!c.getClientReportByFilter}">
+                                                    <span class="slds-truncate" >My Salt Reports</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.canCreate}">
+                    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+                        <div class="slds-button-group" role="group">	
+                            <div class="slds-media__figure slds-media__figure--reverse">
+                                <button class="slds-button slds-button--neutral">New</button>
+                            </div>		
+                        </div>
+                    </div>
+                </aura:if>
+            </div>
+            <div class="slds-grid">
+                <div class="slds-col slds-align-bottom">
+                    <p class="slds-text-body--small">{!v.tbDetails.clientRecords.length} items  • {!v.sortedby}</p>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                    <div class="slds-button-group" role="group">
+                       
+                        <ui:menu >
+                            <ui:menuTriggerLink aura:id="trigger">                                        
+                                <button class="slds-button slds-button--icon-border" title="Filters" onclick="{!c.toggle}">
+                                    <c:svgIcon class="slds-button__icon slds-icon-text-default" assistiveText="Filters" 
+                                               svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#filterList" 
+                                               category="utility" size="xx-small" name="filterList" />
+                                </button>
+                            </ui:menuTriggerLink>
+                            <ui:menuList class="actionMenu" aura:id="actionMenu">
+                                <div class="slds-panel slds-grid slds-grid--vertical slds-nowrap slds-panel--filters">
+                                    <div class="slds-form--stacked slds-grow slds-scrollable--y slds-grid slds-grid--vertical">
+                                        <div class="slds-filters">
+                                            <div class="slds-filters__header slds-grid slds-has-divider--bottom-space">
+                                                <h4 class="slds-align-middle slds-text-heading--small">Filter</h4>
+                                                <button class="slds-button slds-col--bump-left slds-button--icon slds-button--icon-small" title="Close Filter Panel">
+                                                    <c:svgIcon class="slds-button__icon slds-icon-text-default" assistiveText="forward" 
+                                                               svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#forward" 
+                                                               category="utility" size="x-small" name="forward" />
+                                                    <span class="slds-assistive-text">Close Filter Panel</span>
+                                                </button>
+                                            </div>
+                                            <div class="slds-filters__body">
+                                                
+                                                <p class="slds-text-body--small slds-m-vertical--x-small slds-grid">
+                                                    Locked Filters
+                                                     <c:svgIcon class="slds-icon slds-icon--x-small slds-icon-text-default slds-m-left--x-small" assistiveText="forward" 
+                                                               svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#lock" 
+                                                               category="utility" size="x-small" name="lock" />
+                                                </p>
+                                                <ol class="slds-list--vertical slds-list--vertical-space">
+                                                    <li class="slds-item slds-hint-parent">
+                                                        <div class="slds-filters__item slds-grid slds-grid--vertical-align-center slds-is-locked">
+                                                            <a href="javascript:void(0);" class="slds-grow slds-has-blur-focus">
+                                                                <p class="slds-text-body--small">Show me</p>
+                                                                <p>All Salt Client Reports</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                         
+                            </ui:menuList>
+                        </ui:menu>    
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <aura:iteration items="{!v.tbDetails.satCols}" var="saltcols">
+                        <th class="slds-is-sortable slds-is-resizable slds-text-title--caps slds-is-sorted slds-is-sorted--asc" aria-sort="ascending" focusable="true" scope="col">
+                            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                                <span class="slds-assistive-text">Sort </span>
+                                <span class="slds-truncate" onclick="{!c.showrecord}" data-column="{!saltcols.name}" data-order="{!saltcols.sortDirection}" 
+                                      title="{!saltcols.label}">{!saltcols.label}</span>
+                                
+                                <aura:if isTrue="{!saltcols.sortDirection == 'ASC'}">
+                                    <c:svgIcon class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" 
+                                               svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" 
+                                               category="utility" size="small" name="arrowdown"/>
+                                    <aura:set attribute="else">
+                                        <c:svgIcon class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" 
+                                                   svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#arrowup" 
+                                                   category="utility" size="small" name="arrowup"/>
+                                    </aura:set>
+                                </aura:if>
+                            </a>
+                        </th>
+                    </aura:iteration>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.tbDetails.clientRecords}" var="saltreport">
+                    <tr class="slds-hint-parent">
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="">
+                                <a id="{!saltreport.Id}" onclick="{!c.createrecord}">{!saltreport.Name}</a></div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="{!saltreport.CreatedDate}">
+                                <ui:outputDateTime value="{!saltreport.CreatedDate}"/>
+                            </div>
+                        </td>
+                        <td role="gridcell" style="width:3.25rem;">
+                            <ui:menu >
+                                <ui:menuTriggerLink aura:id="trigger">                                        
+                                    <button class="slds-button slds-button--icon" aria-haspopup="true">
+                                        <c:svgIcon class="slds-button__icon slds-button__icon--x-small"
+                                                   svgPath="/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#down" 
+                                                   category="utility" size="small" name="down" />
+                                        <span class="slds-assistive-text">More Actions</span>
+                                    </button>
+                                </ui:menuTriggerLink>
+                                <ui:menuList class="actionMenu" aura:id="actionMenu">
+                                    <ui:actionMenuItem aura:id="item1" label="Edit"  disabled="true" />
+                                    <ui:menuItemSeparator />
+                                    <ui:actionMenuItem aura:id="Delete" label="Delete"  disabled="true" />                                   
+                                </ui:menuList>
+                            </ui:menu>    
+                        </td>
+                    </tr>
+                </aura:iteration> 
+            </tbody>
+        </table>
+    </div>
+</aura:component>

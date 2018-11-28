@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Auto filled with system date the last invoice generated.  Informational only. --></help>
+    <label><!-- Date Last Invoice Generated --></label>
+    <name>Date_Last_Invoice_Generated__c</name>
+</CustomFieldTranslation>

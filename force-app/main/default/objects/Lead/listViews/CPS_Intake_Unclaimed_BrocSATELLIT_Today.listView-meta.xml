@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Intake_Unclaimed_BrocSATELLIT_Today</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>Sign_On_DateTime__c</columns>
+    <columns>Satellite_Intake_Location_EOC__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Have_Appointment__c</columns>
+    <columns>Meet_with_Advisor__c</columns>
+    <columns>CPS_Advisor_Requested__c</columns>
+    <columns>Preferred_language__c</columns>
+    <columns>Purpose_of_Visit_EOC_TS__c</columns>
+    <columns>Purpose_of_Visit__c</columns>
+    <columns>Comment__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Open</value>
+    </filters>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>EOC Brockton</value>
+    </filters>
+    <filters>
+        <field>Sign_On_DateTime__c</field>
+        <operation>greaterThan</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Satellite_Intake_Location_EOC__c</field>
+        <operation>notEqual</operation>
+        <value>Brockton EOC</value>
+    </filters>
+    <filters>
+        <field>FULL_NAME</field>
+        <operation>notContain</operation>
+        <value>Tester</value>
+    </filters>
+    <label>CPS Intake-Unclaimed-BrocSATELLIT(Today)</label>
+    <queue>EOC_Brockton</queue>
+    <sharedTo>
+        <group>EOC_Brockton</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field indicates whether or not the customer provides us with a SALT Demographic File. --></help>
+    <label><!-- Sends Demog File? --></label>
+    <name>Sends_Demog_File__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - w/ SS#</masterLabel>
+        <translation><!-- Yes - w/ SS# --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - w/ Unique ID</masterLabel>
+        <translation><!-- Yes - w/ Unique ID --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

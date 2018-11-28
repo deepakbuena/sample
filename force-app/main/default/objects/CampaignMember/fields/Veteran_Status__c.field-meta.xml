@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Veteran_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Veteran Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child of Active Duty US Military</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Spouse of Active Duty US Military</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Active Duty US Military</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>US Veteran</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Yes (TS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No response/Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not a Veteran</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

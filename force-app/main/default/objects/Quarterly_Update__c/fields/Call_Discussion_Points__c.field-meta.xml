@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Discussion_Points__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will capture the key discussion points/suggestions for the call - from both CM and CC</inlineHelpText>
+    <label>Call Discussion Points</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>15</visibleLines>
+</CustomField>

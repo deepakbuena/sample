@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes">
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+   <aura:handler event="c:SALTClientReportAttEvt" action="{!c.NavigateComponent}"/>
+    <aura:handler event="c:NavigateBack" action="{!c.NavigateBackToMainCmp}"/>
+   <!--<aura:handler event="c:CombinedAttachmentsEvt" action="{!c.NavigateToList}"/>-->
+   {!v.body}
+</aura:component>

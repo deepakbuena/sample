@@ -1,0 +1,95 @@
+<apex:page standardController="Annual_Sales_Plan__c" extensions="QuarterlyResultsController">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+            <apex:includeScript value="{!$Resource.JQuery_minjs}"/>
+            <apex:includeScript value="{!$Resource.JQuery_Datatable_js}"/>
+            <apex:stylesheet value="{!$Resource.JQuery_Datatable_css}"/>
+        </head>
+        <body>
+            <div class = "SLDS_ASA">
+                <apex:form >  
+                <apex:pagemessages id="msgs"></apex:pagemessages>
+                <apex:pageBlock mode="edit">
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer MSEGRID" id="oppList" >
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Total # in Enrollment">Total # in Enrollment</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Stage">Stage</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Close Date">Close Date</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Fiscal Quarter">Fiscal Quarter</div>
+                            </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!listFQWrapper}" var="FQList">
+                            <tr>
+                              <th scope="row" data-label="Opportunity Name">
+                                <div class="slds-truncate">
+                                    <apex:outputLink value="/{!FQList.oppFQ.id}" target="_blank">{!FQList.oppFQ.Name}</apex:outputLink>
+                                </div>
+                              </th>
+                              <td data-label="Total # in Enrollment">
+                                <div class="slds-truncate">{!FQList.oppFQ.Total_in_Enrollment__c}</div>
+                              </td>
+                              <td data-label="Stage">
+                                <div class="slds-truncate">{!FQList.oppFQ.StageName}</div>
+                              </td>
+                              <td data-label="Close Date">
+                                <div class="slds-truncate">
+                                    <apex:outputText value="{0,date,MM/dd/YYYY}">
+                                        <apex:param value="{!FQList.oppFQ.CloseDate}" />
+                                    </apex:outputText>
+                                </div>
+                              </td>
+                              <td data-label="Fiscal Quarter">
+                                <div class="slds-truncate">{!FQList.fiscalQuarter}</div>
+                              </td>
+                            </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                    <script>
+                            var j$ = jQuery.noConflict();
+                            j$('table.MSEGRID').dataTable({
+                                sPaginationType: 'full_numbers',
+                                'aLengthMenu':[[5,10,25,-1],[5,10,25,'All']],
+                                'iDisplayLength':5,
+                                'aaSorting':[[1, 'asc']]
+                            });
+                    </script>
+                    <!--<apex:pageBlock mode="edit">
+                        <apex:pageBlockTable styleClass="MSEGRID" id="oppList" value="{!listFQWrapper}" var="FQList">
+                            <apex:column headerValue="Opportunity Name">
+                                <apex:outputLink value="/{!FQList.oppFQ.id}" target="_blank">{!FQList.oppFQ.Name}</apex:outputLink>
+                            </apex:column>
+                            <apex:column value="{!FQList.oppFQ.Total_in_Enrollment__c}"/>
+                            <apex:column value="{!FQList.oppFQ.StageName}"/>
+                            <apex:column value="{!FQList.oppFQ.CloseDate}"/>
+                            <apex:column headerValue="Fiscal Quarter" value="{!FQList.fiscalQuarter}"/>                 
+                        </apex:pageBlockTable>
+                    </apex:pageBlock> -->
+                </apex:pageBlock>
+                </apex:form>
+            </div>
+        </body>
+        <style>
+            html body.sfdcBody {
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+        </style>
+    </html>
+</apex:page>

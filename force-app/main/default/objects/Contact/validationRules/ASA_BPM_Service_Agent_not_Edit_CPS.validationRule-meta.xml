@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASA_BPM_Service_Agent_not_Edit_CPS</fullName>
+    <active>true</active>
+    <description>ASA BPM Service Agent should not be able to edit the CPS contact record.</description>
+    <errorConditionFormula>AND(
+  not(isnew()),
+  $Profile.Name = &#39;ASA - Counseling Services&#39;,
+  OR(
+    RecordType.Name = &#39;CPS - EOC&#39;,
+    RecordType.Name = &#39;CPS - TS&#39;,
+    RecordType.Name = &#39;CPS - UB&#39;
+  )
+)</errorConditionFormula>
+    <errorMessage>ASA BPM Service Agent does not have Edit Access of this record</errorMessage>
+</ValidationRule>

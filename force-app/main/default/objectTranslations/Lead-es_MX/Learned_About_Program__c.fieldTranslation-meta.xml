@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Learned About Program --></label>
+    <name>Learned_About_Program__c</name>
+    <picklistValues>
+        <masterLabel>AACA</masterLabel>
+        <translation><!-- AACA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attended a Workshop</masterLabel>
+        <translation><!-- Attended a Workshop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BHCC</masterLabel>
+        <translation><!-- BHCC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BPL</masterLabel>
+        <translation><!-- BPL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Line</masterLabel>
+        <translation><!-- Call Line --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College</masterLabel>
+        <translation><!-- College --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flyer</masterLabel>
+        <translation><!-- Flyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Friend/Relative</masterLabel>
+        <translation><!-- Friend/Relative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High School</masterLabel>
+        <translation><!-- High School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Info Session</masterLabel>
+        <translation><!-- Info Session --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internet</masterLabel>
+        <translation><!-- Internet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JVS</masterLabel>
+        <translation><!-- JVS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MRC</masterLabel>
+        <translation><!-- MRC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mass Grant Letter/Email</masterLabel>
+        <translation><!-- Mass Grant Letter/Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online/social media</masterLabel>
+        <translation><!-- Online/social media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Agency</masterLabel>
+        <translation><!-- Other Agency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Previous Client</masterLabel>
+        <translation><!-- Previous Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RCC</masterLabel>
+        <translation><!-- RCC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T Poster</masterLabel>
+        <translation><!-- T Poster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teacher / Counselor Referral</masterLabel>
+        <translation><!-- Teacher / Counselor Referral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teen Room</masterLabel>
+        <translation><!-- Teen Room --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twitter</masterLabel>
+        <translation><!-- Twitter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Urban College</masterLabel>
+        <translation><!-- Urban College --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Year Up</masterLabel>
+        <translation><!-- Year Up --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

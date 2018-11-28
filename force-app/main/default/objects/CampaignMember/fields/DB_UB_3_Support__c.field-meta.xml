@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_UB_3_Support__c</fullName>
+    <description>Academic Performance - GPA</description>
+    <externalId>false</externalId>
+    <formula>IF(
+Active__c = True &amp;&amp; 
+(
+  GPA__c &gt;=2.500 &amp;&amp; GPA__c &lt;5.00
+), &#39;Goal # achieved&#39; ,
+IF (Active__c = True, &#39;Goal # not achieved&#39;,&#39;&#39;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - UB - 3 Support</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grant_Amount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field shows the total Grant amount that will be provided.  The Grant Period reflects the payment installments related to this total amount.  For example, a $100,000 for 5 years = $20,000 per year.</inlineHelpText>
+    <label>Total Grant Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

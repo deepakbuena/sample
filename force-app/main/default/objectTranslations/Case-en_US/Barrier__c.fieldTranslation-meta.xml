@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Secondary Barrier Reasons --></label>
+    <name>Barrier__c</name>
+    <picklistValues>
+        <masterLabel>Connect Date NOT Set</masterLabel>
+        <translation><!-- Connect Date NOT Set --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connect Date in Future</masterLabel>
+        <translation><!-- Connect Date in Future --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demographic File</masterLabel>
+        <translation><!-- Demographic File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demographic File and NSLDS Access</masterLabel>
+        <translation><!-- Demographic File and NSLDS Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack Of Campus Support</masterLabel>
+        <translation><!-- Lack Of Campus Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NSLDS Access</masterLabel>
+        <translation><!-- NSLDS Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Implementation Call</masterLabel>
+        <translation><!-- No Implementation Call --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

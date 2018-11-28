@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingDeliveryMethod__c</fullName>
+    <description>How will this offering be conducted?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the desired delivery method for this Offering.</inlineHelpText>
+    <label>Delivery Method</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Webex</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

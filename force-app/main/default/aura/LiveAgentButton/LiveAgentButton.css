@@ -1,0 +1,28 @@
+.THIS .laBtn{
+  padding: 14px !important;
+  height: auto !important;
+  width: 100% !important;
+  text-align: center;
+}
+
+.THIS .disabled{
+  background-color: #c2cacf !important;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.THIS .disabled:hover{
+  background-color: #c2cacf !important;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.THIS .disabled:focus{
+  background-color: #c2cacf !important;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.THIS .toggle {
+    display: none !important;
+}

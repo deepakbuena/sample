@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internet_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Internet_f__c  +  Internet_m__c  +  Internet_t__c  +  Internet_w__c  +  Internet_th__c  +  Internet_sa__c  +  Internet_su__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Internet Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

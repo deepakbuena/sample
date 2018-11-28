@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NSLDS_Files__c</fullName>
+    <externalId>false</externalId>
+    <label>NSLDS Files</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Granted</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School Provides</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Access Lost</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

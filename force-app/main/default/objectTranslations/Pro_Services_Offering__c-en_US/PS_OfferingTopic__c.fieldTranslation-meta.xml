@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Each offering must be related to a specific Topic offered by the ProServices@ASA team. If an existing Topic does not meet your needs, you may select New Topic Request to request that the ProServices@ASA team create a new Topic for you. --></help>
+    <label><!-- Pro Services Topic --></label>
+    <name>PS_OfferingTopic__c</name>
+    <relationshipLabel><!-- Pro Services Offerings --></relationshipLabel>
+</CustomFieldTranslation>

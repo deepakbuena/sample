@@ -1,0 +1,169 @@
+<apex:page showHeader="false" controller="TSFormController" action="{!redirectToHome}" doctype="html-5.0" cache="false">
+    <c:TSSignOn_doubleclick_Component />
+    <body>
+        <div class="slds-scope">
+            <!-- Desktop header -->
+            <div class="desktop_header_bg">
+                <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+            </div>
+            <!-- Desktop header -->
+            <div class="slds_wrap slds-m-top_xx-large slds_wrap_mobile">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                    <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+                    <div class="slds-notify_container slds-is-relative">
+                        <div class="slds-notify slds-notify_toast slds-theme_warning toast_width" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                                </svg>
+                            </span>
+                            <div class="slds-notify__content">
+                                <h2 class="slds-text-heading_small">
+                                    <apex:pageMessages ></apex:pageMessages>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-mobile-width">
+                    <div class="slds-media mobile_heading_margin">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                            <!-- ***************Added on 29 Oct 2018, by Aj*********** -->
+                            <div style="float:right;">
+                                <div id="google_translate_element"></div>
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,es,hi,ht,ne,pt,sw,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                    }
+                                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </div>
+                            <!-- ***************************************************** -->
+                            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Talent Search Sign-on Form">Talent Search Sign-on Form</h1>
+                            <p class="slds-text-body_small slds-line-height_reset">Welcome! Been here before? Complete the form below so we can find your records. If this is
+                                your first time with us, we’ll ask a few questions after these to create your profile.
+                            </p>
+                            <br/>
+                            <!-- <p>*Required</p> -->
+                            <!--    <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="Talent Search Sign-on Form">Talent Search Sign-on Form</h2>  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <apex:form id="tSSignOnForm" forceSSL="true" styleClass="slds-p-around_large tSSignOnForm">
+                    <apex:actionFunction name="callRegisterContact" action="{!registerContact}"/>
+                    <div class="slds-form slds-form_horizontal">
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Personal Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left">
+                                        <label class="slds-form-element__label" for="firstName">First Name<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="firstname" value="{!firstName}" maxlength="40" label="First Name" styleClass="slds-input" tabindex="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="birthDate">Date of Birth<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:input type="date" id="txtDate" value="{!birthDate}" label="BirthDate" styleClass="slds-input" tabindex="4"/>
+                                            <span class="dateerror">Invalid Date</span>
+                                            <span id="requirederr" class="requirederror">Required field</span>
+                                            <span id="validBirthdate" class="validBirth validBirthCss">Min age should be 9 and max age should be 100</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="middleInitials">Middle Name</label>
+                                        <div class="slds-form-element__control tooltip">
+                                            <apex:inputText id="middleInitial" value="{!middleInitials}" label="Middle Name" styleClass="slds-input txtOnly" maxlength="25" tabindex="2"/>
+                                            <span class="tooltiptext">Allow only 25 alphabets.</span>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="studentId">Student ID<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText value="{!studentId}" maxlength="6" id="studentidts" label="Student Id" styleClass="slds-input" tabindex="5"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="lastName">Last Name<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="lastname" value="{!lastName}" maxlength="80" label="Last Name" styleClass="slds-input" tabindex="3"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="Email">Email</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="TSEmail" value="{!email}" label="TSEmail" styleClass="slds-input" maxlength="80" tabindex="6"/>
+                                            <span class="emailmsg error">Please provide a valid email address</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="Suffix">Suffix</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!suffix}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!suffixOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top_none mobile_row">
+                                        <label class="slds-form-element__label" for="Mobile Phone">Mobile Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="mobilePhonets" value="{!mobilePhone}" label="Mobile Phone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input margin_btm_custom" tabindex="7"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label mobile_label" for="Primary Purpose of Visit" style="width: 48%;" >Primary Purpose of Visit</label>
+                                        <div class="slds-form-element__control">
+                                            <!--  Added by RS on 11132018 -->
+                                            <apex:selectList id="sel1" value="{!purposeOfVisit}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!purposeofVisitOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <!--  Added by RS on 11132018 -->
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top_none mobile_row">
+                                        <label class="slds-form-element__label mobile_label" for="Purpose of Visit-Other" style="width:48%">Purpose of Visit (Other)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="purposeofVisitOther" value="{!purposeofVisitOther}" label="Pupose of Visit-Other" maxlength="255" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="slds-form-element__row slds-m-left_none">
+                            <!--  <div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none custom_padding">
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                                </div>  -->
+                            <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none">
+                                <!--<apex:commandButton action="{!registerContact}" value="Submit" id="submit" styleClass="custom_btn" style="width:30% !important"/>-->
+                                <apex:commandButton value="Next" id="submit" styleClass="custom_btn" style="width:30% !important" onclick="return checkDoubleSubmit(this);"/>
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+        <c:TSSignOn_Validation_Component />
+    </body>
+</apex:page>

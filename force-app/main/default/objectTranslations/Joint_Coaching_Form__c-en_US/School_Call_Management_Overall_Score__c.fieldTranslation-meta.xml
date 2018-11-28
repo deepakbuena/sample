@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please enter a number from 1-5 --></help>
+    <label><!-- School Call Management Overall Score --></label>
+    <name>School_Call_Management_Overall_Score__c</name>
+</CustomFieldTranslation>

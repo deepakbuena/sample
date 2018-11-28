@@ -1,0 +1,477 @@
+<apex:page showHeader="false" controller="TSFormController" action="{!redirectToHome}" docType="html-5.0" cache="false">
+    <c:TSIntake_doubleclick_Component />
+    <body>
+        <div class="slds-scope">
+            <!-- Desktop header -->
+            <div class="desktop_header_bg">
+                <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+            </div>
+            <!-- Desktop header -->
+            <div class="slds_wrap slds-m-top_xx-large slds_wrap_mobile">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                    <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+                    <div class="slds-notify_container slds-is-relative">
+                        <div class="slds-notify slds-notify_toast slds-theme_warning toast_width" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                                </svg>
+                            </span>
+                            <div class="slds-notify__content">
+                                <h2 class="slds-text-heading_small">
+                                    <apex:pageMessages ></apex:pageMessages>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-mobile-width">
+                    <div class="slds-media mobile_heading_margin">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                            <apex:form >
+                            
+                            
+                            
+                              <!-- ***************Added on 29 Oct 2018, by Aj*********** -->
+                              <div style="float:right;"> 
+                                <div id="google_translate_element"></div><script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,es,hi,ht,ne,pt,sw,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                              </div>
+                              <!-- ***************************************************** -->
+                            
+                            
+                            
+                                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">Talent Search Intake Form {!if(firstName!="",firstname,"")}{!if(lastname!="",(" "& lastname),"")}</h1>
+                                <p class="slds-text-body_small slds-line-height_reset">Thanks! You’re almost done {!if(firstName!="",firstname,"")}{!if(lastname!="",(" "& lastname),"")}.
+(Not {!if(firstName!="",firstname,"")}{!if(lastname!="",(" "& lastname),"")}?&nbsp;
+                                    <apex:commandlink value="Click here" action="{!redirectToSignOn}"/>
+                                    &nbsp;to start from the beginning)</p><p>It looks like this is your first visit or we have an incomplete profile for you. Please tell
+                                    us a bit more about yourself to get started.
+                                </p>
+                                <br/>
+                               <!-- <p>*Required</p>
+                                <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="Talent Search Intake Form">Talent Search Intake Form <span style="color:#7030a0">{!if(firstName!="",firstname,"")}</span><span style="color:#7030a0">{!if(lastname!="",(" "& lastname),"")}</span></h2>
+                                <p class="slds-text-body_small slds-line-height_reset slds-align-middle slds-align_absolute-center">
+                                    (Not {!if(firstName!="",firstname,"")}{!if(lastname!="",(" "& lastname),"")}?&nbsp;
+                                    <apex:commandlink value="Click here" action="{!redirectToSignOn}"/>
+                                    &nbsp;to start from the beginning)
+                                </p> -->
+                            </apex:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <apex:form id="tSIntakeForm" forceSSL="true" styleClass="slds-p-around_large tSIntakeForm">
+                    <apex:actionFunction name="callRegisterContact" action="{!registerIntakeContact}"/>
+                    <div class="slds-form slds-form_horizontal">
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Address
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="Street">Street address (apt., floor, etc.)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="street" tabindex="1" maxlength="255" value="{!Street}" label="Street" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="City">City</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="city" tabindex="2" value="{!city}" maxlength="40" label="City" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="State">State</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="state" tabindex="3" value="{!state}" maxlength="80" label="State" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="Zip/Postal Code">Zip/Postal Code</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="zipcode" tabindex="4" value="{!ZipCode}" label="ZipCode" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="Country">Country</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="country" tabindex="5" value="{!country}" maxlength="80" label="Country" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Phone
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left">
+                                        <label class="slds-form-element__label" for="Preferred Phone Type">Preferred Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!PreferredPhoneType}" tabindex="6" multiselect="false" id="preferedphone" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!preferredPhoneTypeOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-left_none slds-p-bottom_none">
+                                        <apex:outputLabel value="Is Mobile Phone Parent/Guardian’s?" for="Is Mobile Phone Parent/Guardian’s?" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputCheckbox tabindex="7" styleClass="slds-checkbox custom_checkbox" id="IsMobileParentGuardians" value="{!IsMobileParentGuardians}" label="Is Mobile Phone Parent/Guardian’s?" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-bottom_none">
+                                        <label class="slds-form-element__label" for="Home Phone">Home Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="homePhone" tabindex="8" value="{!homePhone}" label="Home Phone" styleClass="slds-input" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-left_none">
+                                        <label class="slds-form-element__label" for="Is Mobile Phone OK to Text?">Is Mobile Phone OK to Text?</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!isMobileOktoText}" tabindex="9" id="ismobiletextOK" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!isMobileOktoTextOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none">
+                                        <apex:outputLabel value="Is Home Phone Parent/Guardian’s?" for="Is Home Phone Parent/Guardian’s?" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputCheckbox id="IsHomeParentGuardians" tabindex="10" value="{!IsHomeParentGuardians}" label="Is Home Phone Parent/Guardian’s?" styleClass="slds-checkbox custom_checkbox" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none margin_btm_custom">
+                                        <label class="slds-form-element__label" for="Phone (Other)">Phone (Other)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="otherPhone" tabindex="11" value="{!otherPhone}" label="Phone (Other)" styleClass="slds-input" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none margin_btm_custom">
+                                        <label class="slds-form-element__label" for="Mobile Phone">Mobile Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="mobilePhonets" tabindex="12" value="{!mobilePhone}" label="Mobile Phone" styleClass="slds-input margin_btm_custom" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none margin_btm_custom">
+                                        <apex:outputLabel value="Is Other Phone Parent/Guardian’s?" for="Is Other Phone Parent/Guardian’s?" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputCheckbox id="IsOtherParentGuardians" tabindex="13" value="{!IsOtherParentGuardians}" label="Is Other Phone Parent/Guardian’s?" styleClass="slds-checkbox custom_checkbox" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Student Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Gender Identity">Gender Identity<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!genderIdentity}" tabindex="14" id="gender_identi" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!genderIdentityOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row" style="margin-top: 0;">
+                                        <label class="slds-form-element__label" for="Ethnicity">Ethnicity<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!ethnicity}" tabindex="15" multiselect="false" size="1" styleClass="custom_select" id="ethnicity">
+                                                <apex:selectOptions value="{!ethnicityOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">NonH/L = Non-Hispanic or Latino.</span>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element tooltip slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="School">School<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!school}" tabindex="16" id="Talentschools" multiselect="false" size="1" styleClass="custom_select school">
+                                                <apex:selectOptions value="{!schoolOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">Please select "none of these" if you are not in secondary school and/or not attending one of the schools listed.</span>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <apex:outputPanel id="showschool" style="display:none">
+                                            <label class="slds-form-element__label" style="width: 48%;vertical-align: top;" for="Secondary School (Other)">Secondary School (Other)<abbr class="slds-required">*</abbr></label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputText id="Otherskul" tabindex="17" value="{!schoolOther}" label="School-Other" maxlength="255" styleClass="slds-input"/>
+                                            </div>
+                                            <span class="tooltiptext">Please enter a value if you are attending a secondary school not listed above.</span>
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Current Grade Level">Current Grade Level<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!currentGradeLevel}" tabindex="18" id="currentgrade" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!currentGradeLevelOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Expected Graduation Year">Expected Graduation Year</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="ExpectedGraduationYear" tabindex="19" value="{!ExpectedGraduationYear}" label="Expected Graduation Year" styleClass="slds-input" maxlength="4"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Are You a U.S. Citizen?">Are You a U.S. Citizen?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!usCitizen}" tabindex="20" id="uscitizen" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!usCitizenOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Social Security Number">Social Security Number</label>
+                                        <div class="slds-form-element__control">
+                                            <!-- <apex:inputText id="socialSecurityNumber" tabindex="21" value="{!socialSecurityNumber}" label="Social Security Number" styleClass="slds-input ssn" maxlength="11" />  -->
+                                            <apex:inputText id="socialSecurityNumber" tabindex="22" label="Social Security Number" styleClass="slds-input ssn" maxlength="11" />
+                                            <apex:inputHidden id="socialSecurityNumber-original" value="{!socialSecurityNumber}" />
+                                            <span class="ssnMsg error" id="showSSNMsg">Social Security Number must be 9 digits</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <apex:outputPanel id="showPR" style="display:none">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding margin_btm_custom mobile_row">
+                                            <!--<label class="slds-form-element__label" for="Permanent Resident Id" style="width: 47.9%;">Permanent Resident Id<abbr class="slds-required">*</abbr></label>  -->
+                                            <label class="slds-form-element__label" for="Permanent Resident Id" style="width: 47.9%;">Permanent Resident Id</label>
+                                            <div class="slds-form-element__control">
+                                                <!-- <apex:inputText id="permanentResidentId" tabindex="21" value="{!permanentResidentId}" label="Permanent Resident Id" styleClass="slds-input" maxlength="9"/>  -->
+                                                <apex:inputText id="permanentResidentId" tabindex="22" label="Permanent Resident Id" styleClass="slds-input" maxlength="9"/>
+                                                <apex:inputHidden id="permanentResidentId-original" value="{!permanentResidentId}"/>
+                                               <!-- <span class="prMsg error" id="showPRRequired">Required field</span>  -->
+                                                <span class="prMsg error" id="showPRMsg">Permanent Resident ID must be 8 or 9 digits</span>
+                                            </div>
+                                        </div>
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                    </div>
+                                </apex:outputPanel>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Family Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Mother/Guardian 1 First Name">Mother/Guardian 1 First Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="motherGuardian1FirstName" tabindex="23" value="{!motherGuardian1FirstName}" label="Mother Guardian 1 First Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row" style="margin-top: 0">
+                                        <label class="slds-form-element__label" for="Mother/Guardian 1 Last Name">Mother/Guardian 1 Last Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="motherGuardian1LastName" tabindex="24" value="{!motherGuardian1LastName}" label="Mother Guardian 1 Last Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Father/Guardian 2 First Name">Father/Guardian 2 First Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="fatherGuardian2FirstName" tabindex="25" value="{!fatherGuardian2FirstName}" label="Father Guardian 2 First Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Father/Guardian 2 Last Name">Father/Guardian 2 Last Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="fatherGuardian2LastName" tabindex="26" value="{!fatherGuardian2LastName}" label="Father Guardian 2 Last Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding margin_btm_custom mobile_row">
+                                        <label class="slds-form-element__label" for="Parent Email">Parent Email</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="TSParentEmail" tabindex="27" value="{!parentEmail}" label="TSParentEmail" styleClass="slds-input" maxlength="80"/>
+                                            <span class="emailmsg error">Please provide a valid email address</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Is Mother 4-year U.S. College Grad?">Does Your Mother Have a 4 Year U.S. College Degree?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!isMotherCollgGrad}" tabindex="28" id="ismothercfouryears" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!isMotherCollgGradOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <apex:outputLabel value="Mother's College (If Attended)" for="Mother's College (if attended)" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="motherCollg" tabindex="29" value="{!motherCollg}" label="Mother's College (if attended)" styleClass="slds-input" maxlength="255"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Is Father 4-year U.S. College Grad?">Does Your Father Have a 4 Year U.S. College Degree?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!isFatherCollgGrad}" tabindex="30" id="isfather4collg" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!isFatherCollgGradOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none custom_padding mobile_row">
+                                        <apex:outputLabel value="Father's College (If Attended)" for="Father's College (If Attended)" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="fatherCollg" tabindex="31" value="{!fatherCollg}" label="Father's College (if attended)" styleClass="slds-input" maxlength="255"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 tooltip slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row">
+                                        <label class="slds-form-element__label" for="Annual Taxable Income">Annual Taxable Income<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!annualTaxIncome}" tabindex="32" id="taxableincome" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!annualTaxIncomeOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">Enter the range of your family’s taxable
+                                        income for LAST YEAR.
+                                        income range.
+                                        </span>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding mobile_row" style="margin-top: 0;">
+                                        <label class="slds-form-element__label" for="Household Size">Household Size<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText tabindex="33" id="householdsize" value="{!householdsize}" label="Household Size" styleClass="slds-input" maxlength="2"/>
+                                        </div>
+                                        <span class="tooltiptext">Enter the size of your immediate family living with
+                                        you. Include yourself and all family members dependent on the selected
+                                        income range.
+                                        </span>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Statement of Need
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-1 slds-size_1-of-1 slds-float_left custom_padding multi_select_width">
+                                        <label class="slds-form-element__label" for="Statement of Need" style="width: 24%;">
+                                            Statement of Need
+                                            <button id="Statement_of_Need_tooltiptext" class="slds-button slds-button_icon slds-button slds-button_icon tooltip" aria-describedby="help" title="Help">
+                                                <svg class="slds-button__icon" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#info')}"></use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Help</span>
+                                                <span class="tooltiptext" style="font-size: .8125rem;font-weight: normal;">Choose all that apply.</span>
+                                            </button>
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList id="sel1" value="{!statementOfNeed}" multiselect="TRUE" tabindex="34" size="6" styleClass="custom_select mobile_custom_select custom_height">
+                                                <apex:selectOptions value="{!statementOfNeedOptions}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding">
+                                        <label class="slds-form-element__label" for="Other Programs">Other Programs</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="otherPrograms" value="{!otherPrograms}" label="Other Programs" tabindex="35" styleClass="slds-input" maxlength="255"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding margin_btm_custom">
+                                        <label class="slds-form-element__label" for="Tutoring Topic">Tutoring Topic</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="tutorialTopic" value="{!tutorialTopic}" tabindex="36" label="Tutoring Topic" styleClass="slds-input" maxlength="100"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Referral
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left custom_padding margin_btm_custom">
+                                        <label class="slds-form-element__label" for="ReferredBy">Referred By</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="ReferredBy" value="{!ReferredBy}" tabindex="37" label="Referred By" styleClass="slds-input" maxlength="100"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="slds-form-element__row slds-m-left_none">
+                            <!-- <div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none">
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                                </div>  -->
+                            <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none">
+                                <apex:commandButton tabindex="38" value="Submit" id="submit" styleClass="custom_btn" style="width:30% !important" onclick="return checkDoubleSubmit(this);"/>
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+        <c:TSIntake_Validation_Component />
+    </body>
+</apex:page>

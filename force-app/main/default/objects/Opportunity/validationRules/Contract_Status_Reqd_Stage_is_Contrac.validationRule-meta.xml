@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Status_Reqd_Stage_is_Contrac</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISPICKVAL(StageName, &quot;Contract&quot;),OR(ISBLANK(TEXT(Contract_Status__c))))</errorConditionFormula>
+    <errorDisplayField>Contract_Status__c</errorDisplayField>
+    <errorMessage>You must set this field to Contract Requested in order to proceed.</errorMessage>
+</ValidationRule>

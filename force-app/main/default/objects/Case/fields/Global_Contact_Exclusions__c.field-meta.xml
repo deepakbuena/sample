@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Contact_Exclusions__c</fullName>
+    <externalId>false</externalId>
+    <label>Global Contact Exclusions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Print  Cathleen Kellogg</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Email  Cathleen Kellogg</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Outbound Phone</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

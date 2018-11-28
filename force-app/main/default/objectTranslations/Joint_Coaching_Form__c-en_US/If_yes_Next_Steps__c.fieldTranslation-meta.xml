@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- If yes, Next Steps: --></label>
+    <name>If_yes_Next_Steps__c</name>
+    <picklistValues>
+        <masterLabel>Contract</masterLabel>
+        <translation><!-- Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full Presentation</masterLabel>
+        <translation><!-- Full Presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal Request</masterLabel>
+        <translation><!-- Proposal Request --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volume_Strategy__c</fullName>
+    <description>This field contains the strategy used to determine if the account will result in an opportunity for New/Additional or retention of volume.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the strategy used to determine if the account will result in an opportunity for New/Additional or retention of volume.</inlineHelpText>
+    <label>Volume Strategy</label>
+    <length>500</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

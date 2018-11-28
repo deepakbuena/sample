@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please put in text and resource link school requested. --></help>
+    <label><!-- ResourceLink --></label>
+    <name>ResourceLink9__c</name>
+</CustomFieldTranslation>

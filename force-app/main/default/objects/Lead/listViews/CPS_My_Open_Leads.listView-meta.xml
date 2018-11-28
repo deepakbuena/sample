@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_My_Open_Leads</fullName>
+    <columns>Sign_On_DateTime__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Have_Appointment__c</columns>
+    <columns>Meet_with_Advisor__c</columns>
+    <columns>CPS_Advisor_Requested__c</columns>
+    <columns>Preferred_language__c</columns>
+    <columns>Purpose_of_Visit_EOC_TS__c</columns>
+    <columns>Purpose_of_Visit__c</columns>
+    <columns>Comment__c</columns>
+    <columns>Satellite_Intake_Location_EOC__c</columns>
+    <columns>Intake_Location__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,New</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.CPS_EOC,Lead.CPS_TS,Lead.CPS_UB</value>
+    </filters>
+    <label>CPS My Open Leads</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+        <roleAndSubordinatesInternal>CPS_Manager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

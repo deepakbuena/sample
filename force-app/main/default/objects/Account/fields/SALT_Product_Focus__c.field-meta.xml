@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALT_Product_Focus__c</fullName>
+    <externalId>false</externalId>
+    <label>SALT Product Focus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Product Offerings</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Early SALT Stage Services (ESSS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Free Salt Services</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

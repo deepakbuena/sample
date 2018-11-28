@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingPrimaryContact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Who is the primary contact for this offering? For conferences this would be the individual in charge of scheduling the session (for moderators, use the secondary contact field). For all other offerings, this would be the contact at the organization where the offering will be held.  This should NOT be an ASA team member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is the primary external contact (non-ASA) for this Offering? If the individual does not have their contact information already in Salesforce, you may need to add them to the appropriate Account.</inlineHelpText>
+    <label>Primary Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipName>PS_OfferingPrimaryContact</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

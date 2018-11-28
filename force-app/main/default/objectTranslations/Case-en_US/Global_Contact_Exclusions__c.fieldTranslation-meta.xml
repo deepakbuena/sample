@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Global Contact Exclusions --></label>
+    <name>Global_Contact_Exclusions__c</name>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Email  Cathleen Kellogg</masterLabel>
+        <translation><!-- No Email  Cathleen Kellogg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Outbound Phone</masterLabel>
+        <translation><!-- No Outbound Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Print  Cathleen Kellogg</masterLabel>
+        <translation><!-- No Print  Cathleen Kellogg --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

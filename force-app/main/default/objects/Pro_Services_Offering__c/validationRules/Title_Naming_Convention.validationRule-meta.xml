@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Title_Naming_Convention</fullName>
+    <active>false</active>
+    <description>This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct.</description>
+    <errorConditionFormula>( RecordType.Name  != &#39;Conference Presentation&#39;  ) &amp;&amp; NOT( 
+OR( 
+CONTAINS(Name, &quot;2014&quot;),
+CONTAINS(Name, &quot;2015&quot;),
+CONTAINS(Name, &quot;2016&quot;),
+CONTAINS(Name, &quot;2017&quot;),
+CONTAINS(Name, &quot;2018&quot;),
+CONTAINS(Name, &quot;2019&quot;),
+CONTAINS(Name, &quot;2020&quot;)
+) 
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct.</errorMessage>
+</ValidationRule>

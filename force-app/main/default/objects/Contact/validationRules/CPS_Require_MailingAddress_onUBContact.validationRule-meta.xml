@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Require_MailingAddress_onUBContact</fullName>
+    <active>true</active>
+    <description>Mailing address is required for UB (not possible to require this field from page layout)
+Old Formula : AND (RecordType.Name =&quot;CPS - UB&quot;, OR(ISBLANK(MailingStreet), ISBLANK (MailingPostalCode), ISBLANK (MailingCity ), ISBLANK (MailingState )))</description>
+    <errorConditionFormula>AND (RecordType.Name =&quot;CPS - UB&quot;, 
+Auto_Created_Source__c &lt;&gt; &quot;CPS Event Check In&quot;, 
+OR(ISBLANK(MailingStreet), ISBLANK (MailingPostalCode), ISBLANK (MailingCity ), ISBLANK (MailingState )))</errorConditionFormula>
+    <errorMessage>Mailing address is required.</errorMessage>
+</ValidationRule>

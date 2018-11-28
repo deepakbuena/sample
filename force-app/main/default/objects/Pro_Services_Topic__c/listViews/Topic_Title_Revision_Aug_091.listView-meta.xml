@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topic_Title_Revision_Aug_091</fullName>
+    <columns>NAME</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER</field>
+        <operation>contains</operation>
+        <value>ardagna</value>
+    </filters>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>8/11/2009 12:00 AM</value>
+    </filters>
+    <label>Topic - Title Revision (Aug. 09)</label>
+    <queue>ProfessionalServices</queue>
+    <sharedTo>
+        <group>ASAProfessionalServices</group>
+    </sharedTo>
+</ListView>

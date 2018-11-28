@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingRequestedPresenter__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>If there is a specific individual that you would like to conduct this offering, please indicate your choice here. Otherwise, leave this blank.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If there is a specific individual that you would like to conduct this offering, please indicate your choice here. Otherwise, leave this blank.</inlineHelpText>
+    <label>Requested Presenter</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>PS_OfferingRequestedPresenter</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

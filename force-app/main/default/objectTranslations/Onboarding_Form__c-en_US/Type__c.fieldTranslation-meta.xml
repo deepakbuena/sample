@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>School - 2 Year Private</masterLabel>
+        <translation><!-- School - 2 Year Private --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - 2 Year Public</masterLabel>
+        <translation><!-- School - 2 Year Public --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - 3 Year School</masterLabel>
+        <translation><!-- School - 3 Year School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - 4 Year Private</masterLabel>
+        <translation><!-- School - 4 Year Private --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - 4 Year Public</masterLabel>
+        <translation><!-- School - 4 Year Public --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Foreign School</masterLabel>
+        <translation><!-- School - Foreign School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Grad/Profession</masterLabel>
+        <translation><!-- School - Grad/Profession --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Liberal Arts</masterLabel>
+        <translation><!-- School - Liberal Arts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Proprietary</masterLabel>
+        <translation><!-- School - Proprietary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Voc or Tech</masterLabel>
+        <translation><!-- School - Voc or Tech --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

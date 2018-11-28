@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qualtrics__Send_Qualtrics_Survey_Detail</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Send Qualtrics Survey</masterLabel>
+    <openType>sidebar</openType>
+    <page>qualtrics__CampaignSendSurvey</page>
+    <protected>false</protected>
+</WebLink>

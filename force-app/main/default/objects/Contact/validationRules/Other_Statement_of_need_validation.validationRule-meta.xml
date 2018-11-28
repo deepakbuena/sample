@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Statement_of_need_validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>INCLUDES(Statement_of_Need__c,&#39;Other&#39;) &amp;&amp; ISBLANK(Other_Programs__c)</errorConditionFormula>
+    <errorDisplayField>Other_Programs__c</errorDisplayField>
+    <errorMessage>Please enter Statement of need.</errorMessage>
+</ValidationRule>

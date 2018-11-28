@@ -1,0 +1,256 @@
+<apex:page standardcontroller="Annual_Sales_Plan__c" extensions="ProposedConferenceAttendanceController" standardStylesheets="false" docType="html-5.0">
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+            <!-- INCLUDE SCRIPTING -->
+            <apex:includeScript value="{!$Resource.JQuery_minjs}"/>
+            <apex:includeScript value="{!$Resource.JQuery_Datatable_js}"/>
+            <!-- INCLUDE STYLESHEETS -->
+            <apex:stylesheet value="{!$Resource.JQuery_Datatable_css}"/>
+        </head>
+        
+        <body>
+            <div class = "SLDS_ASA">
+    
+                <apex:form id="theForm">
+                    <apex:pageBlock rendered="{!showPCARelatedlist=='true'}" mode="edit">
+                        <!--<apex:pageBlockButtons location="top">
+                            <apex:commandButton value="{!If(listPCA.size>0,'New/Edit','New')}" action="{!preparePCAList}" reRender="theForm">
+                                 <apex:param assignTo="{!showPCARelatedlist}" value="false"/>
+                            </apex:commandButton>
+                        </apex:pageBlockButtons>-->
+                        
+                        <div class="slds-modal__header slds-align--absolute-center">
+                            <apex:commandButton value="{!If(listPCA.size>0,'New/Edit','New')}" action="{!preparePCAList}" reRender="theForm" styleClass="slds-button slds-button--brand">
+                                 <apex:param assignTo="{!showPCARelatedlist}" value="false"/>
+                            </apex:commandButton>                        
+                        </div>
+                        
+                        <!--<apex:pageBlockSection id="InfoPBS2" collapsible="false" columns="1">
+                        
+                            <apex:pageBlockTable styleclass="MSEGRID" value="{!listPCA}" var="lpca2" columns="8" >
+                            
+                                <apex:column headerValue="Conference Name/Presentation Proposed or Accepted" >
+                                    <apex:outputLink value="/{!lpca2.pca.Conference_Name_Presentation_Proposed__c}" target="_blank">{!lpca2.pca.Conference_Name_Presentation_Proposed__r.Name}</apex:outputLink>
+                                </apex:column> 
+                                                   
+                                <apex:column headerValue="Location">
+                                    <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.Location__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Start Date">
+                                    <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.StartDate}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="End Date">
+                                    <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.EndDate}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Audience">
+                                    <apex:outputField value="{!lpca2.pca.Audience__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Proposed">
+                                    <apex:outputField value="{!lpca2.pca.Proposed__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Attending">
+                                    <apex:outputField value="{!lpca2.pca.Attending__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Presenting">
+                                    <apex:outputField value="{!lpca2.pca.Presenting__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                 
+                           </apex:pageBlockTable>
+                        </apex:pageBlockSection>-->
+                        
+                        <table class="slds-table slds-table--bordered slds-table--cell-buffer MSEGRID">
+                            <thead>
+                                <tr class="slds-text-title">
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="ConferenceName">Conference Name/Presentation Proposed or Accepted</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Location">Location</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="StartDate">Start Date</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="EndDate">End Date</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Audience">Audience</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Proposed">Proposed</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Attending">Attending</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Presenting">Presenting</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!listPCA}" var="lpca2">
+                                    <tr>
+                                        <td scope="row" data-label="ConferenceName">
+                                            <div class="slds-truncate">
+                                                <apex:outputLink value="/{!lpca2.pca.Conference_Name_Presentation_Proposed__c}" target="_blank">{!lpca2.pca.Conference_Name_Presentation_Proposed__r.Name}</apex:outputLink>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Location">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.Location__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="StartDate">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.StartDate}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="EndDate">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Conference_Name_Presentation_Proposed__r.EndDate}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Audience">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Audience__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Proposed">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Proposed__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Attending">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Attending__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Presenting">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Presenting__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        
+                        <script>
+                            var j$ = jQuery.noConflict();
+                            j$('.MSEGRID').dataTable({
+                                sPaginationType: 'full_numbers',
+                                'aLengthMenu':[[5,10,25,-1],[5,10,25,'All']],
+                                'iDisplayLength':5
+                            });
+                       </script>
+                    </apex:pageBlock>
+                    
+                    <apex:pageBlock title="Proposed Conference Attendance Edit" mode="Edit" rendered="{!showPCARelatedlist=='false'}">
+                        <!--<apex:pageBlockButtons location="bottom">
+                            <apex:commandButton value="Save" action="{!savePCA}" reRender="theForm"/>
+                            <apex:commandButton value="Cancel" action="{!preparePCAList}" reRender="theForm" immediate="true">
+                                <apex:param assignTo="{!showPCARelatedlist}" value="true"/>
+                            </apex:commandButton>
+                        </apex:pageBlockButtons>-->
+                        
+                        <!--<apex:pageBlockSection id="InfoPBS" title="Information" collapsible="false" columns="1">
+                        
+                            <apex:pageBlockTable value="{!listPCA}" var="lpca" columns="3">
+                            
+                                <apex:column headerValue="">
+                                   <apex:actionRegion >
+                                       <apex:commandLink action="{!removeRows}" reRender="InfoPBS" rendered="{!IF(lpca.pca.Id != null,true,false)}">
+                                           <apex:image url="/img/func_icons/remove12_on.gif"/>
+                                           <apex:param name="rowIndex" value="{!lpca.pca.Id}" assignTo="{!numberOfRowToRemove}"/>
+                                       </apex:commandLink>
+                                   </apex:actionRegion>
+                                </apex:column> 
+                            
+                                <apex:column headerValue="Conference Name/Presentation Proposed or Accepted" >
+                                    <apex:inputField value="{!lpca.pca.Conference_Name_Presentation_Proposed__c}" rendered="{!IF(lpca.pca.Id == null,true,false)}"/>
+                                    <apex:outputLink value="/{!lpca.pca.Conference_Name_Presentation_Proposed__c}" target="_blank">{!lpca.pca.Conference_Name_Presentation_Proposed__r.Name}</apex:outputLink>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Audience">
+                                    <apex:inputField value="{!lpca.pca.Audience__c}"/>
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                            <apex:commandButton value="Add More" action="{!addRows}" immediate="true" reRender="InfoPBS"/>
+                        </apex:pageBlockSection>-->
+                        
+                        <div class="slds-form slds-m-bottom--x-small" id="theForm">
+                            <h3 class="slds-section-title--divider">Information</h3>
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer MSEGRID">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Remove"></div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Conference Name">Conference Name/Presentation Proposed or Accepted</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Audience">Audience</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!listPCA}" var="lpca">
+                                        <tr>
+                                            <td scope="row" data-label="Remove">
+                                                <div class="slds-truncate">
+                                                    <apex:actionRegion >
+                                                       <apex:commandLink action="{!removeRows}" reRender="theForm" rendered="{!IF(lpca.pca.Id != null,true,false)}">
+                                                           <apex:image url="/img/func_icons/remove12_on.gif"/>
+                                                           <apex:param name="rowIndex" value="{!lpca.pca.Id}" assignTo="{!numberOfRowToRemove}"/>
+                                                       </apex:commandLink>
+                                                   </apex:actionRegion>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="ConferenceName">
+                                                <div class="slds-truncate">
+                                                    <apex:inputField value="{!lpca.pca.Conference_Name_Presentation_Proposed__c}" rendered="{!IF(lpca.pca.Id == null,true,false)}"/>
+                                                    <apex:outputLink value="/{!lpca.pca.Conference_Name_Presentation_Proposed__c}" target="_blank">{!lpca.pca.Conference_Name_Presentation_Proposed__r.Name}</apex:outputLink>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="Audience">
+                                                <div class="slds-truncate">
+                                                    <apex:inputField value="{!lpca.pca.Audience__c}"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <apex:commandButton value="Add More" action="{!addRows}" immediate="true" reRender="theForm" styleClass="slds-button slds-button--brand"/>                       
+                            
+                            <div class="slds-modal__footer slds-align--absolute-center">
+                                <apex:commandButton value="Save" action="{!savePCA}" reRender="theForm" styleClass="slds-button slds-button--brand"/>
+                                <apex:commandButton value="Cancel" action="{!preparePCAList}" reRender="theForm" immediate="true" styleClass="slds-button slds-button--brand">
+                                    <apex:param assignTo="{!showPCARelatedlist}" value="true"/>
+                                </apex:commandButton>                        
+                            </div>
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+        </body>
+        <style>
+            html body.sfdcBody {
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+        </style>
+    </html> 
+</apex:page>

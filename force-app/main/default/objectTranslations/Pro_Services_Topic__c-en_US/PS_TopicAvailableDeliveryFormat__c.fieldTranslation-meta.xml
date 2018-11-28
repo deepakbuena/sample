@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field indicates the methods that may be used to deliver this content. Other options may be available, but may require additional development time. --></help>
+    <label><!-- Available Delivery Formats --></label>
+    <name>PS_TopicAvailableDeliveryFormat__c</name>
+    <picklistValues>
+        <masterLabel>Article</masterLabel>
+        <translation><!-- Article --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presentation (in person)</masterLabel>
+        <translation><!-- Presentation (in person) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presentation (web-based)</masterLabel>
+        <translation><!-- Presentation (web-based) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

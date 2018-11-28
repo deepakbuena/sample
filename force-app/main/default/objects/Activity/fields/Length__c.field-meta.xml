@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length__c</fullName>
+    <description>How much time does the trainer have for this particulate session or workshop</description>
+    <externalId>false</externalId>
+    <label>Session Length</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>45 Min</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>60 Min</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>75 Min</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>90 Min</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Full Day</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/2 Day Morning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/2 Day Afternoon</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

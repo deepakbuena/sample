@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Target_School_Program__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Targeted_School__r.Is_Target_School_for_Program_s__c , &quot;TS Boston&quot;), &quot;TS Boston;&quot;, NULL)   + 
+IF(INCLUDES( Targeted_School__r.Is_Target_School_for_Program_s__c , &quot;TS Brockton&quot;), &quot;TS Brockton;&quot; , NULL)  + 
+IF(INCLUDES( Targeted_School__r.Is_Target_School_for_Program_s__c , &quot;EOC Boston&quot;), &quot;EOC Boston;&quot; , NULL)  + 
+IF(INCLUDES( Targeted_School__r.Is_Target_School_for_Program_s__c , &quot;EOC Brockton&quot;), &quot;EOC Brockton;&quot; , NULL)  + 
+IF(INCLUDES( Targeted_School__r.Is_Target_School_for_Program_s__c , &quot;UB Brockton&quot;), &quot;UB Brockton&quot;, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CPS Target School Program</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

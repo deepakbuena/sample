@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please provide the reason why this Lead is being Unqualified or Closed. --></help>
+    <label><!-- Unqualify/Close Reason --></label>
+    <name>Unqualify_Close_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Already in discussions with Prospect</masterLabel>
+        <translation><!-- Already in discussions with Prospect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cold Lead</masterLabel>
+        <translation><!-- Cold Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current Client</masterLabel>
+        <translation><!-- Current Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Currently has a solution (homegrown/free resource)</masterLabel>
+        <translation><!-- Currently has a solution (homegrown/free resource) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>For-Profit entity</masterLabel>
+        <translation><!-- For-Profit entity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In contract with competitor</masterLabel>
+        <translation><!-- In contract with competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead is not decision maker</masterLabel>
+        <translation><!-- Lead is not decision maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited enrollment/opportunity</masterLabel>
+        <translation><!-- Limited enrollment/opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Looking for immediate CDR reduction product</masterLabel>
+        <translation><!-- Looking for immediate CDR reduction product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Loan Borrowers</masterLabel>
+        <translation><!-- No Loan Borrowers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not interested at this time</masterLabel>
+        <translation><!-- Not interested at this time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retired/No Longer at Institution</masterLabel>
+        <translation><!-- Retired/No Longer at Institution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to Marketing - Nurture Further</masterLabel>
+        <translation><!-- Return to Marketing - Nurture Further --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student inquiry</masterLabel>
+        <translation><!-- Student inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable/Unwilling to include decision maker</masterLabel>
+        <translation><!-- Unable/Unwilling to include decision maker --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

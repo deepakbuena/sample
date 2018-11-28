@@ -1,0 +1,860 @@
+<apex:page controller="EOCFormController" action="{!redirectToHome}" showHeader="false" cache="false" docType="html-5.0">     
+    <c:CPS_CSS_Component />  
+    <style>
+        
+        .modal-open {
+            overflow: hidden
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            outline: 0
+        }
+        
+        .modal.fade .modal-dialog {
+            -webkit-transition: -webkit-transform .3s ease-out;
+            -o-transition: -o-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            -webkit-transform: translate(0, -25%);
+            -ms-transform: translate(0, -25%);
+            -o-transform: translate(0, -25%);
+            transform: translate(0, -25%)
+        }
+        
+        .modal.in .modal-dialog {
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0)
+        }
+        
+        .modal-open .modal {
+            overflow-x: hidden;
+            overflow-y: auto
+        }
+        
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            outline: 0;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+        }
+        
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: #000
+        }
+        
+        .modal-backdrop.fade {
+            filter: alpha(opacity=0);
+            opacity: 0
+        }
+        
+        .modal-backdrop.in {
+            filter: alpha(opacity=50);
+            opacity: .5
+        }
+        
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5
+        }
+        
+        .modal-header .close {
+            margin-top: -2px
+        }
+        
+        .modal-title {
+            margin: 0;
+            line-height: 1.42857143
+        }
+        
+        .modal-body {
+            position: relative;
+            padding: 15px
+        }
+        
+        .modal-footer {
+            padding: 15px;
+            text-align: right;
+            border-top: 1px solid #e5e5e5
+        }
+        
+        .modal-footer .btn+.btn {
+            margin-bottom: 0;
+            margin-left: 5px
+        }
+        
+        .modal-footer .btn-group .btn+.btn {
+            margin-left: -1px
+        }
+        
+        .modal-footer .btn-block+.btn-block {
+            margin-left: 0
+        }
+        
+        .modal-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll
+        }
+        
+        @media (min-width:768px) {
+            .modal-dialog {
+                width: 600px;
+                margin: 30px auto
+            }
+            .modal-content {
+                -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+            }
+            .modal-sm {
+                width: 300px
+            }
+        }
+        
+        @media (min-width:992px) {
+            .modal-lg {
+                width: 900px
+            }
+        }
+           .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0
+        }
+        
+        .sr-only-focusable:active,
+        .sr-only-focusable:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto
+        }
+        
+        [role=button] {
+            cursor: pointer
+        }     
+    </style>  
+    
+ 
+   
+    <head>
+    
+    
+    
+         <script>
+            var $j = jQuery.noConflict(true);
+            console.log('Version 1: '+$j.fn.jquery);
+            var isClicked=false;
+            var digitsOnly = /[1234567890]/g;
+            function checkDoubleSubmit(obj)
+            {
+                if (isClicked)
+                { 
+                    return false; 
+                }
+                else
+                {
+                    
+                    if(($j('[id$=genderIdenti]').val()!== "") && ($j('[id$=ethnicity]').val()!=="") && ($j('[id$=maritial]').val()!=="") && ($j('[id$=uscitizen]').val()!=="")
+                    && ($j('[id$=veteranStatus]').val()!=="") && ($j('[id$=school]').val()!=="") && ($j('[id$=ismother4yrscollg]').val()!=="") && ($j('[id$=isfather4yrscollg]').val()!=="")
+                    && ($j('[id$=taxableincome]').val()!=="") && ($j('[id$=householdsize]').val()!=="") && ($j('[id$=householdsize]')!=="" && $j('[id$=householdsize]').length<=2)
+                    && ($j('[id$=otherLearnedAboutProgram]')!=="" && $j('[id$=otherLearnedAboutProgram]').length<=100) && ($j('[id$=schoolOther]')!=="" && $j('[id$=schoolOther]').length<=255) 
+                    && ($j('[id$=careerGoals]')!=="" && $j('[id$=careerGoals]').length<=255) && ($j('[id$=motherGuardian1FirstName]')!=="" && $j('[id$=motherGuardian1FirstName]').length<=25)
+                    && ($j('[id$=motherGuardian1LastName]')!=="" && $j('[id$=motherGuardian1LastName]').length<=25) 
+                    && ($j('[id$=fatherGuardian2FirstName]')!=="" && $j('[id$=fatherGuardian2FirstName]').length<=25) 
+                    && ($j('[id$=fatherGuardian2LastName]')!=="" && $j('[id$=fatherGuardian2LastName]').length<=25))
+                    {
+                        isClicked = true; 
+                        callRegisterLead();
+                        $j(obj).attr("disabled", "disabled");
+                        return true; 
+                    }
+                } 
+            }
+            function restrictCharacters(myfield, e, restrictionType)
+            {
+                if (!e) var e = window.event
+                if (e.keyCode) code = e.keyCode;
+                else if (e.which) code = e.which;
+                var character = String.fromCharCode(code);
+            
+                // if they pressed esc... remove focus from field...
+                if (code==27) { this.blur(); return false; }
+                
+                // ignore if they are press other keys
+                // strange because code: 39 is the down key AND  key...
+                // and DEL also equals .
+                if (!e.ctrlKey && code!=9 && code!=8 && code!=36 && code!=37 && code!=38 && (code!=39 || (code==39 && character=="'")) && code!=40) {
+                    if (character.match(restrictionType)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                    
+                }
+            }
+       
+            
+            
+            $j(document).userTimeout({
+                session: 60000,
+                logouturl: '{!$Site.BaseSecureUrl}/EOCSignOn',
+                modalTitle: 'Session Timeout',            
+                modalBody: 'Still working on the form? If yes, press OK to continue, otherwise your session will timeout soon and you will lose your changes.  Press EXIT if you want to start from the beginning.',
+                modalStayLoggedBtn: 'OK',
+                modalLogOffBtn: 'EXIT',
+                force: 120000,
+                notify: true
+                 
+                           
+                    
+            });
+            
+            
+          
+            
+       </script>
+        
+   </head>
+    <body>
+        <div class="slds-scope">
+            <!-- Desktop header -->
+            <div class="desktop_header_bg">
+                <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+            </div>
+            <!-- Desktop header -->
+            <div class="slds_wrap slds-m-top_xx-large slds_wrap_mobile">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                    <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+                    <div class="slds-notify_container slds-is-relative">
+                        <div class="slds-notify slds-notify_toast slds-theme_warning toast_width" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                                </svg>
+                            </span>
+                            <div class="slds-notify__content">
+                                <h2 class="slds-text-heading_small">
+                                    <apex:pageMessages ></apex:pageMessages>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-mobile-width">
+                    <div class="slds-media mobile_heading_margin">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                        <apex:form id="eOCIntakeFor1m" forceSSL="true"> 
+                            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Thanks">Thanks! You are almost done…</h1>
+                            <p class="slds-text-body_small slds-line-height_reset">It looks like this is your first visit or it’s been a while since we saw you. Please tell us a bit more about yourself to complete your profile. 
+                            </p>
+                            <br/>
+                            <p>*Required</p>
+                            <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="EOC Intake Form ">EOC Intake Form <span style="color:#7030a0">{!if(firstName!="",("- "& firstname),"")}</span><span style="color:#7030a0">{!if(lastname!="",(" "& lastname),"")}</span></h2>
+                            <p class="slds-text-body_small slds-line-height_reset slds-align-middle slds-align_absolute-center">(Not {!if(firstName!="",firstname,"")}{!if(lastname!="",(" "& lastname),"")}?&nbsp;<apex:commandlink value="Click here" action="{!redirectToSignOn}"/>&nbsp;to start from the beginning)</p>
+                        </apex:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <apex:form id="eOCIntakeForm" forceSSL="true" styleClass="slds-p-around_large eOCIntakeForm">
+                    <apex:actionFunction name="callRegisterLead" action="{!registerIntakeLead}"/>
+                    <div class="slds-form slds-form_horizontal">
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Background
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Gender Identity<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!genderIdentity}" multiselect="false" size="1" styleClass="custom_select" id="genderIdenti">
+                                                <apex:selectOptions value="{!genderIdentityOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Ethnicity<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!ethnicity}" multiselect="false" size="1" styleClass="custom_select" id="ethnicity">
+                                                <apex:selectOptions value="{!ethnicityOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">NonH/L = Non-Hispanic or Latino.</span>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Marital Status<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!maritialStatus}" multiselect="false" size="1" styleClass="custom_select" id="maritial">
+                                                <apex:selectOptions value="{!maritialStatusOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Are You a U.S. Citizen?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!usCitizen}" multiselect="false" size="1" styleClass="custom_select" id="uscitizen">
+                                                <apex:selectOptions value="{!usCitizenOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Social Security Number</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="socialSecurityNumber" tabindex="22" value="{!socialSecurityNumber}" label="Social Security Number" styleClass="slds-input ssn" maxlength="11" />
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Permanent Resident ID</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="permanentResidentId" tabindex="21" value="{!permanentResidentId}" label="Permanent Resident Id" styleClass="slds-input" maxlength="9"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Veteran Status<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!veteranStatus}" multiselect="false" size="1" styleClass="custom_select" id="veteranStatus">
+                                                <apex:selectOptions value="{!veteranStatusOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Student Status</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!studentStatus}" multiselect="false" size="1" styleClass="custom_select" id="currentgrade">
+                                                <apex:selectOptions value="{!studentStatusOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="Attending One of These Schools?">School<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!school}" multiselect="false" size="1" styleClass="custom_select school" id="school">
+                                                <apex:selectOptions value="{!schoolOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">Please select "none of these" if you are not in secondary school and/or not attending one of the schools listed.</span>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row" style="margin-top:0">
+                                        <apex:outputPanel id="showschool">
+                                            <label class="slds-form-element__label" style="width:44.5%" for="Secondary School-Other">Secondary School (Other)</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputText id="schoolOther" value="{!schoolOther}" label="School-Other" styleClass="slds-input" maxlength="255"/>
+                                            </div>
+                                            <span class="tooltiptext">Please enter a value if you are attending a secondary school not listed.</span>
+                                        </apex:outputPanel>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                                
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="School Guidance Counselor">School Guidance Counselor</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="SchGuidancecounselor" value="{!schGuidanceCounselor}" label="School Guidance Counselor" styleClass="slds-input" maxlength="100"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element tooltip slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row" style="margin-top:0">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Family Information
+                                    </h1>
+                                </div>
+                                
+                                <div class="slds-form-element__row">
+                                    <!--13092018 DS<div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">-->
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left margin_btm_custom mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Is Mother 4-Year U.S. College Grad?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!ismotherCollegeGrad}" multiselect="false" size="1" styleClass="custom_select" id="ismother4yrscollg">
+                                                <apex:selectOptions value="{!isMotherCollegeGradOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <!--13092018 DS <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left margin_btm_custom mobile_row">-->
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Is Father 4-Year U.S. College Grad?<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!isFatherCollegeGrad}" multiselect="false" size="1" styleClass="custom_select" id="isfather4yrscollg">
+                                                <apex:selectOptions value="{!isFatherCollegeGradOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none tooltip mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Household Size<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="householdsize" maxlength="2" value="{!houseHoldSize}" label="HouseHold Size" styleClass="slds-input" onkeypress="return restrictCharacters(this, event, digitsOnly);"/>
+                                        </div>
+                                        <span class="tooltiptext"> Enter the size of your immediate family living with you. Include yourself and all family members dependent on the selected income range.</span>
+                                    </div>
+                                    
+                                    <div class="slds-form-element tooltip slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Annual Taxable Income<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!annualTaxableIncome}" multiselect="false" size="1" styleClass="custom_select" id="taxableincome">
+                                                <apex:selectOptions value="{!annualTaxableIncomeOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                        <span class="tooltiptext">Enter the range of your family’s taxable income for LAST YEAR.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Primary Income Source</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!primaryIncomeSource}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!primaryIncomeSourceOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Parent Email</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="parentEmail" value="{!parentEmail}" label="parentEmail" styleClass="slds-input" maxlength="80"/>
+                                            <span class="emailmsg error">Please provide a valid email address</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="Mother/Guardian 1 First Name">Mother/Guardian 1 First Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="motherGuardian1FirstName" value="{!motherGuardian1FirstName}" label="Mother Guardian1 First Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Mother/Guardian 1 Last Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="motherGuardian1LastName" value="{!motherGuardian1LastName}" label="Mother Guardian1 Last Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Father/Guardian 2 First Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="fatherGuardian2FirstName" value="{!fatherGuardian2FirstName}" maxlength="25" label="Father Guardian2 First Name" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Father/Guardian 2 Last Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="fatherGuardian2LastName" value="{!fatherGuardian2LastName}" label="Father Guardian2 Last Name" styleClass="slds-input" maxlength="25"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Program
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">How Did You Learn About This Program?</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!learnAboutProgram}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!learnAboutProgramOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Learned About Program (Other)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="otherLearnedAboutProgram" value="{!otherLearnedAboutProgram}" label="Other-Learn about Program" styleClass="slds-input" maxlength="100"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none margin_btm_custom mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Career Goals</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="careerGoals" value="{!careerGoals}" label="Career Goals" styleClass="slds-input" maxlength="255"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="slds-form-element__row slds-m-left_none">
+                            <!--  <div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none">
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                                </div>  -->
+                            <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none">
+                                <apex:commandButton value="Finish" id="submit" styleClass="custom_btn" style="width: 30% !important" onclick="return checkDoubleSubmit(this);"/>
+                            </div>
+                        </div>
+                    </div>
+               </apex:form>
+            </div>
+        </div>
+        <!--</apex:form>-->
+        
+        
+        
+        
+        <script type="text/javascript">
+        
+            var $jx = jQuery.noConflict(true);
+            //alert("Version 2: "+$jx.fn.jquery);
+            console.log('Version 2: '+$jx.fn.jquery);
+            $jx('[id$=eOCIntakeForm]').validate();
+            errorclass: "myerrorclass";
+            
+            $jx('[id$=genderIdenti]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=ethnicity]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=maritial]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=uscitizen]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=veteranStatus]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=school]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=ismother4yrscollg]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=isfather4yrscollg]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=taxableincome]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            
+            $jx('[id$=householdsize]').rules("add", {
+                required: true,
+                number: true,
+                maxlength: 2,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 2 digits"),
+                    number: $jx.validator.format("<br/>Please enter a valid number"),
+                }
+            });
+            $jx('[id$=otherLearnedAboutProgram]').rules("add", {
+                required: false,
+                maxlength: 100,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 100 characters"),
+                }
+            });
+            $jx('[id$=schoolOther]').rules("add", {
+                required: false,
+                maxlength: 255,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 255 characters"),
+                }
+            });
+            $jx('[id$=careerGoals]').rules("add", {
+                required: false,
+                maxlength: 255,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 255 characters"),
+                }
+            });
+            $jx('[id$=motherGuardian1FirstName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=motherGuardian1LastName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=fatherGuardian2FirstName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=fatherGuardian2LastName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            
+            $jx(document).ready(function(){
+                $jx(document).on('change', "[id$='school']", function() {
+                    if (this.value == 'None of these') {
+                        $jx("[id$='showschool1']").show();
+                    } else {
+                        $jx("[id$='showschool1']").hide();
+                    }
+                })
+                
+                
+            //$jX('[id$="socialSecurityNumber"]').securenumbermask({mask:'*',maxlength:11});
+                
+                
+            
+            // For email masking
+            $jx('[id$="parentEmail"]').blur(function() {
+                var email = $jx(this).val();
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                if (email.length != 0) {
+                    if (re.test(email)) {
+                        $jx('.emailmsg').hide();
+                    } else {
+                        $jx('.emailmsg').hide();
+                        $jx('.error').show();
+                        $jx('[id$="parentEmail"]').addClass("error");
+                    }
+                } else if (email.length == 0) {
+                    $jx('.emailmsg').hide();
+                    $jx('[id$="parentEmail"]').removeClass("error");
+                }
+            });
+            
+            //Disable browser back functionality
+            function disableBack() {
+                window.history.forward()
+            }
+            window.onload = disableBack();
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    disableBack();
+            }
+            
+            
+             
+            
+            });
+            
+            
+            // For formatting social security number
+            $jx('input.ssn').on('keypress', function(event) {
+                // trap keypress
+                var character = String.fromCharCode(event.which);
+                if (!isInteger(character)) {
+                    return false;
+                }
+            });
+        
+            // checks that an input string is an integer, with an optional +/- sign character
+            function isInteger(s) {
+                if (s === '-') return true;
+                var isInteger_re = /^\s*(\+|-)?\d+\s*$/;
+                return String(s).search(isInteger_re) != -1
+            }
+            
+            // format SSN 
+                $jx('input.ssn').on('keyup', function() {
+                    var val = this.value.replace(/\D/g, '');
+                    var newVal = '';
+            
+                    if (val.length > 4) {
+                        this.value = val;
+                    }
+                    if ((val.length > 3) && (val.length < 6)) {
+                        newVal += val.substr(0, 3) + '-';
+                        val = val.substr(3);
+                    }
+                    if (val.length > 5) {
+                        newVal += val.substr(0, 3) + '-';
+                        newVal += val.substr(3, 2) + '-';
+                        val = val.substr(5);
+                    }
+                    newVal += val;
+                    this.value = newVal;
+                    console.log(val.length);
+                });
+            
+            // Prevent the backspace key from navigating back.
+            $jx(document).unbind('keydown').bind('keydown', function(event) {
+            if (event.keyCode === 8) {
+                var doPrevent = true;
+                var types = ["text", "password", "file", "search", "email", "number", "date", "color", "datetime", "datetime-local", "month", "range", "search", "tel", "time", "url", "week"];
+                var d = $jx(event.srcElement || event.target);
+                var disabled = d.prop("readonly") || d.prop("disabled");
+                if (!disabled) {
+                    if (d[0].isContentEditable) {
+                        doPrevent = false;
+                    } else if (d.is("input")) {
+                        var type = d.attr("type");
+                        if (type) {
+                            type = type.toLowerCase();
+                        }
+                        if (types.indexOf(type) > -1) {
+                            doPrevent = false;
+                        }
+                    } else if (d.is("textarea")) {
+                        doPrevent = false;
+                    }
+                }
+                if (doPrevent) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            });
+            
+            
+            // function for checking invalid email field while form submitting   
+            $jx('[id$=eOCIntakeForm]').submit(function() {
+            
+            var email = $jx("[id$='parentEmail']").val();
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+            if (re.test(email) || email.length == 0) {
+                console.log(1);
+            }
+            else if (!re.test(email) && email.length != 0){
+                $jx('[id$="parentEmail"]').addClass("error");
+                console.log(2);
+                event.preventDefault();
+            }
+            
+            });
+        </script>
+        
+        
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>  
+        <apex:includeScript value="{!$Resource.bootstrap_session_timeout}"/>
+        <apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+        
+        
+        <apex:stylesheet value="https://www.jqueryscript.net/css/jquerysctipttop.css"/>
+        <apex:includeScript value="{!$Resource.Secure_Mask}"/>
+               
+        
+        <script>
+            var $jy = jQuery.noConflict();
+            console.log('Version 3: '+$jy.fn.jquery);
+            $jy(document).ready(function(){
+               $jy('[id$="socialSecurityNumber"]').securenumbermask({mask:'*',maxlength:11});
+           }); 
+            
+        </script>  
+        
+      
+    </body>
+</apex:page>

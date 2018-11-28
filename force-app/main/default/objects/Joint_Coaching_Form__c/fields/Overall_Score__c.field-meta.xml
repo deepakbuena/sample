@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>Post_Visit_Follow_Up_Overall_Score__c  +  Pre_Call_Planning_Overall_Score__c  +  School_Call_Management_Overall_Score__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This will auto-calculate from the other scores.</inlineHelpText>
+    <label>Overall Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

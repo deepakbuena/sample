@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Secondary_Enrollment_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Post Secondary Enrollment Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enrolled or Deferred PSE (TS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Earned sec diploma &amp; deferred PSE (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Earned sec diploma &amp; unknown PSE (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Earned sec dipl. &amp; enrolled PSE (UB/EOC)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Did NOT enroll in PSE (EOC)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Had sec diploma &amp; enrolled PSE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (all other current/prior) (UB)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

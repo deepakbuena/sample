@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mutually Agreed to Objectives</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Mutually Agreed to Objectives</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- M2O --></label>
+        <name>M2O</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the value of &quot;Number of Contracts Received&quot;. --></errorMessage>
+        <name>Lock_No_of_Contracts_Rcvd</name>
+    </validationRules>
+</CustomObjectTranslation>

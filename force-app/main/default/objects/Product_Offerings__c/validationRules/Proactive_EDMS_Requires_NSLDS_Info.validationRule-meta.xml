@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proactive_EDMS_Requires_NSLDS_Info</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL(EDMS__c,&#39;Proactive&#39;),
+
+OR(ISPICKVAL(NSLDS_Files__c, &quot;&quot;)))</errorConditionFormula>
+    <errorDisplayField>NSLDS_Files__c</errorDisplayField>
+    <errorMessage>You must provide a response for NSLDS Files if EDMS = Proactive.</errorMessage>
+</ValidationRule>

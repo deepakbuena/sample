@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status_del__c</fullName>
+    <description>What is the current sub status of this topic?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Sub-Status is dependent upon the value of the Status field and provides more information about the current status of this Topic.</inlineHelpText>
+    <label>Sub-Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Initial Version</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Revised/Updated</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Limited Interest</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Few Requests</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Outdated</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Replaced</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Create On Request</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

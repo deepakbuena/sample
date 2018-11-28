@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProfesionalDevelopment_Training__c</fullName>
+    <description>People attending conference for Training/Professional Development</description>
+    <externalId>false</externalId>
+    <label>Professional Development - Training</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andrew Marley</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bill Fortier</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bob Cole</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Caroline Menendez</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>David Snow</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Farida Bahador</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Gina Lucenta-Cole</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jacquie Carroll</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jason Sweeney</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jill Marr</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>John Kelly</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Julie Esau</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Robert Tosh</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sue Nathan</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

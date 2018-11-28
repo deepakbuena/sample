@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reception</fullName>
+    <active>true</active>
+    <description>Dinner/Cocktail or other similar event at a conference or regional party that RSVP is needed</description>
+    <label>Reception</label>
+    <picklistValues>
+        <picklist>ASA_Customer__c</picklist>
+        <values>
+            <fullName>ASA Corportate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board of Directors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Borrower Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%26S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Svcs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ad_Size__c</picklist>
+        <values>
+            <fullName>1%2F2  Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4  Back%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Color</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Attendee_Population_Type__c</picklist>
+        <values>
+            <fullName>High School Students</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public School Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BDAttending__c</picklist>
+        <values>
+            <fullName>Caroline Menendez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casey Wallen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christian James</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Snow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jay Sweeney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julie Esau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mae St%2E Julien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Friedman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Arslanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanya Tanaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracy Drechsler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vince Scalise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>William Fortier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Booth_Type__c</picklist>
+        <values>
+            <fullName>10 X 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA Attending Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retractable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Table Top</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tableclothe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CPS_Center_Affiliation_Intake_Location__c</picklist>
+        <values>
+            <fullName>EOC Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hosting_Partner_EOC__c</picklist>
+        <values>
+            <fullName>Avon HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blue Hills Reg%2E Tech HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Braintree Alt%2E HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bridgewater%2F Raynham Reg%2E HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brockton Community Resource Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brockton Salvation Army</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardinal Spellman HS- Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Works - Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%2E Bridgewater HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foxboro Regional Charter school</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Gospel Tabernacle - Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plymouth North HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plymouth Public Library Literacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plymouth Salvation Army</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plymouth South HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quincy Salvation Army</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Randolph HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Shore Charter school</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Shore Voc%2E Tech%2E HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeastern Reg%2E Vo%2E Tech HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taunton HS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen Challenge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Resources of America - Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Resources of America - Quincy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whitman-Hanson Reg%2E HS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Presenting__c</picklist>
+        <values>
+            <fullName>Betsy Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bob Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caroline Menendez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casey Wallen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Elam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Snow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fidel Calero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gina Lucente-Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacqueline Carroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jay Sweeney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jill Marr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joanne Dashiell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jonathan Sparling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julie Esau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lorinda Diehl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mae St%2E Julien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Friedman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paul Combe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robert Tosh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Arslanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Susan Nathan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanya Tanaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracy Drechsler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vince Scalise</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_BD__c</picklist>
+        <values>
+            <fullName>Alan Ishida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caroline Menendez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casey Wallen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Snow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jay Sweeney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julie Esau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mae St%2E Julien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Friedman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reis Hagerman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Arslanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanya Tanaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracy Drechsler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vince Scalise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>William Fortier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ProfesionalDevelopment_Training__c</picklist>
+        <values>
+            <fullName>Andrew Marley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill Fortier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bob Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caroline Menendez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>David Snow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farida Bahador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gina Lucenta-Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacquie Carroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jason Sweeney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jill Marr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Kelly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julie Esau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robert Tosh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sue Nathan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Participating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Poned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Table_Sign__c</picklist>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topics__c</picklist>
+        <values>
+            <fullName>ASA Overview %28Lenders%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assessing %26 Addressing Your IT Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bringing XML into Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communicating with Millennial Students</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developing a Technology Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emotional Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERPA %26 GLB Featuring Internet Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Go with the Flows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How Automated Are You%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How Your Personality Impacts Your Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase FAO Visibility %26 Impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>It%27s an E-Signature Kind of World</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Financially Savvy Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Top 10 Financial Aid Pitfalls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We%E2%80%99ve Got to Stop Meeting Like This%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Usability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Writing an Effective RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>You%E2%80%99ve Got Mail%21</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trainer__c</picklist>
+        <values>
+            <fullName>Andrew Marley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Betsy Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gina Lucente-Cole</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Training_Location__c</picklist>
+        <values>
+            <fullName>Baltimore%2C MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boston MA %28ASA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crystal City%2C VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hamden%2C CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hampton%2C VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hartford%2C CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Vegas%2C NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phoenix%2C AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tucson%2C AZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worcester%2C MA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>ASA Symposium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Recognition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS Workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Outreach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar %2F Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

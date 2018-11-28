@@ -1,0 +1,18 @@
+<aura:component  controller="CPSMissingDataAlertCtrl"  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="msgList" type="String[]" />
+    <aura:attribute name="atTargtSchool" type="String[]" />
+    <aura:attribute name="recordId" type="string"/>
+    <aura:handler event="force:refreshView" action="{!c.init}" />
+    <div>
+        <aura:iteration items="{!v.atTargtSchool}" var="item" indexVar="i">
+            <ui:outputText value="{!item}" class="{!(i==0?'boldred':'red')}"/><br/>
+        </aura:iteration>
+    </div>
+
+    <div>
+        <aura:iteration items="{!v.msgList}" var="item" indexVar="i">
+            <ui:outputText value="{!item}" class="{!(i==0 ?'boldred':'red')}"/><br/>
+        </aura:iteration>
+    </div>
+</aura:component>

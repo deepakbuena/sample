@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Student Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Currently Attending</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Middle School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>High School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Graduate Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ESL Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>GED/HiSET Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Vocation/Training Student</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

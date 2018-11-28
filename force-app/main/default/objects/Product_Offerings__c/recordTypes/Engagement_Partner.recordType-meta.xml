@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Partner</fullName>
+    <active>true</active>
+    <label>Engagement Partner</label>
+    <picklistValues>
+        <picklist>Co_Branding__c</picklist>
+        <values>
+            <fullName>Logo Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logo and Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Type__c</picklist>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EDMS__c</picklist>
+        <values>
+            <fullName>Proactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Responsive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Financial_Literacy__c</picklist>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job%2FInternship Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALT Courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scholarship Search</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NSLDS_Files__c</picklist>
+        <values>
+            <fullName>Access Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Provides</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promo_Tile__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promotional_Items__c</picklist>
+        <values>
+            <fullName>Access to PDFs %2F eDocs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SALT Store</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sends_Demog_File__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - w%2F SS%23</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Training__c</picklist>
+        <values>
+            <fullName>Faculty%2FStaff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vanity_URL__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

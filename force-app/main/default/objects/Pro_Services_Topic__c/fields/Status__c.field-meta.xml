@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>What is the current status of this topic?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates the current status of this Topic. In development = Future offering but not yet developed; Active = Available Topic; Archived = Available only upon request (may be outdated or no longer relevant); Removed = Not available.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Removed</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

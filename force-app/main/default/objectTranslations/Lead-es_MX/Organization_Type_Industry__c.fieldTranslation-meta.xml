@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Organization Type/Industry --></label>
+    <name>Organization_Type_Industry__c</name>
+    <picklistValues>
+        <masterLabel>Association / Union</masterLabel>
+        <translation><!-- Association / Union --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>For-Profit</masterLabel>
+        <translation><!-- For-Profit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National</masterLabel>
+        <translation><!-- National --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Profit</masterLabel>
+        <translation><!-- Non-Profit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private</masterLabel>
+        <translation><!-- Private --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public</masterLabel>
+        <translation><!-- Public --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional</masterLabel>
+        <translation><!-- Regional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School</masterLabel>
+        <translation><!-- School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State / Government</masterLabel>
+        <translation><!-- State / Government --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Names_Required_for_Market_Field</fullName>
+    <active>false</active>
+    <description>The user must report the school name(s) when the Market field value = School-Specific.</description>
+    <errorConditionFormula>AND (ISPICKVAL (Market__c, &quot;School-Specific&quot;),
+   ISBLANK (School_Name_s__c))</errorConditionFormula>
+    <errorMessage>When the Market = School-Specific, at least one school name is required.</errorMessage>
+</ValidationRule>

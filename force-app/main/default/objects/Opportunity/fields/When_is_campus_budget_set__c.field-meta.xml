@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>When_is_campus_budget_set__c</fullName>
+    <description>If the loss reason = budget cycle/lack of funds is selected this field needs to be completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the loss reason = budget cycle/lack of funds is selected this field needs to be completed.</inlineHelpText>
+    <label>When is campus budget set?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Primary_Loss_Reason__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>May</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>June</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>July</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sept</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Jan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Feb</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Mar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Apr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>May</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>June</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>July</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Aug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Sept</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Oct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Nov</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Budget Cycle/Lack of Funds</controllingFieldValue>
+            <valueName>Dec</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

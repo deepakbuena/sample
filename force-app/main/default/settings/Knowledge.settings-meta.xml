@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KnowledgeSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <answers>
+        <enableArticleCreation>false</enableArticleCreation>
+    </answers>
+    <cases>
+        <articlePDFCreationProfile>community-(employer a):employee</articlePDFCreationProfile>
+        <articlePublicSharingCommunities>
+            <community>Employer Community</community>
+        </articlePublicSharingCommunities>
+        <enableArticleCreation>false</enableArticleCreation>
+        <enableArticlePublicSharingSites>true</enableArticlePublicSharingSites>
+        <useProfileForPDFCreation>true</useProfileForPDFCreation>
+    </cases>
+    <defaultLanguage>en_US</defaultLanguage>
+    <enableChatterQuestionKBDeflection>true</enableChatterQuestionKBDeflection>
+    <enableCreateEditOnArticlesTab>true</enableCreateEditOnArticlesTab>
+    <enableExternalMediaContent>true</enableExternalMediaContent>
+    <enableKnowledge>true</enableKnowledge>
+    <showArticleSummariesCustomerPortal>true</showArticleSummariesCustomerPortal>
+    <showArticleSummariesInternalApp>true</showArticleSummariesInternalApp>
+    <showArticleSummariesPartnerPortal>true</showArticleSummariesPartnerPortal>
+    <showValidationStatusField>false</showValidationStatusField>
+    <suggestedArticles>
+        <caseFields>
+            <field>
+                <name>Subject</name>
+            </field>
+            <field>
+                <name>Reason</name>
+            </field>
+        </caseFields>
+        <useSuggestedArticlesForCase>true</useSuggestedArticlesForCase>
+    </suggestedArticles>
+</KnowledgeSettings>

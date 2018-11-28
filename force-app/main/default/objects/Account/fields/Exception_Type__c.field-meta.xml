@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Exception Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Contract_Exception__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Exception</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Variable Pricing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reduced Annual Price</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Avoid RFP Processing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School Type Exception</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Billing Exception</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Variable Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Reduced Annual Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Avoid RFP Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>School Type Exception</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

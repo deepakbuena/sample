@@ -1,0 +1,961 @@
+<apex:page showHeader="false" applyHtmlTag="false" applyBodyTag="false" controller="EOCFormController" action="{!redirectToHome}" docType="html-5.0" cache="false">
+   <apex:stylesheet value="{!URLFOR($Resource.cps_components,'/cps_components/css/jquery-ui.css')}"/>
+   <c:CPS_CSS_Component ></c:CPS_CSS_Component>
+   <apex:includeScript value="{!URLFOR($Resource.cps_components, '/cps_components/js/jquery-ui.js')}"/>
+   <style>
+      .dateerror {
+      display:none;
+      }
+      .requirederror {
+      display:none;
+      }
+      .ziprequirederror {
+        display:none;
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      .ziperror {
+          display:none;
+      }
+      .zip_error {
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      input.zipcodeerrorborder {
+          border: 2px solid #900 !important;
+      }
+      .addreqerror {
+        display: block;
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      
+      
+   </style>
+
+   <script>
+        var isClicked=false;
+        function checkDoubleSubmit(obj)
+        {
+            if (isClicked)
+            { 
+                return false; 
+            }
+            else
+            {
+                console.log('>****->=>');
+                
+                console.log('SON'+($j('[id$=sel1]').val()!== "") && ($j('[id$=sel1]').length>=1));
+                console.log(($j('[id$=firstname]').val()!=="") && $j('[id$=firstname]').length<=40);
+                console.log(($j('[id$=lastname]').val()!=="") && $j('[id$=lastname]').length<=80);
+                console.log($j('[id$=txtDate]').length>0);
+                console.log($j('[id$=additionalLanguage]').length<=50);
+                console.log($j('[id$=purposeofVisitOther]').length<=50);
+                console.log($j('[id$=purposeofVisitOther]').length<=1);
+                console.log($j('[id$=street]').length<=255);
+                console.log($j('[id$=city]').length<=40) ;
+                console.log($j('[id$=state]').length<=80) ;
+                console.log($j('[id$=preferredPhoneType1]').val()!== "") ;
+                console.log($j('[id$=preferredLanguage]').val()!== "");
+                console.log($j('[id$=zipcode]').val()!== "");
+                
+                if((($j('[id$=sel1]').val()!== "") && ($j('[id$=sel1]').val().length>=1)) && (($j('[id$=firstname]').val()!=="") && $j('[id$=firstname]').length<=40) && (($j('[id$=lastname]').val()!=="") && 
+                $j('[id$=lastname]').length<=80) && ($j('[id$=txtDate]').length>0) && ($j('[id$=additionalLanguage]').length<=50) && ($j('[id$=purposeofVisitOther]').length<=50) 
+                && ($j('[id$=purposeofVisitOther]').length<=1) && ($j('[id$=street]').length<=255) && ($j('[id$=city]').length<=40) && ($j('[id$=state]').length<=80) && ($j('[id$=preferredPhoneType1]').val()!== "") 
+                && ($j('[id$=preferredLanguage]').val()!== "") &&  $j('[id$=zipcode]').val()!=="")
+                {
+                    var isValid=true;
+                    if($j('[id$=eocHomePhone]').val()!== "" && (typeof $j('[id$=eocHomePhone]').val()!== 'undefined')) 
+                    {
+                        phone_number = $j('[id$=eocHomePhone]').val().replace(/\s+/g, "");
+                        var validValue=phone_number.length > 9 && phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+
+                        if(validValue===false)
+                            isValid=false;
+                    }
+                    if($j('[id$=eocPhone]').val()!== "" && (typeof $j('[id$=eocPhone]').val()!== 'undefined')) 
+                    {
+                        phone_number = $j('[id$=eocPhone]').val().replace(/\s+/g, "");
+                        var validValue=phone_number.length > 9 && phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+
+                        if(validValue===false)
+                            isValid=false;
+                    }
+                    var zipValue = $j('[id$="zipcode"]').val();
+                     if (zipValue == 0 || (!checkZip(zipValue))) {
+                         //event.preventDefault();
+                         $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                         $j('[id$=zipcode]').removeClass("valid");
+                         $j('[id$=zipcode]').removeClass("error");
+                         console.log('here');
+                         $j('.ziprequirederror').show();
+                         isValid=false;
+                         
+                    } else {
+                        $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                        $j('.ziprequirederror').hide();
+                    }
+                    
+                    console.log("isValid "+isValid);
+                    if(isValid)
+                    {
+                        isClicked = true; 
+                        callRegisterLead();
+                        
+                        $j(obj).attr("disabled", "disabled");
+                    }                    
+                }
+            } 
+        }
+    </script>
+    <body>
+        <div class="slds-scope">
+         <!-- Desktop header -->
+         <div class="desktop_header_bg">
+            <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+         </div>
+         <!-- Desktop header -->
+         <div class="slds_wrap slds-m-top_xx-large">
+            <!-- mobile header -->
+            <div class="mobile_header_bg">
+               <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+            </div>
+            <!-- mobile header -->
+            <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+               <div class="slds-notify_container slds-is-relative">
+                  <div class="slds-notify slds-notify_toast slds-theme_warning toast_width" role="alert">
+                     <span class="slds-assistive-text">warning</span>
+                     <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                        </svg>
+                     </span>
+                     <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small">
+                           <apex:pageMessages ></apex:pageMessages>
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+            </apex:outputPanel>
+            <div class="slds-page-header slds-mobile-width">
+               <div class="slds-media mobile_heading_margin">
+                  <div class="slds-media__figure"></div>
+                  <div class="slds-media__body">
+                     <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">Welcome!</h1>
+                     <p class="slds-text-body_small slds-line-height_reset">Been here before? Update anything that’s changed since your last visit, and complete
+                        the “personal information” section so we can find your records. If this is your first time
+                        with us, we’ll ask a few questions after these to create your profile.
+                     </p>
+                     <br/>
+                     <p>*Required</p>
+                     <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="EOC Sign-on Form">EOC Sign-on Form </h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="slds-grid slds-wrap">
+            <apex:form id="eOCSignOnForm" forceSSL="true" styleClass="slds-p-around_large eOCSignOnForm">
+                 <apex:actionFunction name="callRegisterLead" action="{!registerLead}"/>
+               <div class="slds-form slds-form_horizontal">
+                  <fieldset class="slds-form-element slds-box rounded_corner">
+                     <div class="slds-form-element__group">
+                        <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                           <h1>
+                              Visit Information
+                           </h1>
+                        </div>
+                        <div class="slds-form-element__row top_margin">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <apex:outputLabel value="Have an Appointment?" for="Have an Appointment" styleClass="slds-form-element__label mobile_label" style="width:48%"/>
+                              <div class="slds-form-element__control">
+                                 <apex:inputcheckbox id="haveAppointment" styleClass="slds-checkbox" value="{!haveAppoinment}" label="Have Appoinment" style="zoom: 1.9;"/>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row" style="margin-top: 0;">
+                              <label class="slds-form-element__label mobile_label" for="Preferred Language">Preferred Language</label>
+                              <div class="slds-form-element__control">
+                                 <apex:selectList value="{!preferredLanguage}" id="preferredLanguage1" multiselect="false" size="1" styleClass="custom_select">
+                                    <apex:selectOptions value="{!preferredLanguageOptions}"></apex:selectOptions>
+                                 </apex:selectList>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <apex:outputLabel value="Meet with Advisor" for="Meet with Advisor" styleClass="slds-form-element__label mobile_label" style="width:48%"/>
+                              <div class="slds-form-element__control">
+                                 <apex:inputcheckbox id="meetAdvisor" styleClass="advisor slds-checkbox" value="{!meetAdvisor}" label="Meet Advisor" style="zoom: 1.9;"/>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left" style="margin-top: 0;"></div>
+                        </div>
+                        <div class="slds-form-element__row" style="margin-top: 0; display:none" id="showadvisor">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <apex:outputPanel >
+                                 <label class="slds-form-element__label mobile_label" style="width: 44%;" for="Advisor Requested">Advisor Requested</label>
+                                 <div class="slds-form-element__control">
+                                    <apex:selectList id="CPSAdvisorRequested" value="{!cPSAdvisorRequested}" multiselect="false" size="1" styleClass="custom_select">
+                                       <apex:selectOptions value="{!lstCPSAdvisorOption}"/>
+                                    </apex:selectList>
+                                 </div>
+                              </apex:outputPanel>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left"></div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-1 slds-size_1-of-1 slds-float_left mobile_row">
+                              <label class="slds-form-element__label mobile_label" for="Purpose of Visit" style="width: 24%;" >Purpose of Visit<abbr class="slds-required">*
+                                <button class="slds-button slds-button_icon slds-button slds-button_icon tooltip" aria-describedby="help" title="Help">
+                                    <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#info')}"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Help</span>
+                                    <span class="tooltiptext" style="font-size: .8125rem;font-weight: normal;">Choose all that apply.</span>
+                                </button>
+                                </abbr>
+                              </label>
+                              <div class="slds-form-element__control">
+                                 <apex:selectList id="sel1" value="{!purposeofVisitSelectedOption}" multiselect="TRUE" size="6" styleClass="custom_select mobile_custom_select custom_height_pv">
+                                    <apex:selectOptions value="{!purposeofVisitOptions}"/>
+                                 </apex:selectList>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row" style="margin-top: 0;">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <label class="slds-form-element__label mobile_label" for="Purpose of Visit-Other" style="width:48%">Purpose of Visit (Other)</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="purposeofVisitOther" value="{!purposeofVisitOther}" label="Pupose of Visit-Other" maxlength="255" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <apex:outputPanel rendered="{!satelliteLoc != Null}">
+                            <div class="slds-form-element__row" style="margin-top: 0;">
+                               <div class="slds-form-element slds-small-size_1-of-1 slds-size_1-of-1 slds-float_left mobile_row">
+                                  <label class="slds-form-element__label mobile_label" for="Purpose of Visit-Other" style="width:24%">Center or Satellite Location</label>
+                                  <div class="slds-form-element__control" style="vertical-align: -webkit-baseline-middle;">
+                                    <!-- <apex:inputText id="satelliteIntakeLoc" value="{!satelliteLoc}" label="Satellite Intake Location" styleClass="slds-input"/>  -->
+                                     <apex:outputText value="{!satelliteLoc}" style="font-weight: 500;width:70%"/>
+                                  </div>
+                               </div>
+                               <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                            </div>
+                        </apex:outputPanel>
+                        
+                     </div>
+                  </fieldset>
+                  <fieldset class="slds-form-element slds-box rounded_corner">
+                     <div class="slds-form-element__group">
+                        <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                           <h1>
+                              Personal Information
+                           </h1>
+                        </div>
+                        <div class="slds-form-element__row slds-p-bottom_none">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">First Name<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="firstname" value="{!firstName}" label="First Name" maxlength="40" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row slds-p-bottom_none">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Middle Initial</label>
+                              <div class="slds-form-element__control tooltip">
+                                 <apex:inputText id="middleInitials" value="{!MddleInitials}" maxlength="1" label="Mddle Initial" styleClass="slds-input txtOnly"/>
+                                 <span class="tooltiptext">Allow only single alphabet.</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row slds-p-bottom_none">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Last Name<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="lastname" value="{!LastName}" label="Last Name" maxlength="80" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <div class="slds-form-element__row slds-p-bottom_none">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="Suffix">Suffix</label>
+                              <div class="slds-form-element__control">
+                                 <apex:selectList value="{!suffix}" multiselect="false" size="1" styleClass="custom_select">
+                                    <apex:selectOptions value="{!suffixOptions}"></apex:selectOptions>
+                                 </apex:selectList>
+                              </div>
+                           </div>
+                        </div>  
+                        
+                        <div class="slds-form-element__row slds-p-bottom_none">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Date of Birth<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:input type="date" id="txtDate" value="{!BirthDate}" styleClass="slds-input"/>
+                                 <span class="dateerror">Invalid Date</span>
+                                 <span id="requirederr" class="requirederror">Required field</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Email</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="eocEmail" value="{!Email}" label="eocEmail" styleClass="slds-input" maxlength="80"/>
+                                 <span class="emailmsg error">Please provide a valid email address</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Mobile Phone</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="eocPhone" value="{!mobilePhone}" label="eocPhone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                        </div>
+                     </div>
+                  </fieldset>
+                  <fieldset class="slds-form-element slds-box rounded_corner">
+                     <div class="slds-form-element__group">
+                        <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                           <h1>
+                              Additional Phone Information
+                           </h1>
+                        </div>
+                        <div class="slds-form-element__row top_margin">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <label class="slds-form-element__label" for="input-id-01">Is Mobile Phone OK to Text?</label>
+                              <div class="slds-form-element__control">
+                                 <apex:selectList value="{!isMobileOktoTest}" multiselect="false" size="1" styleClass="custom_select">
+                                    <apex:selectOptions value="{!isMobileOktoTestOptions}"></apex:selectOptions>
+                                 </apex:selectList>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                              <apex:outputLabel value="Is Mobile Phone Parent/Guardian’s?" for="Is Mobile Parent/Guardian's" styleClass="slds-form-element__label"/>
+                              <div class="slds-form-element__control">
+                                 <apex:inputCheckbox styleClass="slds-checkbox custom_checkbox" id="IsMobileParentGuardians" value="{!IsMobileParentGuardians}" label="Is Mobile Parent/Guardian's" style="zoom: 1.9;"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                              <label class="slds-form-element__label" for="input-id-01">Home Phone</label>
+                              <div class="slds-form-element__control" style="width:45%">
+                                 <apex:inputText id="eocHomePhone" value="{!homePhone}" label="eocHomePhone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <apex:outputLabel value="Is Home Phone Parent/Guardian’s?" for="Is Home Parent/Guardian's" styleClass="slds-form-element__label"/>
+                              <div class="slds-form-element__control">
+                                 <apex:inputCheckbox id="IsHomeParentGuardians" value="{!IsHomeParentGuardians}" label="Is Home Parent/Guardian's" styleClass="slds-checkbox custom_checkbox" style="zoom: 1.9;"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                              <label class="slds-form-element__label" for="input-id-01">Preferred Phone</label>
+                              <div class="slds-form-element__control">
+                                 <apex:selectList value="{!preferredPhoneType}" id="preferredPhoneType" multiselect="false" size="1" styleClass="custom_select">
+                                    <apex:selectOptions value="{!preferredPhoneTypeOptions}"></apex:selectOptions>
+                                 </apex:selectList>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                        </div>
+                     </div>
+                  </fieldset>
+                  <fieldset class="slds-form-element slds-box rounded_corner">
+                     <div class="slds-form-element__group">
+                        <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                           <h1>
+                              Address
+                           </h1>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Street address (apt., floor, etc.)</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="street" value="{!Street}" label="Street" maxlength="255" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">City</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="city" value="{!city}" maxlength="40" label="City" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">State</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="state" value="{!state}" maxlength="80" label="State" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Zip/Postal Code<abbr class="slds-required">*</abbr></label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="zipcode" value="{!ZipCode}" label="ZipCode" styleClass="slds-input"/>
+                                 <span class="ziperror zip_error" id="ziperr">Allowed format: nnnnn or nnnnn-nnnn</span>
+                                 <span id="ziprequirederr" class="ziprequirederror">Required field</span>
+                                 
+                                 
+                                 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                              <label class="slds-form-element__label" for="input-id-01">Country</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputText id="country" value="{!country}" label="Country" maxlength="80" styleClass="slds-input"/>
+                              </div>
+                           </div>
+                           <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                        </div>
+                     </div>
+                  </fieldset>
+                  <div class="slds-form-element__row" style="margin-left: 0;">
+                     <!--  <div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none captcha_left_pad">
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                        </div>  -->
+                     <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none">
+                        <apex:commandButton value="Next"  id="submit" styleClass="custom_btn" style="width:30% !important" onclick="return checkDoubleSubmit(this);"/>
+                        <!-- action="{!registerLead}"-->
+                     </div>
+                  </div>
+               </div>
+            </apex:form>
+         </div>
+      </div>
+      <script type="text/javascript">
+         var $j = jQuery.noConflict();
+         $j('[id$=eOCSignOnForm]').validate();
+         errorclass: "myerrorclass";
+         
+         $j('[id$=lastname]').rules("add", {
+             required: true,
+             maxlength: 80,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>Last Name can not be more than 80 characters"),
+             }
+         });
+         
+         $j('[id$=firstname]').rules("add", {
+             required: true,
+             maxlength: 40,
+             messages: {
+                 required: "<br/>Required field",
+                 maxlength: jQuery.validator.format("<br/>First Name can not be more than 40 characters"),
+             }
+         });
+         
+         
+         $j('[id$=sel1]').rules("add",{
+            required: true,             
+            messages:{
+              required:"<br/>Purpose of Visit is a required field",
+           }                           
+         });
+         
+         
+         $j('[id$=additionalLanguage]').rules("add", {
+             required: false,
+             maxlength: 50,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 50 characters"),
+             }
+         });
+         $j('[id$=purposeofVisitOther]').rules("add", {
+             required: false,
+             maxlength: 255,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 255 characters"),
+             }
+         });
+         $j('[id$=middleInitials]').rules("add", {
+             required: false,
+             maxlength: 1,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 1 character"),
+             }
+         });
+         $j('[id$=street]').rules("add", {
+             required: false,
+             maxlength: 255,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 255 characters"),
+             }
+         });
+         $j('[id$=city]').rules("add", {
+             required: false,
+             maxlength: 40,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 40 characters"),
+             }
+         });
+         $j('[id$=state]').rules("add", {
+             required: false,
+             maxlength: 80,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 80 characters"),
+             }
+         });
+         
+         $j('[id$=country]').rules("add", {
+             required: false,
+             maxlength: 80,
+             messages: {
+                 maxlength: jQuery.validator.format("<br/>Allow only 80 characters"),
+             }
+         });
+       /*  $j('[id$=zipcode]').rules("add", {
+             required: true,
+             zipcodeUS: true,
+             messages: {
+                 zipcodeUS: jQuery.validator.format("<br/>Allowed format: nnnnn or nnnnn-nnnn"),
+                 required: "<br/>Required field"
+             }
+         });  */
+         
+         $j('[id$=preferredPhoneType1]').rules("add", {
+             required: true,
+             messages: {
+                 required: "<br/>Required field",
+             }
+         });
+         
+         $j('[id$=preferredLanguage]').rules("add", {
+             required: true,
+             messages: {
+                 required: "<br/>Required field",
+             }
+         });
+         
+         $j('[id$=eocHomePhone]').rules("add", {
+             required: false,
+             phoneUS: true,
+             messages: {
+                 required: "<br/>Required field",
+                 /* phoneUS: jQuery.validator.format("<br/>Please enter a valid format (nnn) nnn-nnnn"), */
+             }
+         });
+         
+         $j('[id$=eocPhone]').rules("add", {
+             required: false,
+             phoneUS: true,
+             messages: {
+                 required: "<br/>Required field",
+                 /*phoneUS: jQuery.validator.format("<br/>Please enter a valid format (nnn) nnn-nnnn"), */
+             }
+         });
+         
+         // additional method to validate US phone no 
+         // any modification to phoneUS should be added to checkDoubleSubmit method
+         jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+             phone_number = phone_number.replace(/\s+/g, "");
+             return this.optional(element) || phone_number.length > 9 &&
+                 phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+         }, "Please enter a valid format (nnn) nnn-nnnn");
+         
+         
+         $j(document).ready(function() {
+             // for middle initial
+             $j(".txtOnly").keypress(function(e) {
+                 var key = e.keyCode;
+                 if (key >= 48 && key <= 57) {
+                     e.preventDefault();
+                 }
+             });
+             // For meet advisior field rendering
+             $j(document).on('change', "[id$='meetAdvisor']", function() {
+                 console.log($j("[id$='meetAdvisor']").is(':checked'));
+                 if ($j("[id$='meetAdvisor']").is(':checked')) {
+                     $j("[id$='showadvisor']").show();
+                 } else {
+                     $j("[id$='showadvisor']").hide();
+                 }
+             })
+         
+             // For email masking
+             $j('[id$="eocEmail"]').blur(function() {
+                 var email = $j(this).val();
+                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                 if (email.length != 0) {
+                     if (re.test(email)) {
+                         $j('.emailmsg').hide();
+                     } else {
+                         $j('.emailmsg').hide();
+                         $j('.error').show();
+                         $j('[id$="eocEmail"]').addClass("error");
+                     }
+                 } else if (email.length == 0) {
+                     $j('.emailmsg').hide();
+                     $j('[id$="eocEmail"]').removeClass("error");
+                 }
+             });
+             
+             // display error msg for invalid birthdate
+             $j(document).on('change', "[id$='txtDate']", function() {
+                 //var dtVal = $j('#txtDate').val();
+                 var dtVal = $j(this).val();
+                 console.log(dtVal);
+                 if (isDate(dtVal)) {
+                     $j('.dateerror').hide();
+                     $j('[id$=txtDate]').removeClass("inputerror");
+                     $j('[id$=txtDate]').css('display', 'inline-block');
+                     $j('.requirederror').hide();
+                 }
+                 if (!isDate(dtVal)) {
+                     $j('.dateerror').show();
+                     $j('[id$=txtDate]').removeClass("valid");
+                     $j('[id$=txtDate]').addClass("inputerror");
+                     $j('.requirederror').hide();
+                     event.preventDefault();
+                     
+                 }
+                 if (dtVal.length == 0) {
+                     $j('.dateerror').hide();
+                     $j('[id$=txtDate]').removeClass("inputerror");
+                     $j('[id$=txtDate]').css('display', 'inline-block');
+                     $j('.requirederror').hide();
+                     event.preventDefault();
+                 }
+                 
+             });
+             
+             // for selecting multiselect options without pressing ctrl key
+             $j('option').mousedown(function(e) {
+                e.preventDefault();
+                var originalScrollTop = $j(this).parent().scrollTop();
+                console.log(originalScrollTop);
+                $j(this).prop('selected', $j(this).prop('selected') ? false : true);
+                var self = this;
+                $j(this).parent().focus();
+                setTimeout(function() {
+                    $j(self).parent().scrollTop(originalScrollTop);
+                }, 0);
+                
+                return false;
+            });
+            
+            
+            // Zipcode format validation
+            
+            function checkZip(value) {
+                return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(value);
+            }
+        
+            $j('[id$="zipcode"]').blur(function(e) {
+                e.preventDefault;
+                var value = $j('[id$="zipcode"]').val();
+                if(checkZip(value)) {
+                console.log('value : '+value);
+                    $j('.zip_error').hide();
+                    $j('[id$=zipcode]').removeClass("zipcodeerrorborder");   
+                    $j('[id$=ziprequirederr]').removeClass("ziprequirederror");  
+                    $j('[id$=ziprequirederr]').removeClass("addreqerror");
+                    $j('.ziprequirederror').hide();
+                    $j('#ziprequirederr').hide();
+                    
+                }
+                console.log('length'+value.length)
+                
+                if(value.length == 0) {
+                console.log('length <<<<<'+value.length)
+                    $j('.zip_error').hide();  // correct
+                   
+                    $j('.ziprequirederror').hide();
+                   
+                    $j('[id$=ziperr]').removeClass("ziperror");
+                    $j('[id$=ziperr]').removeClass("ziperror");
+                    $j('[id$=zipcode]').removeClass("error");
+                    $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                    $j('#ziprequirederr').hide();
+                } 
+                
+                if(!checkZip(value) && value.length != 0) {
+                    $j('.zip_error').show();
+                    $j('[id$=zipcode]').addClass("error");
+                    $j('.ziprequirederror').hide();
+                    $j('[id$=ziprequirederr]').removeClass("addreqerror");
+                    
+                }
+               
+            });
+
+            
+            
+            
+            
+         });
+         
+         // Phone format 
+         var zChar = new Array(' ', '(', ')', '-', '.');
+         var maxphonelength = 13;
+         var phonevalue1;
+         var phonevalue2;
+         var cursorposition;
+         
+         function ParseForNumber1(object) {
+             phonevalue1 = ParseChar(object.value, zChar);
+         }
+         
+         function ParseForNumber2(object) {
+             phonevalue2 = ParseChar(object.value, zChar);
+         }
+         
+         function backspacerUP(object, e) {
+             if (e) {
+                 e = e
+             } else {
+                 e = window.event
+             }
+             if (e.which) {
+                 var keycode = e.which
+             } else {
+                 var keycode = e.keyCode
+             }
+         
+             ParseForNumber1(object)
+         
+             if (keycode >= 48) {
+                 ValidatePhone(object)
+             }
+         }
+         
+         function backspacerDOWN(object, e) {
+             if (e) {
+                 e = e
+             } else {
+                 e = window.event
+             }
+             if (e.which) {
+                 var keycode = e.which
+             } else {
+                 var keycode = e.keyCode
+             }
+             ParseForNumber2(object)
+         }
+         
+         function GetCursorPosition() {
+         
+             var t1 = phonevalue1;
+             var t2 = phonevalue2;
+             var bool = false
+             for (i = 0; i < t1.length; i++) {
+                 if (t1.substring(i, 1) != t2.substring(i, 1)) {
+                     if (!bool) {
+                         cursorposition = i
+                         bool = true
+                     }
+                 }
+             }
+         }
+         
+         function ValidatePhone(object) {
+         
+             var p = phonevalue1
+             p = p.replace(/[^\d]*/gi, "")
+             if (p.length < 3) {
+                 object.value = p
+             } else if (p.length == 3) {
+                 pp = p;
+                 d4 = p.indexOf('(')
+                 d5 = p.indexOf(')')
+                 if (d4 == -1) {
+                     pp = "(" + pp;
+                 }
+                 if (d5 == -1) {
+                     pp = pp + ")";
+                 }
+                 object.value = pp;
+             } else if (p.length > 3 && p.length < 7) {
+                 p = "(" + p;
+                 l30 = p.length;
+                 p30 = p.substring(0, 4);
+                 p30 = p30 + ")"
+         
+                 p31 = p.substring(4, l30);
+                 pp = p30 + p31;
+         
+                 object.value = pp;
+         
+             } else if (p.length >= 7) {
+                 p = "(" + p;
+                 l30 = p.length;
+                 p30 = p.substring(0, 4);
+                 p30 = p30 + ")"
+         
+                 p31 = p.substring(4, l30);
+                 pp = p30 + p31;
+         
+                 l40 = pp.length;
+                 p40 = pp.substring(0, 8);
+                 p40 = p40 + "-"
+         
+                 p41 = pp.substring(8, l40);
+                 ppp = p40 + p41;
+         
+                 object.value = ppp.substring(0, maxphonelength);
+             }
+         
+             GetCursorPosition()
+         
+             if (cursorposition >= 0) {
+                 if (cursorposition == 0) {
+                     cursorposition = 2
+                 } else if (cursorposition <= 2) {
+                     cursorposition = cursorposition + 1
+                 } else if (cursorposition <= 5) {
+                     cursorposition = cursorposition + 2
+                 } else if (cursorposition == 6) {
+                     cursorposition = cursorposition + 2
+                 } else if (cursorposition == 7) {
+                     cursorposition = cursorposition + 4
+                     e1 = object.value.indexOf(')')
+                     e2 = object.value.indexOf('-')
+                     if (e1 > -1 && e2 > -1) {
+                         if (e2 - e1 == 4) {
+                             cursorposition = cursorposition - 1
+                         }
+                     }
+                 } else if (cursorposition < 11) {
+                     cursorposition = cursorposition + 3
+                 } else if (cursorposition == 11) {
+                     cursorposition = cursorposition + 1
+                 } else if (cursorposition >= 12) {
+                     cursorposition = cursorposition
+                 }
+         
+                 var txtRange = object.createTextRange();
+                 txtRange.moveStart("character", cursorposition);
+                 txtRange.moveEnd("character", cursorposition - object.value.length);
+                 txtRange.select();
+             }
+         
+         }
+         
+         function ParseChar(sStr, sChar) {
+             if (sChar.length == null) {
+                 zChar = new Array(sChar);
+             } else zChar = sChar;
+         
+             for (i = 0; i < zChar.length; i++) {
+                 sNewStr = "";
+         
+                 var iStart = 0;
+                 var iEnd = sStr.indexOf(sChar[i]);
+         
+                 while (iEnd != -1) {
+                     sNewStr += sStr.substring(iStart, iEnd);
+                     iStart = iEnd + 1;
+                     iEnd = sStr.indexOf(sChar[i], iStart);
+                 }
+                 sNewStr += sStr.substring(sStr.lastIndexOf(sChar[i]) + 1, sStr.length);
+                 sStr = sNewStr;
+             }
+             return sNewStr;
+         }
+         
+         // Bithdate validation
+         function isDate(txtDate)
+         {
+             var currVal = txtDate;
+             if(currVal == '')
+                 return false;
+             
+             var rxDatePattern = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/; //Declare Regex
+             var dtArray = currVal.match(rxDatePattern); // is format OK?
+             
+             if (dtArray == null) 
+                 return false;
+             
+             //Checks for mm/dd/yyyy format.
+             dtMonth = dtArray[3];
+             dtDay= dtArray[5];
+             dtYear = dtArray[1];        
+             
+             if (dtMonth < 1 || dtMonth > 12) 
+                 return false;
+             else if (dtDay < 1 || dtDay> 31) 
+                 return false;
+             else if ((dtMonth==4 || dtMonth==6 || dtMonth==9 || dtMonth==11) && dtDay ==31) 
+                 return false;
+             else if (dtMonth == 2) 
+             {
+                 var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+                 if (dtDay> 29 || (dtDay ==29 && !isleap)) 
+                         return false;
+             }
+             return true;
+         }
+         
+         function checkZip(value) {
+                return (/(^\d{5}$)|(^\d{5}-\d{4}$)/).test(value);
+            }
+         
+         // function for validating email,zipcode and birthdate should not be blank while form submitting   
+         $j('[id$=eOCSignOnForm]').submit(function() {
+             
+             var email = $j('[id$="eocEmail"]').val();
+             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+             
+             if (re.test(email) || email.length == 0) {
+             }
+             else if (!re.test(email) && email.length != 0){
+                 $j('[id$="eocEmail"]').addClass("error");
+                 event.preventDefault();
+             }
+             
+             var dtVal = $j('[id$=txtDate]').val();
+             if (dtVal.length == 0)
+             {
+                 $j('.requirederror').show();
+                 $j('[id$=txtDate]').addClass("inputerror");
+                 event.preventDefault();
+             }
+             if (!isDate(dtVal))
+             {
+                 event.preventDefault();
+             }
+             
+             var zipValue = $j('[id$="zipcode"]').val();
+             if (zipValue.length == 0 || (!checkZip(zipValue))) {
+                 $j('[id$=zipcode]').addClass("zipcodeerrorborder");
+                 $j('[id$=ziprequirederr]').addClass("addreqerror");
+                 $j('.ziprequirederror').show();
+                 $j('#ziprequirederr').show();
+                 event.preventDefault();
+                 
+            } else if(!checkZip(zipValue) || zipValue.length != 0) {
+                $j('.ziprequirederror').hide();
+                $j('[id$=ziprequirederr]').removeClass("addreqerror");
+                //$j('#ziprequirederr').hide();
+                event.preventDefault();
+            
+            }
+            if (checkZip(zipValue)) {
+                $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                $j('.ziprequirederror').hide();
+            }
+         });           
+         
+      </script>
+   </body>
+</apex:page>

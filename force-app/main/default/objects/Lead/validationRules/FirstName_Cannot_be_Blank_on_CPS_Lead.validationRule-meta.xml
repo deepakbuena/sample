@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FirstName_Cannot_be_Blank_on_CPS_Lead</fullName>
+    <active>true</active>
+    <description>First Name on CPS Lead Cannot be Blank</description>
+    <errorConditionFormula>AND( 
+OR( RecordType.Name = &quot;CPS - EOC&quot;,
+RecordType.Name = &quot;CPS - TS&quot;,
+RecordType.Name = &quot;CPS - UB&quot;), 
+ISBLANK( FirstName )
+)</errorConditionFormula>
+    <errorMessage>First Name Cannot be Blank</errorMessage>
+</ValidationRule>

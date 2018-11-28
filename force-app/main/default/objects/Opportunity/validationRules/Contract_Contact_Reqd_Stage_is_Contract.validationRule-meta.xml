@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Contact_Reqd_Stage_is_Contract</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISPICKVAL(StageName, &quot;Contract&quot;),OR(ISBLANK(Contract_Contact__c)))</errorConditionFormula>
+    <errorDisplayField>Contract_Contact__c</errorDisplayField>
+    <errorMessage>You must provide a Contact person to receive the Contract. If you do not know the Contact yet, enter yourself in the field.</errorMessage>
+</ValidationRule>

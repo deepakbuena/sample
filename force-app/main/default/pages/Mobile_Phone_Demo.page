@@ -1,0 +1,304 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>SLDS LatestAccounts Visualforce Page in Salesforce Mobile</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!-- Import the Design System style sheet -->
+            <apex:slds />
+        </head>
+        <apex:remoteObjects >
+            <apex:remoteObjectModel name="Account" fields="Id,Name,LastModifiedDate"/>
+        </apex:remoteObjects>
+        <body>
+            <!-- REQUIRED SLDS WRAPPER -->
+            <div class="slds-scope">
+                <!-- PRIMARY CONTENT WRAPPER -->
+                <div class="myapp">
+                    <!-- ACCOUNT LIST TABLE -->
+                    <div class="slds-form slds-form_stacked" role="list">
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">
+                                    <abbr class="slds-required" title="required">* </abbr>Assigned To</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">
+                                            <span class="slds-avatar slds-avatar_x-small slds-avatar_circle slds-m-right_xx-small">
+                                            <img alt="Jack Rogers" src="/assets/images/avatar1.jpg" title="Jack Rogers" />
+                                            </span>
+                                            <a href="javascript:void(0);">Jack Rogers</a>
+                                        </div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Assigned To">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Assigned To</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Team Name</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">
+                                            <a href="javascript:void(0);">Salesforce Lightning Design System</a>
+                                        </div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Team Name">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Team Name</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Security Assessment Required?</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">False</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Security Assessment Required?">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Security Assessment Required?</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Status</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">In Progress</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Status">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Status</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Personalization Settings</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">Disable end user personalization</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Personalization Settings">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Personalization Settings</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem"></div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">SLA Serial Number</span>
+                                    <div class="slds-form-element__icon">
+                                        <button class="slds-button slds-button_icon">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">5367</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: SLA Serial Number">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: SLA Serial Number</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">SLA Expiration Date</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">1/1/2018</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: SLA Expiration Date">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: SLA Expiration Date</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Location</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">10.283, 54.293</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Location">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Location</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Selected Languages</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">Arabic, Chinese, English, German</div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Selected Languages">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Selected Languages</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">
+                                    <abbr class="slds-required" title="required">* </abbr>Billing Address</span>
+                                    <div class="slds-form-element__icon">
+                                        <button class="slds-button slds-button_icon">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">
+                                            <a href="javascript:void(0);">525 S. Lexington Ave
+                                            <br/>Burlington, NC 27215
+                                            <br/>USA
+                                            <br/>
+                                            </a>
+                                        </div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Billing Address">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Billing Address</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                    <span class="slds-form-element__label">Shipping Address</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static">
+                                            <a href="javascript:void(0);">312 Constitution Place
+                                            <br/>Austin, TX 78767
+                                            <br/>USA
+                                            <br/>
+                                            </a>
+                                        </div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Shipping Address">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Shipping Address</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-gutters_small">
+                            <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-form-element_stacked slds-hint-parent">
+                                    <span class="slds-form-element__label">Description</span>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-form-element__static slds-text-longform">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod.
+                                            <br/>
+                                        </div>
+                                        <button class="slds-button slds-button_icon" title="Edit: Description">
+                                            <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Edit: Description</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / ACCOUNT LIST TABLE -->
+                </div>
+                <!-- / PRIMARY CONTENT WRAPPER -->
+            </div>
+            <!-- / REQUIRED SLDS WRAPPER -->
+            <!-- JAVASCRIPT -->
+            <script>
+                (function() {
+                  var outputDiv = document.getElementById('account-list');
+                  var account = new SObjectModel.Account();
+                
+                  var updateOutputDiv = function() {
+                
+                    account.retrieve(
+                      { orderby: [{ LastModifiedDate: 'DESC' }], limit: 10 },
+                      function(error, records) {
+                        if (error) {
+                          alert(error.message);
+                      } else {
+                        // create data table
+                        var dataTable = document.createElement('table');
+                        dataTable.className = 'slds-table slds-table--bordered slds-text-heading_small';
+                
+                        // add header row
+                        var tableHeader = dataTable.createTHead();
+                        var tableHeaderRow = tableHeader.insertRow();
+                
+                        var tableHeaderRowCell1 = tableHeaderRow.insertCell(0);
+                        tableHeaderRowCell1.appendChild(document.createTextNode('Latest Accounts'));
+                        tableHeaderRowCell1.setAttribute('scope', 'col');
+                        tableHeaderRowCell1.setAttribute('class', 'slds-text-heading_medium');
+                
+                        // build table body
+                        var tableBody = dataTable.appendChild(document.createElement('tbody'))
+                
+                        var dataRow, dataRowCell1, recordName, data_id;
+                        records.forEach(function(record) {
+                          dataRow = tableBody.insertRow();
+                          dataRowCell1 = dataRow.insertCell(0);
+                          recordName = document.createTextNode(record.get('Name'));
+                          dataRowCell1.appendChild(recordName);
+                
+                        });
+                        if (outputDiv.firstChild) {
+                          // replace table if it already exists
+                          // see later in tutorial
+                          outputDiv.replaceChild(dataTable, outputDiv.firstChild);
+                        } else {
+                          outputDiv.appendChild(dataTable);
+                        }
+                      }
+                    }
+                  );
+                }
+                updateOutputDiv();
+                })();
+            </script>
+            <!-- / JAVASCRIPT -->
+        </body>
+    </html>
+</apex:page>

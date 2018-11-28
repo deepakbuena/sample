@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affiliations__c</fullName>
+    <externalId>false</externalId>
+    <label>Affiliation(s)</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AACA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>BATA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>BDEA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>BHA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Board of Higher Ed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Boston Public Schools</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Charlestown Adult Center  - Boston Housing Authority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Henderson</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>JVS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mass Rehab</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>The BASE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Work Incorporated (WORK Inc) – D-CAP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Year UP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>YMCA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>YMCA International Center</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

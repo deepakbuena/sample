@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Created_Source__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If this field has a value, it means the Contact record was created as part of an automated process (&quot;CPS Event Check In&quot;, or &quot;CPS Sign On&quot;)</inlineHelpText>
+    <label>Auto-Created Source</label>
+    <length>60</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

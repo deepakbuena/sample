@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Affiliation(s) --></label>
+    <name>Affiliations__c</name>
+    <picklistValues>
+        <masterLabel>AACA</masterLabel>
+        <translation><!-- AACA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BATA</masterLabel>
+        <translation><!-- BATA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BDEA</masterLabel>
+        <translation><!-- BDEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BHA</masterLabel>
+        <translation><!-- BHA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Board of Higher Ed</masterLabel>
+        <translation><!-- Board of Higher Ed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boston Public Schools</masterLabel>
+        <translation><!-- Boston Public Schools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Charlestown Adult Center  - Boston Housing Authority</masterLabel>
+        <translation><!-- Charlestown Adult Center  - Boston Housing Authority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Henderson</masterLabel>
+        <translation><!-- Henderson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JVS</masterLabel>
+        <translation><!-- JVS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mass Rehab</masterLabel>
+        <translation><!-- Mass Rehab --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The BASE</masterLabel>
+        <translation><!-- The BASE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Work Incorporated (WORK Inc) – D-CAP</masterLabel>
+        <translation><!-- Work Incorporated (WORK Inc) – D-CAP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YMCA</masterLabel>
+        <translation><!-- YMCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YMCA International Center</masterLabel>
+        <translation><!-- YMCA International Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Year UP</masterLabel>
+        <translation><!-- Year UP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

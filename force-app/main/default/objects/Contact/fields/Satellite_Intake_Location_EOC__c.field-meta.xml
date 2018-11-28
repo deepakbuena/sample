@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Satellite_Intake_Location_EOC__c</fullName>
+    <externalId>false</externalId>
+    <label>Intake Center or Satellite Location(EOC)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CPS_Satellite_Location_EOC</valueSetName>
+    </valueSet>
+</CustomField>

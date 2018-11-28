@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Action Type --></label>
+    <name>ActionType__c</name>
+    <picklistValues>
+        <masterLabel>Exporting</masterLabel>
+        <translation><!-- Exporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Importing</masterLabel>
+        <translation><!-- Importing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

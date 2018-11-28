@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TOTAL_MEALS_su__c</fullName>
+    <externalId>false</externalId>
+    <formula>Breakfast_Su__c   +  Lunch_su__c  +  Dinner_su__c  +  Other_Food_su__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TOTAL MEALS (su)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,1 @@
+<apex:page standardController="Annual_Sales_Plan__c" extensions="AnnualSalesPlanNewButton" action="{!init}"/>

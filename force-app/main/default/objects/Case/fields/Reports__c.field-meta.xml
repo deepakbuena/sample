@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reports__c</fullName>
+    <externalId>false</externalId>
+    <label>Reports</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Communication Results</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Portfolio Profile</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Risk Analysis</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Portfolio Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Projected CDR</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Portfolio Details</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For the EOC and TS Program.  What is the purpose of the visit? --></help>
+    <label><!-- Purpose of Visit --></label>
+    <name>Purpose_of_Visit_EOC_TS__c</name>
+    <picklistValues>
+        <masterLabel>Admission application assistance</masterLabel>
+        <translation><!-- Admission application assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Career Services</masterLabel>
+        <translation><!-- Career Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education info</masterLabel>
+        <translation><!-- Education info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FA application assistance</masterLabel>
+        <translation><!-- FA application assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fee Waiver</masterLabel>
+        <translation><!-- Fee Waiver --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loan Assistance </masterLabel>
+        <translation><!-- Loan Assistance  --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scholarship </masterLabel>
+        <translation><!-- Scholarship  --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Use resources </masterLabel>
+        <translation><!-- Use resources  --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

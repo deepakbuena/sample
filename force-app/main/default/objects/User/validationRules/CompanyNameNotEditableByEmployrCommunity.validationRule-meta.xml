@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompanyNameNotEditableByEmployrCommunity</fullName>
+    <active>true</active>
+    <description>Prevent Employer Community Users to change CompanyName</description>
+    <errorConditionFormula>AND(ISCHANGED(CompanyName),ISPICKVAL($Profile.UserType, &#39;CspLitePortal&#39;))</errorConditionFormula>
+    <errorMessage>Contact Salt to update your Company.</errorMessage>
+</ValidationRule>

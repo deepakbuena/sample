@@ -1,0 +1,389 @@
+<apex:component >
+  <script type="text/javascript">
+            var $jx = jQuery.noConflict(true);
+
+            $jx('[id$=eOCIntakeForm]').validate();
+            errorclass: "myerrorclass";
+            
+            $jx('[id$=genderIdenti]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=ethnicity]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=maritial]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=uscitizen]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=veteranStatus]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=school]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=ismother4yrscollg]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=isfather4yrscollg]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            $jx('[id$=taxableincome]').rules("add", {
+                required: true,
+                messages: {
+                    required: "<br/>Required field",
+                }
+            });
+            
+            
+            $jx('[id$=householdsize]').rules("add", {
+                required: true,
+                number: true,
+                maxlength: 2,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 2 digits"),
+                    number: $jx.validator.format("<br/>Please enter a valid number"),
+                }
+            });
+            $jx('[id$=otherLearnedAboutProgram]').rules("add", {
+                required: false,
+                maxlength: 100,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 100 characters"),
+                }
+            });
+            $jx('[id$=schoolOther]').rules("add", {
+                required: false,
+                maxlength: 255,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 255 characters"),
+                }
+            });
+            $jx('[id$=careerGoals]').rules("add", {
+                required: false,
+                maxlength: 255,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 255 characters"),
+                }
+            });
+            $jx('[id$=motherGuardian1FirstName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=motherGuardian1LastName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=fatherGuardian2FirstName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            $jx('[id$=fatherGuardian2LastName]').rules("add", {
+                required: false,
+                maxlength: 25,
+                messages: {
+                    required: "<br/>Required field",
+                    maxlength: $jx.validator.format("<br/>Allow only 25 characters"),
+                }
+            });
+            
+            // both the variables are to store SSN values
+            var finalSSN;
+            var encryptedSSN;            
+            
+            $jx(document).ready(function(){
+                
+                $jx(document).on('change', "[id$='school']", function() {
+                    if (this.value == 'None of these') {
+                        $jx("[id$='showschool1']").show();
+                    } else {
+                        $jx("[id$='showschool1']").hide();
+                    }
+                })              
+                
+            
+            // For email masking
+            $jx('[id$="parentEmail"]').blur(function() {
+                var email = $jx(this).val();
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                if (email.length != 0) {
+                    if (re.test(email)) {
+                        $jx('.emailmsg').hide();
+                    } else {
+                        $jx('.emailmsg').hide();
+                        $jx('.error').show();
+                        $jx('[id$="parentEmail"]').addClass("error");
+                    }
+                } else if (email.length == 0) {
+                    $jx('.emailmsg').hide();
+                    $jx('[id$="parentEmail"]').removeClass("error");
+                }
+            });
+            
+            $jx('[id$="permanentResidentId"]').keyup(function(e)
+            {
+                if(e.keyCode==8)
+                {
+                    $jx('[id$="permanentResidentId"]').val("");
+                    $jx('[id$="permanentResidentId-original"]').val("");
+                }
+            });
+            
+            $jx('[id$="permanentResidentId"]').blur(function()
+            {
+                var pRValue = $jx("[id$='permanentResidentId']").val();
+                console.log('value @@@'+ pRValue);
+                if(pRValue == "")
+                {
+                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                } 
+                
+                if(pRValue.length < 9 && pRValue.length != 8 && pRValue.length < 8 && pRValue.length != 0)
+                {
+                    $jx('[id$="permanentResidentId"]').addClass("error");
+                    $jx("[id$='showPRMsg']").css("display", "block");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                }
+                else if (pRValue.length == 8 && $jx.isNumeric(pRValue)){
+                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                    $jx("[id$='showPRMsg']").css("display", "none");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                    var encryptedPR = pRValue.replace(pRValue ,"********");
+                    $jx('[id$="permanentResidentId"]').val(encryptedPR);
+                    $jx('[id$="permanentResidentId-original"]').val(pRValue);
+                }
+                else if (pRValue.length == 9 && $jx.isNumeric(pRValue)){
+                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                    $jx("[id$='showPRMsg']").css("display", "none");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                    var encryptedPR = pRValue.replace(pRValue ,"*********");
+                    $jx('[id$="permanentResidentId"]').val(encryptedPR);
+                    $jx('[id$="permanentResidentId-original"]').val(pRValue);
+                }
+                
+                if(pRValue.length == 0)
+                {
+                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                    $jx("[id$='showPRMsg']").css("display", "none");
+                    $jx('[id$="permanentResidentId-original"]').val("");
+                }  
+            });
+            
+            $jx('[id$="socialSecurityNumber"]').blur(function() {
+                var ssnValue= $jx("[id$='socialSecurityNumber']").val();
+                
+                if(ssnValue.length < 11) //On 15 Oct 2018 by Aj, replaced 9 by 11**************************
+                {
+                    $jx('[id$="socialSecurityNumber"]').addClass("error");
+                    $jx("[id$='showSSNMsg']").css("display", "block");
+                }
+                else
+                {
+                    $jx('[id$="socialSecurityNumber"]').removeClass("error");
+                    $jx("[id$='showSSNMsg']").css("display", "none");
+                    encryptedSSN = finalSSN;
+                    var finalStr = encryptedSSN.replace(encryptedSSN ,"***********");
+                    $jx('[id$="socialSecurityNumber"]').val(finalStr);
+                    $jx('[id$="socialSecurityNumber-original"]').val(finalSSN);
+                }
+                
+                if(ssnValue.length == 0)
+                {
+                    $jx('[id$="socialSecurityNumber"]').removeClass("error");
+                    $jx("[id$='showSSNMsg']").css("display", "none");
+                    $jx('[id$="socialSecurityNumber-original"]').val("");
+                }
+            });
+            
+            
+            //Disable browser back functionality
+            function disableBack() {
+                window.history.forward()
+            }
+            window.onload = disableBack();
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    disableBack();
+            } 
+            
+            // For permanent resident field rendering
+            $jx(document).on('change', "[id$='uscitizen']", function() {
+                if (this.value == 'No') {
+                    $jx("[id$='showPR']").show();
+                    $jx("[id$='showPR']").css("display", "block");
+            
+                } else {
+                    $jx("[id$='permanentResidentId']").val(""); 
+                    $jx("[id$='showPR']").hide();
+                    $jx("[id$='showPR']").css("display", "none");
+                    
+                    //On 15 Oct 2018 by Aj*********************
+                    $jx('[id$="permanentResidentId"]').removeClass("error");
+                    $jx("[id$='showPRMsg']").css("display", "none");
+                    $jx("[id$='showPRRequired']").css("display", "none");
+                    isPRValid = true;
+                    //**********************************************
+                }
+            });
+            
+            
+         });
+            
+            // Prevent the backspace key from navigating back.
+            $jx(document).unbind('keydown').bind('keydown', function(event) {
+            if (event.keyCode === 8) {
+                var doPrevent = true;
+                var types = ["text", "password", "file", "search", "email", "number", "date", "color", "datetime", "datetime-local", "month", "range", "search", "tel", "time", "url", "week"];
+                var d = $jx(event.srcElement || event.target);
+                var disabled = d.prop("readonly") || d.prop("disabled");
+                if (!disabled) {
+                    if (d[0].isContentEditable) {
+                        doPrevent = false;
+                    } else if (d.is("input")) {
+                        var type = d.attr("type");
+                        if (type) {
+                            type = type.toLowerCase();
+                        }
+                        if (types.indexOf(type) > -1) {
+                            doPrevent = false;
+                        }
+                    } else if (d.is("textarea")) {
+                        doPrevent = false;
+                    }
+                }
+                if (doPrevent) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            });
+            
+            
+            // For formatting social security number
+            $jx('input.ssn').on('keypress', function(event) {
+                // trap keypress
+                var character = String.fromCharCode(event.which);
+                if (!isInteger(character)) {
+                    return false;
+                }
+            });
+            
+            // checks that an input string is an integer, with an optional +/- sign character
+            function isInteger(s) {
+                if (s === '-') return true;
+                var isInteger_re = /^\s*(\+|-)?\d+\s*$/;
+                return String(s).search(isInteger_re) != -1
+            }
+            
+            // format SSN 
+                $jx('input.ssn').on('keyup', function() {
+                    var val = this.value.replace(/\D/g, '');
+                    var newVal = '';
+            
+                    if (val.length > 4) {
+                        this.value = val;
+                    }
+                    if ((val.length > 3) && (val.length < 6)) {
+                        newVal += val.substr(0, 3) + '-';
+                        val = val.substr(3);
+                    }
+                    if (val.length > 5) {
+                        newVal += val.substr(0, 3) + '-';
+                        newVal += val.substr(3, 2) + '-';
+                        val = val.substr(5);
+                    }
+                    newVal += val;
+                    this.value = newVal;
+                    finalSSN = this.value;
+                });
+            
+            
+            // function for checking invalid email field while form submitting   
+            $jx('[id$=eOCIntakeForm]').submit(function() {
+            
+                var email = $jx("[id$='parentEmail']").val();
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                if (re.test(email) || email.length == 0) {
+
+                }
+                else if (!re.test(email) && email.length != 0){
+                    $jx('[id$="parentEmail"]').addClass("error");
+                    event.preventDefault();
+                }
+                
+               /* var pRValue = $jx("[id$='permanentResidentId']").val();
+                if(pRValue == "")
+                {
+                    $jx('[id$="permanentResidentId"]').addClass("error");
+                    $jx("[id$='showPRRequired']").css("display", "block");
+                    event.preventDefault();
+                }
+                if(pRValue.length == 0)
+                {
+                    event.preventDefault();
+                    $jx('[id$="permanentResidentId"]').addClass("error");
+                    $jx("[id$='showPRRequired']").css("display", "block");
+                }
+                if(pRValue.length < 9 && pRValue.length != 8 && pRValue.length < 8 && pRValue.length > 0)
+                {
+                    event.preventDefault();
+                    $jx('[id$="permanentResidentId"]').addClass("error");
+                    $jx("[id$='showPRMsg']").css("display", "block");
+                }    */    
+            });
+        </script>       
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+        <apex:includeScript value="{!$Resource.bootstrap_session_timeout}"/>
+        <apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+</apex:component>

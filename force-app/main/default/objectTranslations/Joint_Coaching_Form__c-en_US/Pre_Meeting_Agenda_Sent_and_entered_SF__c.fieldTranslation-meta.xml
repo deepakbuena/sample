@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Did the RAE send a pre-meeting agenda to the client and enter it into Salesforce? --></help>
+    <label><!-- Pre-Meeting Agenda Sent - Entered in SF --></label>
+    <name>Pre_Meeting_Agenda_Sent_and_entered_SF__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

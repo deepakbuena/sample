@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LenderContract</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Lender Contract</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://na4.salesforce.com/setup/ui/recordtypeselect.jsp?retURL=%2F00130000008LpuD&amp;rt=Contract&amp;save_new_url=%2F800%2Fe%3FretURL%3D%252F00130000008LpuD%26accid%{!Opportunity_Account_ID}</url>
+</WebLink>

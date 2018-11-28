@@ -1,0 +1,113 @@
+<apex:page standardcontroller="Mutually_Agreed_to_Objectives__c" extensions="NewTopTargetedClientController">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        </head>
+        <body>
+            <div class = "SLDS_ASA">
+                <apex:form id="theForm">
+                    <apex:pagemessages id="msgs"></apex:pagemessages>
+                    <!--Related List-->
+                    <apex:pageBlock title="Top Targeted Clients" rendered="{!showTtcRelatedlist=='true'}">
+                        <div class="slds-modal__header slds-align--absolute-center">
+                            <apex:commandButton value="New Targeted Client" action="{!prepareTopTargetList}" reRender="theForm"  styleClass="slds-button slds-button--brand">
+                                <apex:param assignTo="{!showTtcRelatedlist}" value="false"/>
+                            </apex:commandButton>                   
+                        </div>
+                        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                            <thead>
+                                <tr class="slds-text-title--caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Top Targeted Client: ID">Top Targeted Client: ID</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Account">Account</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Substantive Visits">Substantive Visits</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!listTopTargeted}" var="ltt2">
+                                    <tr>
+                                        <td scope="row" data-label="Top Targeted Client: ID">
+                                            <div class="slds-truncate">
+                                                <apex:outputLink value="/{!ltt2.tts.Id}" target="_blank" rendered="{!IF(ltt2.tts.Id != null,true,false)}">{!ltt2.tts.Name}</apex:outputLink>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Account">
+                                            <div class="slds-truncate">
+                                                <apex:outputLink value="/{!ltt2.tts.Account__c}" target="_blank" rendered="{!IF(ltt2.tts.Id != null,true,false)}"> {!ltt2.tts.Account__r.Name}</apex:outputLink>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Substantive Visits">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!ltt2.tts.Substantive_Visits__c}" rendered="{!IF(ltt2.tts.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </apex:pageBlock>
+                    <apex:pageBlock title="Top Targeted Client Edit" mode="Edit" rendered="{!showTtcRelatedlist=='false'}">
+                        <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small" id="theForm">
+                            <h3 class="slds-section-title--divider">Top Targeted Client Edit</h3>
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Remove"></div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Mutually Agreed To Objectives">Mutually Agreed To Objectives</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Account">Account</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!listTopTargeted}" var="ltt">
+                                        <tr>
+                                            <td scope="row" data-label="Remove">
+                                                <div class="slds-truncate">
+                                                    <apex:actionRegion >
+                                                        <apex:commandLink action="{!removeRows}" reRender="theForm,msgs" rendered="{!IF(ltt.tts.Id != null,true,false)}">
+                                                            <apex:image url="/img/func_icons/remove12_on.gif"/>
+                                                            <apex:param name="rowIndex" value="{!ltt.tts.Id}" assignTo="{!numberOfRowToRemove}"/>
+                                                        </apex:commandLink>
+                                                   </apex:actionRegion>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="Mutually Agreed To Objectives">
+                                                <div class="slds-truncate">
+                                                    <apex:outputField value="{!ltt.tts.Mutually_Agreed_to_Objectives__c}"/> 
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="Account">
+                                                <div class="slds-truncate">
+                                                    <apex:inputField value="{!ltt.tts.Account__c}" rendered="{!IF(ltt.tts.Id == null,true,false)}" required="{!IF(OR(ltt.index=='1',ltt.index=='2',ltt.index=='3'),true,false)}" />
+                                                    <apex:outputField value="{!ltt.tts.Account__c}" rendered="{!IF(ltt.tts.Id != null,true,false)}"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <apex:commandButton value="Add More" action="{!addRows}" immediate="true" reRender="theForm,msgs" styleClass="slds-button slds-button--brand"/>                       
+                            
+                            <div class="slds-modal__footer slds-align--absolute-center">
+                                <apex:commandButton value="Save" action="{!saveTargetClient}" reRender="theForm" styleClass="slds-button slds-button--brand" />
+                                <apex:commandButton value="Cancel" action="{!prepareTopTargetList}" reRender="theForm"  styleClass="slds-button slds-button--brand">
+                                    <apex:param assignTo="{!showTtcRelatedlist}" value="true"/>
+                                </apex:commandButton>                    
+                            </div>
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+        </body>
+    </html>
+</apex:page>

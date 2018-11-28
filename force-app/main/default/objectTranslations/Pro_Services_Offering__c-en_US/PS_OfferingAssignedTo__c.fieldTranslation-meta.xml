@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the ProServices@ASA team member who has been assigned to conduct this Offering. --></help>
+    <label><!-- Assigned To --></label>
+    <name>PS_OfferingAssignedTo__c</name>
+    <relationshipLabel><!-- Pro Services Offerings (Assigned To) --></relationshipLabel>
+</CustomFieldTranslation>

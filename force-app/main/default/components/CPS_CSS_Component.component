@@ -1,0 +1,720 @@
+<apex:component > 
+    <apex:includeScript value="{!URLFOR($Resource.cps_components, '/cps_components/js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cps_components, '/cps_components/js/jquery.validate.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cps_components, '/cps_components/js/additional-methods.min.js')}"/>
+    <head> 
+        <apex:slds /> 
+        <style> 
+            .slds-scope {
+                 overflow-x: hidden;
+            }
+             .slds-scope .slds-text-heading_large{
+                 font-weight: bold;
+                 color: #003763;
+            }
+             .slds-scope .slds-p-around_large{
+                 margin: 0 auto;
+                 width: 70%;
+            }
+             .desktop_header_bg {
+                 display:block;
+            }
+             .mobile_header_bg {
+                 display:none;
+            }
+             .slds-scope .slds-form-element__row {
+                 display: flex;
+                 margin-bottom: 0.5rem;
+                 margin-left: 1rem;
+                 margin-top: .75rem;
+            }
+             .toast_width {
+                 width:800px !important;
+            }
+             .form_heading {
+                 background: #003763;
+                 padding: 4px !important;
+                 font-size: 16px;
+                 margin-top: 0 !important;
+                 margin-bottom: 0 !important;
+                 border-top-left-radius: 4px;
+                 border-top-right-radius: 4px;
+                 color: #fff;
+            }
+             .slds-scope .slds-input[readonly] {
+                 padding-left: 0;
+                 font-size: .875rem;
+                 font-weight: 400;
+                 background-color: rgb(255, 255, 255);
+                 border: .5px solid #003763;
+                 padding-left: 10px;
+            }
+             .slds-scope .slds-box {
+                 padding:0;
+            }
+             .slds-required {
+                 font-size: 16px;
+                 font-weight:bold;
+                 color:#900 !important;
+                 margin: 0 !important;
+                 margin-left: -7px !important;
+            }
+             .slds-scope .slds-form_horizontal .slds-form-element>.slds-form-element__label {
+                 text-align:left;
+                 font-size: 13px;
+                 width: 48%;
+            }
+             .slds-scope .slds-form_horizontal .slds-form-element__control, .slds-scope .slds-form--horizontal .slds-form-element__control {
+                 width:45%;
+                 margin-bottom: 0;
+            }
+             .slds-scope .slds-form_horizontal, .slds-scope .slds-form--horizontal {
+                 text-align: unset;
+            }
+             .custom_btn {
+                 width: 20% !important;
+                 border-radius: 8px !important;
+                 background: #003763 !important;
+                 borde-color: #7f9bb1 !important;
+                 border: 0px !important;
+                 font-size: 15px !important;
+                 line-height: 1.7 !important;
+                 color: #fff !important;
+            }
+             .slds-scope .slds-form_horizontal .slds-form-element+.slds-form-element, .slds-scope .slds-form--horizontal .slds-form-element+.slds-form-element {
+                 margin-top: 1rem;
+            }
+             .error {
+                 font-weight:bold;
+                 color:#900;
+                 font-size: 12px;
+            }
+             select.error {
+                 border:2px solid #900 !important;
+            }
+             input.error {
+                 border:2px solid #900 !important;
+            }
+             .dateerror {
+                 font-weight:bold;
+                 color:#900;
+                 font-size: 12px;
+            }
+             input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button {
+                 -webkit-appearance: none;
+            }
+             .custom_select {
+                 width: 100%;
+                 line-height: 1.875rem;
+                 min-height: calc(1.875rem + (1px * 2));
+                 background-color: rgb(255, 255, 255);
+                 border: 1px solid rgb(221, 219, 218);
+                 border-radius: .25rem;
+            }
+             .custom_select_multi {
+                 width: 100%;
+                 line-height: 1.875rem;
+                 min-height: calc(1.875rem + (1px * 2));
+                 background-color: rgb(255, 255, 255);
+                 border: 1px solid rgb(221, 219, 218);
+                 border-radius: .25rem;
+            }
+             .panel_custom td:nth-of-type(3) {
+                 width:44%;
+            }
+             .tooltip {
+                 position: relative;
+                 display: inline-block;
+                /*border-bottom: 1px dotted black;
+                 */
+            }
+             .tooltip .tooltiptext {
+                 visibility: hidden;
+                 width: 200px;
+                 background-color: #003763;
+                 color: #fff;
+                 text-align: center;
+                 border-radius: 6px;
+                 padding: 5px 0;
+                /* Position the tooltip */
+                 position: absolute;
+                 z-index: 1;
+            }
+             .tooltip:hover .tooltiptext {
+                 visibility: visible;
+            }
+             .message {
+                 background-color: transparent !important;
+                 border-style: none !important;
+            }
+             .warningM3 .msgIcon, .warningMedium {
+                 background-image: none !important;
+            }
+             .slds-scope .slds-notify_toast, .slds-scope .slds-notify--toast {
+                 padding: 0.5rem 0 0 1rem !important;
+            }
+             .ui-datepicker .ui-datepicker-title {
+                 color: #000;
+            }
+             input.inputerror {
+                 border:2px solid #900 !important;
+            }
+             .requirederror {
+                 color:#900;
+                 font-size:12px;
+                 font-weight:bold 
+            }
+             .slds-scope .slds-form-element__label {
+                 font-size:13px;
+                 color: #003763;
+            }
+             .emailmsg {
+                 display: none;
+            }
+             .slds_wrap {
+                 width: 65%;
+                 margin:0 auto;
+                 border-radius:5px;
+            }
+             .slds-scope .slds-page-header {
+                 border: none !important;
+                 background: transparent !important;
+                 box-shadow: none !important;
+                 padding: 0 !important;
+            }
+             .slds-scope .slds-page-header h1 {
+                 color: #5BC500;
+                 font-size: 2rem;
+            }
+             .slds-scope .slds-page-header p {
+                 line-height: 1.1rem;
+                 font-size: 14px;
+            }
+            .slds-scope .slds-page-header h2 {
+                color: #5BC500;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+             .slds-scope .slds-required {
+                 color: #fff;
+            }
+             .rounded_corner {
+                 border-top-left-radius: 20px !important;
+                 border-bottom-right-radius: 20px !important;
+                 background: #DCDDDE;
+            }
+             .form_rounded_corner {
+                 border-top-left-radius: 20px !important;
+            }
+             .form_rounded_corner h1 {
+                 padding-left: 18px;
+            }
+             .slds-scope .slds-input {
+                 border: .5px solid #003763;
+            }
+             .custom_select {
+                 border: .5px solid #003763;
+            }
+             .custom_select_multi {
+                 border: .5px solid #003763;
+            }
+             .slds-scope .slds-required {
+                 margin-left: 2px !important;
+            }
+            .slds-scope .slds-textarea {
+                border: .5px solid #003763;
+            }
+            .message .messageText h4 {
+                display:none;
+            }
+            .message {
+             background-color: #fff !important;
+             border-style: none;
+             border-width: none;
+             padding : 0 !important;
+             margin : 0 !important;
+            }
+            .custom_exception .message {
+                 background-color: #ffb75d !important;
+                 border-style: none;
+                 border-width: none;
+                 padding : 0 !important;
+                 margin : 0 !important;
+            }
+            .slds-text-heading_small {
+                padding:1px !important;
+            }
+             .errorM3 .msgIcon, .errorMedium {
+                 background-image: none !important;
+            }
+             .messageTable td:nth-of-type(1) {
+                 display:none;
+            }
+            .message .messageText {
+             font-weight: bold;
+             margin-left:0;
+             color: #900;
+             font-size: 12px;
+            }
+            .eventCheckInForm .message {
+                background-color: transparent !important;
+            }
+            .cpsLocationForm .message {
+                background-color: transparent !important;
+            }
+            .tSSignOnForm .message {
+                background-color: transparent !important;
+            }
+            .tSIntakeForm .message {
+                background-color: transparent !important;
+            }
+            .eOCSignOnForm .message {
+                background-color: transparent !important;
+            }
+            eOCIntakeForm .message {
+                background-color: transparent !important;
+            }
+            .CPSCampaignInput_form {
+                margin-top: 6%;
+                margin-left: 4.5%;
+            }
+            
+            /* --- iphone 6/7/8 starts ---- */
+             @media only screen and (device-width : 375px) and (device-height : 667px) and (-webkit-device-pixel-ratio : 2) and (orientation : portrait) {
+                 .slds-scope .slds-form_horizontal .slds-form-element>.slds-form-element__label {
+                     text-align:left;
+                     font-size: 14px;
+                     width: 100%;
+                }
+                 .slds-scope .slds-input[readonly] {
+                     padding-left: 0;
+                     border-color: transparent;
+                     font-size: .875rem;
+                     font-weight: 400;
+                     background-color: rgb(255, 255, 255);
+                     border: 1px solid rgb(221, 219, 218);
+                }
+                 .slds-scope .slds-form_horizontal .slds-form-element__control, .slds-scope .slds-form--horizontal .slds-form-element__control {
+                     width:100%;
+                }
+                 .slds-scope .slds-small-size_1-of-2, .slds-scope .slds-small-size--1-of-2 {
+                     width:90% 
+                }
+                 .slds-scope .slds-p-left_none, .slds-scope .slds-p-left--none {
+                     padding: 1rem !important;
+                }
+                 .slds-scope .slds-p-bottom_none, .slds-scope .slds-p-bottom--none {
+                     padding: 1rem !important;
+                }
+                 .slds-form-element__control {
+                     width:100% !important;
+                }
+                 .slds-form-element__control .slds-input {
+                     margin-left:0px !important;
+                }
+                 .custom_checkbox {
+                     width: 4% !important;
+                     min-height: 1px !important;
+                     zoom: 1.7 !important;
+                }
+                 .slds-scope .slds-form-element__row {
+                     display: block;
+                     margin-bottom: 0.5rem;
+                     margin-left: 1rem;
+                     margin-top: 1rem;
+                }
+                 .message {
+                     background-color: transparent !important;
+                     border-style: none !important;
+                }
+                 .warningM3 .msgIcon, .warningMedium {
+                     background-image: none !important;
+                }
+                 .slds-scope .slds-notify_toast, .slds-scope .slds-notify--toast {
+                     padding: 0.5rem 0 0 1rem !important;
+                }
+                 input.inputerror {
+                     border:2px solid #900;
+                }
+                 .requirederror {
+                     color:#900;
+                     font-size:12px;
+                     font-weight:bold 
+                }
+            }
+            /* --- iphone 6/7/8 finish ---- */
+
+            /* ----- iphone 6/7/8 plus starts----- */
+             @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+                 .slds-scope .slds-form_horizontal .slds-form-element>.slds-form-element__label {
+                     text-align:left;
+                     font-size: 14px;
+                     width: 100%;
+                }
+                 .slds-scope .slds-input[readonly] {
+                     padding-left: 0;
+                     border-color: transparent;
+                     font-size: .875rem;
+                     font-weight: 400;
+                     background-color: rgb(255, 255, 255);
+                     border: 1px solid rgb(221, 219, 218);
+                }
+                 .slds-scope .slds-form_horizontal .slds-form-element__control, .slds-scope .slds-form--horizontal .slds-form-element__control {
+                     width:100%;
+                }
+                 .slds-scope .slds-small-size_1-of-2, .slds-scope .slds-small-size--1-of-2 {
+                     width:90% 
+                }
+                 .slds-scope .slds-p-left_none, .slds-scope .slds-p-left--none {
+                     padding: 1rem !important;
+                }
+                 .slds-scope .slds-p-bottom_none, .slds-scope .slds-p-bottom--none {
+                     padding: 1rem !important;
+                }
+                 .slds-form-element__control {
+                     width:100% !important;
+                }
+                 .slds-form-element__control .slds-input {
+                     margin-left:0px !important;
+                }
+                 .custom_checkbox {
+                     width: 4% !important;
+                     min-height: 1px !important;
+                     zoom: 1.7 !important;
+                }
+                 .slds-scope .slds-form-element__row {
+                     display: block;
+                     margin-bottom: 0.5rem;
+                     margin-left: 1rem;
+                     margin-top: 1rem;
+                }
+                 .message {
+                     background-color: transparent !important;
+                     border-style: none !important;
+                }
+                 .warningM3 .msgIcon, .warningMedium {
+                     background-image: none !important;
+                }
+                 .slds-scope .slds-notify_toast, .slds-scope .slds-notify--toast {
+                     padding: 0.5rem 0 0 1rem !important;
+                }
+                 input.inputerror {
+                     border:2px solid #900;
+                }
+                 .requirederror {
+                     color:#900;
+                     font-size:12px;
+                     font-weight:bold 
+                }
+            }
+            /* ----- iphone 6/7/8 plus finish ----- */
+
+            /* ---- iphone X starts ---- */
+             @media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
+                 .slds-scope .slds-form_horizontal .slds-form-element>.slds-form-element__label {
+                     text-align:left;
+                     font-size: 14px;
+                     width: 100%;
+                }
+                 .slds-scope .slds-input[readonly] {
+                     padding-left: 0;
+                     border-color: transparent;
+                     font-size: .875rem;
+                     font-weight: 400;
+                     background-color: rgb(255, 255, 255);
+                     border: 1px solid rgb(221, 219, 218);
+                }
+                 .slds-scope .slds-form_horizontal .slds-form-element__control, .slds-scope .slds-form--horizontal .slds-form-element__control {
+                     width:100%;
+                }
+                 .slds-scope .slds-small-size_1-of-2, .slds-scope .slds-small-size--1-of-2 {
+                     width:90% 
+                }
+                 .slds-scope .slds-p-left_none, .slds-scope .slds-p-left--none {
+                     padding: 1rem !important;
+                }
+                 .slds-scope .slds-p-bottom_none, .slds-scope .slds-p-bottom--none {
+                     padding: 1rem !important;
+                }
+                 .slds-scope .slds-form-element__row {
+                     display: block;
+                     ;
+                     margin-bottom: 0.5rem;
+                     margin-left: 1rem;
+                     margin-top: 1rem;
+                }
+                 .message {
+                     background-color: transparent !important;
+                     border-style: none !important;
+                }
+                 .warningM3 .msgIcon, .warningMedium {
+                     background-image: none !important;
+                }
+                 .slds-scope .slds-notify_toast, .slds-scope .slds-notify--toast {
+                     padding: 0.5rem 0 0 1rem !important;
+                }
+                 input.inputerror {
+                     border:2px solid #900;
+                }
+                 .requirederror {
+                     color:#900;
+                     font-size:12px;
+                     font-weight:bold 
+                }
+            }
+            /* ---- iphone X finish ---- */
+
+            /* --- iPad in landscape --- */
+             @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+            }
+
+            /* ---- ipad in portrait starts ---- */
+             @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+                 .slds-scope .slds-form_horizontal .slds-form-element>.slds-form-element__label {
+                     text-align:left;
+                     font-size: 20px;
+                     width: 100%;
+                }
+                 .slds-scope .slds-form_horizontal .slds-form-element__control, .slds-scope .slds-form--horizontal .slds-form-element__control {
+                     width:100%;
+                }
+                 .slds-scope .slds-small-size_1-of-2, .slds-scope .slds-small-size--1-of-2 {
+                     width:90%;
+                     padding-bottom: 0;
+                }
+                 .slds-scope .slds-input[readonly] {
+                     padding-left: 0;
+                     border-color: transparent;
+                     font-size: .875rem;
+                     font-weight: 400;
+                     background-color: rgb(255, 255, 255);
+                     border: 1px solid rgb(221, 219, 218);
+                }
+                 .slds-scope .slds-p-left_none, .slds-scope .slds-p-left--none {
+                     padding-left: 0px !important;
+                }
+                 .slds-scope .slds-p-bottom_none, .slds-scope .slds-p-bottom--none {
+                    /* padding: 1rem !important;
+                     */
+                     padding-top: 0;
+                }
+                /* .slds-scope .slds-p-around_medium, .slds-scope .slds-p-around--medium {
+                     padding-top: 0;
+                } */
+                 .slds-form-element__control {
+                     width:100% !important;
+                }
+                 .slds-form-element__control .slds-input {
+                     margin-left:0px !important;
+                     font-size: 20px;
+                }
+                /* .custom_checkbox {
+                     width: 4% !important;
+                     min-height: 1px !important;
+                     zoom: 1.7 !important;
+                }
+                 */
+                 .slds-scope .slds-form-element__row {
+                     display: block;
+                     margin-bottom: 0.5rem;
+                     margin-left: 1rem;
+                     margin-top: 1rem;
+                }
+                 .custom_padding {
+                     padding-bottom: 1rem;
+                }
+                /*.margin_btm_custom {
+                     margin-bottom:1rem !important;
+                }
+                 */
+                 .multi_select_width {
+                     width:90% !important;
+                }
+                 .message {
+                     background-color: transparent !important;
+                     border-style: none !important;
+                }
+                 .warningM3 .msgIcon, .warningMedium {
+                     background-image: none !important;
+                }
+                 .slds-scope .slds-notify_toast, .slds-scope .slds-notify--toast {
+                     padding: 0.5rem 0 0 1rem !important;
+                }
+                 input.inputerror {
+                     border:2px solid #900;
+                }
+                 .requirederror {
+                     color:#900;
+                     font-size:12px;
+                     font-weight:bold 
+                }
+                 .desktop_header_bg {
+                     display:none;
+                }
+                 .mobile_header_bg {
+                     display:block;
+                }
+                 .mobile_heading_margin {
+                     margin-top:5% !important;
+                }
+                 .mobile_header_bg {
+                     display:block;
+                     background: #003763;
+                     text-align: center;
+                }
+                 .slds-scope .slds_wrap {
+                     width:100%;
+                     margin-top:0;
+                }
+                 .slds-mobile-width {
+                     width: 90%;
+                     margin: 0 auto;
+                }
+                 .slds-scope .slds-page-header h1 {
+                     color: #5BC500;
+                     font-size: 3.5rem !important;
+                }
+                 .slds-scope .slds-page-header p {
+                     line-height: 1.8rem !important;
+                     font-size: 18px !important;
+                }
+                 .mobile_header_bg img {
+                     width: 25%;
+                }
+                 .form_rounded_corner h1 {
+                     padding-left: 18px;
+                     font-size: 1.5rem ;
+                }
+                 .custom_btn {
+                     font-size:22px !important;
+                }
+                 .slds-scope .slds-input {
+                     line-height: 2.5rem;
+                }
+                 .slds_mobile_wrap {
+                     width:90% !important;
+                     margin:0 auto;
+                }
+                 .error {
+                     font-size: 16px;
+                }
+                 .slds-scope .slds-p-around_large {
+                     margin: 0 auto;
+                     width: 90%;
+                }
+                 .slds-scope .slds-form-element__control .slds-checkbox {
+                     zoom: 3 !important;
+                }
+                 .mobile_custom_select {
+                     width:90% !important;
+                }
+                 .mobile_label {
+                     //margin-bottom: 1% !important;
+                }
+                 .slds-scope .slds-m-top--none {
+                     margin-top: 1rem !important;
+                }
+                 .mobile_row {
+                     margin-top: 1rem !important;
+                }
+                 select option, select optgroup {
+                     font-size: 100%;
+                     font-size: 20px;
+                }
+                 .slds-scope .slds-form-element__label {
+                     font-size:20px;
+                     color: #003763;
+                     margin-bottom: 0;
+                }
+            }
+            /* ---- ipad in portrait starts ---- */
+            
+            
+            
+            /* ipad pro Portrait */
+            @media only screen 
+              and (min-device-width: 1024px) 
+              and (max-device-width: 1366px) 
+              and (orientation: portrait) 
+              and (-webkit-min-device-pixel-ratio: 1.5) {
+              
+              .top_margin {
+                   margin-top : 0px !important;
+               }
+               .slds-scope .slds-form-element__control .slds-checkbox {
+                    zoom: 2 !important;
+                }
+                .slds-scope select {
+                    font-size: 20px;
+                    height: 40px;
+                }
+                
+                .requirederror {
+                    font-size: 16px;
+                }
+                .slds-required {
+                    font-size: 20px;
+                }
+                .error {
+                    font-size: 16px;
+                }
+                .dateerror {
+                    font-size:16px;
+                }
+                .slds-scope .slds-page-header h2 {
+                    font-size:2rem;
+                }
+                .tooltip .tooltiptext {
+                    font-size:16px;
+                    padding: 4px;
+                }
+                .message .messageText {
+                    font-size: 16px;
+                }
+                .custom_height {
+                    height: 150px !important;
+                    width: 100% !important;
+                }
+                .custom_height option {
+                    font-size:20px;
+                    padding: 2px 6px;
+                }
+                .custom_height_pv {
+                    height: 150px !important;
+                    width: 90% !important;
+                }
+                .custom_height_pv option {
+                    font-size:20px;
+                    padding: 2px 6px;
+                }
+                .CPSCampaignInput_form {
+                    margin-top: 0;
+                    margin-left: 0;
+                    width:100%;
+                }
+                .slds-scope form {
+                    width: 100% !important;
+                    margin-top: 0 !important;
+                    margin-left: 0 !important;
+                }
+                input[type=date] {
+                    font-size:20px;
+                }
+                .slds-scope .slds-notify_container {
+                    width: 87%;
+                    margin: 0 auto;
+                    margin-top: 2%;
+                }
+                .readonly_text
+                {
+                    font-size: 20px;
+                }
+                .readonly_label
+                {
+                    width: 30% !important;
+                }
+            }
+            
+        </style>
+    </head>
+</apex:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zip_Code_Invalid</fullName>
+    <active>true</active>
+    <description>Validates that zip is either 5 digits or 5 digits with 4 digit extension.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(MailingPostalCode)),  
+NOT(REGEX(MailingPostalCode , &quot;\\d{5}(-\\d{4})?&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>MailingPostalCode</errorDisplayField>
+    <errorMessage>Mailing Zip/Postal Code must be in the correct format: nnnnn or nnnnn-nnnn.</errorMessage>
+</ValidationRule>

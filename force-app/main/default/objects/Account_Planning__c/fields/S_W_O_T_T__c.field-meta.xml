@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S_W_O_T_T__c</fullName>
+    <description>This field contains all of the information for:
+Strengths, Weaknesses, Opportunities, Threats and Trends</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains all of the information for:
+Strengths, Weaknesses, Opportunities, Threats and Trends</inlineHelpText>
+    <label>S.W.O.T.T.</label>
+    <length>32000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

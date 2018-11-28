@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spanish__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When PS offerings are delivered in Spanish</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the session being delivered in Spanish? If yes check box</inlineHelpText>
+    <label>Spanish</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

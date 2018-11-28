@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_EOC_5_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+Active__c = True &amp;&amp; 
+ISPICKVAL(Obj_C_Post_Secondary_Ed_Admissions__c , &#39;Applied&#39;), &#39;Goal # achieved&#39; , 
+IF( 
+Active__c = True &amp;&amp; 
+( 
+  ISPICKVAL( Grade_Level_at_Start_Non_Adult__c, &#39;Grade 12 (Senior)&#39;) || 
+  ISPICKVAL( Grade_Level_at_Start_Non_Adult__c, &#39;Secondary School dropout&#39;) || 
+  ISPICKVAL( Educational_Status_at_Start_Adult__c, &#39;A1_Adult w/o Cred Alternative Ed&#39;) ||
+  ISPICKVAL( Educational_Status_at_Start_Adult__c, &#39;A3_HS/GED Grad NOT in postsec&#39;) ||
+  ISPICKVAL( Educational_Status_at_Start_Adult__c, &#39;A4_Adult w/Cred postsec dropout&#39;) ||
+  ISPICKVAL( Educational_Status_at_Start_Adult__c, &#39;A6_Potential postsec transfer&#39;)
+), &#39;Goal # not achieved&#39;,&#39;&#39; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - EOC - 5 Support</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

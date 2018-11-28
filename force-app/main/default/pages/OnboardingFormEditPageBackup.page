@@ -1,0 +1,50 @@
+<apex:page standardController="Onboarding_Form__c" extensions="OnboardingFormEditcls" tabStyle="Onboarding_Form__c">
+     <apex:form >
+        <apex:sectionHeader title="Onboarding Form Edit" subtitle="New Onboarding Form"/>
+        
+     
+        <apex:pageBlock title="Onboarding Form Edit" mode="edit" >
+        
+           <apex:pageBlockButtons >
+            <apex:commandButton action="{!saveoff}" value="Save"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+          </apex:pageBlockButtons>
+          
+          <apex:pageBlockSection title="School Information"    collapsible="false" columns="2"  >
+            <apex:inputField value="{!oObject.Name}"  required="true" />
+            <apex:inputField value="{!Onboarding_Form__c.Print_Name_BPMS__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.Today_s_Date__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.Alias__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.School_Name__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.Short_Name__c}"/>
+            <apex:inputField value="{!oObject.Type__c}" />
+            <apex:inputField value="{!Onboarding_Form__c.Phonetic_Name__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.Years_in_Repayment__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.ED_School_Type__c}"/>
+            <apex:inputField value="{!Onboarding_Form__c.ED_School_Program_Length__c}"/>
+            </apex:pageBlockSection>
+          <apex:pageBlockSection title="Primary Contact Information" collapsible="false" columns="1">
+              <apex:inputField value="{!Onboarding_Form__c.Primary_Contact__c}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Loan Types to Add" collapsible="false" columns="2">
+              <apex:inputField value="{!Onboarding_Form__c.DL_Grad_PLUS__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Perkins__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.DL_Subsidized_Stafford__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Stafford__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.DL_Unsubsidized_Stafford__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Stafford_Subsidized__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Grad_PLUS__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Stafford_Unsubsidized__c}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="SALT Product Offerings" collapsible="false" columns="2">
+              <apex:inputField value="{!Onboarding_Form__c.Reporting_ID__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Job_Search__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.My_Money_101__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Scholarship_Search__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Dashboard__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.Onboarding__c}"/>
+              <apex:inputField value="{!Onboarding_Form__c.College_Cost_Planner__c}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+ </apex:page>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reports --></label>
+    <name>Reports__c</name>
+    <picklistValues>
+        <masterLabel>Communication</masterLabel>
+        <translation><!-- Communication --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communication Results</masterLabel>
+        <translation><!-- Communication Results --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portfolio Details</masterLabel>
+        <translation><!-- Portfolio Details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portfolio Management</masterLabel>
+        <translation><!-- Portfolio Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portfolio Profile</masterLabel>
+        <translation><!-- Portfolio Profile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Projected CDR</masterLabel>
+        <translation><!-- Projected CDR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Risk Analysis</masterLabel>
+        <translation><!-- Risk Analysis --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

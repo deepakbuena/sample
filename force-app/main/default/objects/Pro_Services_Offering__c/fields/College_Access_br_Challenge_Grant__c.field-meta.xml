@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_Access_br_Challenge_Grant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if  this Professional Services event is for an organization who has received funds from the College Access Challenge Grant.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if  this Professional Services event is for an organization who has received funds from the College Access Challenge Grant.</inlineHelpText>
+    <label>College Access &lt;br&gt; Challenge Grant</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

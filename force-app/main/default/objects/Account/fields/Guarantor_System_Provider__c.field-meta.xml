@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guarantor_System_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Guarantor System Provider</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Guarantec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Homegrown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PHEAA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>USAF</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

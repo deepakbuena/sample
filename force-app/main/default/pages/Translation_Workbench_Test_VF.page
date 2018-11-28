@@ -1,0 +1,20 @@
+<apex:page standardcontroller="Lead" extensions="ChangeLanguage2" doctype="HTML-5.0" language="{!language}" cache="false">
+    <apex:form >
+        <apex:outputPanel rendered="{!rndrSpenish}">
+            <apex:outputlink value="/apex/Translation_Workbench_Test_VF?lang=es_MX">Spanish</apex:outputlink>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!!rndrSpenish}">
+            <apex:outputlink value="/apex/Translation_Workbench_Test_VF">English</apex:outputlink>
+        </apex:outputPanel>
+
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputfield value="{!Lead.FirstName}"/>
+                <apex:inputfield value="{!Lead.LastName}"/>
+                <apex:inputfield value="{!Lead.Company}"/>
+                <apex:inputfield value="{!Lead.Are_you_a_US_Citizen__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

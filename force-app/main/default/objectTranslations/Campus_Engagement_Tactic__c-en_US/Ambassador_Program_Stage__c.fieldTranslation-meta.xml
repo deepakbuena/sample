@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Ambassador Program Stage --></label>
+    <name>Ambassador_Program_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Active Program</masterLabel>
+        <translation><!-- Active Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ambassador Training in Progress</masterLabel>
+        <translation><!-- Ambassador Training in Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Certification in Progress</masterLabel>
+        <translation><!-- Certification in Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Decision</masterLabel>
+        <translation><!-- Pending Decision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Program Inquiry</masterLabel>
+        <translation><!-- Program Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recruiting/Planning</masterLabel>
+        <translation><!-- Recruiting/Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stagnant Activity</masterLabel>
+        <translation><!-- Stagnant Activity --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

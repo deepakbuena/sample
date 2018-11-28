@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other</fullName>
+    <active>false</active>
+    <description>Some other strange and unusual type of event. Use this only as a last resort!</description>
+    <label>Other</label>
+    <picklistValues>
+        <picklist>PS_OfferingDeliveryMethod__c</picklist>
+        <values>
+            <fullName>Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Person</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PS_OfferingStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PS_OfferingSubStatus__c</picklist>
+        <values>
+            <fullName>Additional Information Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changed Topic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response From Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for ProServices Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting to be Submitted for Approval</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

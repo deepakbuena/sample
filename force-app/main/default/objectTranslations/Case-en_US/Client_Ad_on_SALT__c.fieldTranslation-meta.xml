@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Client Ad on SALT --></label>
+    <name>Client_Ad_on_SALT__c</name>
+    <picklistValues>
+        <masterLabel>Large</masterLabel>
+        <translation><!-- Large --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Small</masterLabel>
+        <translation><!-- Small --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligibility__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Eligibility (at time of initial selection)</inlineHelpText>
+    <label>Eligibility</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic Risk only (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First-Gen and academic risk (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First-Gen College only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low-income and academic risk (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low-Income and First-Gen College</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low-income-first-gen-academic risk (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low-Income only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not Eligible</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

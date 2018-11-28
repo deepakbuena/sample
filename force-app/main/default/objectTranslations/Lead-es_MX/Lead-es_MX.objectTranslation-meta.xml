@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>CPS_New_Event_LE</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>CPS_New_Task_LE</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Business Development --></label>
+        <name>Business_Development</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CPS - EOC --></label>
+        <name>CPS_EOC</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CPS - TS --></label>
+        <name>CPS_TS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CPS - UB --></label>
+        <name>CPS_UB</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Strategic Partnership --></label>
+        <name>Strategic_Partnership</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- If the Lead Status is being Closed, you must provide a reason. --></errorMessage>
+        <name>Closed_Lead_Requires_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Name Cannot be Blank --></errorMessage>
+        <name>FirstName_Cannot_be_Blank_on_CPS_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate Other Organization Type --></errorMessage>
+        <name>Other_industry_type</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- financialprofile --></label>
+        <name>financialprofile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- map --></label>
+        <name>map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- news --></label>
+        <name>news</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Qualtrics_Survey --></label>
+        <name>qualtrics__Send_Qualtrics_Survey</name>
+    </webLinks>
+</CustomObjectTranslation>

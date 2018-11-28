@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lead_Requires_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL(Status, &quot;Unqualified / Closed&quot;),OR(ISBLANK(TEXT(Unqualify_Close_Reason__c))))</errorConditionFormula>
+    <errorDisplayField>Unqualify_Close_Reason__c</errorDisplayField>
+    <errorMessage>If the Lead Status is being Closed, you must provide a reason.</errorMessage>
+</ValidationRule>

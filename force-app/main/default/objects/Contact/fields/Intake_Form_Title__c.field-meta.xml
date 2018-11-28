@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Form_Title__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Intake_Location__c, &quot;EOC Boston&quot;), 
+&quot;ASA/MassEdCo - EOC INTAKE FORM 2018-2019&quot; 
+,IF( ISPICKVAL( Intake_Location__c, &quot;EOC Brockton&quot;), 
+&quot;ASA - EOC INTAKE FORM 2018-2019&quot; 
+,&quot;INTAKE FORM 2018-2019&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Intake Form Title</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

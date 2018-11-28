@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Win__c</fullName>
+    <description>If the primary win reason is product please select which products were the reason for the win.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the primary win reason is product please select which products were the reason for the win.</inlineHelpText>
+    <label>Product-Win</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Primary_Win_Reason__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Financial Literacy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Debt Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Membership</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Staff Trainings</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Engagement/Activation Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Financial Literacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Debt Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>SALT Membership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Staff Trainings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Engagement/Activation Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

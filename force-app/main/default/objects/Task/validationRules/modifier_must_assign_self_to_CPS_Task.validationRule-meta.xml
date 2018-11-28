@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>modifier_must_assign_self_to_CPS_Task</fullName>
+    <active>false</active>
+    <description>This rule ensures that an advisor assigns an open task (created by sign on advising process) to him/herself before saving changes.  DEACTIVATED!!</description>
+    <errorConditionFormula>AND (
+LEFT($User.Username,11) != &#39;cps@asaimpa&#39;,
+OwnerId !=  $User.Id,
+RecordType.Name = &#39;CPS - Task&#39;
+)</errorConditionFormula>
+    <errorDisplayField>Attended__c</errorDisplayField>
+    <errorMessage>Please update &#39;Assigned To&#39; field to yourself.  DEACTIVATED!!</errorMessage>
+</ValidationRule>

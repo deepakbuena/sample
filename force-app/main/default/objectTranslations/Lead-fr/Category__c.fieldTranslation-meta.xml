@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Content</masterLabel>
+        <translation><!-- Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Impact</masterLabel>
+        <translation><!-- Impact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reach</masterLabel>
+        <translation><!-- Reach --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

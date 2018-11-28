@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SALT Courses --></label>
+    <name>My_Money_101_Courses__c</name>
+    <picklistValues>
+        <masterLabel>All</masterLabel>
+        <translation><!-- All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banking Basics</masterLabel>
+        <translation><!-- Banking Basics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Budgeting</masterLabel>
+        <translation><!-- Budgeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Cards</masterLabel>
+        <translation><!-- Credit Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Score</masterLabel>
+        <translation><!-- Credit Score --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entrance Counseling</masterLabel>
+        <translation><!-- Entrance Counseling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Aid</masterLabel>
+        <translation><!-- Financial Aid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Goals</masterLabel>
+        <translation><!-- Financial Goals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grad level</masterLabel>
+        <translation><!-- Grad level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identity Theft</masterLabel>
+        <translation><!-- Identity Theft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Repayment Options</masterLabel>
+        <translation><!-- Repayment Options --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Loans</masterLabel>
+        <translation><!-- Student Loans --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

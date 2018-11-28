@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountOpportunityorCampaignRequired</fullName>
+    <active>false</active>
+    <description>This validation rule is designed to ensure that each Offering created is linked to an Account, Opportunity or Campaign (at least one).</description>
+    <errorConditionFormula>IF(AND(ISNULL( PS_OfferingCampaign__c)=TRUE,ISNULL( PS_OfferingOpportunity__c)=TRUE,ISNULL( PS_OfferingAccount__c)=TRUE),TRUE,FALSE)</errorConditionFormula>
+    <errorMessage>An Offering MUST be tied to either an Account, an Opportunity or a Campaign. Please use one of these fields to link to this Offering.</errorMessage>
+</ValidationRule>

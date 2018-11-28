@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllExpenses</fullName>
+    <columns>Week_of__c</columns>
+    <columns>Projects__c</columns>
+    <columns>Resource__c</columns>
+    <columns>REPORT_TOTAL__c</columns>
+    <columns>Submit__c</columns>
+    <columns>Approve__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Expenses</label>
+</ListView>

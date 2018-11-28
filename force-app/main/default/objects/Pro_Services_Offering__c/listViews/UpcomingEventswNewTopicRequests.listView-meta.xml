@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UpcomingEventswNewTopicRequests</fullName>
+    <columns>NAME</columns>
+    <columns>PS_OfferingRequestedBy__c</columns>
+    <columns>PS_OfferingTargetDate__c</columns>
+    <columns>PS_OfferingAssignedTo__c</columns>
+    <columns>PS_OfferingState__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PS_OfferingTopic__c</field>
+        <operation>equals</operation>
+        <value>New Topic Request</value>
+    </filters>
+    <filters>
+        <field>PS_OfferingCompleted__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Upcoming Events w/New Topic Requests</label>
+    <sharedTo>
+        <group>ASAProfessionalServices</group>
+    </sharedTo>
+</ListView>

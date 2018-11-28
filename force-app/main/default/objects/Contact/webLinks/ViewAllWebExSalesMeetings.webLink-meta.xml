@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ViewAllWebExSalesMeetings</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>View All WebEx Sales Meetings</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://integration.webex.com/SaCSFService/director.do?sid={!API_Session_ID}&amp;svr={!API_Partner_Server_URL_60}&amp;act=list</url>
+</WebLink>

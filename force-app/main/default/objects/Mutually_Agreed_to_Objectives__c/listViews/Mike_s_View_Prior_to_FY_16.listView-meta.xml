@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mike_s_View_Prior_to_FY_16</fullName>
+    <columns>NAME</columns>
+    <columns>Regional_Manager__c</columns>
+    <columns>Regional_Account_Executive__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>objective_plan_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Regional_Manager__c</field>
+        <operation>contains</operation>
+        <value>Michael Friedman</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>lessThan</operation>
+        <value>7/1/2015 12:00 AM</value>
+    </filters>
+    <label>Mike&#39;s View - Prior to FY &#39;16</label>
+    <sharedTo>
+        <group>BD_East</group>
+        <group>BD_West</group>
+    </sharedTo>
+</ListView>

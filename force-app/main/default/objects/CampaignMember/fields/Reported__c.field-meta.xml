@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reported__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field should NOT be used!  See SFD-58.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should NOT be used!  See SFD-58.</inlineHelpText>
+    <label>Reported Value Imported From Blumen</label>
+    <type>Checkbox</type>
+</CustomField>

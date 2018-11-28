@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Conf_Registration__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do we get a pre-conference regigistration list with our Sponsorship level?</description>
+    <externalId>false</externalId>
+    <label>Pre Conf. Registration List?</label>
+    <type>Checkbox</type>
+</CustomField>

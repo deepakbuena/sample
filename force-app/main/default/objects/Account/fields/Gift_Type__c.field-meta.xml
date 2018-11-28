@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Type__c</fullName>
+    <description>This is for Foundation (Grant) processing only.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the type of gift this represents for the Foundation/Grant.</inlineHelpText>
+    <label>Gift Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In-Kind</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pledge</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pledge Payment</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

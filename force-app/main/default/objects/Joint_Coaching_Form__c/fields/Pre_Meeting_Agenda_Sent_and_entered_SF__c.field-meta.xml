@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Meeting_Agenda_Sent_and_entered_SF__c</fullName>
+    <description>Did the RAE send a pre-meeting agenda to the client and enter it into Salesforce?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did the RAE send a pre-meeting agenda to the client and enter it into Salesforce?</inlineHelpText>
+    <label>Pre-Meeting Agenda Sent - Entered in SF</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

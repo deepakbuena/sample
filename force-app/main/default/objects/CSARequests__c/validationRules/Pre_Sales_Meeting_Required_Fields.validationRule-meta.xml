@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Sales_Meeting_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.DeveloperName = &#39;Pro_Services_Request&#39; &amp;&amp;  (ISPICKVAL(CSA_Request__c,&#39;Pre-Sales Meeting / In-Person Support&#39;) || ISPICKVAL(CSA_Request__c,&#39;Salt Demo / Webinar&#39;)) &amp;&amp; (ISBLANK(Details__c)|| ISNULL(Meeting_Date__c))</errorConditionFormula>
+    <errorMessage>Details and Meeting Date are required fields for this Request Type.</errorMessage>
+</ValidationRule>

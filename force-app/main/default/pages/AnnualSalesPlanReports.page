@@ -1,0 +1,86 @@
+<apex:page standardController="Annual_Sales_Plan__c"  extensions="AnnualSalesPlanReports">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <apex:form >
+        <table>
+            <tr>
+                <td>
+                Q1
+                    <apex:commandLink target="_blank" id="sOfTdy1">
+                        <analytics:reportChart reportid="{!report2}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ1StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ1EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q2
+                    <apex:commandLink target="_blank" id="sOfTdy2">
+                        <analytics:reportChart reportid="{!report2}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ2StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ2EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q3
+                    <apex:commandLink target="_blank" id="sOfTdy3">
+                        <analytics:reportChart reportid="{!report2}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ3StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ3EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q4
+                    <apex:commandLink target="_blank" id="sOfTdy4">
+                        <analytics:reportChart reportid="{!report2}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ4StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ4EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+            </tr>
+                <td/><td/><td/><td/><td/><td/><td/><td/> 
+            <tr> 
+                <td>
+                Q1
+                    <apex:commandLink target="_blank" id="sOfTdy5">
+                        <analytics:reportChart reportid="{!report1}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ1StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ1EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q2
+                    <apex:commandLink target="_blank" id="sOfTdy6">
+                        <analytics:reportChart reportid="{!report1}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ2StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ2EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q3
+                    <apex:commandLink target="_blank" id="sOfTdy7">
+                        <analytics:reportChart reportid="{!report1}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ3StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ3EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+                <td>
+                Q4
+                    <apex:commandLink target="_blank" id="sOfTdy8">
+                        <analytics:reportChart reportid="{!report1}" size="tiny" showRefreshButton="true" filter="{column:'CUST_OWNER_NAME', operator:'equals', value:'{!ownerName}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'greaterOrEqual', value:'{!FQ4StartDate}'} , {column:'Mutually_Agreed_to_Objectives__c.objective_plan_date__c', operator:'lessOrEqual', value:'{!FQ4EndDate}'}"/>
+                    </apex:commandLink>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function myFunction(){
+                var q1 = '{!currentQuarter1}';
+                var q2 = '{!currentQuarter2}';
+                var q3 = '{!currentQuarter3}';
+                var q4 = '{!currentQuarter4}';
+                console.log($("[id$='sOfTdy7']").children().find(".asOfDate"));
+                if(q1=="false"){
+                    $("[id$='sOfTdy1']").children().find(".asOfDate").css({"display": "none"});
+                    $("[id$='sOfTdy5']").children().find(".asOfDate").css({"display": "none"});
+                }
+                if(q2=="false"){
+                    $("[id$='sOfTdy2']").children().find(".asOfDate").css({"display": "none"});
+                    $("[id$='sOfTdy6']").children().find(".asOfDate").css({"display": "none"});
+                }
+                if(q3=="false"){
+                    $("[id$='sOfTdy3']").children().find(".asOfDate").css({"display": "none"});
+                    $("[id$='sOfTdy7']").children().find(".asOfDate").css({"display": "none"});
+                }
+                if(q4=="false"){
+                    $("[id$='sOfTdy4']").children().find(".asOfDate").css({"display": "none"});
+                    $("[id$='sOfTdy8']").children().find(".asOfDate").css({"display": "none"});
+                }
+            }
+            setTimeout(myFunction, 3000);
+        </script>
+    </apex:form> 
+</apex:page>

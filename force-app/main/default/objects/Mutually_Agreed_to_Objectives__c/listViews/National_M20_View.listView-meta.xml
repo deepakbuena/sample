@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_M20_View</fullName>
+    <columns>NAME</columns>
+    <columns>Annual_Sales_Plan__c</columns>
+    <columns>Regional_Account_Executive__c</columns>
+    <columns>Regional_Manager__c</columns>
+    <columns>objective_plan_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>THIS_FISCAL_YEAR</value>
+    </filters>
+    <label>National M20 View</label>
+</ListView>

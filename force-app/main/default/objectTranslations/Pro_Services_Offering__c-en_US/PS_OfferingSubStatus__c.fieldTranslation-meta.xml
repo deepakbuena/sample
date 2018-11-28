@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub-Status --></label>
+    <name>PS_OfferingSubStatus__c</name>
+    <picklistValues>
+        <masterLabel>Additional Information Requested</masterLabel>
+        <translation><!-- Additional Information Requested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Changed Topic</masterLabel>
+        <translation><!-- Changed Topic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Cancelled</masterLabel>
+        <translation><!-- Event Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High Priority</masterLabel>
+        <translation><!-- High Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Registration</masterLabel>
+        <translation><!-- Lack of Registration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Resources</masterLabel>
+        <translation><!-- Lack of Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Priority</masterLabel>
+        <translation><!-- Low Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Response From Contact</masterLabel>
+        <translation><!-- No Response From Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Priority Override</masterLabel>
+        <translation><!-- Priority Override --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard Priority</masterLabel>
+        <translation><!-- Standard Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted for ProServices Approval</masterLabel>
+        <translation><!-- Submitted for ProServices Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for ProServices Approval</masterLabel>
+        <translation><!-- Waiting for ProServices Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Strategic Services Approval</masterLabel>
+        <translation><!-- Waiting for Strategic Services Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting to be Submitted for Approval</masterLabel>
+        <translation><!-- Waiting to be Submitted for Approval --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

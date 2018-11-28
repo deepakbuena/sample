@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X10X10_Booth_Sent_Date__c</fullName>
+    <externalId>false</externalId>
+    <label>10X10 Booth Sent Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALT_Brand</fullName>
+    <columns>NAME</columns>
+    <columns>Brand_del__c</columns>
+    <columns>PS_TopicCategory__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Brand_del__c</field>
+        <operation>equals</operation>
+        <value>SALT</value>
+    </filters>
+    <label>SALT Brand</label>
+</ListView>

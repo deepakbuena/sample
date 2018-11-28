@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Mother_College_graduate__c</fullName>
+    <externalId>false</externalId>
+    <label>Is Mother 4-yr. U.S. College grad?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No (did not attend U.S. college)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No (attended some U.S. college)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No (completed 2-year U.S. college)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

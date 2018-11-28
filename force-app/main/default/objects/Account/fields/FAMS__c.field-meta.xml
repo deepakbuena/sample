@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAMS__c</fullName>
+    <externalId>false</externalId>
+    <label>FAMS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA Direct</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Datatel - Colleague</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>eCourier</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Ed Express</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Elite</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>HomeGrown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>IRIS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jenzabar CX (CARS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Paper</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PowerFAIDS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ScholarNet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SCT Banner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SCT Matrix</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SIS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Univers</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

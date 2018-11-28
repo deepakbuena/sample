@@ -1,0 +1,21 @@
+<apex:page controller="CaseBarrierMultiPickController" showHeader="false" sidebar="false" >
+    <script type="text/javascript">
+     function closeWin(){   
+            if(window.parent){
+            window.parent.location.href="/{!$CurrentPage.parameters.id}";
+            window.parent.close();
+            } 
+           
+        }
+        function closeWindow_NoAction(){
+            window.close();
+        }
+    </script>
+    
+    <apex:form >
+        <c:MultiSelectComponent leftLabel="Available Barriers" left1Options="{!allBarriers}"  rightLabel="Selected Barriers" 
+        right1Options="{!selectedBarriers}" size="6" width="140px" recordId="{!$CurrentPage.parameters.id}" ObjType="Case"/>
+
+    </apex:form>
+    <apex:outputText >{!message}</apex:outputText>
+</apex:page>

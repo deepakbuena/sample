@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Financial Literacy --></label>
+    <name>Financial_Literacy__c</name>
+    <picklistValues>
+        <masterLabel>Community</masterLabel>
+        <translation><!-- Community --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Job/Internship Search</masterLabel>
+        <translation><!-- Job/Internship Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Courses</masterLabel>
+        <translation><!-- SALT Courses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scholarship Search</masterLabel>
+        <translation><!-- Scholarship Search --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,2095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_EOC</fullName>
+    <active>true</active>
+    <label>CPS - EOC</label>
+    <picklistValues>
+        <picklist>ASA_Member__c</picklist>
+        <values>
+            <fullName>ASA Board of Directors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisory Board</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Academic_Course_Level__c</picklist>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Academic_Year__c</picklist>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Achievement_plan__c</picklist>
+        <values>
+            <fullName>3 years of Foreign Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 years of Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 years of English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 years of Math</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_program_participation__c</picklist>
+        <values>
+            <fullName>Boston Scholar-Athlete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bottom line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freedom House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gear Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project GRAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roxx Map</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talented %26 Gifted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tenacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upward Bound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Youth Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>uAspire</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Annual_Taxable_Income__c</picklist>
+        <values>
+            <fullName>%240 %E2%80%93 18%2C210</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2418%2C211 %E2%80%93 24%2C690</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2424%2C691 %E2%80%93 31%2C170</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2431%2C171 %E2%80%93 37%2C650</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2437%2C651 %E2%80%93 44%2C130</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2444%2C131 %E2%80%93 50%2C610</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2450%2C611 %E2%80%93 57%2C090</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2457%2C091 %E2%80%93 63%2C570</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over %2463%2C570</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Are_you_a_US_Citizen__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>At_Risk_Alg_Not_Completed_10th_ATOIS__c</picklist>
+        <values>
+            <fullName>Algebra %28or pre-%29 completed by 10th gr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No algebra %28or pre-%29 by 10th grade start</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28not yet available%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28prior to 2012%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>At_Risk_Low_GPA_ATOIS__c</picklist>
+        <values>
+            <fullName>GPA above 2%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GPA of 2%2E5 or less</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28prior to 2012%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>At_Risk_Reading_LA_or_Math_ATOIS__c</picklist>
+        <values>
+            <fullName>NOT Proficient in State assessments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proficient in State assessments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28no results%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28prior to 2012%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CPS_Intake_location</picklist>
+        <values>
+            <fullName>EOC Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CPS_Satellite_Location_EOC</picklist>
+        <values>
+            <fullName>Asian American Civic Association %28AACA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHA Adult Learning Center %E2%80%93 Charlestown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BPS BDEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BPS Henderson Inclusion School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brockton EOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Codman Square BPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copley Square BPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Signature_Needed_Received__c</picklist>
+        <values>
+            <fullName>NOT Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needed%2FNOT Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Communications__c</picklist>
+        <values>
+            <fullName>Lender%2FServicer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Education_Level_or_Last_Grade__c</picklist>
+        <values>
+            <fullName>A1_Adult w%2Fo Cred Alternative Ed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A2_Adult w%2Fo Cred NOT in A1 or A5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A3_HS%2FGED Grad NOT in postsec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A4_Adult w%2FCred postsec dropout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A5_Adult w%2Fo HS Cred postsec dropout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A6_Potential postsec transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A7_Postsec student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A8_Adult Other %28%3E 18 years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A9_Adult Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B1_HS non-Senior %289th-11th grade%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2_HS Senior or in Alt Ed %2812th grade only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B3_Secondary School dropout %28%3C%3D 18 years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B4_Other %28%3C%3D 18 years%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Survey__c</picklist>
+        <values>
+            <fullName>Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfaction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Degrees_Goal__c</picklist>
+        <values>
+            <fullName>Associates %282-year%29 degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelor%E2%80%99s Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate%2FTechnical Training Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master%E2%80%99s Degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Degree %28M%2ED%2E%2C J%2ED%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure about plans</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disconnected_Youth__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28prior participant%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Eligibility__c</picklist>
+        <values>
+            <fullName>First-Gen College only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low-Income and First-Gen College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low-Income only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Eligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ethnic_Type__c</picklist>
+        <values>
+            <fullName>African</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cantonese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cape Verdean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filipino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haitian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hawaiian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandarin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pakistanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somalian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnamese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Indian</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finished_MM101_Courses__c</picklist>
+        <values>
+            <fullName>Budgeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit and Debt Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Educational Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internships%2C Income and Careers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saving and Investing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Loan Repayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grade_Level_at_Entry__c</picklist>
+        <values>
+            <fullName>10th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9th grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In 4th year of 5-year dual enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In 5th year of 5-year dual enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No response%2FUnknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rising 10th grader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rising 11th grader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rising 12th grader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rising 9th grader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Income_Source__c</picklist>
+        <values>
+            <fullName>Child support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSI or SSDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signed Statement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAFDC %28welfare%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unemployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wages%2Fsalary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Father_College_graduate__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Media_Release_Authorized__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Mobile_OK_to_Text__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Mother_College_graduate__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Text_ED_Participant__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Latest_Grant_Program__c</picklist>
+        <values>
+            <fullName>EOC Boston %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Boston %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Boston %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Boston %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC Brockton %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC MassEdCo %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC MassEdCo %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC MassEdCo %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC MassEdCo %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Boston %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS Brockton %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton %282016-2017%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton %282017-2018%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton %282018-2019%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UB Brockton %282019-2020%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aggregator%2FAssociation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BD Rep Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MQL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail %2F e-mail campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School CM Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show%2FConference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Learned_about_program__c</picklist>
+        <values>
+            <fullName>AACA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attended a Workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BHCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend%2FRelative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Info Session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JVS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Grant Letter%2FEmail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online%2Fsocial media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Previous Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T Poster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher %2F Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urban College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Year Up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Limited_English_Proficiency__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marital_Status__c</picklist>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown%2FNot disclosed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Captain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rabbi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rear Admiral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rev%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S%2EJ%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sister</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice Admiral</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Academic_Need__c</picklist>
+        <values>
+            <fullName>Diagnosed learning disability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest in careers in math or science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of career goals and%2For accurate info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of opportunity%2C support%2C or guidance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited English proficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low GPA and%2For achievement test scores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low confidence%2Fself-esteem%2Fsocial skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low educational aspirations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low-income community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than one</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rural isolation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parent_Signature_Needed_Received__c</picklist>
+        <values>
+            <fullName>NOT Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needed%2FNOT Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Post_Secondary_Ed_Enrollment_Cohort__c</picklist>
+        <values>
+            <fullName>2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2011</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8888</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9999</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_Phone_Type__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Language__c</picklist>
+        <values>
+            <fullName>Cantonese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French-Creole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandarin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnamese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Race</picklist>
+        <values>
+            <fullName>Amer%2E Indian or Alaska Native %28NonH%2FL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asian %28NonH%2FL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Black or African American %28NonH%2FL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hispanic%2FLatino of any race</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Native Hawaiian or Pac%2E Islander %28N-H%2FL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Two or more races %28NonH%2FL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown%2FNot disclosed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White %28NonH%2FL%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role_to_ASA__c</picklist>
+        <values>
+            <fullName>Admissions Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bursar Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center FIN AID contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicer Access Official</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRIO Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signature_Data_is_for_Service_Year_EOC__c</picklist>
+        <values>
+            <fullName>2018-2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019-2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020-2021</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sortable_Title__c</picklist>
+        <values>
+            <fullName>ASA Board Of Directors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASA Business Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASA Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin%2FExec%2E Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Dean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Dean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Provost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Vice President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bursar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chancelor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chief Financial Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chief Operating Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comptroller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Controller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director - Financial Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director Enrollment Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Director of Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Vice President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fin-Aid Counselor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO LONGER HERE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSLDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Sales Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEPS Official</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President - University%2FCollege</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printing RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Account Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Sales Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical%2FSystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VP - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VP of Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VP of Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VP of Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice President</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Statement_of_Need__c</picklist>
+        <values>
+            <fullName>ACT%2FSAT Test Prep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Academic Advising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Counseling%2FMajors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Field Trips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College Campus Visits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College Prep Workshops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Essay Writing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutoring in</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strategic_Services__c</picklist>
+        <values>
+            <fullName>Endorsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive Ongoing Communication</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Student_Status__c</picklist>
+        <values>
+            <fullName>College Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESL Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED%2FHiSET Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Currently Attending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocation%2FTraining Student</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Suffix__c</picklist>
+        <values>
+            <fullName>Esq%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>III</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PhD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Talent_Search_Target_Schools</picklist>
+        <values>
+            <fullName>Ashfield Middle School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brighton High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brockton High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Academy of Science %26 Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Davis Middle School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Middle School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None of these</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urban Science Academy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Roxbury Academy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Office__c</picklist>
+        <values>
+            <fullName>Academic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admissions Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advancement Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Services Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrollment Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President%27s Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrar%27s Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Life Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterans Affairs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Veteran_Status__c</picklist>
+        <values>
+            <fullName>Active Duty US Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child of Active Duty US Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a Veteran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse of Active Duty US Military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Veteran</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

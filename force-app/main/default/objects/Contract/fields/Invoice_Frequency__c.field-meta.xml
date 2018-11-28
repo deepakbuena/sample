@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Frequency__c</fullName>
+    <description>Takes the maximum of Invoice Frequency from Contract Lines, required to calculate the Service Period End date on Sales Invoice. - GS Development Team</description>
+    <externalId>false</externalId>
+    <label>Invoice Frequency</label>
+    <summarizedField>Contract_Lines__c.Invoice_Freq__c</summarizedField>
+    <summaryFilterItems>
+        <field>Contract_Lines__c.Unit_Price__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Contract_Lines__c.Contract__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DNU_Activity_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>DNU_Activity Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>50000</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>20000</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>20251</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>10000</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

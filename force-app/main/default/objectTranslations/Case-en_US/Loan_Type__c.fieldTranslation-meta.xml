@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Loan Type --></label>
+    <name>Loan_Type__c</name>
+    <picklistValues>
+        <masterLabel>Grad PLUS</masterLabel>
+        <translation><!-- Grad PLUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Institutional</masterLabel>
+        <translation><!-- Institutional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MA - NIL</masterLabel>
+        <translation><!-- MA - NIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLUS</masterLabel>
+        <translation><!-- PLUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Perkins</masterLabel>
+        <translation><!-- Perkins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sub</masterLabel>
+        <translation><!-- Sub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unsub</masterLabel>
+        <translation><!-- Unsub --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

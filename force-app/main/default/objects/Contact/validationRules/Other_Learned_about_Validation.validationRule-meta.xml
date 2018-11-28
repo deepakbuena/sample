@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Learned_about_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL(Learned_about_program__c, &#39;Other&#39;) &amp;&amp; ISBLANK(Other_Learned_about_program__c)</errorConditionFormula>
+    <errorDisplayField>Other_Learned_about_program__c</errorDisplayField>
+    <errorMessage>Please enter Learned about source</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPSChangeOwnerDefaultedFromSignOn</fullName>
+    <active>true</active>
+    <description>Contact activities that are auto-created by the TS sign on process are assigned to default user bsullivan. Users must reassign the task when they edit it.</description>
+    <errorConditionFormula>AND ( 
+LEFT($User.Username,11) != &#39;cps@asaimpa&#39;, /*prod*/
+LEFT($User.Username,11) != &#39;cps_signon@&#39;, /*UAT*/
+LEFT($User.Username,10) != &#39;bsullivan@&#39;, /*default user*/
+Owner:User.Alias = &#39;bsull&#39;, 
+RecordType.Name = &#39;CPS - Task&#39; 
+)</errorConditionFormula>
+    <errorMessage>Please assign this task to a CPS Advisor.</errorMessage>
+</ValidationRule>

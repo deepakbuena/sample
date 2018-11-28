@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Case_Last_Inbound_Message_Set</fullName>
+        <description>Sets case last inbound message field to current date/time when an inbound message is received</description>
+        <field>Last_Inbound_Message__c</field>
+        <formula>NOW()</formula>
+        <name>Case Last Inbound Message Set</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>New_Message_Received_Set_False_Email</fullName>
+        <description>Cross-object workflow to set Case New Message Received flag to false</description>
+        <field>New_Message_Received__c</field>
+        <literalValue>0</literalValue>
+        <name>New Message Received Set False(EmailMsg)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>New_Message_Received_Set_True_Email</fullName>
+        <description>Cross-object workflow to set Case New Message Received flag to true</description>
+        <field>New_Message_Received__c</field>
+        <literalValue>1</literalValue>
+        <name>New Message Received Set True(EmailMsg)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>CS New Inbound Email Message</fullName>
+        <actions>
+            <name>Case_Last_Inbound_Message_Set</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>New_Message_Received_Set_True_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>On emailmessage creation, evaluates to true if message is incoming</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CS New Outbound Email Message</fullName>
+        <actions>
+            <name>New_Message_Received_Set_False_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>On emailmessage creation, evaluates to true if &quot;incoming&quot; is not true.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

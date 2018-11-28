@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>REPORT_TOTAL__c</fullName>
+    <externalId>false</externalId>
+    <formula>Meals_Total__c  +  Hotel_Total__c  +  Air_Fare_Total__c  +  Car_Rental_Total__c  +  Other_Total__c  +  Internet_Total__c  +  Laundry_Total__c  +  Mileage_Total__c  +  Gas_Total__c  +  Taxi_Total__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>REPORT TOTAL</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

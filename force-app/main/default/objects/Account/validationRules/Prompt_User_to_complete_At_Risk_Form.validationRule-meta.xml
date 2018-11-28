@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prompt_User_to_complete_At_Risk_Form</fullName>
+    <active>false</active>
+    <description>This validation rule forces the user to complete an At Risk Form in the Address / Additional Info section on the Account Page Layout, or from the Home Page - Custom Link.</description>
+    <errorConditionFormula>OR (ISPICKVAL (Rating, &quot;On Watch&quot;),
+
+          ISPICKVAL (Rating, &quot;At Risk&quot;),
+
+          ISPICKVAL (Rating, &quot;Partial Loss&quot;))</errorConditionFormula>
+    <errorMessage>Accounts with a Rating of On Watch, At Risk or Partial Loss require the completion of the At Risk Form.  There is a link in the Account in the Address Area, or you may use the custom link from the Home Page.</errorMessage>
+</ValidationRule>

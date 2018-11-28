@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Form_Footer_Line3__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Intake_Location__c, &quot;TS Boston&quot;),
+&quot;West Roxbury Education Complex:  Cell 617.620.9525          Brighton High:  Cell 617.872.8053                            Community Academy of Science &amp; Health:  Cell 857.488.5119&quot;
+,IF( ISPICKVAL( Intake_Location__c, &quot;TS Brockton&quot;),
+&quot;231 Main Street, Ste R. Brockton, MA 508.586.3146        Brockton High School: 508.894.4214                       Brockton High School: 508.894.4214&quot;
+,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Intake Form Footer Line3</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

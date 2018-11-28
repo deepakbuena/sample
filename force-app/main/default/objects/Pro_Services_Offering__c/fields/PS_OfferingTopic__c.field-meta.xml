@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingTopic__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>What is the topic of this offering?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Each offering must be related to a specific Topic offered by the ProServices@ASA team. If an existing Topic does not meet your needs, you may select New Topic Request to request that the ProServices@ASA team create a new Topic for you.</inlineHelpText>
+    <label>Pro Services Topic</label>
+    <referenceTo>Pro_Services_Topic__c</referenceTo>
+    <relationshipLabel>Pro Services Offerings</relationshipLabel>
+    <relationshipName>PS_OfferingTopic</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

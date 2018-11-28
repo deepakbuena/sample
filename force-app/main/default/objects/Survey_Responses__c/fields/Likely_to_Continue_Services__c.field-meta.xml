@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Likely_to_Continue_Services__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Q# 23 - 2017 CSAT Response</inlineHelpText>
+    <label>Likely to Continue Services</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

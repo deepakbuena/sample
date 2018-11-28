@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- School Email --></label>
+    <name>School_Email__c</name>
+    <picklistValues>
+        <masterLabel>CRC v1 Disb Forecast All</masterLabel>
+        <translation><!-- CRC v1 Disb Forecast All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRC v1 Disb Forecast School Hold</masterLabel>
+        <translation><!-- CRC v1 Disb Forecast School Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRC v1 SCR</masterLabel>
+        <translation><!-- CRC v1 SCR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRC v1 School Roster</masterLabel>
+        <translation><!-- CRC v1 School Roster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Copay Check Roster</masterLabel>
+        <translation><!-- Copay Check Roster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Approval Letter Rpt</masterLabel>
+        <translation><!-- Credit Approval Letter Rpt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disb Roster</masterLabel>
+        <translation><!-- Disb Roster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email SCR Notification</masterLabel>
+        <translation><!-- Email SCR Notification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FastFund Pre-Disb</masterLabel>
+        <translation><!-- FastFund Pre-Disb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indiv Check Roster</masterLabel>
+        <translation><!-- Indiv Check Roster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Notice of Loan Approval</masterLabel>
+        <translation><!-- Notice of Loan Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Disb Rpt</masterLabel>
+        <translation><!-- Pre-Disb Rpt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preclaims For Schools</masterLabel>
+        <translation><!-- Preclaims For Schools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roster Dunning Rpt</masterLabel>
+        <translation><!-- Roster Dunning Rpt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSCR Outbound feed</masterLabel>
+        <translation><!-- SSCR Outbound feed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSCR not returned Letter</masterLabel>
+        <translation><!-- SSCR not returned Letter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - CL4 Unsol Resp</masterLabel>
+        <translation><!-- School - CL4 Unsol Resp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - CRC v1 Unsol Resp</masterLabel>
+        <translation><!-- School - CRC v1 Unsol Resp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School - Proc Sum Rpt</masterLabel>
+        <translation><!-- School - Proc Sum Rpt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Escrow Disb R/U</masterLabel>
+        <translation><!-- School Escrow Disb R/U --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Hold File</masterLabel>
+        <translation><!-- School Hold File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Missing Prom Note Rpt</masterLabel>
+        <translation><!-- School Missing Prom Note Rpt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Pending Cert Req</masterLabel>
+        <translation><!-- School Pending Cert Req --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Roster File</masterLabel>
+        <translation><!-- School Roster File --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

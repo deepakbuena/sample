@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains all of the information for:
+Strengths, Weaknesses, Opportunities, Threats and Trends --></help>
+    <label><!-- S.W.O.T.T. --></label>
+    <name>S_W_O_T_T__c</name>
+</CustomFieldTranslation>

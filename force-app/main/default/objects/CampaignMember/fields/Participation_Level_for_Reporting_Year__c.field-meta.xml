@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participation_Level_for_Reporting_Year__c</fullName>
+    <externalId>false</externalId>
+    <label>Participation Level</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic year and summer components</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Academic year and summer bridge</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Academic year component only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Summer component only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Summer bridge only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (prior participant)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

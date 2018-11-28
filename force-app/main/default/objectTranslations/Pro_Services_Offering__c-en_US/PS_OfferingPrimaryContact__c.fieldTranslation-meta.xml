@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Who is the primary external contact (non-ASA) for this Offering? If the individual does not have their contact information already in Salesforce, you may need to add them to the appropriate Account. --></help>
+    <label><!-- Primary Contact --></label>
+    <name>PS_OfferingPrimaryContact__c</name>
+    <relationshipLabel><!-- Pro Services Offerings (Primary Contact) --></relationshipLabel>
+</CustomFieldTranslation>

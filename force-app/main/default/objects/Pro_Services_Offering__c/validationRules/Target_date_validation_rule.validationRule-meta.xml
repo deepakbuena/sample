@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_date_validation_rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>RecordType.Name  != &#39;Conference Presentation&#39; &amp;&amp;  ISBLANK(PS_OfferingTargetDate__c)</errorConditionFormula>
+    <errorDisplayField>PS_OfferingTargetDate__c</errorDisplayField>
+    <errorMessage>Target Date is a required field</errorMessage>
+</ValidationRule>

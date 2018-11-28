@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bachelors_Degree_Attained__c</fullName>
+    <externalId>false</externalId>
+    <label>Bachelor&#39;s Degree Obtained</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (bachelor’s degree)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No (other postsec credential)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Accepted, deferred to next semester</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Still enrolled in bach. degree program</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Left (incomplete)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (still in HS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (HS grad not enrolled in postsec)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

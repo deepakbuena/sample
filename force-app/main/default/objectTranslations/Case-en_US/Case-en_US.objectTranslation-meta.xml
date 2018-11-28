@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send An Email --></label>
+        <name>Send_An_Email</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SocialPublisher --></label>
+        <name>SocialPublisher</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Call Center --></label>
+        <name>CallCenter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Collect Contract Addendum --></label>
+        <name>Collect_Contract_Addendum</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contract Renewal --></label>
+        <name>Contract_Renewal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- ELM Issues --></label>
+        <name>ELM_Issues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Email To Case --></label>
+        <name>Email_To_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Counseling Services Case --></label>
+        <name>Employer_Community_Case_From_Employee</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Employer Community Case: From HR Manager --></label>
+        <name>Employer_Community_Case_From_HR_Manager</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation --></label>
+        <name>Implementation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation (GO) --></label>
+        <name>ImplementationGO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation Consumer Services --></label>
+        <name>Implementation_Consumer_Services</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Implementation Engagement Partner --></label>
+        <name>Implementation_Engagement_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Issues --></label>
+        <name>Issues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lender Issues --></label>
+        <name>LenderIssues</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lender-Testing --></label>
+        <name>LenderTesting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MPN Serialization --></label>
+        <name>MPNSerialization</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Salesforce Support Request --></label>
+        <name>Salesforce_Support_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- School Process Change --></label>
+        <name>SchoolProcessChange</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The Demog File Processed Date field must contain a date when the Status = Complete. --></errorMessage>
+        <name>Demog_File_Processed_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Demog File Received Date field must contain a date. --></errorMessage>
+        <name>Demog_File_Rcvd_Date_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Case --></label>
+        <name>New_Case</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- Your customer received the Welcome Guide by mail a week ago.  This is a reminder to send them the electronic version. --></description>
+        <name>Reminder_Time_to_Send_the_Electronic_Version_of_the_Welcome_Guide</name>
+        <subject><!-- Reminder: Time to Send the Electronic Version of the Welcome Guide --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

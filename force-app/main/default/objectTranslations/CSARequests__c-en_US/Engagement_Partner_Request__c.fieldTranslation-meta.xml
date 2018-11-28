@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select this checkbox if the request being submitted is specifically for ENGAGEMENT PARTNERS only - otherwise, leave this field blank. --></help>
+    <label><!-- Engagement Partner Request --></label>
+    <name>Engagement_Partner_Request__c</name>
+</CustomFieldTranslation>

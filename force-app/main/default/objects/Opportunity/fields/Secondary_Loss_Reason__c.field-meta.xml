@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Loss_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Deprecated_Secondary Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Budget Cycle/Lack of Funds</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Currently under contract</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In house solution</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Interested, but not ready yet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>RFP Selection</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

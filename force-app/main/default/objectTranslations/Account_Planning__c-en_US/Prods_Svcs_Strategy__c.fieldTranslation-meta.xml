@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the strategy used to determine what Products &amp; Services an account is interested in using. --></help>
+    <label><!-- Products and Services Strategy --></label>
+    <name>Prods_Svcs_Strategy__c</name>
+</CustomFieldTranslation>

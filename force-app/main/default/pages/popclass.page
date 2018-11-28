@@ -1,0 +1,15 @@
+<apex:page controller="popupClass"> 
+  <apex:form > 
+    <apex:commandButton value="Show" action="{!showPopup}" rerender="tstpopup"/> 
+    <apex:outputPanel id="tstpopup"> 
+      <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/> 
+      <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}"> 
+        <apex:commandButton value="Hide Pop up" action="{!closePopup}" rerender="tstpopup"/> 
+      </apex:outputPanel> 
+    </apex:outputPanel> 
+  </apex:form> 
+  <style type="text/css"> 
+    .custPopup{ background-color: white; border-width: 2px; border-style: solid; z-index: 9999; left: 50%; padding:11px; position: absolute; width: 600px; margin-left: -240px; top:100px; } 
+    .popupBackground{ background-color:black; opacity: 0.20; filter: alpha(opacity = 20); position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 9998; } 
+  </style> 
+</apex:page>

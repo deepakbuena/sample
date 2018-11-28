@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>At_Risk_Alg_Not_Completed_10th_ATOIS__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>At Risk: Pre-Algebra or Algebra Course Not Successfully Completed by Beginning of 10th Grade (at time of initial selection).</inlineHelpText>
+    <label>At Risk: Alg Not Completed 10th (ATOIS)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No algebra (or pre-) by 10th grade start</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Algebra (or pre-) completed by 10th gr</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (not yet available)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (prior to 2012)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

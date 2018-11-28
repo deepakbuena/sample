@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Speakers__c</fullName>
+    <description>Who will be the key speakers at the Symposium</description>
+    <externalId>false</externalId>
+    <label>Speakers</label>
+    <length>32000</length>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

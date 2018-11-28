@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_School_Communication__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to track whether or not the International School contact will receive mass email communications, similar to From The Desk Of emails.</description>
+    <externalId>false</externalId>
+    <label>International School Communication</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

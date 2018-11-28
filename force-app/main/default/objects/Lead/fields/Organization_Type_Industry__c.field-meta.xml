@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_Type_Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Organization Type/Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Association / Union</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>For-Profit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>National</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Regional</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>State / Government</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please identify the ASA team member who is requesting this event. --></help>
+    <label><!-- Requested By (ASA) --></label>
+    <name>PS_OfferingRequestedBy__c</name>
+    <relationshipLabel><!-- Pro Services Offerings (Requested By (ASA)) --></relationshipLabel>
+</CustomFieldTranslation>

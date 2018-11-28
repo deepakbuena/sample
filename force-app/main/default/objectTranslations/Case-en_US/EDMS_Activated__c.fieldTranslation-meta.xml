@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- THis is when the EDMS profile has been updated so communciations can begin. --></help>
+    <label><!-- EDMS Activated --></label>
+    <name>EDMS_Activated__c</name>
+</CustomFieldTranslation>

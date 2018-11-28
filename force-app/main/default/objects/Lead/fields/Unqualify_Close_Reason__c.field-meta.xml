@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unqualify_Close_Reason__c</fullName>
+    <description>Have user provide the reason why this Lead is being Unqualified or Closed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide the reason why this Lead is being Unqualified or Closed.</inlineHelpText>
+    <label>Unqualify/Close Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Limited enrollment/opportunity</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student inquiry</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In contract with competitor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Looking for immediate CDR reduction product</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Already in discussions with Prospect</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lead is not decision maker</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Currently has a solution (homegrown/free resource)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>For-Profit entity</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unable/Unwilling to include decision maker</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Loan Borrowers</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not interested at this time</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Retired/No Longer at Institution</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Return to Marketing - Nurture Further</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cold Lead</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Current Client</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Limited enrollment/opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Student inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>In contract with competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Looking for immediate CDR reduction product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Already in discussions with Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Lead is not decision maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Currently has a solution (homegrown/free resource)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>For-Profit entity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Unable/Unwilling to include decision maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>No Loan Borrowers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Not interested at this time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Retired/No Longer at Institution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Return to Marketing - Nurture Further</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Cold Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified / Closed</controllingFieldValue>
+            <valueName>Current Client</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

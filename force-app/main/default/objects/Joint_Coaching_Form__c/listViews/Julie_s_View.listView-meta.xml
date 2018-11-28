@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Julie_s_View</fullName>
+    <columns>NAME</columns>
+    <columns>District_Manager__c</columns>
+    <columns>Regional_Account_Executive__c</columns>
+    <columns>Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>District_Manager__c</field>
+        <operation>equals</operation>
+        <value>Julie Esau</value>
+    </filters>
+    <label>Julie&#39;s View</label>
+    <sharedTo/>
+</ListView>

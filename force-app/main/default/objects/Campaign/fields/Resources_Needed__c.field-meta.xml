@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resources_Needed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to note needed/requested resources, such as: A/V equipment, supplies, special room set ups, materials, snacks/prizes, food (lunch/breakfast).</inlineHelpText>
+    <label>Resources Needed</label>
+    <length>400</length>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

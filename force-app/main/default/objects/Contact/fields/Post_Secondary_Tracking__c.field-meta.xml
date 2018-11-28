@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Secondary_Tracking__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>It&#39;s unclear how CPS users plan to use and set this field (since tracking can be determined by the cohort year and Objective E value recorded on Campaign Member). Until this is determined, this field should not be included on any page layout.</description>
+    <externalId>false</externalId>
+    <label>Post Secondary Tracking</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

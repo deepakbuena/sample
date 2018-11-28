@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UB_APR</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>UB APR</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/loop__looplus?&amp;eid={!Campaign.Id}&amp;ddpIds=a0d0d00000EtlsB&amp;autorun=true</url>
+</WebLink>

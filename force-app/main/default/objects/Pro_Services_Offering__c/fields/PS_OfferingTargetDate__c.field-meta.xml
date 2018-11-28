@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingTargetDate__c</fullName>
+    <description>What is the target date for this offering?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the date requested for this Offering. This date may change depending on intervening factors and the availability of resources to accommodate your request.</inlineHelpText>
+    <label>Target Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

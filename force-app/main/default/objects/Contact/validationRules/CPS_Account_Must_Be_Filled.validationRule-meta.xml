@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Account_Must_Be_Filled</fullName>
+    <active>true</active>
+    <errorConditionFormula>(RecordType.Name  =  &#39;CPS - UB&#39; || RecordType.Name  =  &#39;CPS - TS&#39; || RecordType.Name  =  &#39;CPS - EOC&#39;)
+&amp;&amp;  (AccountId = &#39;&#39;  || LEFT(Account.Name, 25) &lt;&gt; &#39;College Planning Services&#39;)</errorConditionFormula>
+    <errorMessage>Please associate this Contact with Account:  &#39;College Planning Services &lt;current year&gt;&#39;</errorMessage>
+</ValidationRule>

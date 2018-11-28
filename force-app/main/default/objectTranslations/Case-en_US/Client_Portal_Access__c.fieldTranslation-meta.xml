@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A check in this field indicates the customer established has an account on the Client Portal. --></help>
+    <label><!-- Client Portal Access --></label>
+    <name>Client_Portal_Access__c</name>
+</CustomFieldTranslation>

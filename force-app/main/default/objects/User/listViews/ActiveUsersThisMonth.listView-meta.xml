@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActiveUsersThisMonth</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>MANAGER</columns>
+    <columns>CORE.USERS.PHONE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.LAST_LOGIN</columns>
+    <columns>CORE.USER_ROLE.NAME</columns>
+    <columns>CORE.PROFILE.NAME</columns>
+    <columns>CORE.USERS.ACTIVE</columns>
+    <columns>CORE.USERS.USERNAME</columns>
+    <columns>CORE.USERS.EMAIL</columns>
+    <columns>Cost_Center__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CORE.PROFILE.NAME</field>
+        <operation>notContain</operation>
+        <value>chatter,community</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_LOGIN</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>Active Users This Month</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tactic Category --></label>
+    <name>Tactic_Category__c</name>
+    <picklistValues>
+        <masterLabel>Adopted ongoing communication/promotional plan</masterLabel>
+        <translation><!-- Adopted ongoing communication/promotional plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Core promotional initiatives</masterLabel>
+        <translation><!-- Core promotional initiatives --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engagement Meeting</masterLabel>
+        <translation><!-- Engagement Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorporate SALT into existing campus events/programming</masterLabel>
+        <translation><!-- Incorporate SALT into existing campus events/programming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration into the curriculum</masterLabel>
+        <translation><!-- Integration into the curriculum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Large-Scale Engagement Initiative</masterLabel>
+        <translation><!-- Large-Scale Engagement Initiative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multi-department engagement plan</masterLabel>
+        <translation><!-- Multi-department engagement plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One-on-One Counseling</masterLabel>
+        <translation><!-- One-on-One Counseling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-Engagement Meeting</masterLabel>
+        <translation><!-- Re-Engagement Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Courses/Lesson requirement</masterLabel>
+        <translation><!-- SALT Courses/Lesson requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT ambassador program</masterLabel>
+        <translation><!-- SALT ambassador program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT incentive event/raffle</masterLabel>
+        <translation><!-- SALT incentive event/raffle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT registration requirement</masterLabel>
+        <translation><!-- SALT registration requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT steering committee/task force</masterLabel>
+        <translation><!-- SALT steering committee/task force --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Top down buy-in (President/C-Suite)</masterLabel>
+        <translation><!-- Top down buy-in (President/C-Suite) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utilization of instructor handbook</masterLabel>
+        <translation><!-- Utilization of instructor handbook --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Family --></label>
+    <name>Family__c</name>
+    <picklistValues>
+        <masterLabel>Premiums</masterLabel>
+        <translation><!-- Premiums --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Printed Materials</masterLabel>
+        <translation><!-- Printed Materials --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campus_Consultant__c</fullName>
+    <externalId>false</externalId>
+    <formula>Account__r.Campus_Consultant__r.FirstName &amp; &quot; &quot; &amp;  Account__r.Campus_Consultant__r.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This data element shows the Campus Consultant for the account.</inlineHelpText>
+    <label>Campus Consultant</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

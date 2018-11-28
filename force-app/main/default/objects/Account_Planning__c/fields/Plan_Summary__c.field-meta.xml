@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plan_Summary__c</fullName>
+    <description>This field contains the summary information of the plan for this account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the summary information of the plan for this account.  
+
+REMINDER: Please complete this section last.</inlineHelpText>
+    <label>Plan Summary</label>
+    <length>32000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

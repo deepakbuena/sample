@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODADefaultExpenseAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The default GLA on expense lines.</description>
+    <externalId>false</externalId>
+    <label>Default Expense Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <errorMessage>The selected GLA does not exist or is not valid. It must be a corporate GLA.</errorMessage>
+        <filterItems>
+            <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.Name</field>
+            <operation>equals</operation>
+            <value/>
+        </filterItems>
+        <filterItems>
+            <field>c2g__codaGeneralLedgerAccount__c.c2g__ChartOfAccountsStructure__r.c2g__IsCorporate__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+    <relationshipLabel>Accounts (Default Expense Account)</relationshipLabel>
+    <relationshipName>Accounts2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

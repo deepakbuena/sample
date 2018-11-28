@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODABillingMethod__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The billing method</description>
+    <externalId>false</externalId>
+    <label>Billing Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Electronic</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Paper</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Self-billing</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

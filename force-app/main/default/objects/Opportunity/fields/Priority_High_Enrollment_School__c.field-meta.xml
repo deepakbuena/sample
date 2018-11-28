@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_High_Enrollment_School__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Please check this box if this is a top ten enrollment school.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this box if this is a top ten enrollment school.</inlineHelpText>
+    <label>Priority High Enrollment School</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

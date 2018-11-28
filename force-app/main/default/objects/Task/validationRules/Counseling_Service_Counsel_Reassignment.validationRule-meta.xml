@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Counseling_Service_Counsel_Reassignment</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( $Profile.Name = &#39;Counseling Services&#39; &amp;&amp; $UserRole.Name = &#39;Counseling Services Counselor&#39; &amp;&amp;  OwnerId  != $User.Id &amp;&amp;  ISPICKVAL(Why_Reassigned__c, &#39;&#39;), true, false )</errorConditionFormula>
+    <errorDisplayField>Why_Reassigned__c</errorDisplayField>
+    <errorMessage>Please select a Reassignment reason</errorMessage>
+</ValidationRule>

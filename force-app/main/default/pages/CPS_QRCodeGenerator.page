@@ -1,0 +1,95 @@
+<apex:page standardController="campaign" extensions="CPSQRCodeGenerator" action="{!generateCode}" lightningStylesheets="true">
+<apex:slds />
+    <style>
+        .qrcode {
+          width:500px;
+          height:500px;
+          margin-top:15px;
+        }
+        .margin_custom {
+          margin: 10% 35%;;
+        }
+        .qrnotes {
+            display:none;
+            text-align:left;
+        } 
+        @media print {
+          input[type=submit].printPageButton {
+            display: none;
+          }
+          .printPageTime {
+              display: none; // modified by RS on 11142018
+          }
+          .qrnotes {
+              text-align:left;
+              display:block;
+          }
+          .qrnotes h1 {
+              font-size: 19px;
+          }
+          .qrnotes h3 {
+              font-size: 19px;
+          }
+          .qrnotes p {
+              font-size: 17px;
+          }
+        }
+    </style>
+    <apex:includeScript value="{!URLFOR($Resource.CPS_QRCode)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jquery)}"/>
+    <div class="slds-box slds-text-align_center">
+        <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="{!campaignName}">{!campaignName}</h2>
+        <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="{!QRCodeValidity}"> 
+            <span class="printPageTime">Expires on:<apex:outputText value="{0,date,M/d/yyyy hh:mm a}"><apex:param value="{!QRCodeValidity}"/></apex:outputText></span>
+        </h2>
+        <apex:outputLabel value="{!failureMsg}"></apex:outputLabel>
+        <div class="slds-m-top_x-large"></div>
+        <div class="margin_custom ">
+            <div id="qrcode"></div>
+        </div>
+        <div class="slds-m-top_x-large"></div>
+        <apex:form >
+            <apex:commandButton styleClass="slds-button slds-button_brand printPageButton" value="Print" onclick="window.print();"/>
+        </apex:form>
+        <div class="qrnotes">
+            <br/>
+            <br/>
+            <h1><b>Instructions</b></h1>
+            <br/>
+            <h3><b>Step 1:</b></h3>
+            <p>Open the Camera app either from the lock screen or tapping on the icon from your home screen.</p>
+            <br/>
+            <h3><b>Step 2:</b></h3>
+            <p>Hold your device steady for 2-3 seconds towards the QR Code you want to scan.</p>
+            <br/>
+            <h3><b>Step 3:</b></h3>
+            <p>Click on the notification to open the content of the QR Code.</p>
+            <br/>
+            <p>If nothing happens on your screen, you may have to go to your Settings app and enable QR Code scanning. If QR Codes isn’t an option in your settings, your device unfortunately can’t scan QR Codes natively. But don’t worry, this only means you’ll have to download a third-party QR Code reader app. We recommend <b>QR Code Reader</b>, it's free!</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 200,
+            height : 200
+        });
+    
+        function makeCode ()
+        { 
+            if("{!url}"!=="")
+            {
+                console.log("isblank");
+                var elText ="{!url}";
+                if (!elText) {
+                    alert("Unable to generate the QR Code. Something went Wrong!");
+                    elText.focus();
+                    return;
+                }    
+                qrcode.makeCode(elText);
+            }
+        }
+        
+        makeCode();
+    </script>
+    
+</apex:page>

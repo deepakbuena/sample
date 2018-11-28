@@ -1,0 +1,203 @@
+<apex:component >
+  <apex:stylesheet value="{!URLFOR($Resource.cps_components,'/cps_components/css/jquery-ui.css')}"/>
+   <c:CPS_CSS_Component ></c:CPS_CSS_Component>
+   <apex:includeScript value="{!URLFOR($Resource.cps_components, '/cps_components/js/jquery-ui.js')}"/>
+   <style>
+      .privisit {
+       display:none;
+       }
+      .error_border {
+           border: 2px solid #900 !important;
+       }
+      .privisit_text {
+           font-weight: bold;
+        color: #900;
+        font-size: 12px;
+       }
+      .dateerror {
+      display:none;
+      }
+      .requirederror {
+      display:none;
+      }
+      .ziprequirederror {
+        display:none;
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      .ziperror {
+          display:none;
+      }
+      .zip_error {
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      input.zipcodeerrorborder {
+          border: 2px solid #900 !important;
+      }
+      .addreqerror {
+        display: block;
+        font-weight: bold;
+        color: #900;
+        font-size: 12px;
+      }
+      .validBirth
+      {
+          display:none;
+      }
+      .validBirthCss
+      {
+          font-weight: bold;
+          color: #900;
+          font-size: 12px;
+      }
+      input.birtherror
+      {
+          border: 2px solid #900 !important;
+      }
+      @media (min-width: 48em) {
+        .slds-scope .slds-form_horizontal .slds-form-element__row .slds-form-element__control
+        {
+            float: left;
+        }
+       
+        .slds-scope .slds-form_horizontal .slds-form-element__row .slds-form-element__label
+        {
+            float: left;
+        }
+        }
+    
+        .slds-scope .slds-form_horizontal .slds-form-element__control
+        {
+            width: 45% !important;
+        }
+      
+      
+   </style>
+   <script>
+        var isClicked=false;
+        function checkDoubleSubmit(obj)
+        {
+            if (isClicked)
+            { 
+                return false; 
+            }
+            else
+            {
+                if(((($j('[id$=sel1]').val()!== "") && ($j('[id$=sel1]').val().length>=1) && $j('[id$=sel1]').val() === "None") && (($j('[id$=firstname]').val()!=="") && $j('[id$=firstname]').length<=40) && (($j('[id$=lastname]').val()!=="") && 
+                $j('[id$=lastname]').length<=80) && ($j('[id$=txtDate]').length>0) && ($j('[id$=additionalLanguage]').length<=50) && ($j('[id$=purposeofVisitOther]').length<=50) 
+                && ($j('[id$=purposeofVisitOther]').length<=1) && ($j('[id$=street]').length<=255) && ($j('[id$=city]').length<=40) && ($j('[id$=state]').length<=80) && ($j('[id$=preferredPhoneType1]').val()!== "") 
+                && ($j('[id$=preferredLanguage]').val()!== "") &&  $j('[id$=zipcode]').val()!=="") || ($j("[id$='meetAdvisor']").is(':checked') && $j('[id$=sel1]').val() !== "None"))
+                {
+                    var isValid=true;
+                    if($j('[id$=eocHomePhone]').val()!== "" && (typeof $j('[id$=eocHomePhone]').val()!== 'undefined')) 
+                    {
+                        phone_number = $j('[id$=eocHomePhone]').val().replace(/\s+/g, "");
+                        var validValue=phone_number.length > 9 && phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+
+                        if(validValue===false)
+                            isValid=false;
+                    }
+                    if($j('[id$=eocPhone]').val()!== "" && (typeof $j('[id$=eocPhone]').val()!== 'undefined')) 
+                    {
+                        phone_number = $j('[id$=eocPhone]').val().replace(/\s+/g, "");
+                        var validValue=phone_number.length > 9 && phone_number.match(/\(?[\d\s]{3}\)[\d\s]{3}-[\d\s]{4}$/);
+
+                        if(validValue===false)
+                            isValid=false;
+                    }
+                    var zipValue = $j('[id$="zipcode"]').val();
+                     if (zipValue == 0 || (!checkZip(zipValue))) {
+                         //event.preventDefault();
+                         $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                         $j('[id$=zipcode]').removeClass("valid");
+                         $j('[id$=zipcode]').removeClass("error");
+                         console.log('here');
+                         $j('.ziprequirederror').show();
+                         isValid=false;
+                         
+                    } else {
+                        $j('[id$=zipcode]').removeClass("zipcodeerrorborder");
+                        $j('.ziprequirederror').hide();
+                    }
+                   
+                    // Added by RS on 11132018
+                    if ($j("[id$='meetAdvisor']").is(':checked'))
+                    {
+                        var purposeVisit = $j('[id$="sel1"]').val();
+                        //alert('2222222222222222');
+                        //alert('2222222222222222'+purposeVisit);
+                        console.log('value @@@'+purposeVisit);
+                        
+                        if(purposeVisit === 'None')
+                        {
+                            $j('[id$=visitError]').css('display', 'block');
+                            $j('[id$=sel1]').addClass("error_border");
+                            isValid=false;
+                        }else {
+                            $j('[id$=visitError]').css('display', 'none');
+                            $j('[id$=sel1]').removeClass("error_border");
+                            isValid=true;
+                        }
+                    } 
+                  /*  else { // Added by RS on 11132018
+                        var purposeVisit = $j('[id$="sel1"]').val();
+                        //alert('333333333333');
+                        console.log('value @@@'+purposeVisit);
+                        $j('[id$=visitError]').css('display', 'none');
+                        $j('[id$=sel1]').removeClass("error_border");
+                        
+                        if(purposeVisit === 'None')
+                        {
+                            isValid=true;
+                        }
+                    }
+                     */
+                    // BirthDate validtion if input date is less than 9 years or greater than 100 years
+                    var fullDate = new Date();
+                     
+                    var twoDigitMonth = fullDate.getMonth()+1;
+                    
+                    if(twoDigitMonth.length==1) { 
+                        twoDigitMonth="0" +twoDigitMonth;
+                    }
+                    var twoDigitDate = fullDate.getDate()+"";
+                    if(twoDigitDate.length==1) {
+                        twoDigitDate="0" +twoDigitDate;
+                    }
+                    
+                    var dtVal = $j('[id$=txtDate]').val();
+                    var currentDate = fullDate.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    console.log('Current Date : '+currentDate);
+                    
+                    // Substract 9 years from current date
+                    var newDate = (fullDate.getFullYear() - 9) + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    
+                    // Substract 100 years from current date
+                    var newDate1 = (fullDate.getFullYear() - 100) + "-" + twoDigitMonth + "-" + twoDigitDate;
+                    // dtVal is the input date by user
+                    if(dtVal >= newDate1 && dtVal < newDate)
+                    {
+                        $j('[id$=validBirthdate]').css('display', 'none');  
+                        $j('[id$=txtDate]').removeClass("birtherror");
+                    } 
+                    else {
+                        //$j('[id$=validBirthdate]').css('display', 'inline-block');  
+                        $j('[id$=txtDate]').addClass("birtherror");
+                        isValid=false;
+                    }  
+                    console.log("isValid "+isValid);
+                    if(isValid)
+                    {
+                        isClicked = true; 
+                        callRegisterLead();
+                        
+                        $j(obj).attr("disabled", "disabled");
+                    }                    
+                }
+            } 
+        }
+    </script>
+</apex:component>

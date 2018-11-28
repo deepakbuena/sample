@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demog_File_Rcvd_Date_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+             OR (ISPICKVAL (Demog_File_Status__c , &quot;Testing&quot;),
+
+                    ISPICKVAL (Demog_File_Status__c , &quot;Validated&quot;),
+
+                    ISPICKVAL (Demog_File_Status__c , &quot;Complete&quot;)), 
+
+                                 ISNULL( Demog_File_Received_Date__c ))</errorConditionFormula>
+    <errorDisplayField>Demog_File_Status__c</errorDisplayField>
+    <errorMessage>The Demog File Received Date field must contain a date.</errorMessage>
+</ValidationRule>

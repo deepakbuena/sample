@@ -1,0 +1,50 @@
+<aura:component controller="TabInteractiveReports" implements="forceCommunity:themeLayout,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" extends="forceCommunity:navigationMenuBase" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="TabInteractiveReports" name="showInteractiveRpTab" />
+    <nav class="forceCommunityNavigationMenu" data-aura-class="forceCommunityNavigationMenu">
+        <div class="navigationMenuWrapper navbg">
+            <ul onclick="{!c.onClick}" class="navigationMenu">
+                <aura:iteration items="{!v.menuItems}" var="item" >
+                    <aura:if isTrue="{!item.subMenu}">
+                        <li class="navigationMenuNode uiMenuItem" role="presentation">{!item.label}</li>
+                        <ul>
+                            <aura:iteration items="{!item.subMenu}" var="subItem">
+                                <aura:if isTrue="{!item.label!='Interactive Reports'}">
+                                <li><a class="menuItemLink" data-menu-item-id="{!subItem.id}" href="">{!subItem.label}</a></li>
+                                    <aura:set attribute="else">
+                                        <aura:renderIf isTrue="{!v.showInteractiveRpTab}">
+                                        <li class="navigationMenuNode uiMenuItem" role="presentation" data-aura-class="uiMenuItem" style="display:none">
+                                            <div class="menuItem">
+                                                <a data-menu-item-id="{!item.id}" href="" class="menuItemLink">{!v.showInteractiveRpTab}</a>
+                                            </div>
+                                        </li>
+                                    </aura:renderIf>
+                                </aura:set>
+                            </aura:if>
+                            </aura:iteration>
+                        </ul>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!item.label!='Interactive Reports'}">
+                                <li class="navigationMenuNode uiMenuItem" data-aura-class="uiMenuItem" role="presentation">
+                                    <div class="menuItem">
+                                    	<a data-menu-item-id="{!item.id}" href="" class="menuItemLink">{!item.label}</a>
+                                    </div>
+                                </li>
+                                <aura:set attribute="else">
+                                    <aura:renderIf isTrue="{!v.showInteractiveRpTab}">
+                                        <li class="navigationMenuNode uiMenuItem" role="presentation" data-aura-class="uiMenuItem" >
+                                            <div class="menuItem">
+                                                <a data-menu-item-id="{!item.id}" href="" class="menuItemLink">{!item.label}</a>
+                                            </div>
+                                        </li>
+                                    </aura:renderIf>
+                                </aura:set>
+                            </aura:if>
+                            
+                        </aura:set>
+                    </aura:if>
+                </aura:iteration>
+            </ul>
+        </div>
+    </nav>   
+</aura:component>

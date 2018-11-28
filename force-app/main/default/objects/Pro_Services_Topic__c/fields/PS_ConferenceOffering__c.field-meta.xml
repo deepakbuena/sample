@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_ConferenceOffering__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether the topic will be submitted to conferences for the current year.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this box is checked, this Topic is considered part of the standard conference offerings for all state, regional and national _ASFAA conferences.</inlineHelpText>
+    <label>Conference Offering</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

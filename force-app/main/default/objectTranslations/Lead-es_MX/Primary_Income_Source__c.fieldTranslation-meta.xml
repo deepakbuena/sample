@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Income Source --></label>
+    <name>Primary_Income_Source__c</name>
+    <picklistValues>
+        <masterLabel>Child support</masterLabel>
+        <translation><!-- Child support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No income</masterLabel>
+        <translation><!-- No income --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSI or SSDI</masterLabel>
+        <translation><!-- SSI or SSDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signed Statement</masterLabel>
+        <translation><!-- Signed Statement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Security</masterLabel>
+        <translation><!-- Social Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAFDC (welfare)</masterLabel>
+        <translation><!-- TAFDC (welfare) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unemployment</masterLabel>
+        <translation><!-- Unemployment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wages/salary</masterLabel>
+        <translation><!-- Wages/salary --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

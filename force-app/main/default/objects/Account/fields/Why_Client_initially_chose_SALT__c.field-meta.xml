@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Why_Client_initially_chose_SALT__c</fullName>
+    <description>Should be Picklist including: Comprehehsive Product, Debt Management Outreach, MM101 - Financial Literacy
+Client Services Administration - Should be updating this field once we have determined that a contract has been signed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Should be Picklist including: Comprehehsive Product, Debt Management Outreach, MM101 - Financial Literacy
+Client Services Administration - Should be updating this field once we have determined that a contract has been signed</inlineHelpText>
+    <label>Why Client initially chose SALT</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comprehensive Product</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Debt Management Outreach</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MM101 - Financial Literacy</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

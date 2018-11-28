@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassador_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Story S-54-16 - Create private contact based on record type</description>
+    <externalId>false</externalId>
+    <label>Ambassador Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>SALT Ambassadors &amp; Members</relationshipLabel>
+    <relationshipName>Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

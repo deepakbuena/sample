@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODATaxCode3__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Tax Code 3</label>
+    <referenceTo>c2g__codaTaxCode__c</referenceTo>
+    <relationshipLabel>Accounts (Tax Code 3)</relationshipLabel>
+    <relationshipName>AccountsTC3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

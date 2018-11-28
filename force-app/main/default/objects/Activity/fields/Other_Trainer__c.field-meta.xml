@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Trainer__c</fullName>
+    <description>Another person that may be training from ASA that does usually.</description>
+    <externalId>false</externalId>
+    <label>Other Trainer</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

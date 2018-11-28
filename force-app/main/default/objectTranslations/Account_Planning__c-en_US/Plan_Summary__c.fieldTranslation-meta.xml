@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the summary information of the plan for this account.  
+
+REMINDER: Please complete this section last. --></help>
+    <label><!-- Plan Summary --></label>
+    <name>Plan_Summary__c</name>
+</CustomFieldTranslation>

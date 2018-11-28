@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Administrator</masterLabel>
+        <translation><!-- Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client</masterLabel>
+        <translation><!-- Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financer</masterLabel>
+        <translation><!-- Financer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Funding Agent</masterLabel>
+        <translation><!-- Funding Agent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantor</masterLabel>
+        <translation><!-- Guarantor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantors</masterLabel>
+        <translation><!-- Guarantors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holder</masterLabel>
+        <translation><!-- Holder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender</masterLabel>
+        <translation><!-- Lender --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Preferred (PLUS)</masterLabel>
+        <translation><!-- Lender - Preferred (PLUS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Preferred (STAFF)</masterLabel>
+        <translation><!-- Lender - Preferred (STAFF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Preferred (STAFF/PLUS)</masterLabel>
+        <translation><!-- Lender - Preferred (STAFF/PLUS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Secondary (PLUS)</masterLabel>
+        <translation><!-- Lender - Secondary (PLUS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Secondary (STAFF)</masterLabel>
+        <translation><!-- Lender - Secondary (STAFF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lender - Secondary (STAFF/PLUS)</masterLabel>
+        <translation><!-- Lender - Secondary (STAFF/PLUS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Potential Lender</masterLabel>
+        <translation><!-- Potential Lender --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Specific Benefit</masterLabel>
+        <translation><!-- School Specific Benefit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Servicer</masterLabel>
+        <translation><!-- Servicer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shadow Lender</masterLabel>
+        <translation><!-- Shadow Lender --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

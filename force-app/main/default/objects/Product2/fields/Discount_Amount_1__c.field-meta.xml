@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount_Amount_1__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((CONTAINS(ProductCode,&quot;DISC-10&quot;)),0.10,IF((CONTAINS(ProductCode,&quot;DISC&quot;)),0.15,0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Discount Amount 1</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASATrainingCourses</fullName>
+    <active>false</active>
+    <description>ASA training courses offered</description>
+    <label>ASA Training Courses</label>
+    <picklistValues>
+        <picklist>Additional_Products_Services__c</picklist>
+        <values>
+            <fullName>Same day funding available</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audience__c</picklist>
+        <values>
+            <fullName>Bursar%2FStudent Financial Svcs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Experienced Aid Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intermediate Aid Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novice Aid Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Borrowers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dimension_3__c</picklist>
+        <values>
+            <fullName>50000</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disbursement_Services__c</picklist>
+        <values>
+            <fullName>Disubrsement through the NDN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EFT disbursements on behalf of lenders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>SALT Services</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>General_Information__c</picklist>
+        <values>
+            <fullName>24-hours Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo on company website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instant Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web-based</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interfaces__c</picklist>
+        <values>
+            <fullName>Able to accept Direct Loan files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Able to accept ISIR files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Able to accept major FAMS files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interfaces w%2F guarantors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interfaces w%2F lenders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loan_Products_Delivery__c</picklist>
+        <values>
+            <fullName>Ability to manually create loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternative Loan Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CommonLine Compliant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Line MPN application for students</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Misc_Products_Services__c</picklist>
+        <values>
+            <fullName>OnLine Awarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnLine entrance%2Fexit interviews</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

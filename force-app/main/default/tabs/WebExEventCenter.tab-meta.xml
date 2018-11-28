@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Before using it you may access http://www.webex.com/ to ask for professional help from WebEx company.</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>WebEx Event Center</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom43: Jewel</motif>
+    <url>https://integration.webex.com/ECSFService/ecsf.do?sid={!API.Session_ID}&amp;svr={!API.Partner_Server_URL_100}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

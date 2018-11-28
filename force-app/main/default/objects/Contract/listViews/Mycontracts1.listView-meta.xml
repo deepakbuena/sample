@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mycontracts1</fullName>
+    <columns>CONTRACT.STATUS_CODE</columns>
+    <columns>CONTRACT.STATUS</columns>
+    <columns>CONTRACT.RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <label>My contracts 1</label>
+</ListView>

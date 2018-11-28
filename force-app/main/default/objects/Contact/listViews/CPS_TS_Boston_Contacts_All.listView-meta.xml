@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_TS_Boston_Contacts_All</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Elidgable_Report_Support__c</columns>
+    <columns>Eligibility__c</columns>
+    <columns>Student_ID__c</columns>
+    <columns>School_Guidance_Counselor__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CPS_Advisor__c</columns>
+    <columns>Age__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Other_Programs__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Intake_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>TS Boston</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.CPS_TS</value>
+    </filters>
+    <label>CPS TS Boston Contacts - All</label>
+    <sharedTo>
+        <group>Talent_Search_Boston</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Message_Received__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is a checkbox controlled by workflow.  It is set to true on a new inbound emailmessage (whether from the customer or anyone else), and set to false by sending an outbound message or marking the case resolved.</description>
+    <externalId>false</externalId>
+    <label>New Message Received</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

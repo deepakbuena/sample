@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- # of Targeted Schools in Territory --></label>
+    <name>of_Targets_in_Territory__c</name>
+</CustomFieldTranslation>

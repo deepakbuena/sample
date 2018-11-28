@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_to_SPA</fullName>
+    <active>true</active>
+    <description>Any request to Strategic Partnership Administration i.e. updated proposals, collateral, reports etc.</description>
+    <label>Request to SPA</label>
+    <picklistValues>
+        <picklist>Ad_Size__c</picklist>
+        <values>
+            <fullName>1%2F2 Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4 Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Color</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audience__c</picklist>
+        <values>
+            <fullName>ASA Staff Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bursar%2FSFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intemediate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Clients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Rep%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixed Knowledge Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Clients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicer Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Students</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery_Typer__c</picklist>
+        <values>
+            <fullName>Electronic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Graduation_Periods__c</picklist>
+        <values>
+            <fullName>Apr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sept</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Length__c</picklist>
+        <values>
+            <fullName>1%2F2 Day Afternoon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2 Day Morning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Day</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requested_Materials__c</picklist>
+        <values>
+            <fullName>Budget Worksheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferment%2FForbearance Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entr%2FExit Counsel Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-paid return envels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repayment Worksheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Compl Directions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Master Prom Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Master Prom Notes - Imprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF School Cert Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signage__c</picklist>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conceptual Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Considering Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Awarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interveiw Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Message Left%2FWaiting for Call Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respondant Notified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Info Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Unpaid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Waiting for Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task Closed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Waiting on someone else</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Courtesy Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default Fee Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid Lit%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Fin Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journeys Co-Brand Newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Contract Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Request External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Request Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro-Active PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Demonstration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Promotional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Collateral Material%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship Not Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training - ASA Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training - Consultation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training- Wellness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wellness</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Frame__c</picklist>
+        <values>
+            <fullName>30-60 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60-90 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASAP %28next 30 days%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WebEx</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Why_Reassigned__c</picklist>
+        <values>
+            <fullName>Manager Reassignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skillset</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>x2nd_Trainer__c</picklist>
+        <values>
+            <fullName>Betsy Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brad Finger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brendan Furey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duane Quinn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gina Lucente-Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gretchen Bonfardine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jason Burke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Schott</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martie Adler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nancy Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sabrina Mainini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn Monk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

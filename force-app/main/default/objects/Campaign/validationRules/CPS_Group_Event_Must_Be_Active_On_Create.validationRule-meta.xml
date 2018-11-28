@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Group_Event_Must_Be_Active_On_Create</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(),
+IsActive = FALSE,
+ RecordType.Name = &quot;CPS Group Event&quot; )</errorConditionFormula>
+    <errorMessage>Please create your group event as Active (so that members can check into it)</errorMessage>
+</ValidationRule>

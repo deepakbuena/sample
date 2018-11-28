@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mutually Agreed to Objectives --></label>
+    <name>Mutually_Agreed_to_Objectives__c</name>
+    <relationshipLabel><!-- Top Targeted Schools --></relationshipLabel>
+</CustomFieldTranslation>

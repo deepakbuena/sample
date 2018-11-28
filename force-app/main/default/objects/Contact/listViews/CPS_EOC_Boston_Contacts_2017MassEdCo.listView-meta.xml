@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_EOC_Boston_Contacts_2017MassEdCo</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Elidgable_Report_Support__c</columns>
+    <columns>Eligibility__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CPS_Advisor__c</columns>
+    <columns>Age__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Statement_of_Need__c</columns>
+    <columns>Career_Goals__c</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>EOC Boston</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.CPS_EOC</value>
+    </filters>
+    <filters>
+        <field>Latest_Grant_Program__c</field>
+        <operation>equals</operation>
+        <value>EOC MassEdCo (2017-2018)</value>
+    </filters>
+    <label>CPS EOC Boston Contacts - 2017MassEdCo</label>
+    <sharedTo>
+        <group>EOC_Boston</group>
+    </sharedTo>
+</ListView>

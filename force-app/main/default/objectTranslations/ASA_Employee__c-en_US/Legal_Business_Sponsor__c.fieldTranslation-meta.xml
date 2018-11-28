@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Legal Business Sponsor Contact --></label>
+    <name>Legal_Business_Sponsor__c</name>
+    <relationshipLabel><!-- Contract Business Sponsor --></relationshipLabel>
+</CustomFieldTranslation>

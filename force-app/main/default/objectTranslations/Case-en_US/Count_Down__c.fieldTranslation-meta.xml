@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field calculates the number of days remaining for the Implementation to complete while the Status = WIP.  The standard is 60 days. --></help>
+    <label><!-- Count Down --></label>
+    <name>Count_Down__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custodial_LID</fullName>
+    <active>false</active>
+    <description>This rule makes sure that if a user indicates the lender participates in the Loan Purchase Program with ED, the custodial LID must be provided.</description>
+    <errorConditionFormula>AND(ED_Loan_Participation_Purchase_Program__c = true,Custodial_LID_08_09_Participation__c= &quot;&quot;)</errorConditionFormula>
+    <errorMessage>You have indicated that this lender participates in the Loan Participation and Purchase Program with ED.  It is required that you provide the custodial Lender ID code.</errorMessage>
+</ValidationRule>

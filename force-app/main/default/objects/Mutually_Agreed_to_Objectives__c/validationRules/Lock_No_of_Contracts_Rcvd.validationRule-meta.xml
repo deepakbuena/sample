@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_No_of_Contracts_Rcvd</fullName>
+    <active>true</active>
+    <description>Lock No of Contracts Rcvd except for BD Managers &amp; Admins if rep closes more than 3 contracts in any given month</description>
+    <errorConditionFormula>ISCHANGED(Number_of_Contracts_Received__c) &amp;&amp; $Profile.Name != &quot;System Administrator&quot; &amp;&amp; $UserRole.Name != &quot;BD Senior Management&quot; &amp;&amp; NOT((ISCHANGED(Expected_Contract_1_Recv_d_Closed__c)) || (ISCHANGED(Expected_Contract_2_Recv_d_Closed__c)) || (ISCHANGED(Expected_Contract_3_Recv_d_Closed__c)))</errorConditionFormula>
+    <errorDisplayField>Number_of_Contracts_Received__c</errorDisplayField>
+    <errorMessage>You are not allowed to change the value of &quot;Number of Contracts Received&quot;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Q# 20 - 2017 CSAT Response --></help>
+    <label><!-- Forms of Communication --></label>
+    <name>Forms_of_Communication__c</name>
+</CustomFieldTranslation>

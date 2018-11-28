@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type_ID_formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordTypeId = &quot;0126000000010rU&quot;, &quot;012600000009YRY&quot;, 
+IF(RecordTypeId = &quot;012600000000vSx&quot;, &quot;012J0000000DAQK&quot;, 
+IF(RecordTypeId = &quot;012J0000000D9yG&quot;, &quot;012J0000000DAQK&quot;, 
+IF(RecordTypeId = &quot;01260000000165R&quot; &amp;&amp; ISPICKVAL(Type,&#39;Sponsor&#39;), &quot;012600000009YRY&quot;, 
+IF(RecordTypeId = &quot;01260000000165R&quot; &amp;&amp; ISPICKVAL(Type,&#39;Engagement Partner&#39;), &quot;012600000009YRY&quot;, 
+IF(RecordTypeId = &quot;01260000000165R&quot; &amp;&amp; ISPICKVAL(Type,&#39;Grant&#39;), &quot;012J0000000DAQK&quot;,null))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Record Type ID formula</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

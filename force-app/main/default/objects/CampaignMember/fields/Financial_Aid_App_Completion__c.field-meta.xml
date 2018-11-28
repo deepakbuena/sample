@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Aid_App_Completion__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>For EOC: this is APR Objective B.
+For TS: this is APR Demographic Section F
+For UB: this is APR Field 44.</inlineHelpText>
+    <label>Financial Aid App Completion</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sr. Completed FAFSA but did NOT Enroll in Postsec (TS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sr. Completed FAFSA and enrolled in postsec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sr. Did NOT Complete FAFSA (TS/UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (did not complete HS this report yr)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (prior participant)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sr. Completed FAFSA (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Completed Fin Aid App (EOC)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Did NOT Complete Fin Aid App (EOC)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_TS_Brockton_4B_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+ISPICKVAL(Contact.Intake_Location__c, &#39;TS Brockton&#39;) &amp;&amp; 
+ISPICKVAL(Campaign.Service_Year__c , &#39;2017-2018&#39;) &amp;&amp; 
+Active__c = True &amp;&amp; 
+ISPICKVAL( Education_Status_at_End_Senior__c, &#39;Grad in standard num yrs (rigorous)&#39;) &amp;&amp; 
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c, &#39;Grade 12 (Senior)&#39;) 
+, &#39;Goal # achieved&#39; , &#39;Goal # not achieved&#39; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - TS Brockton - 4B DELETE</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

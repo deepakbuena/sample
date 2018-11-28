@@ -1,0 +1,275 @@
+<apex:page standardcontroller="Annual_Sales_Plan__c" extensions="TargetESSSController" docType="html-5.0">
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+            <!-- INCLUDE SCRIPTING -->
+            <apex:includeScript value="{!$Resource.JQuery_minjs}"/>
+            <apex:includeScript value="{!$Resource.JQuery_Datatable_js}"/>
+            <!-- INCLUDE STYLESHEETS -->
+            <apex:stylesheet value="{!$Resource.JQuery_Datatable_css}"/>
+        </head>
+        
+        <body>
+            <div class = "SLDS_ASA">
+
+                <apex:form id="theForm">
+                    <apex:actionFunction name="retrieveOppsAF" action="{!retrieveOpps}" reRender="theForm">
+                        <apex:param name="p1" value="" assignTo="{!selAccId}"/>
+                        <apex:param name="p2" value="" assignTo="{!selIndex}"/>
+                    </apex:actionFunction>
+                    
+                    <apex:pagemessages id="msgs"></apex:pagemessages>
+                    <apex:pageBlock rendered="{!showPCARelatedlist=='true'}" mode="edit">
+                        <!--<apex:pageBlockButtons location="top">
+                            <apex:commandButton value="{!If(listPCA.size>0,'New/Edit','New')}" action="{!preparePCAList}" reRender="theForm">
+                                 <apex:param assignTo="{!showPCARelatedlist}" value="false"/>
+                            </apex:commandButton>
+                        </apex:pageBlockButtons>-->
+                        
+                        <div class="slds-modal__header slds-align--absolute-center">
+                            <apex:commandButton value="{!If(listPCA.size>0,'New/Edit','New')}" action="{!preparePCAList}" reRender="theForm" styleClass="slds-button slds-button--brand">
+                                 <apex:param assignTo="{!showPCARelatedlist}" value="false"/>
+                            </apex:commandButton>                        
+                        </div>
+                                                
+                        <!--<apex:pageBlockSection id="InfoPBS2" collapsible="false" columns="1">
+                        
+                            <apex:pageBlockTable styleClass="MSEGRID" value="{!listPCA}" var="lpca2" columns="6" >
+                                     
+                                <apex:column headerValue="School Name">
+                                    <apex:outputLink value="/{!lpca2.pca.School_Name__c}" target="_blank">{!lpca2.pca.School_Name__r.Name}</apex:outputLink>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Opportunity">
+                                    <apex:outputLink value="/{!lpca2.pca.Opportunity__c}" target="_blank">{!lpca2.pca.Opportunity__r.Name}</apex:outputLink>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Opportunity Stage">
+                                    <apex:outputField value="{!lpca2.pca.Opportunity__r.StageName}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Total Enrollment">
+                                    <apex:outputField value="{!lpca2.pca.Total_Enrollments__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Status Update">
+                                    <apex:outputField value="{!lpca2.pca.Target_ESSS_Status_Update__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Quarter Added" value="{!lpca2.fiscalQuarter}"/>
+                                
+                           </apex:pageBlockTable>
+                           
+                        </apex:pageBlockSection>-->
+                        
+                        <table class="slds-table slds-table--bordered slds-table--cell-buffer MSEGRID">
+                            <thead>
+                                <tr class="slds-text-title">
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="SchoolName">School Name</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Opportunity">Opportunity</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Stage">Opportunity Stage</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Enrollment">Total Enrollment</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Status">Status Update</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate slds-text-title" title="Quarter">Quarter Added</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!listPCA}" var="lpca2">
+                                    <tr>
+                                        <td scope="row" data-label="SchoolName">
+                                            <div class="slds-truncate">
+                                                <apex:outputLink value="/{!lpca2.pca.School_Name__c}" target="_blank">{!lpca2.pca.School_Name__r.Name}</apex:outputLink>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Opportunity">
+                                            <div class="slds-truncate">
+                                                <apex:outputLink value="/{!lpca2.pca.Opportunity__c}" target="_blank">{!lpca2.pca.Opportunity__r.Name}</apex:outputLink>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Stage">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Opportunity__r.StageName}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Enrollment">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Total_Enrollments__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Status">
+                                            <div class="slds-truncate">
+                                                <apex:outputField value="{!lpca2.pca.Target_ESSS_Status_Update__c}" rendered="{!IF(lpca2.pca.Id != null,true,false)}"/>
+                                            </div>
+                                        </td>
+                                        <td scope="row" data-label="Quarter">
+                                            <div class="slds-truncate">
+                                                <apex:outputText styleclass="slds-output" value="{!lpca2.fiscalQuarter}"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                        
+                        <script>
+                            var j$ = jQuery.noConflict();
+                            j$('table.MSEGRID').dataTable({
+                                sPaginationType: 'full_numbers',
+                                'aLengthMenu':[[5,10,25,-1],[5,10,25,'All']],
+                                'iDisplayLength':5
+                            });
+                       </script>
+                    </apex:pageBlock>
+                    
+                    <apex:pageBlock title="Top Target ESSS Edit" mode="Edit" rendered="{!showPCARelatedlist=='false'}">
+                        <!--<apex:pageBlockButtons location="bottom">
+                            <apex:commandButton value="Save" action="{!saveTargetESSS}" reRender="theForm"/>
+                            <apex:commandButton value="Cancel" action="{!preparePCAList}" reRender="theForm" immediate="true">
+                                <apex:param assignTo="{!showPCARelatedlist}" value="true"/>
+                            </apex:commandButton>
+                        </apex:pageBlockButtons>-->
+                        
+                        <!--<apex:pageBlockSection id="InfoPBS" title="Information" collapsible="false" columns="1">
+                        
+                            <apex:pageBlockTable value="{!listPCA}" var="lpca" columns="5">
+                            
+                                <apex:column headerValue="">
+                                   <apex:actionRegion >
+                                       <apex:commandLink action="{!removeRows}" reRender="InfoPBS" rendered="{!IF(lpca.pca.Id != null,true,false)}">
+                                           <apex:image url="/img/func_icons/remove12_on.gif"/>
+                                           <apex:param name="rowIndex" value="{!lpca.pca.Id}" assignTo="{!numberOfRowToRemove}"/>
+                                       </apex:commandLink>
+                                   </apex:actionRegion>
+                                </apex:column> 
+                            
+                                <apex:column headerValue="School Name">
+                                    <apex:outputPanel >
+                                        <div class="requiredInput">
+                                            <div class="requiredBlock"/>
+                                            <apex:inputField value="{!lpca.pca.School_Name__c}" onselect="retrieveOppsAF(document.getElementById('j_id0:theForm:j_id51:InfoPBS:j_id56:{!lpca.index}:j_id65'+'_lkid').value,'{!lpca.index}');" rendered="{!IF(lpca.pca.Id == null,true,false)}"/>
+                                        </div>
+                                    </apex:outputPanel>
+                                    <apex:outputLink value="/{!lpca.pca.School_Name__c}" target="_blank">{!lpca.pca.School_Name__r.Name}</apex:outputLink> 
+                                </apex:column>
+                                
+                                <apex:column headerValue="Opportunity">
+                                    <apex:selectList value="{!lpca.selOppId}" multiselect="false" size="1">
+                                        <apex:selectOptions value="{!lpca.oppList}"/>
+                                    </apex:selectList>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Total Enrollment">
+                                    <apex:inputField value="{!lpca.pca.Total_Enrollments__c}"/>
+                                </apex:column>
+                                
+                                <apex:column headerValue="Status Update">
+                                    <apex:inputField value="{!lpca.pca.Target_ESSS_Status_Update__c}"/>
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                            <apex:commandButton value="Add More" action="{!addRows}" reRender="InfoPBS"/>
+                        </apex:pageBlockSection>-->
+                        
+                        <div class="slds-form slds-m-bottom--x-small" id="theForm">
+                            <h3 class="slds-section-title--divider">Information</h3>
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer MSEGRID">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title slds-size--xx-small" title="Remove"></div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="School">School Name</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Opportunity">Opportunity</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Enrollment">Total Enrollment</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate slds-text-title" title="Status">Status Update</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!listPCA}" var="lpca">
+                                        <tr>
+                                            <td scope="row" data-label="Remove">
+                                                <div class="slds-truncate">
+                                                    <apex:actionRegion >
+                                                       <apex:commandLink action="{!removeRows}" reRender="theForm" rendered="{!IF(lpca.pca.Id != null,true,false)}">
+                                                           <apex:image url="/img/func_icons/remove12_on.gif"/>
+                                                           <apex:param name="rowIndex" value="{!lpca.pca.Id}" assignTo="{!numberOfRowToRemove}"/>
+                                                       </apex:commandLink>
+                                                   </apex:actionRegion>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="School">
+                                                <!--<div class="slds-truncate">-->
+                                                    <apex:outputPanel >
+                                                        <div class="requiredInput">
+                                                            <div class="requiredBlock"/>
+                                                            <apex:inputField value="{!lpca.pca.School_Name__c}" onselect="retrieveOppsAF(document.getElementById('j_id0:theForm:j_id57:j_id59:{!lpca.index}:j_id68'+'_lkid').value,'{!lpca.index}');" rendered="{!IF(lpca.pca.Id == null,true,false)}"/>
+                                                        </div>
+                                                    </apex:outputPanel>
+                                                    <apex:outputLink value="/{!lpca.pca.School_Name__c}" target="_blank">{!lpca.pca.School_Name__r.Name}</apex:outputLink> 
+                                                <!--</div>-->
+                                            </td>
+                                            <td scope="row" data-label="Opportunity">
+                                                <div class="slds-truncate">
+                                                    <apex:selectList value="{!lpca.selOppId}" multiselect="false" size="1">
+                                                        <apex:selectOptions value="{!lpca.oppList}"/>
+                                                    </apex:selectList>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="Enrollment">
+                                                <div class="slds-truncate">
+                                                    <apex:inputField value="{!lpca.pca.Total_Enrollments__c}"/>
+                                                </div>
+                                            </td>
+                                            <td scope="row" data-label="Status">
+                                                <div class="slds-truncate">
+                                                    <apex:inputField value="{!lpca.pca.Target_ESSS_Status_Update__c}"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            <apex:commandButton value="Add More" action="{!addRows}" reRender="theForm" styleClass="slds-button slds-button--brand"/>                       
+                            
+                            <div class="slds-modal__footer slds-align--absolute-center">
+                                <apex:commandButton value="Save" action="{!saveTargetESSS}" reRender="theForm" styleClass="slds-button slds-button--brand"/>
+                                <apex:commandButton value="Cancel" action="{!preparePCAList}" reRender="theForm" immediate="true" styleClass="slds-button slds-button--brand">
+                                    <apex:param assignTo="{!showPCARelatedlist}" value="true"/>
+                                </apex:commandButton>                        
+                            </div>
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+        </body>
+        <style>
+            html body.sfdcBody {
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+        </style>
+    </html>
+</apex:page>

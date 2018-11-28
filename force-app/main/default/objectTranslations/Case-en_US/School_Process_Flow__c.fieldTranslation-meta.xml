@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- School Process Flow --></label>
+    <name>School_Process_Flow__c</name>
+    <picklistValues>
+        <masterLabel>Full Service</masterLabel>
+        <translation><!-- Full Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantee Only</masterLabel>
+        <translation><!-- Guarantee Only --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mix/Split</masterLabel>
+        <translation><!-- Mix/Split --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

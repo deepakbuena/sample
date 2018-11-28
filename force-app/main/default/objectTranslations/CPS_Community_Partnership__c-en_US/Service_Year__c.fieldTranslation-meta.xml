@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Service Year --></label>
+    <name>Service_Year__c</name>
+    <picklistValues>
+        <masterLabel>2016-2017</masterLabel>
+        <translation><!-- 2016-2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2017-2018</masterLabel>
+        <translation><!-- 2017-2018 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2018-2019</masterLabel>
+        <translation><!-- 2018-2019 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2019-2020</masterLabel>
+        <translation><!-- 2019-2020 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

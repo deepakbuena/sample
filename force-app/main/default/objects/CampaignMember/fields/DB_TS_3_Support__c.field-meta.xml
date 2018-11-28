@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_TS_3_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+Active__c = True &amp;&amp; 
+ISPICKVAL( Secondary_School_Persistence__c  , &#39;Persisted at next grade or graduated HS&#39;), &#39;Goal # achieved&#39; , 
+IF( 
+Active__c = True &amp;&amp; 
+(  
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c , &#39;Grade 6-8 (Middle School)&#39;) || 
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c , &#39;Grade 9 (Freshman)&#39;) || 
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c , &#39;Grade 10 (Sophomore)&#39;) ||  
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c , &#39;Grade 11 (Junior)&#39;) ||
+ISPICKVAL( Grade_Level_at_Start_Non_Adult__c , &#39;In 4th year of 5-year dual enrollment&#39;)
+), &#39;Goal # not achieved&#39;,&#39;&#39; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - TS - 3 Support</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

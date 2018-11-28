@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conference_Name_Presentation_Proposed__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Conference Name/Presentation Proposed</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Campaign.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Conference</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Annual Sales Plan Items</relationshipLabel>
+    <relationshipName>Annual_Sales_Plan_Items</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

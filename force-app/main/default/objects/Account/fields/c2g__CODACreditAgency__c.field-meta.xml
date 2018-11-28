@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODACreditAgency__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The name of the credit agency</description>
+    <externalId>false</externalId>
+    <label>Credit Agency</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

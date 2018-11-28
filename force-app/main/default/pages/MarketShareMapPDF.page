@@ -1,0 +1,139 @@
+<apex:page controller="MarketShareMap_Ctrl" showheader="false" sidebar="false" applyBodyTag="false">
+        <apex:form >
+       
+        <head>
+        
+        <apex:includeScript value="{!URLFOR($Resource.d3,'d3.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.jquery)}" />
+        <apex:includeScript value="{!URLFOR($Resource.UsMap,'UsMap/topojson.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.UsMap,'UsMap/datamaps.all.js')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.UsMap,'UsMap/csstable.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.UsMap,'UsMap/map.css')}"/>
+        <script>
+        "use strict"
+        var respString=' ';
+       
+        console.log('printing pdf..');
+        
+        $(document).ready(function()
+        {
+        
+            console.debug("Begin enable_test : " + '{!dataString}');
+            var dBack=getUrlParameter('date');
+            var selectedBack=getUrlParameter('selType');
+            var states=getUrlParameter('st');
+            var result='{'+'{!dataString}'+'}';
+            
+            loadMap(result);
+                        
+           var url = "/apex/MarketShareMap?fromPDF=yes&qDate="+dBack+"&qSelType="+selectedBack;            
+           $(location).attr('href',url);
+            
+           javascript:window.open(url); 
+           window.print(); 
+        });
+        
+        
+        function getUrlParameter(sParam)
+                {
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++) 
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam) 
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+       
+        var loadMap=function(f)
+         {
+         var t=$.parseJSON(f);
+         var election = new Datamap({
+         scope: 'usa',
+         element: document.getElementById('map_election'),
+         geographyConfig: {
+            highlightBorderColor: '#bada55',
+            popupTemplate: function(geography, data) {
+              return '<div class="hoverinfo"><strong>' + geography.properties.name + '</strong> <br />Market Share(%) :' +  data.percent +' </div>'
+            },
+            highlightBorderWidth: 3
+         },
+        
+         fills: {
+                 'Group1':'#00A3E1',
+                 'Group2': '#9F5CC0',
+                 'Group3': '#0367FC',
+                 'Group4': '#FFB81C',
+                 'Group5': '#F168A9',
+                 'Group6': '#5BC500',
+                 'NoData': '#e0e0e0',
+                 defaultFill: '#e0e0e0'
+        },
+        data:t
+        });
+        election.labels();
+        }
+        
+        var loadMapByState=function(datev,state)
+        {
+                      alert(datev+'  '+state);        
+                    populateTableApex(datev,state);
+                    $("div[id$='CSSTable']").empty();
+        
+        }
+          
+    </script>
+
+     <style>
+        .map { position: relative; margin: 0 auto; width: 750px; height: 500px;}
+            
+       #tablelabel{ 
+        border-spacing: 20px;
+        border-collapse: separate;
+        background-color: #EDEDED;
+        width:100%;
+        }
+        
+
+    </style>
+    
+    </head>
+        
+        <h2> As of Date : </h2><apex:outputLabel value="{!$CurrentPage.parameters.date}"></apex:outputLabel>
+        <br/>
+       <apex:image url="{!URLFOR($Resource.UsMap,'UsMap/MapHeaderImage.png')}" width="100%" height="50"/>
+                       
+        <br/>
+        <apex:outputPanel id="refreshMap">
+            <div class="map" id="map_election"></div>
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="refreshPanel" rendered="{!IF($CurrentPage.parameters.st!=null, true,false)}">
+        <center>
+                <apex:outputLabel id="stateLabel"  rendered="{!iF(dList.size!=0,true,false)}" value="Selected State : {!$CurrentPage.parameters.full}" style="font-size:large"/>
+                <apex:outputLabel id="refreshLable"  rendered="{!iF(dList.size==0,true,false)}" value="No School exists in {!$CurrentPage.parameters.full}" styleClass="norows"/>
+                <apex:outputPanel id="refreshTableinner"  rendered="{!iF(dList.size>0,true,false)}">
+                    <div class="CSSTable" >
+                        <table>
+                            <tr>
+                                <td>Name</td>
+                                <td>Zipcode</td>
+                            </tr>
+                            <apex:repeat value="{!dList}" var="z" >
+                                <tr>
+                                    <td>{!z.name}</td>
+                                    <td>{!z.zipcode}</td>
+                                </tr>
+                            </apex:repeat>
+                        </table>
+                    </div>
+                </apex:outputPanel>
+            </center>
+          </apex:outputPanel>
+    
+
+ </apex:form>
+</apex:page>

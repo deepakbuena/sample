@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Êtes-vous citoyen américain</label>
+    <name>Are_you_a_US_Citizen__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation>Non</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation>Oui</translation>
+    </picklistValues>
+</CustomFieldTranslation>

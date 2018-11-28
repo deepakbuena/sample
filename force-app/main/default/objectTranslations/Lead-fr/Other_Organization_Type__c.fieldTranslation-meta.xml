@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Only fill out if &apos;Other&apos; is selected in Organization Type field. --></help>
+    <label><!-- Other Organization Type --></label>
+    <name>Other_Organization_Type__c</name>
+</CustomFieldTranslation>

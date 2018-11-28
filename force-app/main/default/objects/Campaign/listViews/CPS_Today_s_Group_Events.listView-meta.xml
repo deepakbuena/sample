@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Today_s_Group_Events</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CPS_Center_Affiliation_Intake_Location__c</columns>
+    <columns>Start_DateTime__c</columns>
+    <columns>End_DateTime__c</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>Resources_Needed__c</columns>
+    <columns>CPS_Advisor__c</columns>
+    <columns>Estimated_Number_Attending__c</columns>
+    <columns>Attendee_Population_Type__c</columns>
+    <columns>Hosting_Partner__c</columns>
+    <columns>Hosting_Partner_EOC__c</columns>
+    <columns>Service_Year__c</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.CPS_Group_Event</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>notContain</operation>
+        <value>Template</value>
+    </filters>
+    <filters>
+        <field>Start_DateTime__c</field>
+        <operation>greaterThan</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Start_DateTime__c</field>
+        <operation>lessThan</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <label>CPS Today&#39;s Group Events</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

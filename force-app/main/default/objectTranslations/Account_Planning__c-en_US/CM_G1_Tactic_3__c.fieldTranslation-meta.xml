@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains an additional tactic for the strategy of the goal being reported. --></help>
+    <label><!-- 3rd Tactic --></label>
+    <name>CM_G1_Tactic_3__c</name>
+</CustomFieldTranslation>

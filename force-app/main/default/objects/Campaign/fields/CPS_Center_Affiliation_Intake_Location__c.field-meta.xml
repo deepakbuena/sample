@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Center_Affiliation_Intake_Location__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If a new Contact is created from the auto-check-in process (as may be the case for TS), this field is mapped to the Contact Intake Location.</inlineHelpText>
+    <label>CPS Center Affiliation</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EOC Boston</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EOC Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TS Boston</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TS Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>UB Brockton</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

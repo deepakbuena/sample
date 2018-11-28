@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Recieved__c</fullName>
+    <description>When did we receive payment for the sponsorship Date Field</description>
+    <externalId>false</externalId>
+    <label>Payment Recieved</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

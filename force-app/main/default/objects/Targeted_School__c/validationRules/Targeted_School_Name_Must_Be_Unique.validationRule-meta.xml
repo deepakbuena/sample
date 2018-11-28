@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Targeted_School_Name_Must_Be_Unique</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+    Unique_Targeted_School_Name__c = VLOOKUP
+       ($ObjectType.Targeted_School__c.Fields.Name , $ObjectType.Targeted_School__c.Fields.Name, Unique_Targeted_School_Name__c ),
+
+    not(
+     Id=VLOOKUP
+         ($ObjectType.Targeted_School__c.Fields.Id , $ObjectType.Targeted_School__c.Fields.Name, Unique_Targeted_School_Name__c )))</errorConditionFormula>
+    <errorMessage>There is already an existing Target School for the same Secondary School and Service Year.</errorMessage>
+</ValidationRule>

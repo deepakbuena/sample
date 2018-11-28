@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finished_MM101_Courses__c</fullName>
+    <externalId>false</externalId>
+    <label>Finished SALT Courses</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fundamentals</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Educational Planning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Internships, Income and Careers</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Employment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Money Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Budgeting</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Loans</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Loan Repayment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Credit and Debt Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Saving and Investing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Risk Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Taxes</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

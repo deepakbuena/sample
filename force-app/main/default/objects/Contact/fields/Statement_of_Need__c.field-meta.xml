@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statement_of_Need__c</fullName>
+    <externalId>false</externalId>
+    <label>Statement of Need</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ACT/SAT Test Prep</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Counseling/Majors</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Field Trips</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Admissions</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Campus Visits</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Prep Workshops</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Essay Writing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Study Skills</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tutoring in</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

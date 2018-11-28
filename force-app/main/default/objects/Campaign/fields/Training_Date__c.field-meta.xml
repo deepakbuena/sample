@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Date__c</fullName>
+    <description>Day the training is scheduled to take place</description>
+    <externalId>false</externalId>
+    <label>Training Event Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

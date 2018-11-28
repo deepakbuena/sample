@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NSLDS_Access_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>NSLDS Access Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - School Provided</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>2 - Confidentiality Auth Form Rcvd</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>3 - Bus Analysis NPI Provided</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>4 - ASA Rcvd User Docs</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>5 - ASA Returns to SAIG</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>6 - Received SAIG Access</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>7 - Access Terminated</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

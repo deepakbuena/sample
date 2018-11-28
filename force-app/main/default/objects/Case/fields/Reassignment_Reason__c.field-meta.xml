@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reassignment_Reason__c</fullName>
+    <description>Please provide a reason as to why a case is being reassigned.</description>
+    <externalId>false</externalId>
+    <label>Reassignment Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Skillset</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Out of Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Manager Reassignment</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

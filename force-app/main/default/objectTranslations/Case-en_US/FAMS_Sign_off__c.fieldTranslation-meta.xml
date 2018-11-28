@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Feed File Handler Status --></label>
+    <name>FAMS_Sign_off__c</name>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Production</masterLabel>
+        <translation><!-- In Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Testing</masterLabel>
+        <translation><!-- In Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Testing</masterLabel>
+        <translation><!-- Pre-Testing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

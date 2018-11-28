@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Opportunity" showHeader="false" sidebar="false" standardStylesheets="false">
+    <style>
+        Body { Background: transparent; }
+    </style>
+    <apex:iframe id="prospect_insight" src="https://pi.pardot.com/prospect/activity/email/{!URLENCODE(Opportunity.ConvertedLeadEmail__c)}?sessionid={!$Api.Session_ID}&serverurl={!$Api.Partner_Server_URL_90}&source=salesforce&tab=lead&style={!$User.UIThemeDisplayed}&fid={!Opportunity.ConvertedLeadId__c}" scrolling="false" height="390"/>
+</apex:page>

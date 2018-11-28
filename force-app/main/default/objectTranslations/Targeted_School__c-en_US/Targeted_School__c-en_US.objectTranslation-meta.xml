@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Targeted School</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Targeted Schools</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- There is already an existing Target School for the same Secondary School and Service Year. --></errorMessage>
+        <name>Targeted_School_Name_Must_Be_Unique</name>
+    </validationRules>
+</CustomObjectTranslation>

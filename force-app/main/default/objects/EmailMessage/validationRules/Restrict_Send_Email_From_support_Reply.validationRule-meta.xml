@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Send_Email_From_support_Reply</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status, &#39;3&#39;), NOT(ISNULL(ParentId)), NOT(ISNULL(Parent.Email2Case_TO_Address__c)), LOWER(FromAddress) &lt;&gt; LOWER(Parent.Email2Case_TO_Address__c), Parent.Owner:Queue.DeveloperName = &quot;Support_asa_org_Email&quot;)</errorConditionFormula>
+    <errorMessage>Please select the correct From address: support@asa.org</errorMessage>
+</ValidationRule>

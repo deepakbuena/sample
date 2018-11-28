@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_TS_Brockton_Contacts_2017</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Elidgable_Report_Support__c</columns>
+    <columns>Eligibility__c</columns>
+    <columns>CPS_Advisor__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Age__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Other_Programs__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.CPS_TS</value>
+    </filters>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>TS Brockton</value>
+    </filters>
+    <filters>
+        <field>Latest_Grant_Program__c</field>
+        <operation>equals</operation>
+        <value>TS Brockton (2017-2018)</value>
+    </filters>
+    <label>CPS TS Brockton Contacts - 2017</label>
+    <sharedTo>
+        <group>Talent_Search_Brockton</group>
+    </sharedTo>
+</ListView>

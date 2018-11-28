@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Sales_Lead</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>LEAD.RECORDTYPE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Strategic_Partnership</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>Strategic Sales</value>
+    </filters>
+    <label>Strategic Sales</label>
+    <sharedTo>
+        <group>ASAProfessionalServices</group>
+        <group>BD_East</group>
+        <group>BD_Management</group>
+        <group>BD_West</group>
+        <group>BusinessDevelopmentAEs</group>
+        <group>Business_Analysis</group>
+        <group>Client_Services_Admininstration</group>
+        <group>Executive_Team</group>
+        <group>FinancialForce_Team</group>
+        <group>Linfield_College_and</group>
+        <group>Pardot_Marketing</group>
+        <group>Revamp_Team</group>
+        <group>School_CM</group>
+    </sharedTo>
+</ListView>

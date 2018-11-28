@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Automatically turned on when invoice has been generated.   Then automatically turned off awaiting next invoice. --></help>
+    <label><!-- Has Been Invoiced --></label>
+    <name>Has_Been_Invoiced__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,354 @@
+<apex:page showHeader="false" applyHtmlTag="false" applyBodyTag="false" controller="EOCFormController" action="{!redirectToHome}" docType="html-5.0" cache="false">
+    <c:EOCSignOn_doubleclick_Component />
+    <body>
+        <div class="slds-scope">
+            <!-- Desktop header -->
+            <div class="desktop_header_bg">
+                <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+            </div>
+            <!-- Desktop header -->
+            <div class="slds_wrap slds-m-top_xx-large">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                    <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <apex:outputPanel rendered="{!renderPgMsgBox}" styleClass="custom_exception">
+                    <div class="slds-notify_container slds-is-relative">
+                        <div class="slds-notify slds-notify_toast slds-theme_warning toast_width" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                                </svg>
+                            </span>
+                            <div class="slds-notify__content">
+                                <h2 class="slds-text-heading_small">
+                                    <apex:pageMessages ></apex:pageMessages>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-mobile-width">
+                    <div class="slds-media mobile_heading_margin">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                            <!-- ***************Added on 29 Oct 2018, by Aj*********** -->
+                            <div style="float:right;">
+                                <div id="google_translate_element"></div>
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,es,hi,ht,ne,pt,sw,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                    }
+                                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </div>
+                            <!-- ***************************************************** -->
+                            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">EOC Sign-on Form</h1>
+                            <p class="slds-text-body_small slds-line-height_reset">Welcome! Been here before? Update anything that’s changed since your last visit, and complete
+                                the “personal information” section so we can find your records. If this is your first time
+                                with us, we’ll ask a few questions after these to create your profile.
+                            </p>
+                            <br/>
+                            <p>*Required</p>
+                            <!-- <h2 class="slds-page-header__title slds-truncate slds-align-middle slds-m-top_medium" title="EOC Sign-on Form">EOC Sign-on Form </h2>  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <apex:form id="eOCSignOnForm" forceSSL="true" styleClass="slds-p-around_large eOCSignOnForm">
+                    <apex:actionFunction name="callRegisterLead" action="{!registerLead}"/>
+                    <div class="slds-form slds-form_horizontal">
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Visit Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <apex:outputLabel value="Check here if you want to meet with an Advisor" for="Check here if you want to meet with an Advisor" styleClass="slds-form-element__label mobile_label" style="width:48%"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputcheckbox id="meetAdvisor" styleClass="advisor slds-checkbox" value="{!meetAdvisor}" label="Meet Advisor" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row" style="margin-top: 0;">
+                                        <label class="slds-form-element__label mobile_label" for="Preferred Language">Preferred Language</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!preferredLanguage}" id="preferredLanguage1" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!preferredLanguageOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <!--<div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left" style="margin-top: 0;"></div>-->
+                                </div>
+                                <!-- MeetAdvisor Rendering part starts -->
+                                <div style="margin-top: 0;display:none" id="showadvisor">
+                                    <div class="slds-form-element__row top_margin">
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                            <apex:outputLabel value="Do you have an Appointment?" for="Do you have an Appointment?" styleClass="slds-form-element__label mobile_label" style="width:48%"/>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputcheckbox id="haveAppointment" styleClass="slds-checkbox" value="{!haveAppoinment}" label="Have Appoinment" style="zoom: 1.9;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                            <apex:outputPanel >
+                                                <label class="slds-form-element__label mobile_label" style="width: 48%;" for="Advisor Requested?">Advisor Requested?</label>
+                                                <div class="slds-form-element__control">
+                                                    <apex:selectList id="CPSAdvisorRequested" value="{!cPSAdvisorRequested}" multiselect="false" size="1" styleClass="custom_select">
+                                                        <apex:selectOptions value="{!lstCPSAdvisorOption}"/>
+                                                    </apex:selectList>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </div>
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left"></div>
+                                    </div>
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-small-size_1-of-1 slds-size_1-of-1 slds-float_left mobile_row">
+                                            <label class="slds-form-element__label mobile_label" for="Primary Purpose of Visit" style="width: 24%;" >
+                                                Primary Purpose of Visit
+                                                <abbr class="slds-required">
+                                                    *
+                                                    <!--   <button class="slds-button slds-button_icon slds-button slds-button_icon tooltip" aria-describedby="help" title="Help">
+                                                        <svg class="slds-button__icon" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#info')}"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Help</span>
+                                                        <span class="tooltiptext" style="font-size: .8125rem;font-weight: normal;">Choose all that apply.</span>
+                                                        </button>  -->
+                                                </abbr>
+                                            </label>
+                                            <div class="slds-form-element__control">
+                                                <!--*** Commented on 9 Nov 2018, by Aj ***********
+                                                    <apex:selectList id="sel1" value="{!purposeofVisitSelectedOption}" multiselect="TRUE" size="6" styleClass="custom_select mobile_custom_select custom_height_pv">
+                                                       <apex:selectOptions value="{!purposeofVisitOptions}"/>
+                                                    </apex:selectList>
+                                                    ******************-->
+                                                <!--*** Added on 9 Nov 2018, by Aj *************-->
+                                                <apex:selectList id="sel1" value="{!purposeofVisitSelectedOption}" multiselect="false" size="1" styleClass="custom_select" style="width:50%">
+                                                    <apex:selectOptions value="{!purposeofVisitOptions}"/>
+                                                </apex:selectList>
+                                                <span id="visitError" class="privisit privisit_text">Required field</span> <!-- Added by RS on 11132018  -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                            <label class="slds-form-element__label mobile_label" for="Purpose of Visit-Other" style="width:48%">Purpose of Visit (Other)</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputText id="purposeofVisitOther" value="{!purposeofVisitOther}" label="Pupose of Visit-Other" maxlength="255" styleClass="slds-input"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!-- MeetAdvisor Rendering part ends -->
+                                <apex:outputPanel rendered="{!satelliteLoc != Null}">
+                                    <div class="slds-form-element__row" style="margin-top: 0;">
+                                        <div class="slds-form-element slds-small-size_1-of-1 slds-size_1-of-1 slds-float_left mobile_row">
+                                            <label class="slds-form-element__label mobile_label" for="Purpose of Visit-Other" style="width:24%">Center or Satellite Location</label>
+                                            <div class="slds-form-element__control" style="vertical-align: -webkit-baseline-middle;">
+                                                <!-- <apex:inputText id="satelliteIntakeLoc" value="{!satelliteLoc}" label="Satellite Intake Location" styleClass="slds-input"/>  -->
+                                                <apex:outputText value="{!satelliteLoc}" style="font-weight: 500;width:70%"/>
+                                            </div>
+                                        </div>
+                                        <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                    </div>
+                                </apex:outputPanel>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Personal Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row slds-p-bottom_none">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">First Name<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="firstname" value="{!firstName}" label="First Name" maxlength="40" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row slds-p-bottom_none">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Middle Initial</label>
+                                        <div class="slds-form-element__control tooltip">
+                                            <apex:inputText id="middleInitials" value="{!MddleInitials}" maxlength="1" label="Mddle Initial" styleClass="slds-input txtOnly"/>
+                                            <span class="tooltiptext">Allow only single alphabet.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row slds-p-bottom_none">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Last Name<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="lastname" value="{!LastName}" label="Last Name" maxlength="80" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row slds-p-bottom_none">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="Suffix">Suffix</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!suffix}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!suffixOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row slds-p-bottom_none">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Date of Birth<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:input type="date" id="txtDate" value="{!BirthDate}" styleClass="slds-input"/>
+                                            <span class="dateerror">Invalid Date</span>
+                                            <span id="requirederr" class="requirederror">Required field</span>
+                                            <span id="validBirthdate" class="validBirth validBirthCss">Min age should be 9 and max age should be 100</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Email</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="eocEmail" value="{!Email}" label="eocEmail" styleClass="slds-input" maxlength="80"/>
+                                            <span class="emailmsg error">Please provide a valid email address</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Mobile Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="eocPhone" value="{!mobilePhone}" label="eocPhone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Additional Phone Information
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row top_margin">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Is Mobile Phone OK to Text?</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!isMobileOktoTest}" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!isMobileOktoTestOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <apex:outputLabel value="Is Mobile Phone Parent/Guardian’s?" for="Is Mobile Parent/Guardian's" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputCheckbox styleClass="slds-checkbox custom_checkbox" id="IsMobileParentGuardians" value="{!IsMobileParentGuardians}" label="Is Mobile Parent/Guardian's" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Home Phone</label>
+                                        <div class="slds-form-element__control" style="width:45%">
+                                            <apex:inputText id="eocHomePhone" value="{!homePhone}" label="eocHomePhone" onkeydown="javascript:backspacerDOWN(this,event);" onkeyup="javascript:backspacerUP(this,event);" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <apex:outputLabel value="Is Home Phone Parent/Guardian’s?" for="Is Home Parent/Guardian's" styleClass="slds-form-element__label"/>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputCheckbox id="IsHomeParentGuardians" value="{!IsHomeParentGuardians}" label="Is Home Parent/Guardian's" styleClass="slds-checkbox custom_checkbox" style="zoom: 1.9;"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-xx-small-size_1-of-1 slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left mobile_row">
+                                        <label class="slds-form-element__label" for="input-id-01">Preferred Phone</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:selectList value="{!preferredPhoneType}" id="preferredPhoneType" multiselect="false" size="1" styleClass="custom_select">
+                                                <apex:selectOptions value="{!preferredPhoneTypeOptions}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="slds-form-element slds-box rounded_corner">
+                            <div class="slds-form-element__group">
+                                <div class="slds-m-top_small slds-m-bottom_small form_heading slds-text-align_left form_rounded_corner">
+                                    <h1>
+                                        Address
+                                    </h1>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Street address (apt., floor, etc.)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="street" value="{!Street}" label="Street" maxlength="255" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">City</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="city" value="{!city}" maxlength="40" label="City" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">State</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="state" value="{!state}" maxlength="80" label="State" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Zip/Postal Code<abbr class="slds-required">*</abbr></label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="zipcode" value="{!ZipCode}" label="ZipCode" styleClass="slds-input"/>
+                                            <span class="ziperror zip_error" id="ziperr">Mailing Zip/Postal Code must be in the correct format: nnnnn or nnnnn-nnnn</span>
+                                            <span id="ziprequirederr" class="ziprequirederror">Required field</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1">
+                                        <label class="slds-form-element__label" for="input-id-01">Country</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputText id="country" value="{!country}" label="Country" maxlength="80" styleClass="slds-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="slds-form-element__row" style="margin-left: 0;">
+                            <!--  <div style="width: 40%;" class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-p-around_medium slds-m-top--none slds-p-left_none slds-p-right_none captcha_left_pad">
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <div class="g-recaptcha" data-sitekey="6LePxF0UAAAAAFzplp3t-fr4ZjwTwZtymV551FY1"></div>
+                                </div>  -->
+                            <div class="slds-form-element slds-small-size_1-of-2 slds-size_1-of-1 slds-float_left slds-m-top--none slds-p-around_medium slds-p-left_none">
+                                <apex:commandButton value="Next"  id="submit" styleClass="custom_btn" style="width:30% !important" onclick="return checkDoubleSubmit(this);"/>
+                                <!-- action="{!registerLead}"-->
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+        <c:EOCSignOn_Validation_Component />
+    </body>
+</apex:page>

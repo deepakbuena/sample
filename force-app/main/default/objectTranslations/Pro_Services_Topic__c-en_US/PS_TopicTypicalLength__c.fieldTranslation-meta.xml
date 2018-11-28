@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Typical Length --></label>
+    <name>PS_TopicTypicalLength__c</name>
+    <picklistValues>
+        <masterLabel>1/2 day</masterLabel>
+        <translation><!-- 1/2 day --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 hours</masterLabel>
+        <translation><!-- 2 hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30 minutes</masterLabel>
+        <translation><!-- 30 minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>60 minutes</masterLabel>
+        <translation><!-- 60 minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90 minutes</masterLabel>
+        <translation><!-- 90 minutes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full day</masterLabel>
+        <translation><!-- Full day --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Varies</masterLabel>
+        <translation><!-- Varies --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

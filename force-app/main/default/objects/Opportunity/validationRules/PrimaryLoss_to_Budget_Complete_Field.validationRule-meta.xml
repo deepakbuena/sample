@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryLoss_to_Budget_Complete_Field</fullName>
+    <active>false</active>
+    <description>The user must report the month the campus budget is set when the Primary Loss Reason = Budget Cycle/Lack of Funds.</description>
+    <errorConditionFormula>AND (ISPICKVAL (Primary_Loss_Reason__c, &quot;Budget Cycle/Lack of Funds&quot;),
+   ISPICKVAL (When_is_campus_budget_set__c, &quot;&quot; ))</errorConditionFormula>
+    <errorDisplayField>When_is_campus_budget_set__c</errorDisplayField>
+    <errorMessage>When the Primary Loss Reason is because of a budget, you must provide the month the campus budget is set.</errorMessage>
+</ValidationRule>

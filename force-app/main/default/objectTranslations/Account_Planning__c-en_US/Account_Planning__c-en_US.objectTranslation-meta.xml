@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Planning</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Planning</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Account Plan FY 09 --></label>
+        <name>AccountPlanFY09</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The name of the Account Plan must contain the current or upcoming year. --></errorMessage>
+        <name>Account_Plan_Name</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- NewAccountPlan --></label>
+        <name>NewAccountPlan</name>
+    </webLinks>
+</CustomObjectTranslation>

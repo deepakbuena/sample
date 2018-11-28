@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALT_Contract_Executed__c</fullName>
+    <description>The date the SALT contract was executed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the SALT contract was executed.</inlineHelpText>
+    <label>SALT Contract Executed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

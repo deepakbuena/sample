@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Academic_Year__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates the Academic Year(s) that this student served as SALT Ambassador</inlineHelpText>
+    <label>Academic Year</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

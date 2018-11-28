@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A checkmark in this box will send an email alert to Della. She will review the item and, when approved, will submit it to Business Analysis for entry into the SALT Shaker. --></help>
+    <label><!-- Ready To Submit --></label>
+    <name>Ready_To_Submit__c</name>
+</CustomFieldTranslation>

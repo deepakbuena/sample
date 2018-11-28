@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Accept_Terms_And_Conditions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Accept_Terms_And_Conditions</shortDescription>
+        <value>Please accept Terms and Conditions.</value>
+    </labels>
+    <labels>
+        <fullName>AccountIDForSocToCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountIDForSocToCase</shortDescription>
+        <value>0010d00001Juzve</value>
+    </labels>
+    <labels>
+        <fullName>CPSSignOn_AdvProcess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CPSSignOn&amp;AdvProcessTaskOwner</shortDescription>
+        <value>Bridget Sullivan</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_Company_Id_Self_Registration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invalid_Company_Id_Self_Registration</shortDescription>
+        <value>The Company ID you entered is invalid.</value>
+    </labels>
+    <labels>
+        <fullName>Masking_DL_Keywords1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking DL Keywords1</shortDescription>
+        <value>DriverLic;DriverLics;DriverLicense;DriverLicenses;Driver Lic;Driver Lics;Driver License;Driver Licenses;DriversLic;DriversLics;DriversLicense;DriversLicenses;Drivers Lic;Drivers Lics;Drivers License;Drivers Licenses;Driver&#39;Lic;Driver&#39;Lics;Driver&#39;License;Driver&#39;Licenses;Driver&#39; Lic;Driver&#39; Lics;Driver&#39; License;Driver&#39; Licenses;Driver&#39;sLic;Driver&#39;sLics;Driver&#39;sLicense;Driver&#39;sLicenses;Driver&#39;s Lic;Driver&#39;s Lics;Driver&#39;s License;Driver&#39;s Licenses;identification number;identification numbers;identification #;id card;id cards;identification card;identification cards;DriverLic#;DriverLics#;DriverLicense#;DriverLicenses#;Driver Lic#;Driver Lics#;Driver License#;Driver Licenses#;DriversLic#;DriversLics#;DriversLicense#;DriversLicenses#;Drivers Lic#;Drivers Lics#;Drivers License#;Drivers Licenses#;Driver&#39;Lic#;Driver&#39;Lics#;Driver&#39;License#;Driver&#39;Licenses#;Driver&#39; Lic#;Driver&#39; Lics#;Driver&#39; License#;Driver&#39; Licenses#;Driver&#39;sLic#;Driver&#39;sLics#;Driver&#39;sLicense#;Driver&#39;sLicenses#</value>
+    </labels>
+    <labels>
+        <fullName>Masking_DL_Keywords2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking DL Keywords2</shortDescription>
+        <value>Driver&#39;s Lic#;Driver&#39;s Lics#;Driver&#39;s License#;Driver&#39;s Licenses#;id card#;id cards#;identification card#;identification cards#;DL#;DLS#;CDL#;CDLS#;ID#;IDs#;ID number;ID numbers;LIC#</value>
+    </labels>
+    <labels>
+        <fullName>Masking_DL_Keywords_Abbre</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Masking DL Keywords Abbre</shortDescription>
+        <value>[ ,.,,,:,-,\n][Dd]{1}?[Ll]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Dd]{1}?[Ll]{1}?[Ss]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Cc]{1}?[Dd]{1}?[Ll]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Cc]{1}?[Dd]{1}?[Ll]{1}?[Ss]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Ii]{1}?[Dd]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Ii]{1}?[Dd]{1}?[Ss]{1}[ ,.,,,:,-,\n];[ ,.,,,:,-,\n][Ll]{1}?[Ii]{1}?[Cc]{1}[ ,.,,,:,-,\n];</value>
+    </labels>
+    <labels>
+        <fullName>Required_Company_Name_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Company_Name_Self_Reg</shortDescription>
+        <value>Company Name is required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_Customer_Code_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Customer_Code_Self_Reg</shortDescription>
+        <value>Company ID is required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_First_Name_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_First_Name_Self_Reg</shortDescription>
+        <value>First Name is Required.</value>
+    </labels>
+    <labels>
+        <fullName>Required_Phone_Number_Self_Reg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Required_Phone_Number_Self_Reg</shortDescription>
+        <value>Phone number is required.</value>
+    </labels>
+    <labels>
+        <fullName>Routing_Keywords</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Routing Keywords</shortDescription>
+        <value>aba;aba-;aba,;aba:;aba #;aba routing #;aba routing number;aba#;abarouting#;aba number;abaroutingnumber;american bank association routing #;american bank association routing number;americanbankassociationrouting#;americanbankassociationroutingnumber;bank routing number;bankrouting#;bankroutingnumber;routing transit number;RTN</value>
+    </labels>
+    <labels>
+        <fullName>SSN_Keywords</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SSN Keywords</shortDescription>
+        <value>Social Security;SociaSecurity;Social Security#;SocialSecurity#;Social Security Number;SocialSecurityNumber;Social Security Number #;SocialSecurityNumber#;SocialSecurityNumbers;Social;Social#;Social #;Social Number;SocialNumber;Social Number #;SocialNumber#;Soc Sec;SocSec;Soc Sec#;SocSec#;Soc Sec Number;SocSec Number;SocSecNumber;Soc Sec Number #;SocSec Number #;SocSecNumber#;Soc Number;SocNumber;SocNumber#;SSN;SSN#;SSN #;SS Number;S S Number;SSNumber;SS Number #;SSNumber#;SSNS;SSNS#;SSNS Number;SSNS Number #;SS#;SS;S S #;SSID;SSID#;SSID Number;SSIDNumber;SSID Number #;SSIDNumber#</value>
+    </labels>
+</CustomLabels>

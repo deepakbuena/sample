@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Misc_1_f__c  +  Misc_1_m__c  +  Misc_1_sa__c  +  Misc_1_su__c  +  Misc_1_t__c  +  Misc_1_th__c  +  Misc_1_w__c  + Misc_2_f__c  +  Misc_2_m__c  +  Misc_2_sa__c  +  Misc_2_su__c  +  Misc_2_t__c  +  Misc_2_th__c  +  Misc_2_w__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Other Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

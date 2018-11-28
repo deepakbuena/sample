@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visits_Remaining__c</fullName>
+    <description># of visits remaining against target</description>
+    <externalId>false</externalId>
+    <formula>if((Targeted_Substantive_Visits_for_Month__c - Actual_Substantive_Visits_for_Month__c) &lt;= 0, 0, (Targeted_Substantive_Visits_for_Month__c -  Actual_Substantive_Visits_for_Month__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText># of visits remaining against target</inlineHelpText>
+    <label>Visits Remaining</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

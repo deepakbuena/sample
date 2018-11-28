@@ -1,0 +1,20 @@
+<aura:component controller="TabInteractiveReports" implements="forceCommunity:themeLayout,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="TabInteractiveReports" name="showInteractiveRpTab"/>
+    <div class="slds-m-around_large">
+      <p class="boldtext slds-m-top_large slds-list--vertical">Within the Salt Admin Portal, you'll be able to:</p>
+    
+    <div class="slds-p-left_medium">
+    <ul class="slds-has-block-links_space slds-list--vertical">
+      <li class="slds-list__item">
+          
+          
+          <ul class="slds-list--dotted slds-list--vertical slds-is-nested">
+              <li class="slds-m-top_medium slds-list__item"><p>Access<a href="https://saltmoney.force.com/customers/s/standard-reports" target="_blank" class="inlinedis" style="padding: 3px">Standard Reports</a></p></li>
+              
+          </ul>
+      </li>
+    </ul>
+        </div>
+        </div>
+</aura:component>

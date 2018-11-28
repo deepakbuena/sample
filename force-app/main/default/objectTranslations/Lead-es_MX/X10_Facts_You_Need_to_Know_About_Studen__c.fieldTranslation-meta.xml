@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 10 Facts You Need to Know About Student --></label>
+    <name>X10_Facts_You_Need_to_Know_About_Studen__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSA_Request__c</fullName>
+    <description>List of the possible requests that could be made of CSA</description>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add/Edit Salesforce contacts</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Advisory Board Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Ambassador Program Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Business Cards</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campaign Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campus Activation Event</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Check Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Client Forum Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Collateral or Presentations</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conference Presentation Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conference Presentation Proposal</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conference Registration</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Create Brand Name</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Data Depersonalization Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Miscellaneous Marketing Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Miscellaneous Research</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>New/Renew Association Membership</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>New Collateral</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Off-board Client</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pre-Conference Email</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pre-Sales Meeting / In-Person Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Presentation Content Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>President Pre-Renewal Letter</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Print/Copy Materials</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Purchasing Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Return School Copy of Contract</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Salesforce Admininstrator Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Courses Data Request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Salt Demo / Webinar</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Salt Store New Contact</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School Profile Creation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Shipping Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Special invoicing request</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Stakeholder meeting packets</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tabulate survey results</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Training meeting packets</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

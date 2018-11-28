@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Topics__c</fullName>
+    <description>Used by the counselor to select one or many topics covered with the Contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select one or many topics covered with the Contact.</inlineHelpText>
+    <label>Actual Topics</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>College planning/paying for college (parents and students)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Beginning student loan repayment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Comparing_repayment_plans_and_or_postponing_payments</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Consolidation and refinance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Resolving delinquent student loans</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Forgiveness for student loans</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>General student loan information</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>General financial information (budgeting, credit, saving, etc.)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

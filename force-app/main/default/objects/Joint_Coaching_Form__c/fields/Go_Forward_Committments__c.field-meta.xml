@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Go_Forward_Committments__c</fullName>
+    <description>At the end of the meeting, did the RAE get customer  &quot;go-forward&quot; committments?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>At the end of the meeting, did the RAE get customer  &quot;go-forward&quot; committments?</inlineHelpText>
+    <label>Go-Forward Committments?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the OE Code of the Account for which this plan is being reported. --></help>
+    <label><!-- OE Code --></label>
+    <name>OE_Code__c</name>
+</CustomFieldTranslation>

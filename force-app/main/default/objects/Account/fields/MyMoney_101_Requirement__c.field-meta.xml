@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyMoney_101_Requirement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If a school requires MyMoney101 in general</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If a school requires MyMoney101 in general</inlineHelpText>
+    <label>SALT Courses Recommended</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

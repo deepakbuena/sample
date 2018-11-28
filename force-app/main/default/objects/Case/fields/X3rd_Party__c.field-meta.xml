@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party__c</fullName>
+    <externalId>false</externalId>
+    <label>3rd Party</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>ELM</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>OpenNet (FMS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>OpenNet (Web)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Nteract</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ScholarNet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

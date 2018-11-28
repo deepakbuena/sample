@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Office__c</fullName>
+    <externalId>false</externalId>
+    <label>Target Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Advancement Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Alumni Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Business Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Services Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Enrollment Management</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>President&#39;s Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Registrar&#39;s Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Life Office</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Veterans Affairs</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

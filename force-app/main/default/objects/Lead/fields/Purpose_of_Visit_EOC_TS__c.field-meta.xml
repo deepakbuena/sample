@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose_of_Visit_EOC_TS__c</fullName>
+    <description>For the EOC and TS Program.  What is the purpose of the visit?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For the EOC and TS Program.  What is the purpose of the visit?</inlineHelpText>
+    <label>Purpose of Visit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Career Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Loan Assistance </fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Scholarship </fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Use resources </fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admission application assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Education info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FA application assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Fee Waiver</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

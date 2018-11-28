@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field indicates the ProServices @ ASA team members who may be able to presnt on this topic. --></help>
+    <label><!-- Available Presenters --></label>
+    <name>PS_TopicAvailablePresenters__c</name>
+    <picklistValues>
+        <masterLabel>Daryl Conte</masterLabel>
+        <translation><!-- Daryl Conte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fidel Calero</masterLabel>
+        <translation><!-- Fidel Calero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gina Lucente-Cole</masterLabel>
+        <translation><!-- Gina Lucente-Cole --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jacquie Carroll</masterLabel>
+        <translation><!-- Jacquie Carroll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jen Schott</masterLabel>
+        <translation><!-- Jen Schott --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joanne Dashiell</masterLabel>
+        <translation><!-- Joanne Dashiell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lorinda Diehl</masterLabel>
+        <translation><!-- Lorinda Diehl --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lyssa Thaden</masterLabel>
+        <translation><!-- Lyssa Thaden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-PS ASA Staff</masterLabel>
+        <translation><!-- Non-PS ASA Staff --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sabrina Mainini</masterLabel>
+        <translation><!-- Sabrina Mainini --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

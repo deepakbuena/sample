@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT1__ReadyTalkUser__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Indicates the user has access to the full functionality in the ReadyTalk application.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the user has access to the full functionality in the ReadyTalk application.</inlineHelpText>
+    <label>ReadyTalk Webinar User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

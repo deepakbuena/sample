@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_greater_than_0</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( Amount__c &lt; 1, True, False)</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>Amount should be greater than Zero.</errorMessage>
+</ValidationRule>

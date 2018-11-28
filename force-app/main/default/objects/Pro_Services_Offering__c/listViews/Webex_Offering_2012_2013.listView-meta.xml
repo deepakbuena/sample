@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Webex_Offering_2012_2013</fullName>
+    <columns>NAME</columns>
+    <columns>PS_OfferingAssignedTo__c</columns>
+    <columns>PS_OfferingCampaign__c</columns>
+    <columns>PS_OfferingCompleted__c</columns>
+    <columns>PS_OfferingDeliveryMethod__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PS_OfferingTargetDate__c</field>
+        <operation>greaterThan</operation>
+        <value>7/1/2012</value>
+    </filters>
+    <filters>
+        <field>PS_OfferingDeliveryMethod__c</field>
+        <operation>equals</operation>
+        <value>Webex</value>
+    </filters>
+    <label>Webex Offering 2012-2013</label>
+</ListView>

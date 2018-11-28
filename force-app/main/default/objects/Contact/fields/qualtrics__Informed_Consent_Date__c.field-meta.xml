@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>qualtrics__Informed_Consent_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This date is populated when a contact grants Informed Consent via Qualtrics Informed Consent Quick Start Survey</description>
+    <externalId>false</externalId>
+    <label>Informed Consent Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

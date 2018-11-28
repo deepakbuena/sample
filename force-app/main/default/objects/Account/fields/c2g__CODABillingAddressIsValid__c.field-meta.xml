@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODABillingAddressIsValid__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(BillingStreet) &amp;&amp;
+ISBLANK(BillingCity) &amp;&amp;
+ISBLANK(BillingState) &amp;&amp;
+ISBLANK(BillingPostalCode) &amp;&amp;
+ISBLANK(BillingCountry)) &amp;&amp;
+c2g__CODAValidatedBillingStreet__c == BillingStreet &amp;&amp;
+c2g__CODAValidatedBillingCity__c == BillingCity &amp;&amp;
+c2g__CODAValidatedBillingState__c == BillingState &amp;&amp;
+c2g__CODAValidatedBillingPostCode__c == BillingPostalCode &amp;&amp;
+c2g__CODAValidatedBillingCountry__c == BillingCountry</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Billing Address Validated</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

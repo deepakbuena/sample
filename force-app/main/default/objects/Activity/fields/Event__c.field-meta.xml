@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(IsTask,false,true)</formula>
+    <label>Event</label>
+    <type>Checkbox</type>
+</CustomField>

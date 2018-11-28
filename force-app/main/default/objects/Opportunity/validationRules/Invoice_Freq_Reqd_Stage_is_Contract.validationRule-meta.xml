@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Freq_Reqd_Stage_is_Contract</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISPICKVAL(StageName, &quot;Contract&quot;),OR(ISBLANK(TEXT(Invoice_Frequency__c))))</errorConditionFormula>
+    <errorDisplayField>Invoice_Frequency__c</errorDisplayField>
+    <errorMessage>Please select the appropriate Invoice Frequency for this Contract</errorMessage>
+</ValidationRule>

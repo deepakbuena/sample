@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gold_Sponsor__c</fullName>
+    <description>Who are the Gold Sponsors for the ASA Smposium, can be more than one</description>
+    <externalId>false</externalId>
+    <label>Gold Sponsor</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

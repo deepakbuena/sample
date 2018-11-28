@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Promotional Asset --></label>
+    <name>Promotional_Asset__c</name>
+    <picklistValues>
+        <masterLabel>Amabassador Handbook</masterLabel>
+        <translation><!-- Amabassador Handbook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banner</masterLabel>
+        <translation><!-- Banner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Buckslip</masterLabel>
+        <translation><!-- Buckslip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bulletin Board Kit</masterLabel>
+        <translation><!-- Bulletin Board Kit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communication Kit</masterLabel>
+        <translation><!-- Communication Kit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital board presentation</masterLabel>
+        <translation><!-- Digital board presentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Resources</masterLabel>
+        <translation><!-- Event Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flyer</masterLabel>
+        <translation><!-- Flyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guide for Student Organizations</masterLabel>
+        <translation><!-- Guide for Student Organizations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instructor’s Handbook</masterLabel>
+        <translation><!-- Instructor’s Handbook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Membership Card</masterLabel>
+        <translation><!-- Membership Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orientation Kit</masterLabel>
+        <translation><!-- Orientation Kit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poster</masterLabel>
+        <translation><!-- Poster --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Press Kit</masterLabel>
+        <translation><!-- Press Kit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print Ad</masterLabel>
+        <translation><!-- Print Ad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Flyer</masterLabel>
+        <translation><!-- SALT Flyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Overview Video</masterLabel>
+        <translation><!-- SALT Overview Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slide Deck</masterLabel>
+        <translation><!-- Slide Deck --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Table Tent</masterLabel>
+        <translation><!-- Table Tent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Ad</masterLabel>
+        <translation><!-- Web Ad --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

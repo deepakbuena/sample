@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This box becomes ticked once a Request for Proposal has entered the second round. --></help>
+    <label><!-- RFP 2nd Round --></label>
+    <name>RFP_2nd_Round__c</name>
+</CustomFieldTranslation>

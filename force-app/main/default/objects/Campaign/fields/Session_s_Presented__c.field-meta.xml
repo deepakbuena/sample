@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_s_Presented__c</fullName>
+    <description>What is being presented at the conference.</description>
+    <externalId>false</externalId>
+    <label>Session(s) Presented</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

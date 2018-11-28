@@ -1,0 +1,184 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SALTClientReportAttachmentCtrl">
+    <!--<aura:registerEvent name="navigate" type="c:SALTPDFViewerEvt"/>
+    <aura:registerEvent name="navigatetoList" type="c:CombinedAttachmentsEvt"/>-->
+    <ltng:require styles="/resource/SLDS220_1/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="liAttachment" type="AttachmentParent"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="canUpload" type="Boolean"/>
+    <aura:attribute name="errMessage" type="String" />
+    <div class="ConamTechnologies">
+        <div class="slds-grid">
+            <div class="slds-col">
+                <p class="slds-text-title--caps slds-line-height--reset">
+                    <a id="{!v.liAttachment.Id}" onclick="{!c.goBack}">
+                        SALT CLIENT REPORTS
+                    </a>
+                    >
+                    {!v.liAttachment.name}
+                </p> 
+            </div>
+        </div>
+        <div class="slds-page-header">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/custom-sprite/svg/symbols.svg#custom79" 
+                                       category="custom" size="large" name="custom79" />
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-title--caps slds-line-height--reset">SALT CLIENT REPORTS</p>
+                            <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" 
+                                title="{!v.liAttachment.name}">{!v.liAttachment.name}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                    <button class="slds-button slds-button--neutral slds-not-selected" 
+                            onclick="{!c.createFollow}" aria-live="assertive">
+                        <span class="slds-text-not-selected icn" aura:id="follow">
+                            <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#add" 
+                                       class="slds-button__icon--stateful slds-button__icon--left" category="utility" size="x-small" 
+                                       name="add" />Follow</span>
+                        <span class="slds-text-selected icn" aura:id="following">
+                            <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#check" 
+                                       class="slds-button__icon--stateful slds-button__icon--left" category="utility-sprite" size="x-small" 
+                                       name="check" />Following
+                        </span>
+                        <span class="slds-text-selected-focus icn" aura:id="unfollow">
+                            <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#close" 
+                                       class="slds-button__icon--stateful slds-button__icon--left" category="utility-sprite" size="x-small" 
+                                       name="close" />Unfollow</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <div class="slds-size--1-of-1"> 
+                    <div class="slds-tabs--default">
+                        <ul class="slds-tabs--default__nav" role="tablist">
+                            <li aura:id="tabpageNotesAttachments" class="slds-tabs--default__item slds-active" title="Related" role="presentation" onclick="{!c.changeTab}">
+                                <a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-3" id="tab-default-3__item">
+                                    Related
+                                </a>
+                            </li>
+                            <li aura:id="tabpageNotesAttachments" class="slds-tabs--default__item" title="Details" role="presentation" onclick="{!c.changeTab}">
+                                <a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">
+                                    Details
+                                </a>
+                            </li>
+                        </ul>
+                        <div aura:id="tab-default-3" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-3__item">
+                            <lightning:card class="articlecustom">
+                                <aura:set attribute="title">
+                                    <div>
+                                        <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/standard-sprite/svg/symbols.svg#file" 
+                                                   class="slds-button__icon--stateful slds-button__icon--left" category="standard" size="small" 
+                                                   name="file" />
+                                        Notes &amp; Attachments({!v.liAttachment.allDocs.length})
+                                    </div>
+                                </aura:set>
+                                
+                                <aura:set attribute="actions"> 
+                                    <div class="slds-file-selector slds-file-selector--files">
+                                        <c:FileUpload parentId="{!v.liAttachment.Id}"/>
+                                    </div>
+                                </aura:set>
+                                
+                                <aura:set attribute="footer">
+                                    
+                                    <a href="javascript:void(0)" ></a>
+                                </aura:set>
+                                <p class="slds-p-horizontal--small">
+                                    <ul class="slds-has-dividers--bottom-space">
+                                        <aura:iteration items="{!v.liAttachment.allDocs}" var="obj" >
+                                            <li class="slds-item">
+                                                <div class="slds-tile slds-media">
+                                                    <div class="slds-media__figure">
+                                                        <c:svgIcon svgPath="{!'/customers/resource/SLDS220_1/assets/icons/doctype-sprite/svg/symbols.svg#'+ obj.iconType}"
+                                                                   class="slds-button__icon--stateful slds-button__icon--left" category="doctype" size="medium" 
+                                                                   name="{!obj.iconType}" />
+                                                        
+                                                    </div>
+                                                    <div class="slds-media__body">
+                                                        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+                                                            <h3 class="slds-truncate" title="{!obj.Name}">
+                                                                <aura:if isTrue="{!obj.fileType=='Attachment'}">
+                                                                    <a target="_blank" href="{!obj.url}" id="{!obj.recordId}" onclick="{!c.recordViewed}">
+                                                                        {!obj.name}
+                                                                    </a>
+                                                                    <aura:set attribute="else">
+                                                                        <a target="_blank" href="{!obj.url}" id="{!obj.recordId}" onclick="{!c.saveDownload}">
+                                                                            {!obj.name}
+                                                                        </a>
+                                                                    </aura:set>
+                                                                </aura:if>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="slds-tile__detail slds-text-body--small">
+                                                            <ul class="slds-list--horizontal slds-has-dividers--right">
+                                                                <li class="slds-item">
+                                                                    <ui:outputDate value="{!obj.createddate}"/>
+                                                                </li>
+                                                                <li class="slds-item">{!obj.fileSize}</li>
+                                                                <li class="slds-item">
+                                                                    <aura:if isTrue="{!obj.fileType=='Attachment'}">
+                                                                        <a href="{!'/customers/servlet/servlet.FileDownload?file=' + obj.recordId}" id="{!obj.recordId}" download="{!obj.name}" onclick="{!c.saveDownload}">
+                                                                            Download
+                                                                        </a>
+                                                                        <aura:set attribute="else">
+                                                                            <a href="{!'/customers/sfc/servlet.shepherd/version/download/' + obj.recordId}" id="{!obj.recordId}" download="{!obj.name}" onclick="{!c.saveDownload}">
+                                                                                Download
+                                                                            </a>
+                                                                        </aura:set>
+                                                                    </aura:if>
+                                                                </li>
+                                                                <li>
+                                                                    <a data-id="{!obj.recordId}" onclick="{!c.deleteRecordA}">
+                                                                        Delete
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </aura:iteration>
+                                    </ul>
+                                </p>
+                            </lightning:card>
+                            <div aura:id='ErrorModal' class="slds-hide">
+                                <div role="dialog" tabindex="-1"  class="slds-modal slds-fade-in-open">
+                                    <div class="slds-modal__container">
+                                        <div class="slds-modal__header slds-modal__header slds-modal__header--empty">
+                                            <button onclick="{!c.hideModal}" class="slds-button slds-modal__close slds-button--icon-inverse" title="Close">
+                                                <c:svgIcon svgPath="/customers/resource/SLDS220_1/assets/icons/utility-sprite/svg/symbols.svg#close" 
+                                                           class="slds-button__icon slds-button__icon--large" category="utility" size="large" 
+                                                           name="close" />
+                                                <span class="slds-assistive-text">Close</span>
+                                            </button>
+                                        </div>
+                                        <div class="slds-modal__content slds-p-around--medium">
+                                            <p>{!v.errMessage}</p>
+                                        </div>
+                                        <div class="slds-modal__footer">
+                                            <button onclick="{!c.hideModal}" class="slds-button slds-button--neutral">Cancel</button>
+                                            <button onclick="{!c.hideModal}" class="slds-button slds-button--brand">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-backdrop slds-backdrop--open"></div>
+                            </div>
+                        </div>
+                        <div aura:id="tab-default-4" class="slds-tabs--default__content slds-hide tab-default-4" role="tabpanel" aria-labelledby="tab-default-4__item">
+                            <force:recordView recordId="{!v.recordId}" type="FULL"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </div>
+    
+</aura:component>

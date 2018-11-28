@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- School Co-Branded URL --></label>
+    <name>School_Co_Branded_URL__c</name>
+</CustomFieldTranslation>

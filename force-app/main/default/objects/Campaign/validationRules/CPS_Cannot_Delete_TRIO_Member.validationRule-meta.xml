@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Cannot_Delete_TRIO_Member</fullName>
+    <active>true</active>
+    <description>Users should not be able to delete members from a TRIO campaign. If the members are not active and/or should not be reported, they should instead update them to Active/Report = False (unchecked).</description>
+    <errorConditionFormula>AND( 
+OR (RecordType.Name = &quot;CPS - EOC&quot;, RecordType.Name = &quot;CPS - TS&quot;, RecordType.Name = &quot;CPS - UB&quot;), 
+PRIORVALUE( Member_Count_for_Validation__c )&gt; Member_Count_for_Validation__c, 
+NOT($Profile.Name = &quot;System Administrator&quot;)
+)</errorConditionFormula>
+    <errorMessage>Campaign Members cannot be deleted from a TRIO Campaign. You can instead mark them inactive to keep them off the APR.  If you are getting this error while trying to merge dup Contacts, contact your Sys Admin to delete one of the Campaign Members for you.</errorMessage>
+</ValidationRule>

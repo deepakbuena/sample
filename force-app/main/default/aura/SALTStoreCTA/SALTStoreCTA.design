@@ -1,0 +1,6 @@
+<design:component label="SALT Store CTA">
+    <design:attribute name="prefix" label="Prefix" description="Text that goes before the link" />
+    <design:attribute name="linkText" label="Link Text"  description="Text of the link" />
+    <design:attribute name="linkTarget" label="URL" description="Target of the URL" />
+    <design:attribute name="suffix" label="Suffix" description="Text that goes after the link" />
+</design:component>

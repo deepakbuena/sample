@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caroline_s_Requests</fullName>
+    <columns>Assigned_to__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>CSA_Request__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Completed_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assigned_to__c</field>
+        <operation>equals</operation>
+        <value>Caroline Barry</value>
+    </filters>
+    <label>Caroline&#39;s Requests</label>
+</ListView>

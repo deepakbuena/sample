@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_OfferingSubStatus__c</fullName>
+    <description>What is the sub-status of this offering?</description>
+    <externalId>false</externalId>
+    <label>Sub-Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PS_OfferingStatus__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Waiting to be Submitted for Approval</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>Submitted for ProServices Approval</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Additional Information Requested</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>High Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Standard Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low Priority</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lack of Resources</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Priority Override</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lack of Registration</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Event Cancelled</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Changed Topic</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Waiting for ProServices Approval</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Waiting for Strategic Services Approval</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No Response From Contact</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Approved</controllingFieldValue>
+            <valueName>High Priority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Approved</controllingFieldValue>
+            <valueName>Standard Priority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Approved</controllingFieldValue>
+            <valueName>Low Priority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denied</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Lack of Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denied</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Priority Override</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denied</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>No Response From Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Lack of Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Event Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Changed Topic</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

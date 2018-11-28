@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_User_Cannot_Edit_Other_Program</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  not(isnew()),
+  OR (
+AND(OR($Profile.Name =&#39;CPS - EOC&#39;,$Profile.Name =&#39;CPS - EOC Admin&#39;), RecordType.Name != &#39;CPS - EOC&#39;),
+
+AND(OR($Profile.Name =&#39;CPS - TS&#39;,$Profile.Name =&#39;CPS - TS Admin&#39;), RecordType.Name != &#39;CPS - TS&#39;),
+
+AND(OR($Profile.Name =&#39;CPS - UB&#39;,$Profile.Name =&#39;CPS - UB Admin&#39;), RecordType.Name != &#39;CPS - UB&#39;))
+)</errorConditionFormula>
+    <errorMessage>This Contact&#39;s record type is for another CPS Program.  If this record type is not correct, please ask the owner of the Contact record to change the owner to yourself or someone in your program (then you will be able to edit it).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- File Source --></label>
+    <name>File_Source__c</name>
+    <picklistValues>
+        <masterLabel>ASA</masterLabel>
+        <translation><!-- ASA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School</masterLabel>
+        <translation><!-- School --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Servicer</masterLabel>
+        <translation><!-- Servicer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

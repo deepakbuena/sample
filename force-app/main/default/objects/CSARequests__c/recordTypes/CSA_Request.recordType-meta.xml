@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSA_Request</fullName>
+    <active>true</active>
+    <description>Use this record type for any request other than Conference Presentation Assistance</description>
+    <label>CSA Request</label>
+    <picklistValues>
+        <picklist>CSA_Request__c</picklist>
+        <values>
+            <fullName>Add%2FEdit Salesforce contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisory Board Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ambassador Program Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Activation Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Forum Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral or Presentations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Brand Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Depersonalization Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscellaneous Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New%2FRenew Association Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-board Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Conference Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print%2FCopy Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return School Copy of Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Admininstrator Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salt Store New Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Profile Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stakeholder meeting packets</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opened</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

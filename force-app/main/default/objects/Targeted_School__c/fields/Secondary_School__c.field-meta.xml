@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_School__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Is Target School</description>
+    <externalId>false</externalId>
+    <label>Secondary School</label>
+    <referenceTo>Secondary_School__c</referenceTo>
+    <relationshipLabel>Targeted Schools</relationshipLabel>
+    <relationshipName>Targeted_Schools</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

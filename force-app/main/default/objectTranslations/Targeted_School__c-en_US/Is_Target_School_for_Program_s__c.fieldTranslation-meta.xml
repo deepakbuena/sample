@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Is Target School for Program(s) --></label>
+    <name>Is_Target_School_for_Program_s__c</name>
+    <picklistValues>
+        <masterLabel>EOC Boston</masterLabel>
+        <translation><!-- EOC Boston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EOC Brockton</masterLabel>
+        <translation><!-- EOC Brockton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TS Boston</masterLabel>
+        <translation><!-- TS Boston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TS Brockton</masterLabel>
+        <translation><!-- TS Brockton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UB Brockton</masterLabel>
+        <translation><!-- UB Brockton --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

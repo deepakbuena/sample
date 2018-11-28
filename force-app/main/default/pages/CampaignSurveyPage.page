@@ -1,0 +1,97 @@
+<apex:page Controller="CampaignSurveyController" docType="html-5.0">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        </head>
+        
+        <body>
+            <div class = "SLDS_ASA">
+                <apex:form >
+                    <apex:pagemessages id="msgs"></apex:pagemessages>
+                        <div class="slds-form--horizontal">
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <h3 class="slds-section-title--divider slds-text-align--left slds-size--1-of-1">Campaign Feedback</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="div-campaign-name">
+                                    <label class="slds-form-element__label" for="CampaignName">
+                                        Campaign
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:outputField styleclass="slds-output"  id="Campaign" value="{!campsurvey.Campaign__c}"/>
+                                        <div role="dialog" id="CampaignName-popover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="div-attendee-name">
+                                    <label class="slds-form-element__label" for="AttendeeName">
+                                        ASA Attendee
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:outputField styleclass="slds-output"  id="Attendee" value="{!campsurvey.ASA_Attendee__c}"/>
+                                        <div role="dialog" id="AttendeeName-popover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="div-recommendation">
+                                    <label class="slds-form-element__label" for="recommendation">
+                                        <abbr class="slds-required" title="required">*</abbr>Recommendation for Next Years Show
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField styleclass="slds-input"  id="recommendation" value="{!campsurvey.Recommendation_for_Next_Year_s_Show__c}" required="true"/>
+                                        <div role="dialog" id="AttendeeName-popover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="div-totalcost">
+                                    <label class="slds-form-element__label" for="totalcost">
+                                        <abbr class="slds-required" title="required">*</abbr>Total Cost of Attendance?
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField styleclass="slds-input"  id="totalcost" value="{!campsurvey.Total_Cost_of_Attendance__c}" required="true"/>
+                                        <div role="dialog" id="Totalcost-popover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-col">
+                                <div class="slds-form-element slds-m-vertical--small slds-size--1-of-2" id="div-reasons">
+                                    <label class="slds-form-element__label" for="totalcost">
+                                        <abbr class="slds-required" title="required">*</abbr>Reason for Attending
+                                    </label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField styleclass="slds-input"  id="reasons" value="{!campsurvey.Why_did_they_attend__c}" required="true"/>
+                                        <div role="dialog" id="Reasons-popover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-modal__footer slds-align--absolute-center">
+                            <apex:CommandButton value="Submit" action="{!saveSurvey}" styleClass="slds-button slds-button--brand"/>                        
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+        </body>
+    </html> 
+</apex:page>

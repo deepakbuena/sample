@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Penalty_Charge__c</fullName>
+    <description>Is there a penalty charge for early termination of this contract if so please complete the dollar amount in &quot;Penalty Charge&quot; field (currency)</description>
+    <externalId>false</externalId>
+    <label>Is there a Penalty Charge?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

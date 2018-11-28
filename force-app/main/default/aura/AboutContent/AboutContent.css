@@ -1,0 +1,21 @@
+.THIS .licolor{
+    color:#000;
+}
+.THIS .boldtext{
+    font-weight:bold;
+    font-size:14px;
+    line-height:3.375;
+    font-family:tahoma;
+}
+.THIS .inlinedis
+{
+    display:inline;
+    color:rgb(9, 183, 250);
+    font-weight:bold;
+    font-family:tahoma;
+    font-size:14px;
+}
+.THIS .textstyle{
+    font-size:16px;
+    font-family:tahoma;
+}

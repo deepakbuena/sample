@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reassignment Reason --></label>
+    <name>Reassignment_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Manager Reassignment</masterLabel>
+        <translation><!-- Manager Reassignment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out of Office</masterLabel>
+        <translation><!-- Out of Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skillset</masterLabel>
+        <translation><!-- Skillset --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

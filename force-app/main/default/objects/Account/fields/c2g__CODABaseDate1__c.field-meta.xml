@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODABaseDate1__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The date on which terms will be calculated.</description>
+    <externalId>false</externalId>
+    <label>Base Date 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>End of Next Month</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Invoice Date</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Start of Next Month</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

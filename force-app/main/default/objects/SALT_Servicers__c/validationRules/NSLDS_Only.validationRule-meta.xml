@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NSLDS_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (Servicer__r.Name &lt;&gt; &#39;NSLDS&#39;, 
+(ISPICKVAL (Access__c, &quot;Provided by Client&quot;)))</errorConditionFormula>
+    <errorDisplayField>Access__c</errorDisplayField>
+    <errorMessage>This value may not be selected unless the Account is NSLDS. Please select another value.</errorMessage>
+</ValidationRule>

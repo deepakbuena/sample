@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Loss_Reason_s__c</fullName>
+    <externalId>false</externalId>
+    <label>RFP Loss Reason(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Legal Issues</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

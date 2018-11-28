@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_Access_Challenge_Grant</fullName>
+    <columns>NAME</columns>
+    <columns>College_Access_br_Challenge_Grant__c</columns>
+    <columns>PS_OfferingAccount__c</columns>
+    <columns>PS_OfferingStatus__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>PS_OfferingDeliveryMethod__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>College_Access_br_Challenge_Grant__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>College Access Challenge Grant</label>
+</ListView>

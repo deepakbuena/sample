@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target__c</fullName>
+    <externalId>false</externalId>
+    <label>Target</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Alumni</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>All Students</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Faculty and Administrators</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First-Year Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Graduating Student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Leaders</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TRIO</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Young Alumni</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

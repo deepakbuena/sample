@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitive_Preference_Priorities__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitive Preference Priorities (TS)</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Received CPP tutoring only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received CPP mentoring only</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received CPP tutoring and mentoring</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received neither CPP service</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

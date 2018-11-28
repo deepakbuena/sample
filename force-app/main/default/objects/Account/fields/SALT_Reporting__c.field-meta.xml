@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SALT_Reporting__c</fullName>
+    <description>This multi picklist field replaces the former individual checkboxes for each report. 4/2015</description>
+    <externalId>false</externalId>
+    <label>SALT Reporting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Membership Activation Report</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EDMS School Portfolio Profile</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EDMS Communications Attempts</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EDMS Communications Results</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>My Money 101</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Quarterly SALT Summary Report</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

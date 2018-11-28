@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pro Services Offering</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pro Services Offerings</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Advisory Board --></label>
+        <name>Advisory_Board</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Article --></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campus Engagement --></label>
+        <name>Campus_Engagement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Client Events --></label>
+        <name>Client_Events</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Community Outreach --></label>
+        <name>Community_Outreach</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Conference Presentation --></label>
+        <name>ConferencePresentation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Consultation --></label>
+        <name>Consultation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Financial Education Messaging --></label>
+        <name>Financial_Education_Messaging</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- My Money 101 --></label>
+        <name>My_Money_101</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner Engagement --></label>
+        <name>Partner_Engagement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre-Sales Support --></label>
+        <name>Pre_Sales_Support</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Training --></label>
+        <name>Training</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- WebEx --></label>
+        <name>WebEx</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Workshop --></label>
+        <name>Workshop</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- An Offering MUST be tied to either an Account, an Opportunity or a Campaign. Please use one of these fields to link to this Offering. --></errorMessage>
+        <name>AccountOpportunityorCampaignRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a ProServices Topic that does not have Status of Archived or Removed --></errorMessage>
+        <name>PS_Topic_NOT_Archived_or_Removed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Target Date is a required field --></errorMessage>
+        <name>Target_date_validation_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This title must contain a date (2014 - 2020) and should be in the format:  &lt;Org Name&gt; - &lt;Topic&gt; - &lt;Date&gt;  
+For example, MASFAA (MS) - Newsletter Article - Fall 2016 would be correct. --></errorMessage>
+        <name>Title_Naming_Convention</name>
+    </validationRules>
+    <workflowTasks>
+        <description><!-- New task for the Professional Services Manager to review the event request for approval. --></description>
+        <name>NewEventRequested</name>
+        <subject><!-- New Event Requested --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- This event was approved, but it still needs to be assigned to a member of Professional Services @ ASA team and it needs it&apos;s Sub-Status set based on priority level given to this Event. --></description>
+        <name>UpdateApprovedEvent</name>
+        <subject><!-- Update Approved Event --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- This event was recently denied, however additional information about the denial must be added to the Event record.  Specifically, the Event Owner should be reset back to the user who requested the event and the Sub-Status needs to be updated. --></description>
+        <name>UpdateDeniedEvent</name>
+        <subject><!-- Update Denied Event --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

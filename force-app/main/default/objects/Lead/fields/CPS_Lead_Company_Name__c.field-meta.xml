@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Lead_Company_Name__c</fullName>
+    <description>Used for generating a generic Company name for Lead - Field not on page layouts or reported . Used in workflow.</description>
+    <externalId>false</externalId>
+    <formula>&#39;College Planning Services &#39;+ TEXT(YEAR(TODAY()))</formula>
+    <label>CPS Lead Company Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

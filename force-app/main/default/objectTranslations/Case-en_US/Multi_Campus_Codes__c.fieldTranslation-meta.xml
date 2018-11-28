@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please enter the various OE branch codes that comprise the multi-campuses of SALT. --></help>
+    <label><!-- Multi-Campus Codes --></label>
+    <name>Multi_Campus_Codes__c</name>
+</CustomFieldTranslation>

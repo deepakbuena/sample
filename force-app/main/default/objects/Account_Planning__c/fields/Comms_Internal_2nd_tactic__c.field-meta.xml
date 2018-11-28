@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comms_Internal_2nd_tactic__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the tactic to support the strategy for the goal being reported.</inlineHelpText>
+    <label>2nd tactic</label>
+    <length>500</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

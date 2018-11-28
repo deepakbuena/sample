@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RFP Type --></label>
+    <name>RFP_Type__c</name>
+    <picklistValues>
+        <masterLabel>Proactive</masterLabel>
+        <translation><!-- Proactive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reactive</masterLabel>
+        <translation><!-- Reactive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

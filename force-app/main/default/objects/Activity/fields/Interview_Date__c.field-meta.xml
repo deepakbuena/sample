@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interview_Date__c</fullName>
+    <description>The date of the interview also Status should be moved to Interview Scheduled.</description>
+    <externalId>false</externalId>
+    <label>Interview Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

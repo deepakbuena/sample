@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Education_Level_or_Last_Grade__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Education Level or Last Grade</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A1_Adult w/o Cred Alternative Ed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A2_Adult w/o Cred NOT in A1 or A5</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A3_HS/GED Grad NOT in postsec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A4_Adult w/Cred postsec dropout</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A5_Adult w/o HS Cred postsec dropout</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A6_Potential postsec transfer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A7_Postsec student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A8_Adult Other (&gt; 18 years)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A9_Adult Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>B1_HS non-Senior (9th-11th grade)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>B2_HS Senior or in Alt Ed (12th grade only)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>B3_Secondary School dropout (&lt;= 18 years)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>B4_Other (&lt;= 18 years)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

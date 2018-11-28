@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_EOC_Boston_All_Open_Leads</fullName>
+    <columns>Sign_On_DateTime__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Meet_with_Advisor__c</columns>
+    <columns>CPS_Advisor_Requested__c</columns>
+    <columns>Have_Appointment__c</columns>
+    <columns>Preferred_language__c</columns>
+    <columns>Purpose_of_Visit_EOC_TS__c</columns>
+    <columns>Purpose_of_Visit__c</columns>
+    <columns>Comment__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>EOC Boston</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,New</value>
+    </filters>
+    <label>CPS - EOC Boston - All Open Leads</label>
+    <sharedTo>
+        <group>EOC_Boston</group>
+    </sharedTo>
+</ListView>

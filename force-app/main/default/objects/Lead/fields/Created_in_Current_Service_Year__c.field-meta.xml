@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_in_Current_Service_Year__c</fullName>
+    <description>This field used for reporting only (Fernando&#39;s dashboard reports)</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+AND ( 
+MONTH(TODAY()) &lt;= 8, 
+Datevalue(CreatedDate) &gt;= Date(YEAR(TODAY()) - 1,09,01) 
+),TRUE, 
+IF ( 
+AND ( 
+MONTH(TODAY()) &gt; 8, 
+Datevalue(CreatedDate) &gt;= Date(YEAR(TODAY()),09,01) 
+),TRUE, FALSE)) 
+
+/*created 1-8/x/19 is within 2018-2019 
+created 9-12/x/18 is within 2018-2019 
+
+if current date is month 9-12, service year start is current year 
+if current date is month 1-8, service year start is current year - 1*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Created in Current Service Year?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

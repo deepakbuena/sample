@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_UB_8_Support__c</fullName>
+    <description>Postsecondary Completion Objective (dashboard report will need to filter the results out by Contact.Post_Secondary_Ed_Enrollment_Cohort__c).  Is also used by TS for postSec tracking (Obj. E)</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+Active__c = True &amp;&amp; 
+( 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Cert. only, 6 yrs after HS grad)&#39;) || 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Assoc. Degree, 6 yrs after HS grad)&#39;) || 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Bach. Degree, 6 yrs after HS grad)&#39;) || 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Assoc. AND Bach., 6 yrs after HS)&#39;) || 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Assoc. OR Bach., 6 yrs after HS) (UB)&#39;) || 
+ISPICKVAL( Postsecondary_Attainment_Completion__c, &#39;Yes (Multi-cred (other), 6 yrs after HS))&#39;) 
+), &#39;Goal # achieved&#39; , 
+IF( 
+Active__c = True, &#39;Goal # not achieved&#39;,&#39;&#39; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - UB/TS PostSec - 8 Support</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

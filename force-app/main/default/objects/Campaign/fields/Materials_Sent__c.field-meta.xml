@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Materials_Sent__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date in which the Materials were sent to the conference/event.</inlineHelpText>
+    <label>Materials Sent</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

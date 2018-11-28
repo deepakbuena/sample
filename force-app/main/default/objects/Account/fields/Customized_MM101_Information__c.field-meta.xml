@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customized_MM101_Information__c</fullName>
+    <description>Please describe what is customized about the SALT Courses Setup.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please describe what is customized about the SALT Courses Setup.</inlineHelpText>
+    <label>Customized SALT Courses Information</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

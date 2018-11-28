@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Target --></label>
+    <name>Target__c</name>
+    <picklistValues>
+        <masterLabel>All Alumni</masterLabel>
+        <translation><!-- All Alumni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>All Students</masterLabel>
+        <translation><!-- All Students --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Faculty and Administrators</masterLabel>
+        <translation><!-- Faculty and Administrators --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>First-Year Student</masterLabel>
+        <translation><!-- First-Year Student --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graduating Student</masterLabel>
+        <translation><!-- Graduating Student --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Leaders</masterLabel>
+        <translation><!-- Student Leaders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRIO</masterLabel>
+        <translation><!-- TRIO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Young Alumni</masterLabel>
+        <translation><!-- Young Alumni --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

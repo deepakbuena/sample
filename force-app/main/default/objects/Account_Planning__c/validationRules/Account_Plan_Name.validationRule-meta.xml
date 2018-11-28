@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Plan_Name</fullName>
+    <active>true</active>
+    <description>The Account plan name must contain the current year being reported.</description>
+    <errorConditionFormula>NOT(
+     OR(
+         CONTAINS(Name, &quot;2013&quot;),
+          CONTAINS(Name, &quot;2014&quot;)
+           )
+         )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>The name of the Account Plan must contain the current or upcoming year.</errorMessage>
+</ValidationRule>

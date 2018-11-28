@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductLine__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Field  refers specifically to what you sell</inlineHelpText>
+    <label>Product Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Premiums</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Printed Materials</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

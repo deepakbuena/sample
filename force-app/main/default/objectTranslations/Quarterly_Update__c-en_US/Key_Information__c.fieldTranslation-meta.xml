@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is used to capture important information from the call that has potential impact on the relationship. --></help>
+    <label><!-- Key Information --></label>
+    <name>Key_Information__c</name>
+</CustomFieldTranslation>

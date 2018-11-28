@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>False_Date_Audit1</fullName>
+    <columns>NAME</columns>
+    <columns>Contract__c</columns>
+    <columns>Next_Invoice_Date__c</columns>
+    <columns>Invoice_Count__c</columns>
+    <columns>Remaining_Invoices__c</columns>
+    <columns>Ready_to_Process__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Remaining_Invoices__c</field>
+        <operation>notEqual</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Next_Invoice_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>False Date Audit</label>
+</ListView>

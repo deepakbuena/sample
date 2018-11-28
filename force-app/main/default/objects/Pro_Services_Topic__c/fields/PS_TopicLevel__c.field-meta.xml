@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_TopicLevel__c</fullName>
+    <description>Target level for expected audience.</description>
+    <externalId>false</externalId>
+    <label>Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beginner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Intermediate</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

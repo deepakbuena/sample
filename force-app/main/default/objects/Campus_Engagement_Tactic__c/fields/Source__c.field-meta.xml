@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consultation Call</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Stakeholder Meeting</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Post-Launch Call</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Quarterly Check-In-Call</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Is Mother 4-yr. U.S. College Grad? --></label>
+    <name>Is_Mother_4yr_U_S_College_Grad__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No (attended some U.S. college)</masterLabel>
+        <translation><!-- No (attended some U.S. college) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No (completed 2-year U.S. college)</masterLabel>
+        <translation><!-- No (completed 2-year U.S. college) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No (did not attend U.S. college)</masterLabel>
+        <translation><!-- No (did not attend U.S. college) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

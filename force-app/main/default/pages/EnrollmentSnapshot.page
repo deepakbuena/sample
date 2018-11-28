@@ -1,0 +1,7 @@
+<apex:page standardController="Pro_Services_Enrollment__c" recordSetVar="ps_enrollment__c">
+    <apex:PageBlock >
+        <apex:pageblocktable value="{!Pro_Services_Enrollment__c}" var="a">
+                <apex:column value="{!a.PS_Attendee__c}" />
+        </apex:pageblocktable>
+    </apex:PageBlock>
+</apex:page>

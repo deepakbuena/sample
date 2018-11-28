@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used by trigger that scans contract lines looking at Nxt Inv Dates and turns Ready to Invoice to Y when Next Invoice Date&lt;=TODAY. By adding this field, closed Contract with no more billing can be turned Inactive and the trigger doesn&apos;t have to scan them. --></help>
+    <label><!-- Active --></label>
+    <name>Active__c</name>
+</CustomFieldTranslation>

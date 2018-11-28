@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Sub-Status is dependent upon the value of the Status field and provides more information about the current status of this Topic. --></help>
+    <label><!-- Sub-Status --></label>
+    <name>Sub_Status_del__c</name>
+    <picklistValues>
+        <masterLabel>Create On Request</masterLabel>
+        <translation><!-- Create On Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Few Requests</masterLabel>
+        <translation><!-- Few Requests --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High Priority</masterLabel>
+        <translation><!-- High Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initial Version</masterLabel>
+        <translation><!-- Initial Version --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited Interest</masterLabel>
+        <translation><!-- Limited Interest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Priority</masterLabel>
+        <translation><!-- Low Priority --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outdated</masterLabel>
+        <translation><!-- Outdated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Replaced</masterLabel>
+        <translation><!-- Replaced --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revised/Updated</masterLabel>
+        <translation><!-- Revised/Updated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard Priority</masterLabel>
+        <translation><!-- Standard Priority --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

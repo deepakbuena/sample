@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Current Grade Level --></label>
+    <name>Grade__c</name>
+    <picklistValues>
+        <masterLabel>10th grade</masterLabel>
+        <translation><!-- 10th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11th grade</masterLabel>
+        <translation><!-- 11th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12th grade</masterLabel>
+        <translation><!-- 12th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6th grade</masterLabel>
+        <translation><!-- 6th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7th grade</masterLabel>
+        <translation><!-- 7th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8th grade</masterLabel>
+        <translation><!-- 8th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9th grade</masterLabel>
+        <translation><!-- 9th grade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In 4th year of 5-year dual enrollment</masterLabel>
+        <translation><!-- In 4th year of 5-year dual enrollment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In 5th year of 5-year dual enrollment</masterLabel>
+        <translation><!-- In 5th year of 5-year dual enrollment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

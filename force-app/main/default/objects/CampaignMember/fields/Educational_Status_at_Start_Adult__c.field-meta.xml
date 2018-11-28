@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Educational_Status_at_Start_Adult__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Educational status of participants over 19.</inlineHelpText>
+    <label>Educational Status at Start (Adult)</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A1_Adult w/o Cred Alternative Ed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A2_Adult w/o Cred NOT in A1 or A5</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A3_HS/GED Grad NOT in postsec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A4_Adult w/Cred postsec dropout</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A5_Adult w/o HS Cred postsec dropout</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A6_Potential postsec transfer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A7_Postsec student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A8_Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>A9_Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

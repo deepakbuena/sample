@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fiscal_Year__c</fullName>
+    <externalId>false</externalId>
+    <label>Fiscal Year</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FY 11</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FY 12</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FY 13</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FY 14</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

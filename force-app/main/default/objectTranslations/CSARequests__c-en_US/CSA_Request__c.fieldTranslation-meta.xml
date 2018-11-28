@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Request Type --></label>
+    <name>CSA_Request__c</name>
+    <picklistValues>
+        <masterLabel>Add/Edit Salesforce contacts</masterLabel>
+        <translation><!-- Add/Edit Salesforce contacts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Advisory Board Support</masterLabel>
+        <translation><!-- Advisory Board Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ambassador Program Request</masterLabel>
+        <translation><!-- Ambassador Program Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Cards</masterLabel>
+        <translation><!-- Business Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Assistance</masterLabel>
+        <translation><!-- Campaign Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus Activation Event</masterLabel>
+        <translation><!-- Campus Activation Event --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Check Request</masterLabel>
+        <translation><!-- Check Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Forum Support</masterLabel>
+        <translation><!-- Client Forum Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collateral or Presentations</masterLabel>
+        <translation><!-- Collateral or Presentations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference</masterLabel>
+        <translation><!-- Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference Presentation Assistance</masterLabel>
+        <translation><!-- Conference Presentation Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference Presentation Proposal</masterLabel>
+        <translation><!-- Conference Presentation Proposal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference Registration</masterLabel>
+        <translation><!-- Conference Registration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Create Brand Name</masterLabel>
+        <translation><!-- Create Brand Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Depersonalization Request</masterLabel>
+        <translation><!-- Data Depersonalization Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous Marketing Request</masterLabel>
+        <translation><!-- Miscellaneous Marketing Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miscellaneous Research</masterLabel>
+        <translation><!-- Miscellaneous Research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Collateral</masterLabel>
+        <translation><!-- New Collateral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New/Renew Association Membership</masterLabel>
+        <translation><!-- New/Renew Association Membership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Off-board Client</masterLabel>
+        <translation><!-- Off-board Client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Conference Email</masterLabel>
+        <translation><!-- Pre-Conference Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Sales Meeting / In-Person Support</masterLabel>
+        <translation><!-- Pre-Sales Meeting / In-Person Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presentation Content Assistance</masterLabel>
+        <translation><!-- Presentation Content Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>President Pre-Renewal Letter</masterLabel>
+        <translation><!-- President Pre-Renewal Letter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print/Copy Materials</masterLabel>
+        <translation><!-- Print/Copy Materials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchasing Assistance</masterLabel>
+        <translation><!-- Purchasing Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports</masterLabel>
+        <translation><!-- Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return School Copy of Contract</masterLabel>
+        <translation><!-- Return School Copy of Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Courses Data Request</masterLabel>
+        <translation><!-- SALT Courses Data Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Admininstrator Request</masterLabel>
+        <translation><!-- Salesforce Admininstrator Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salt Demo / Webinar</masterLabel>
+        <translation><!-- Salt Demo / Webinar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salt Store New Contact</masterLabel>
+        <translation><!-- Salt Store New Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Profile Creation</masterLabel>
+        <translation><!-- School Profile Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shipping Assistance</masterLabel>
+        <translation><!-- Shipping Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Special invoicing request</masterLabel>
+        <translation><!-- Special invoicing request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stakeholder meeting packets</masterLabel>
+        <translation><!-- Stakeholder meeting packets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tabulate survey results</masterLabel>
+        <translation><!-- Tabulate survey results --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training meeting packets</masterLabel>
+        <translation><!-- Training meeting packets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

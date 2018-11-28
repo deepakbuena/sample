@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promotional_Asset__c</fullName>
+    <externalId>false</externalId>
+    <label>Promotional Asset</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amabassador Handbook</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Buckslip</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bulletin Board Kit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Communication Kit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Digital board presentation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Event Resources</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Guide for Student Organizations</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Instructor’s Handbook</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Membership Card</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Orientation Kit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Poster</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Press Kit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Print Ad</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Flyer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SALT Overview Video</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Slide Deck</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Table Tent</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Web Ad</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

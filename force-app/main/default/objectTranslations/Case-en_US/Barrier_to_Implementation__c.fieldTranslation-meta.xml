@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the value that best describes the primary reason for Barrier to Implementation. --></help>
+    <label><!-- Barrier to Implementation --></label>
+    <name>Barrier_to_Implementation__c</name>
+    <picklistValues>
+        <masterLabel>Connect Date In Future</masterLabel>
+        <translation><!-- Connect Date In Future --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connect Date Not Set</masterLabel>
+        <translation><!-- Connect Date Not Set --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demographic File</masterLabel>
+        <translation><!-- Demographic File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demographic File and NSLDS Access</masterLabel>
+        <translation><!-- Demographic File and NSLDS Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Campus Support</masterLabel>
+        <translation><!-- Lack of Campus Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NSLDS Access</masterLabel>
+        <translation><!-- NSLDS Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Implementation Call</masterLabel>
+        <translation><!-- No Implementation Call --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

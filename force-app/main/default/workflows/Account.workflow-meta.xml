@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>RAE_Phone_Update</fullName>
+        <field>RAE_Phone__c</field>
+        <formula>$User.Phone</formula>
+        <name>RAE Phone Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <tasks>
+        <fullName>Test</fullName>
+        <assignedTo>InsideSalesSupportSpecialist</assignedTo>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Test</subject>
+    </tasks>
+    <tasks>
+        <fullName>testQ1</fullName>
+        <assignedTo>amarley@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Q1 has changed</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>test-Q1</subject>
+    </tasks>
+</Workflow>

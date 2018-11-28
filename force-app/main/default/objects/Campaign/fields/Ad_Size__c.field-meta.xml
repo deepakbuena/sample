@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ad_Size__c</fullName>
+    <description>What size advertizement will they do in the Symposium program.</description>
+    <externalId>false</externalId>
+    <label>Ad Size</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Black/White</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/2  Black/White</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/4  Back/White</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Full Color</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/2 Color</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>1/4 Color</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CS_Cases_from_Reassign_Me_Queue</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>New_Message_Indicator__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.REASON</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Employer_Community_Case_From_Employee,Case.Email_To_Case</value>
+    </filters>
+    <label>CS Cases from &quot;Reassign Me&quot; Queue</label>
+    <queue>Reassign_Me</queue>
+    <sharedTo>
+        <role>EDM_Counselor</role>
+        <role>EDM_Manager</role>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+    </sharedTo>
+</ListView>

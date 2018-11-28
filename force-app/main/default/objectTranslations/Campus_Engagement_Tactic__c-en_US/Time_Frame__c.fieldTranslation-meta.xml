@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Time Frame --></label>
+    <name>Time_Frame__c</name>
+    <picklistValues>
+        <masterLabel>Fall 2012</masterLabel>
+        <translation><!-- Fall 2012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fall 2013</masterLabel>
+        <translation><!-- Fall 2013 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fall 2014</masterLabel>
+        <translation><!-- Fall 2014 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fall 2015</masterLabel>
+        <translation><!-- Fall 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fall 2016</masterLabel>
+        <translation><!-- Fall 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fall 2017</masterLabel>
+        <translation><!-- Fall 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2012</masterLabel>
+        <translation><!-- Spring 2012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2013</masterLabel>
+        <translation><!-- Spring 2013 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2014</masterLabel>
+        <translation><!-- Spring 2014 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2015</masterLabel>
+        <translation><!-- Spring 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2016</masterLabel>
+        <translation><!-- Spring 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spring 2017</masterLabel>
+        <translation><!-- Spring 2017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2012</masterLabel>
+        <translation><!-- Summer 2012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2013</masterLabel>
+        <translation><!-- Summer 2013 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2014</masterLabel>
+        <translation><!-- Summer 2014 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2015</masterLabel>
+        <translation><!-- Summer 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2016</masterLabel>
+        <translation><!-- Summer 2016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summer 2017</masterLabel>
+        <translation><!-- Summer 2017 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select one or many topics covered with the Contact. --></help>
+    <label><!-- Actual Topics --></label>
+    <name>Actual_Topics__c</name>
+    <picklistValues>
+        <masterLabel>Beginning student loan repayment</masterLabel>
+        <translation><!-- Beginning student loan repayment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College planning/paying for college (parents and students)</masterLabel>
+        <translation><!-- College planning/paying for college (parents and students) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comparing_repayment_plans_and_or_postponing_payments</masterLabel>
+        <translation><!-- Comparing_repayment_plans_and_or_postponing_payments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidation and refinance</masterLabel>
+        <translation><!-- Consolidation and refinance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgiveness for student loans</masterLabel>
+        <translation><!-- Forgiveness for student loans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General financial information (budgeting, credit, saving, etc.)</masterLabel>
+        <translation><!-- General financial information (budgeting, credit, saving, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General student loan information</masterLabel>
+        <translation><!-- General student loan information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resolving delinquent student loans</masterLabel>
+        <translation><!-- Resolving delinquent student loans --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

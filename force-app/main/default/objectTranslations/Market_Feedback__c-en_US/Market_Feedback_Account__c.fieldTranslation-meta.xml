@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field shows the Account that is tied to this Opportunity - and Market Feedback is associated here. --></help>
+    <label><!-- Market Feedback Account --></label>
+    <name>Market_Feedback_Account__c</name>
+    <relationshipLabel><!-- Market Feedback --></relationshipLabel>
+</CustomFieldTranslation>

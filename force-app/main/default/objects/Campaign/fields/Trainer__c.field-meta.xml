@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trainer__c</fullName>
+    <description>Who will be the trainer at this event</description>
+    <externalId>false</externalId>
+    <label>Trainer</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andrew Marley</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Betsy Mayotte</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Gina Lucente-Cole</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jonathan Sparling</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lorinda Diehl</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Jacquie Carroll</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

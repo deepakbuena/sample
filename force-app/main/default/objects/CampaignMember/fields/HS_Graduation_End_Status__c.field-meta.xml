@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HS_Graduation_End_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>HS Graduation End Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Currently enrolled in High School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>High School dropout</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received regular secondary school diploma</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received HS equivalency (e.g., GED)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Completed 12th gr but failed to graduate</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

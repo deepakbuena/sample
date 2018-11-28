@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TopicsRegulatoryCompliance</fullName>
+    <columns>NAME</columns>
+    <columns>PS_TopicDescription__c</columns>
+    <columns>Status__c</columns>
+    <columns>PS_TopicAvailablePresenters__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PS_TopicCategory__c</field>
+        <operation>includes</operation>
+        <value>Regulations &amp; Compliance</value>
+    </filters>
+    <label>Topics - Regulatory &amp; Compliance</label>
+</ListView>

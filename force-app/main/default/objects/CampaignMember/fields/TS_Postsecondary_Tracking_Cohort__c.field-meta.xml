@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TS_Postsecondary_Tracking_Cohort__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(ISPICKVAL(Post_Secondary_Enrollment_Status__c,&#39;Enrolled or Deferred PSE (TS)&#39;),OR(ISPICKVAL(Education_Status_at_End_Senior__c,&#39;Grad in standard num yrs (non-rigorous)&#39;),ISPICKVAL(Education_Status_at_End_Senior__c,&#39;Grad in standard num yrs (rigorous)&#39;),ISPICKVAL(Education_Status_at_End_Senior__c,&#39;Grad in non-standard num yrs&#39;))),
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2011-2012&#39;),&#39;2016-2017&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2012-2013&#39;),&#39;2017-2018&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2013-2014&#39;),&#39;2018-2019&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2014-2015&#39;),&#39;2019-2020&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2015-2016&#39;),&#39;2020-2021&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2016-2017&#39;),&#39;2021-2022&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2017-2018&#39;),&#39;2022-2023&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2018-2019&#39;),&#39;2023-2024&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2019-2020&#39;),&#39;2024-2025&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2020-2021&#39;),&#39;2025-2026&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2021-2022&#39;),&#39;2026-2027&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2022-2023&#39;),&#39;2027-2028&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2023-2024&#39;),&#39;2028-2029&#39;,
+IF (ISPICKVAL(Campaign.Service_Year__c ,&#39;2024-2025&#39;),&#39;2029-2030&#39;,&#39;&#39;)))))))))))))),&#39;&#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TS Postsecondary Tracking Cohort</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

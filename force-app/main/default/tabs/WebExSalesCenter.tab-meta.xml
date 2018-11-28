@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>WebEx Sales Center</description>
+    <frameHeight>800</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>WebEx Sales Center</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom16: Bank</motif>
+    <url>https://integration.webex.com/SaCSFService/sacsf.do?sid={!API_Session_ID}&amp;svr={!API_Partner_Server_URL_60}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Name__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The contact that the contract should go to.</description>
+    <externalId>false</externalId>
+    <label>Contact Name</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Contracts</relationshipLabel>
+    <relationshipName>Contracts</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

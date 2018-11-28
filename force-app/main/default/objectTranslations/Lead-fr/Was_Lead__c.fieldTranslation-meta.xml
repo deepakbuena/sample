@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Hidden field for marking the converted account as having originated from a lead conversion. --></help>
+    <label><!-- Was Lead? --></label>
+    <name>Was_Lead__c</name>
+</CustomFieldTranslation>

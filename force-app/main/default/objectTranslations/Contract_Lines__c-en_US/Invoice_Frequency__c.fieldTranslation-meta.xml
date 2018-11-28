@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Billing frequency for this line --></help>
+    <label><!-- Invoice Frequency --></label>
+    <name>Invoice_Frequency__c</name>
+    <picklistValues>
+        <masterLabel>1 Time</masterLabel>
+        <translation><!-- 1 Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Year (Single Payment)</masterLabel>
+        <translation><!-- 2 Year (Single Payment) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Year (Single Payment)</masterLabel>
+        <translation><!-- 3 Year (Single Payment) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annually</masterLabel>
+        <translation><!-- Annually --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daily</masterLabel>
+        <translation><!-- Daily --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monthly</masterLabel>
+        <translation><!-- Monthly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quarterly</masterLabel>
+        <translation><!-- Quarterly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semi-Annually</masterLabel>
+        <translation><!-- Semi-Annually --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

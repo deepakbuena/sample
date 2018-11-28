@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the name of the School Client Manager for this account. --></help>
+    <label><!-- Account Owner/Client Manager --></label>
+    <name>Account_Owner_Client_Manager__c</name>
+    <relationshipLabel><!-- Account Planning (Account Owner/Client Manager) --></relationshipLabel>
+</CustomFieldTranslation>

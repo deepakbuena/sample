@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains text which describes why this school/lender initially chose to work with ASA. --></help>
+    <label><!-- Why client initially chose SALT --></label>
+    <name>Why_client_initially_chose_SALT__c</name>
+</CustomFieldTranslation>

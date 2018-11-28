@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <tasks>
+        <fullName>NewEventRequested</fullName>
+        <assignedTo>ProfessionalServicesManagement</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>New task for the Professional Services Manager to review the event request for approval.</description>
+        <dueDateOffset>-14</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Pro_Services_Offering__c.PS_OfferingTargetDate__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>New Event Requested</subject>
+    </tasks>
+    <tasks>
+        <fullName>UpdateApprovedEvent</fullName>
+        <assignedTo>ProfessionalServicesManagement</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>This event was approved, but it still needs to be assigned to a member of Professional Services @ ASA team and it needs it&#39;s Sub-Status set based on priority level given to this Event.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Update Approved Event</subject>
+    </tasks>
+    <tasks>
+        <fullName>UpdateDeniedEvent</fullName>
+        <assignedTo>ProfessionalServicesManagement</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>This event was recently denied, however additional information about the denial must be added to the Event record.  Specifically, the Event Owner should be reset back to the user who requested the event and the Sub-Status needs to be updated.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Update Denied Event</subject>
+    </tasks>
+</Workflow>

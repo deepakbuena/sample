@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edition__c</fullName>
+    <externalId>false</externalId>
+    <label>Edition</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SE</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

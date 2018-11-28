@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open for offers</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Evaluating offers</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Live - Design</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Live - Implemented</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Completed &amp; Accepted</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

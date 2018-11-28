@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>c2g__CODAEntityUseCode__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Entity / Use Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A - Federal government - United States</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>B - State government - United States</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>C - Tribe / Status Indian / Indian Band - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>D - Foreign diplomat - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>E - Charitable or benevolent org - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>F - Religious or educational org - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>G - Resale - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>H - Commercial agricultural production - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>I - Industrial production / manufacturer - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>J - Direct pay permit - United States</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>K - Direct mail - United States</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>L - Other - both</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>N - Local government - United States</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>P - Commercial aquaculture - Canada</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Q - Commercial Fishery - Canada</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>R - Non-resident - Canada</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hosting_Partner_EOC__c</fullName>
+    <externalId>false</externalId>
+    <label>Hosting Partner (EOC)</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Avon HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Blue Hills Reg. Tech HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Braintree Alt. HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bridgewater/ Raynham Reg. HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Brockton Community Resource Center</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Brockton Salvation Army</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cardinal Spellman HS- Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Works - Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>E. Bridgewater HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Foxboro Regional Charter school</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Full Gospel Tabernacle - Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Plymouth North HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Plymouth Public Library Literacy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Plymouth Salvation Army</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Plymouth South HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Quincy Salvation Army</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Randolph HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Southeastern Reg. Vo. Tech HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>South Shore Charter school</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>South Shore Voc. Tech. HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Taunton HS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Teen Challenge</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Training Resources of America - Brockton</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Training Resources of America - Quincy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Whitman-Hanson Reg. HS</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

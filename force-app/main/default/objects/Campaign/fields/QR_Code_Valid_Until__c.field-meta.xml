@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QR_Code_Valid_Until__c</fullName>
+    <externalId>false</externalId>
+    <label>QR Code Valid Until</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

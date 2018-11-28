@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsor_Name_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>Sponsorship_Opportunity__c = TRUE &amp;&amp; Sponsor_Name_s__c = NULL</errorConditionFormula>
+    <errorDisplayField>Sponsor_Name_s__c</errorDisplayField>
+    <errorMessage>At least one Sponsor Name is required.</errorMessage>
+</ValidationRule>

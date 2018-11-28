@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DNU_Next_Invoice_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (TEXT( Invoice_Frequency__c )=&#39;Daily&#39;, Date_Last_Invoice_Generated__c +1, 
+if( TEXT(Invoice_Frequency__c)=&#39;Monthly&#39;, Date_Last_Invoice_Generated__c +30, 
+if( TEXT(Invoice_Frequency__c)=&#39;Quarterly&#39;, Date_Last_Invoice_Generated__c +90, 
+if( TEXT(Invoice_Frequency__c)=&#39;Semi-Annually&#39;, Date_Last_Invoice_Generated__c +180, 
+if( TEXT(Invoice_Frequency__c)=&#39;Annually&#39;, Date_Last_Invoice_Generated__c +365, 
+null)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>After invoicing, updates to next invoice date based on frequency</inlineHelpText>
+    <label>DNU Next Invoice Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

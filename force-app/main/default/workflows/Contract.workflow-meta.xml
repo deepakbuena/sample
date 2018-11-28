@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>FF_Turn_Header_Has_Been_Invoiced_off</fullName>
+        <field>Invoice_has_been_created__c</field>
+        <literalValue>0</literalValue>
+        <name>FF Turn Header Has Been Invoiced off</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FF_Turn_Header_Ready_to_Invoice_off</fullName>
+        <field>Ready_to_Create_Invoice__c</field>
+        <literalValue>0</literalValue>
+        <name>FF Turn Header Ready to Invoice off</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>FF Header Actions Upon Processed</fullName>
+        <actions>
+            <name>FF_Turn_Header_Has_Been_Invoiced_off</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FF_Turn_Header_Ready_to_Invoice_off</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contract.Invoice_has_been_created__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>When the ClickLink rule is processed, and Has Been Invoiced is checked, do these field updates. Per Kara T., 5/7/2018,  keep them inactive just in case we ever need them</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>testcontract</fullName>
+        <assignedTo>amarley@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Contract.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>test contract</subject>
+    </tasks>
+</Workflow>

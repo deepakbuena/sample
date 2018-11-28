@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PS_Topic_NOT_Archived_or_Removed</fullName>
+    <active>true</active>
+    <description>Ensure that the selected ProServices Topic parent record does not have Status of Archived or Removed</description>
+    <errorConditionFormula>( ISNEW()
+|| ISCHANGED( PS_OfferingTopic__c )
+)
+&amp;&amp;
+( ISPICKVAL( PS_OfferingTopic__r.Status__c, &quot;Archived&quot; ) 
+|| ISPICKVAL( PS_OfferingTopic__r.Status__c, &quot;Removed&quot; )
+)</errorConditionFormula>
+    <errorDisplayField>PS_OfferingTopic__c</errorDisplayField>
+    <errorMessage>Please select a ProServices Topic that does not have Status of Archived or Removed</errorMessage>
+</ValidationRule>

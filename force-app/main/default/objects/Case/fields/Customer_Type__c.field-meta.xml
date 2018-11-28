@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Deprecated Customer Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Charter</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Fee for Service</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>State Agency</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lender</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>For-Profit</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Strategic Partner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sponsor</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Provided_Servicer_Data__c</fullName>
+    <externalId>false</externalId>
+    <label>School Provided Servicer Data</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ACS-Perkins</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AES</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campus Partners-Perkins</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cornerstone</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ECSI</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Edfinancial</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MOHELA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Nelnet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sallie Mae</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>UAS</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

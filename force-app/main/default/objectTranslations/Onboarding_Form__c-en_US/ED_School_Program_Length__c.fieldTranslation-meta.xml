@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ED School Program Length --></label>
+    <name>ED_School_Program_Length__c</name>
+    <picklistValues>
+        <masterLabel>Associate&#39;s Degree</masterLabel>
+        <translation><!-- Associate&apos;s Degree --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bachelor&#39;s Degree</masterLabel>
+        <translation><!-- Bachelor&apos;s Degree --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graduate/Professional</masterLabel>
+        <translation><!-- Graduate/Professional --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Master&#39;s or Doctor&#39;s Degree</masterLabel>
+        <translation><!-- Master&apos;s or Doctor&apos;s Degree --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

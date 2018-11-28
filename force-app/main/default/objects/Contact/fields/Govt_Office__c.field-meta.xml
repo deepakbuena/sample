@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Govt_Office__c</fullName>
+    <description>This field is used to indicate the government office associated to this contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used to indicate the government office associated to this contact.</inlineHelpText>
+    <label>Government Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Stage__c</fullName>
+    <description>What stage of the Sales/Opportunity cycle was the sale lost.</description>
+    <externalId>false</externalId>
+    <label>Loss Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-Qualification</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Pre-Implementation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Assign Resources</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Presentation/Info Gathering</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Closed - Won</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Closed - Lost</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_type__c</fullName>
+    <description>required for CPS activities to support programs and contracts</description>
+    <externalId>false</externalId>
+    <label>Service type</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACT/SAT Registration</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Advocacy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Application Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Application Fee Waiver</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Admissions Info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Attendance Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Exploration/Planning</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Career Interest Inventory/Assessment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Classroom Workshops</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Visits</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Community Events</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Community Service Project</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cultural Field-trip</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Education Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Educational Field-trip</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid Advocacy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid Application Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid Info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Literacy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Follow-Up</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Loan Assistance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MCAS/SAT Preparation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Parent Events</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Presentations/Workshops</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Residential Summer Program</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Scholarship Search</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Senior Advising</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Stipends</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Test Prep</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Testing Fee Waiver</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Transfer Info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tutoring</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cant_edit_cps_task_closedBy_another_user</fullName>
+    <active>true</active>
+    <description>if a user completes a task, another user should not be able to edit that other user&#39;s task</description>
+    <errorConditionFormula>AND (
+Owner:User.Id !=  $User.Id
+,  LastModifiedBy.Id !=  $User.Id
+,  RecordType.Name = &#39;CPS - Task&#39;
+,  ISPICKVAL(Status, &#39;Completed&#39;)
+)</errorConditionFormula>
+    <errorMessage>You do not have permission to edit another Advisor&#39;s task once it has been closed.</errorMessage>
+</ValidationRule>

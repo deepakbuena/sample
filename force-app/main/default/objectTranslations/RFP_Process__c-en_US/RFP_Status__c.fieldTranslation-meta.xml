@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RFP Status --></label>
+    <name>RFP_Status__c</name>
+    <picklistValues>
+        <masterLabel>Approval to Respond to RFP</masterLabel>
+        <translation><!-- Approval to Respond to RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Process</masterLabel>
+        <translation><!-- In Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invited to Participate in 2nd Round</masterLabel>
+        <translation><!-- Invited to Participate in 2nd Round --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost</masterLabel>
+        <translation><!-- Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Receipt of the Request for RFP</masterLabel>
+        <translation><!-- Receipt of the Request for RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Response to RFP Sent</masterLabel>
+        <translation><!-- Response to RFP Sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Won</masterLabel>
+        <translation><!-- Won --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

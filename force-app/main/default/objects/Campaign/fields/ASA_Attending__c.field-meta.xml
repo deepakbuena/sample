@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASA_Attending__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the name(s) of other ASA staff attending which are not listed as a Salesforce user.</inlineHelpText>
+    <label>ASA - Attending</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

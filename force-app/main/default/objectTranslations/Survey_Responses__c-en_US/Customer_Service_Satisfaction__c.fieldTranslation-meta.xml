@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Q# 10 - 2017 CSAT response --></help>
+    <label><!-- Customer Service Satisfaction --></label>
+    <name>Customer_Service_Satisfaction__c</name>
+</CustomFieldTranslation>

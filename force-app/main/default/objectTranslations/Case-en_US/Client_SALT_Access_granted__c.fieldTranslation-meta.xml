@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- access to saltmoney.org --></help>
+    <label><!-- Client SALT Access granted --></label>
+    <name>Client_SALT_Access_granted__c</name>
+</CustomFieldTranslation>

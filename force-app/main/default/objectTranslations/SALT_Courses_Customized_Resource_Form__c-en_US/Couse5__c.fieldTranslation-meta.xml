@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Course --></label>
+    <name>Couse5__c</name>
+    <picklistValues>
+        <masterLabel>Budgeting</masterLabel>
+        <translation><!-- Budgeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit and Debt Management</masterLabel>
+        <translation><!-- Credit and Debt Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Educational Planning</masterLabel>
+        <translation><!-- Educational Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employment</masterLabel>
+        <translation><!-- Employment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fundamentals</masterLabel>
+        <translation><!-- Fundamentals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insurance and Risk Management</masterLabel>
+        <translation><!-- Insurance and Risk Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internships, Income, and Careers</masterLabel>
+        <translation><!-- Internships, Income, and Careers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Money Management</masterLabel>
+        <translation><!-- Money Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saving and Investing</masterLabel>
+        <translation><!-- Saving and Investing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Loan Repayment</masterLabel>
+        <translation><!-- Student Loan Repayment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Loans</masterLabel>
+        <translation><!-- Student Loans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taxes</masterLabel>
+        <translation><!-- Taxes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

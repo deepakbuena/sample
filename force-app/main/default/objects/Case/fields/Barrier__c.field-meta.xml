@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Barrier__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary Barrier Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Implementation Call</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Connect Date NOT Set</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Demographic File and NSLDS Access</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Demographic File</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>NSLDS Access</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lack Of Campus Support</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Connect Date in Future</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

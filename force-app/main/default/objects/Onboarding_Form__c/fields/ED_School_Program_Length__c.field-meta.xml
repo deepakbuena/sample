@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ED_School_Program_Length__c</fullName>
+    <externalId>false</externalId>
+    <label>ED School Program Length</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Associate&#39;s Degree</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bachelor&#39;s Degree</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>Graduate/Professional</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Master&#39;s or Doctor&#39;s Degree</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Money_101_Courses__c</fullName>
+    <externalId>false</externalId>
+    <label>SALT Courses</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Banking Basics</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Budgeting</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Credit Cards</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Credit Score</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Identity Theft</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Loans</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Repayment Options</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Goals</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Entrance Counseling</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Grad level</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

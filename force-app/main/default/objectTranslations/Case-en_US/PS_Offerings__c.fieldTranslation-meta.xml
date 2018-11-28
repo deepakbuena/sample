@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PS Offerings --></label>
+    <name>PS_Offerings__c</name>
+    <picklistValues>
+        <masterLabel>In Person</masterLabel>
+        <translation><!-- In Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webex</masterLabel>
+        <translation><!-- Webex --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

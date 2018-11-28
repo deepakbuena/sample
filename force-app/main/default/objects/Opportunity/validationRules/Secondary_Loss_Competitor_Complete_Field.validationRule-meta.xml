@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Loss_Competitor_Complete_Field</fullName>
+    <active>false</active>
+    <description>The user must report the winning competitor when the Secondary Loss Reason = Competitor.</description>
+    <errorConditionFormula>AND (ISPICKVAL (Secondary_Loss_Reason__c, &quot;Competitor&quot;),
+   ISPICKVAL (Winning_Competitor__c, &quot;&quot; ))</errorConditionFormula>
+    <errorDisplayField>Winning_Competitor__c</errorDisplayField>
+    <errorMessage>When the Secondary Loss Reason is because of a competitor, you must provide the winning competitor&#39;s name.</errorMessage>
+</ValidationRule>

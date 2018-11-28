@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Privacy_Review__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>After reveiw of Contract and has been blessed by the Privacy Specilist box should be checked.</description>
+    <externalId>false</externalId>
+    <label>Privacy Review</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

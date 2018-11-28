@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Union_Leads</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Unqualify_Close_Reason__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Strategic_Partnership</value>
+    </filters>
+    <label>Pardot Credit Union Leads</label>
+    <sharedTo>
+        <allCustomerPortalUsers/>
+        <group>ASAProfessionalServices</group>
+        <group>BD_East</group>
+        <group>BD_Management</group>
+        <group>BD_West</group>
+        <group>BusinessDevelopmentAEs</group>
+        <group>Business_Analysis</group>
+        <group>Client_Services_Admininstration</group>
+        <group>Executive_Team</group>
+        <group>FinancialForce_Team</group>
+        <group>Linfield_College_and</group>
+        <group>Pardot_Marketing</group>
+        <group>Revamp_Team</group>
+        <group>School_CM</group>
+    </sharedTo>
+</ListView>

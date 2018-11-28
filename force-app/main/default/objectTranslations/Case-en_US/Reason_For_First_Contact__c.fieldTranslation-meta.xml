@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason For Contact --></label>
+    <name>Reason_For_First_Contact__c</name>
+    <picklistValues>
+        <masterLabel>Apprenticeships</masterLabel>
+        <translation><!-- Apprenticeships --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Career Counseling</masterLabel>
+        <translation><!-- Career Counseling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Career Training</masterLabel>
+        <translation><!-- Career Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College Counseling</masterLabel>
+        <translation><!-- College Counseling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>College Planning/Paying For College</masterLabel>
+        <translation><!-- College Planning/Paying For College --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidation and Refinance</masterLabel>
+        <translation><!-- Consolidation and Refinance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgiveness For Student Loans</masterLabel>
+        <translation><!-- Forgiveness For Student Loans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Financial Information (Budgeting, Credit, Saving, etc.)</masterLabel>
+        <translation><!-- General Financial Information (Budgeting, Credit, Saving, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Student Loan Repayment</masterLabel>
+        <translation><!-- General Student Loan Repayment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Enhancement</masterLabel>
+        <translation><!-- Product Enhancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resolving Delinquent Student Loans</masterLabel>
+        <translation><!-- Resolving Delinquent Student Loans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salt Site Support</masterLabel>
+        <translation><!-- Salt Site Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vocational Path Training</masterLabel>
+        <translation><!-- Vocational Path Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

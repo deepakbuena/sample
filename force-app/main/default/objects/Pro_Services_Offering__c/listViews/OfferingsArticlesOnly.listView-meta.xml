@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OfferingsArticlesOnly</fullName>
+    <columns>NAME</columns>
+    <columns>PS_OfferingTargetDate__c</columns>
+    <columns>PS_OfferingStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Pro_Services_Offering__c.Article</value>
+    </filters>
+    <label>Offerings (Articles Only)</label>
+</ListView>

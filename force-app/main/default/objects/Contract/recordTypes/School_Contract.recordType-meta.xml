@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Contract</fullName>
+    <active>true</active>
+    <description>SALT Contract</description>
+    <label>School Contract</label>
+    <picklistValues>
+        <picklist>Agreement_Types__c</picklist>
+        <values>
+            <fullName>Auto -Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blanket Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversion to Monthly%2FAnnual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-signature Repurchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarantee-only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holder Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Price__c</picklist>
+        <values>
+            <fullName>10%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2C000</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancellation_Termination_Provision__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28explain below%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Auto_Renewal__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Requests__c</picklist>
+        <values>
+            <fullName>Alternative Payment Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Contract Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training included</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Status_Not_Used__c</picklist>
+        <values>
+            <fullName>ASA Review school edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreement Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract submitted to school</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Review ASA edits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Years__c</picklist>
+        <values>
+            <fullName>%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Penalty_Charge__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legal_Review_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Further Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renewal_Terms__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signed_By__c</picklist>
+        <values>
+            <fullName>Clara Serpa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debra Chromy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janine Greenwood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larry O%27Connell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lauren Rolfe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Finn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paul Combe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rick Rindini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stephen Wong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sue Nathan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signed_Copy_File__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28Copy%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28Original%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreement Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting ASA Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dead Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privacy%2FSecurity Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Term_of_Contract__c</picklist>
+        <values>
+            <fullName>Auto-Renewal %28same term%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversion to Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversion to Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Options %28explain below%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28explain below%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tracking_2__c</picklist>
+        <values>
+            <fullName>Email %28PDF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over-night Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tracking__c</picklist>
+        <values>
+            <fullName>Email %28PDF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over-night Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

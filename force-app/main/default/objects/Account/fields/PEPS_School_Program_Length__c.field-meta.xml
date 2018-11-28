@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PEPS_School_Program_Length__c</fullName>
+    <description>School program length - data taken from PEPS</description>
+    <externalId>false</externalId>
+    <label>PEPS School Program Length</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Short-Term (300-599 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Graduate/Professional (&gt;= 300 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Non-Degree (600-899 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Non-Degree 1 Year (900-1799 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Non-Degree 2 Years (1800-2699 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Associate&#39;s Degree</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bachelor&#39;s Degree</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First Professional Degree</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Master&#39;s Degree or Doctor&#39;s Degree</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Professional Certification</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Undergraduate (Previous Degree Required)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Non-Degree 3 Plus Years (&gt;= 2700 hours)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Two-Year Transfer</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

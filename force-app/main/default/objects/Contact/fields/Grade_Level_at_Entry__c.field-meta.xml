@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grade_Level_at_Entry__c</fullName>
+    <externalId>false</externalId>
+    <label>Grade Level at Intake</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>7th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>8th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rising 9th grader</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>9th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rising 10th grader</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>10th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rising 11th grader</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>11th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rising 12th grader</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>12th grade</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In 4th year of 5-year dual enrollment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>In 5th year of 5-year dual enrollment</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>No response/Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College Dropout</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Availability --></label>
+    <name>Availability__c</name>
+    <picklistValues>
+        <masterLabel>Fully Engaged</masterLabel>
+        <translation><!-- Fully Engaged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited Engagement</masterLabel>
+        <translation><!-- Limited Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provide Insight</masterLabel>
+        <translation><!-- Provide Insight --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

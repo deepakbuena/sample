@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Date_of_HS_Grad_or_HS_Eq_Cert__c</fullName>
+    <description>This field is recorded by TS and UB.  For UB, it is also reported (Field #35 on APR).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Actual Date of High School Graduation (or completion of high school equivalency certificate).</inlineHelpText>
+    <label>Actual Date of HS Grad (or HS Eq Cert)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

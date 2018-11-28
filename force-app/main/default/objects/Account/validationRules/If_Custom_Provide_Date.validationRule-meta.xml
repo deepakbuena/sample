@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Custom_Provide_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( ISPICKVAL(Reporting_Frequency__c , &#39;Custom&#39;),OR(ISBLANK(TEXT( Custom_Date__c ))))</errorConditionFormula>
+    <errorDisplayField>Custom_Date__c</errorDisplayField>
+    <errorMessage>If you choose &quot;Custom&quot; for Reporting Frequency, you must provide a date in the &quot;Custom Date&quot; field.</errorMessage>
+</ValidationRule>

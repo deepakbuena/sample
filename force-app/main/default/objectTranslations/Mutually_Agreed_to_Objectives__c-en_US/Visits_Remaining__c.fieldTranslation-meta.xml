@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- # of visits remaining against target --></help>
+    <label><!-- Visits Remaining --></label>
+    <name>Visits_Remaining__c</name>
+</CustomFieldTranslation>

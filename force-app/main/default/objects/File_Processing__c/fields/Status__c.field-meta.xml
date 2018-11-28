@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>This is the status of the file.</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Source__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CM Approved</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Processed</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reconciled</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>EdFinancial</controllingFieldValue>
+            <controllingFieldValue>COSTEP</controllingFieldValue>
+            <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+            <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+            <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+            <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+            <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+            <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+            <controllingFieldValue>Nelnet</controllingFieldValue>
+            <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+            <controllingFieldValue>Sallie Mae</controllingFieldValue>
+            <controllingFieldValue>ACS</controllingFieldValue>
+            <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+            <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+            <controllingFieldValue>Aspire</controllingFieldValue>
+            <controllingFieldValue>Campus Partners</controllingFieldValue>
+            <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+            <controllingFieldValue>DELQ</controllingFieldValue>
+            <controllingFieldValue>Demographic File</controllingFieldValue>
+            <controllingFieldValue>DER</controllingFieldValue>
+            <controllingFieldValue>UAS</controllingFieldValue>
+            <controllingFieldValue>ECSI</controllingFieldValue>
+            <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+            <valueName>Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EdFinancial</controllingFieldValue>
+            <controllingFieldValue>COSTEP</controllingFieldValue>
+            <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+            <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+            <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+            <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+            <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+            <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+            <controllingFieldValue>Nelnet</controllingFieldValue>
+            <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+            <controllingFieldValue>Sallie Mae</controllingFieldValue>
+            <controllingFieldValue>ACS</controllingFieldValue>
+            <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+            <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+            <controllingFieldValue>Aspire</controllingFieldValue>
+            <controllingFieldValue>Campus Partners</controllingFieldValue>
+            <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+            <controllingFieldValue>DELQ</controllingFieldValue>
+            <controllingFieldValue>Demographic File</controllingFieldValue>
+            <controllingFieldValue>DER</controllingFieldValue>
+            <controllingFieldValue>UAS</controllingFieldValue>
+            <controllingFieldValue>ECSI</controllingFieldValue>
+            <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+            <valueName>Reviewed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EdFinancial</controllingFieldValue>
+            <controllingFieldValue>COSTEP</controllingFieldValue>
+            <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+            <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+            <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+            <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+            <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+            <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+            <controllingFieldValue>Nelnet</controllingFieldValue>
+            <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+            <controllingFieldValue>Sallie Mae</controllingFieldValue>
+            <controllingFieldValue>ACS</controllingFieldValue>
+            <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+            <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+            <controllingFieldValue>Aspire</controllingFieldValue>
+            <controllingFieldValue>Campus Partners</controllingFieldValue>
+            <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+            <controllingFieldValue>DELQ</controllingFieldValue>
+            <controllingFieldValue>Demographic File</controllingFieldValue>
+            <controllingFieldValue>DER</controllingFieldValue>
+            <controllingFieldValue>UAS</controllingFieldValue>
+            <controllingFieldValue>ECSI</controllingFieldValue>
+            <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+            <valueName>CM Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EdFinancial</controllingFieldValue>
+            <controllingFieldValue>COSTEP</controllingFieldValue>
+            <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+            <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+            <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+            <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+            <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+            <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+            <controllingFieldValue>Nelnet</controllingFieldValue>
+            <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+            <controllingFieldValue>Sallie Mae</controllingFieldValue>
+            <controllingFieldValue>ACS</controllingFieldValue>
+            <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+            <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+            <controllingFieldValue>Aspire</controllingFieldValue>
+            <controllingFieldValue>Campus Partners</controllingFieldValue>
+            <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+            <controllingFieldValue>DELQ</controllingFieldValue>
+            <controllingFieldValue>Demographic File</controllingFieldValue>
+            <controllingFieldValue>DER</controllingFieldValue>
+            <controllingFieldValue>UAS</controllingFieldValue>
+            <controllingFieldValue>ECSI</controllingFieldValue>
+            <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+            <valueName>Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EdFinancial</controllingFieldValue>
+            <controllingFieldValue>COSTEP</controllingFieldValue>
+            <controllingFieldValue>EdManage (SC)</controllingFieldValue>
+            <controllingFieldValue>EDGEucation Loans.</controllingFieldValue>
+            <controllingFieldValue>Granite State (NH)</controllingFieldValue>
+            <controllingFieldValue>Great Lakes Higher Education</controllingFieldValue>
+            <controllingFieldValue>KHESLC (KY)</controllingFieldValue>
+            <controllingFieldValue>MOHELA (MO)</controllingFieldValue>
+            <controllingFieldValue>Nelnet</controllingFieldValue>
+            <controllingFieldValue>OSLA (OK)</controllingFieldValue>
+            <controllingFieldValue>Sallie Mae</controllingFieldValue>
+            <controllingFieldValue>ACS</controllingFieldValue>
+            <controllingFieldValue>ACS-Perkins</controllingFieldValue>
+            <controllingFieldValue>AES/PHEAA</controllingFieldValue>
+            <controllingFieldValue>Aspire</controllingFieldValue>
+            <controllingFieldValue>Campus Partners</controllingFieldValue>
+            <controllingFieldValue>Cornerstone (UT)</controllingFieldValue>
+            <controllingFieldValue>DELQ</controllingFieldValue>
+            <controllingFieldValue>Demographic File</controllingFieldValue>
+            <controllingFieldValue>DER</controllingFieldValue>
+            <controllingFieldValue>UAS</controllingFieldValue>
+            <controllingFieldValue>ECSI</controllingFieldValue>
+            <controllingFieldValue>VSAC (VT)</controllingFieldValue>
+            <valueName>Reconciled</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

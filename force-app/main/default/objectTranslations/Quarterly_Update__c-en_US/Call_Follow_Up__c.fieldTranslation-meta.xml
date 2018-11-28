@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field captures the action items/follow up tasks that resulted from the call. --></help>
+    <label><!-- Call Follow Up --></label>
+    <name>Call_Follow_Up__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition_3_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Condition 3 Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access &amp; Security</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Accounts &amp; Contacts</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campaigns</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cases &amp; Solutions</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Custom Objects</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Leads &amp; Opportunities</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Products</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>SSP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

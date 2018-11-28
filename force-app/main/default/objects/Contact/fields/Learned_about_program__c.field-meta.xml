@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Learned_about_program__c</fullName>
+    <externalId>false</externalId>
+    <label>Learned about program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AACA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Attended a Workshop</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>BHCC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>BPL</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Call Line</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>College</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Friend/Relative</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>High School</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Info Session</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>JVS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mass Grant Letter/Email</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MRC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Online/social media</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other Agency</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Previous Client</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>RCC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Teacher / Counselor</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Teen Room</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>T Poster</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Urban College</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Year Up</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

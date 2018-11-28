@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Renewal_Opp_Update</fullName>
+        <field>Renewal_Opp__c</field>
+        <literalValue>1</literalValue>
+        <name>Renewal Opp Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_List_Price</fullName>
+        <description>Set the List Price based on the Total Enrollment Number</description>
+        <field>List_Price__c</field>
+        <formula>IF
+ ( Renewal_Opp__c = False &amp;&amp; Total_in_Enrollment__c &lt;= 5000, 30000, 
+IF
+ ( Renewal_Opp__c = False &amp;&amp; Total_in_Enrollment__c &lt; 9999, 50000,
+IF
+ ( Renewal_Opp__c = False &amp;&amp; Total_in_Enrollment__c &lt; 24999, 75000,
+IF
+ ( Renewal_Opp__c = False &amp;&amp; Total_in_Enrollment__c &gt;= 25000, 100000,
+IF
+ ( Renewal_Opp__c = True &amp;&amp; Total_in_Enrollment__c &lt;= 5000, 25000, 
+IF
+ ( Renewal_Opp__c = True &amp;&amp; Total_in_Enrollment__c &lt; 9999, 35000,
+IF
+ ( Renewal_Opp__c = True &amp;&amp; Total_in_Enrollment__c &lt; 24999, 60000,
+IF
+ ( Renewal_Opp__c = True &amp;&amp; Total_in_Enrollment__c &gt;= 25000, 85000,
+
+NULL))))))))</formula>
+        <name>Set List Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>qualtrics__Qualtrics_Example_Outbound_Message</fullName>
+        <apiVersion>34.0</apiVersion>
+        <description>An example of how to setup an outbound message. 
+The endpoint url is not valid and needs to be updated to a real out endpoint url.</description>
+        <endpointUrl>http://survey.qualtrics.com/WRQualtricsServer/sfApi.php?r=outboundMessage&amp;u=UR_123456789&amp;s=SV_123456789&amp;t=TR_123456789</endpointUrl>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>amarley@asa.org</integrationUser>
+        <name>Qualtrics Example Outbound Message</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>qualtrics__Qualtrics Example Survey Rule</fullName>
+        <actions>
+            <name>qualtrics__Qualtrics_Example_Outbound_Message</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>An example of how to setup a rule to trigger a survey using an outbound message. 
+In this example when an opportunity is closed we want to email the opportunity and see how their interaction with the sales representative went.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Create_Implementation_Case</fullName>
+        <assignedTo>Account Manager</assignedTo>
+        <assignedToType>accountTeam</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Create Implementation Case</subject>
+    </tasks>
+    <tasks>
+        <fullName>NewLenderSetUpTestingRequired</fullName>
+        <assignedToType>role</assignedToType>
+        <description>A new lender has agreed to due business with us please log on to the Opportunity/Account in Salesforce, and decide if it needs testing, and then check the box when that testing is complete.</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>New Lender Set Up - Testing Required?</subject>
+    </tasks>
+    <tasks>
+        <fullName>NewSchoolResearchPresentationPatti</fullName>
+        <assignedTo>dsnow@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>-7</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Opportunity.Introductory_Meeting__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>New School Research &amp; Presentation (Patti)</subject>
+    </tasks>
+    <tasks>
+        <fullName>Your_Account_has_moved_into_Implementation_Please_send_them_the_welcome_guide</fullName>
+        <assignedTo>School Client Manager</assignedTo>
+        <assignedToType>accountTeam</assignedToType>
+        <description>The Opportunity for this Account has moved into the Implementation stage.  This task is being sent to you to alert you that it is time to send them the Welcome Kit and Cover Letter.</description>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Your Account has moved into Implementation: Please send them the Welcome Guide</subject>
+    </tasks>
+    <tasks>
+        <fullName>Your_account_has_moved_to_Implementation_stage_Please_update_the_case_set_the_Pr</fullName>
+        <assignedTo>School Client Manager</assignedTo>
+        <assignedToType>accountTeam</assignedToType>
+        <description>Your account has moved to Implementation stage. Please update the case, set the Pre-Implementation Meeting and send the Welcome Packet.</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Your account has moved to Implementation stage. Please update the case, set the Pre-Implementation Meeting and send the Welcome Packet.</subject>
+    </tasks>
+</Workflow>

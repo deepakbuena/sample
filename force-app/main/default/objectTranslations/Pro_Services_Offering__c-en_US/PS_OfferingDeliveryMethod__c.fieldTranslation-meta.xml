@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please select the desired delivery method for this Offering. --></help>
+    <label><!-- Delivery Method --></label>
+    <name>PS_OfferingDeliveryMethod__c</name>
+    <picklistValues>
+        <masterLabel>Conference Call</masterLabel>
+        <translation><!-- Conference Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Person</masterLabel>
+        <translation><!-- In Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Postal Mail</masterLabel>
+        <translation><!-- Postal Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Webex</masterLabel>
+        <translation><!-- Webex --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

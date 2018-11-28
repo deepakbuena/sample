@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CSA Requests</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CSA Requests</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- CSA Request --></label>
+        <name>CSA_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pro Services Request --></label>
+        <name>Pro_Services_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Due/Proposal Deadline,Start Date,EndDate,Expected Attendees are required fields for this Request Type . --></errorMessage>
+        <name>Conf_Presentation_Prop_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Details and Meeting Date are required fields for this Request Type. --></errorMessage>
+        <name>Pre_Sales_Meeting_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Due/Proposal Deadline and Details are required fields for this Request Type . --></errorMessage>
+        <name>Presentation_Content_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

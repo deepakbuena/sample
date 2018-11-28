@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Proposal</fullName>
+    <active>false</active>
+    <description>When stage is changed to proposal then amount will be required.</description>
+    <errorConditionFormula>AND ( ISPICKVAL(StageName, &quot;Proposal&quot;),OR(ISBLANK(Amount),Amount=0.00))</errorConditionFormula>
+    <errorDisplayField>Amount</errorDisplayField>
+    <errorMessage>Please fill amount field (price quoted)</errorMessage>
+</ValidationRule>

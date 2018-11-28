@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 1st Quarter Check-in --></label>
+    <name>X1st_Quarter_Check_in__c</name>
+</CustomFieldTranslation>

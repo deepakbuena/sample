@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_type_for_community_09a60000000CjRCAA0_entity_Idea</fullName>
+    <active>true</active>
+    <description>Record type used to associate Idea with a specific community</description>
+    <label>Campus Activation: Idea Record Type</label>
+    <picklistValues>
+        <picklist>Categories</picklist>
+        <values>
+            <fullName>EDMS General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fin Ed General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing %2F Collateral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Region</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web %2F Prototype</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Add%27l Information Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Included in Next Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Product Dev Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Scorecard Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Consideration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strategic_Product_Imperatives__c</picklist>
+        <values>
+            <fullName>Community Discussion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Competency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database and User Segmentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Educational Outcomes Measurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Channel Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

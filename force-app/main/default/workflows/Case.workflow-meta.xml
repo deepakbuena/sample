@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Case_assignment_notification_Alert</fullName>
+        <description>CS ??? New Case assignment notification Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Case_assignment_notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>New_Message_Received_Set_False_Case</fullName>
+        <description>Set New Message Received to false from non-cross-object workflow rule.</description>
+        <field>New_Message_Received__c</field>
+        <literalValue>0</literalValue>
+        <name>New Message Received Set False (Case)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Email2Case_TO_Address</fullName>
+        <field>Email2Case_TO_Address__c</field>
+        <formula>IF(Owner:Queue.QueueName == &quot;Askasa@asa.org Email&quot;,&quot;askasa@asa.org&quot;,IF(Owner:Queue.QueueName == &quot;Salt Email&quot;,&quot;salt@saltmoney.org&quot;,IF(Owner:Queue.QueueName == &quot;Support@asa.org Email&quot;,&quot;support@asa.org&quot;,null)))</formula>
+        <name>Populate Email2Case TO Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_field_type</fullName>
+        <description>For SF Support Request the type field in the case will auto populate with SF Support Request</description>
+        <field>Type</field>
+        <literalValue>Salesfore Support Request</literalValue>
+        <name>Update Case field type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CS Case is Resolved or Closed</fullName>
+        <actions>
+            <name>New_Message_Received_Set_False_Case</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Employer Community Case: From Employee,Employer Community Case: From HR Manager</value>
+        </criteriaItems>
+        <description>Evaluates to true if a case is Resolved or Closed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CS Populate Email2Case TO Address of Case</fullName>
+        <actions>
+            <name>Populate_Email2Case_TO_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Askasa@asa.org Email,Salt Email,Support@asa.org Email</value>
+        </criteriaItems>
+        <description>CS: If case is in a CS email-to-case queue (salt, support, or askasa), then owner email should be copied to field</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Field Update for SF Support Case</fullName>
+        <actions>
+            <name>Update_Case_field_type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Salesfore Support Request,Salesforce Support Request</value>
+        </criteriaItems>
+        <description>Type field will automatically update on case creation</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Reminder_Time_to_Send_the_Electronic_Version_of_the_Welcome_Guide</fullName>
+        <assignedTo>School Client Manager</assignedTo>
+        <assignedToType>accountTeam</assignedToType>
+        <description>Your customer received the Welcome Guide by mail a week ago.  This is a reminder to send them the electronic version.</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Case.Date_Welcome_Guide_Sent__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Reminder: Time to Send the Electronic Version of the Welcome Guide</subject>
+    </tasks>
+</Workflow>

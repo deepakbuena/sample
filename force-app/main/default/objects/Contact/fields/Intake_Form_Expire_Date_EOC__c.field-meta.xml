@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Form_Expire_Date_EOC__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Intake_Date__c),Date(1900,1,1),
+IF (AND(OR(ISPICKVAL(Intake_Location__c, &#39;EOC Boston&#39;),ISPICKVAL(Intake_Location__c, &#39;EOC Brockton&#39;)), MONTH( Intake_Date__c) &lt;= 8),
+Date(YEAR(Intake_Date__c), 8,31),
+IF (OR(ISPICKVAL(Intake_Location__c, &#39;EOC Boston&#39;),ISPICKVAL(Intake_Location__c, &#39;EOC Brockton&#39;)), 
+(Date(YEAR(Intake_Date__c) + 1,8,31)),Date(1900,1,1)
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Intake Form Expire Date EOC</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

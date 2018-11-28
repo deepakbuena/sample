@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description</fullName>
+    <inlineHelpText>This is where you would enter any important notes about the Contact.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+</CustomField>

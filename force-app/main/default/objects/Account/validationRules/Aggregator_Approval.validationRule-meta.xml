@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aggregator_Approval</fullName>
+    <active>true</active>
+    <description>Only allow Andrew Marley or Jill Marr the ability to set the &quot;Approved&quot; field to Yes or No</description>
+    <errorConditionFormula>(ISCHANGED(Approved__c) &amp;&amp; ($User.Id != &#39;00530000000hyIk&#39; &amp;&amp;  $User.Id != &#39;00530000000i7mK&#39;))</errorConditionFormula>
+    <errorDisplayField>Approved__c</errorDisplayField>
+    <errorMessage>You do not have the access required to approve/decline Aggregators.  Please contact Andrew Marley or Jill Marr for this request.</errorMessage>
+</ValidationRule>

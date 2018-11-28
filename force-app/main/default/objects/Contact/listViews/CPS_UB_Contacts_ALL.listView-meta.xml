@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_UB_Contacts_ALL</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Elidgable_Report_Support__c</columns>
+    <columns>Eligibility__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CPS_Advisor__c</columns>
+    <columns>Age__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Student_ID__c</columns>
+    <columns>School_Guidance_Counselor__c</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Location__c</field>
+        <operation>equals</operation>
+        <value>UB Brockton</value>
+    </filters>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.CPS_UB</value>
+    </filters>
+    <label>CPS UB Contacts - ALL</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+        <roleAndSubordinatesInternal>CPS_Manager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

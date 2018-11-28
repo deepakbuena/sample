@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Win_Reason__c</fullName>
+    <description>Why did we win the Sale, what was the strongest deciding factor</description>
+    <externalId>false</externalId>
+    <label>Primary Win Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Win__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not satisfied w/ current service provider</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>RFP Selection</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School Recommendation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Customer Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Not satisfied w/ current service provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>RFP Selection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>School Recommendation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Technology</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

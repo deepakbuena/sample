@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pro_Services_Request</fullName>
+    <active>true</active>
+    <description>Use this record type ONLY for Conference Presentation Assistance</description>
+    <label>Pro Services Request</label>
+    <picklistValues>
+        <picklist>CSA_Request__c</picklist>
+        <values>
+            <fullName>Conference Presentation Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Sales Meeting %2F In-Person Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation Content Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salt Demo %2F Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opened</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

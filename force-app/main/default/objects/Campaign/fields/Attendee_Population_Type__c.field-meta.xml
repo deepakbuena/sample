@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendee_Population_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Attendee Population Type</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High School Students</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Parents</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Public School Staff</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

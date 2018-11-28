@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDMS_Activated__c</fullName>
+    <description>This is when the EDMS profile has been updated so communciations can begin.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>THis is when the EDMS profile has been updated so communciations can begin.</inlineHelpText>
+    <label>EDMS Activated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

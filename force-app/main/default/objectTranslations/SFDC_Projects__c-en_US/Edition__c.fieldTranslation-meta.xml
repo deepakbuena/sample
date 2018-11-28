@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Edition --></label>
+    <name>Edition__c</name>
+    <picklistValues>
+        <masterLabel>PE</masterLabel>
+        <translation><!-- PE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SE</masterLabel>
+        <translation><!-- SE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TE</masterLabel>
+        <translation><!-- TE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

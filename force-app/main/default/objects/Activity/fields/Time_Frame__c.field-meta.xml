@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Frame__c</fullName>
+    <description>When is the training for, please specify when the training is requested for from today the day the request is put in.  ex: You are requesting the training for July and today is May 1st.  60-90 days.</description>
+    <externalId>false</externalId>
+    <label>Time Frame/When</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASAP (next 30 days)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>30-60 Days</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>60-90 Days</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>90+</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

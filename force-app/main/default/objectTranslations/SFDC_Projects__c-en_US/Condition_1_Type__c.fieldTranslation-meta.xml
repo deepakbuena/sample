@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Condition 1 Type --></label>
+    <name>Condition_1_Type__c</name>
+    <picklistValues>
+        <masterLabel>Access &amp; Security</masterLabel>
+        <translation><!-- Access &amp; Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Accounts &amp; Contacts</masterLabel>
+        <translation><!-- Accounts &amp; Contacts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activities</masterLabel>
+        <translation><!-- Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaigns</masterLabel>
+        <translation><!-- Campaigns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cases &amp; Solutions</masterLabel>
+        <translation><!-- Cases &amp; Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contracts</masterLabel>
+        <translation><!-- Contracts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Objects</masterLabel>
+        <translation><!-- Custom Objects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dashboards</masterLabel>
+        <translation><!-- Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data</masterLabel>
+        <translation><!-- Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leads &amp; Opportunities</masterLabel>
+        <translation><!-- Leads &amp; Opportunities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Products</masterLabel>
+        <translation><!-- Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports</masterLabel>
+        <translation><!-- Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSP</masterLabel>
+        <translation><!-- SSP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workflow</masterLabel>
+        <translation><!-- Workflow --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Quarterly_Update_Record_Name_Update</fullName>
+        <field>Name</field>
+        <formula>Account_Name__r.Name  + &quot; - Qtr Check-in - &quot;+ TEXT(Quarterly_Check_in_Date__c)</formula>
+        <name>Quarterly Update Record Name Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <tasks>
+        <fullName>Jacqueline_Send_Quarterly_Check_In_Call_Notes</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Jacqueline Send Quarterly Check In Call Notes</subject>
+    </tasks>
+    <tasks>
+        <fullName>Joanne_Send_Quarterly_Check_In_Call_Notes</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Joanne Send Quarterly Check In Call Notes</subject>
+    </tasks>
+    <tasks>
+        <fullName>Jonathan_Send_Quarterly_Check_In_Call_Notes</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Jonathan Send Quarterly Check In Call Notes</subject>
+    </tasks>
+    <tasks>
+        <fullName>Lyssa_Send_Quarterly_Check_In_Call_Notes</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Lyssa Send Quarterly Check In Call Notes</subject>
+    </tasks>
+    <tasks>
+        <fullName>Review_CM_s_Notes_Lyssa</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Review CM&#39;s Notes Lyssa</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Quarterly_Check_In_Call_Notes_Fidel</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Send Quarterly Check In Call Notes Fidel</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Quarterly_Check_In_Call_Notes_Lorinda</fullName>
+        <assignedTo>anorwood@asa.org</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Quarterly_Update__c.Quarterly_Check_in_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Send Quarterly Check In Call Notes Lorinda</subject>
+    </tasks>
+</Workflow>

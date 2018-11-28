@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Only_Allowed_During_FYQ3</fullName>
+    <active>false</active>
+    <description>Update_Only_Allowed_During_FYQ3</description>
+    <errorConditionFormula>!(TODAY() &gt;= DATE(2010,01,01) &amp;&amp; TODAY() &lt;= DATE(2010,03,31)) 
+&amp;&amp; ISCHANGED(Current_contract_Year_Q3_Rating__c )</errorConditionFormula>
+    <errorDisplayField>Current_contract_Year_Q3_Rating__c</errorDisplayField>
+    <errorMessage>You may only change the rating in the current Quarter.</errorMessage>
+</ValidationRule>

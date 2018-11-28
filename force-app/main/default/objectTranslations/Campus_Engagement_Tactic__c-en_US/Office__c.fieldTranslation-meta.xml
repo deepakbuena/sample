@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Office --></label>
+    <name>Office__c</name>
+    <picklistValues>
+        <masterLabel>Academic Advising</masterLabel>
+        <translation><!-- Academic Advising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Academic Affairs</masterLabel>
+        <translation><!-- Academic Affairs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admissions</masterLabel>
+        <translation><!-- Admissions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alumni Relations</masterLabel>
+        <translation><!-- Alumni Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Athletics</masterLabel>
+        <translation><!-- Athletics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bursar</masterLabel>
+        <translation><!-- Bursar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Office</masterLabel>
+        <translation><!-- Business Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campus-Wide</masterLabel>
+        <translation><!-- Campus-Wide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Career Services</masterLabel>
+        <translation><!-- Career Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development</masterLabel>
+        <translation><!-- Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment Management</masterLabel>
+        <translation><!-- Enrollment Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Faculty</masterLabel>
+        <translation><!-- Faculty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Aid</masterLabel>
+        <translation><!-- Financial Aid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>First-Year Experience</masterLabel>
+        <translation><!-- First-Year Experience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Institutional Research</masterLabel>
+        <translation><!-- Institutional Research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orientation</masterLabel>
+        <translation><!-- Orientation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>President&#39;s Office</masterLabel>
+        <translation><!-- President&apos;s Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registrar</masterLabel>
+        <translation><!-- Registrar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Residence Life</masterLabel>
+        <translation><!-- Residence Life --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retention Office</masterLabel>
+        <translation><!-- Retention Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scholarship Office</masterLabel>
+        <translation><!-- Scholarship Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Activities</masterLabel>
+        <translation><!-- Student Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Affairs</masterLabel>
+        <translation><!-- Student Affairs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Government</masterLabel>
+        <translation><!-- Student Government --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Leadership Programming</masterLabel>
+        <translation><!-- Student Leadership Programming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Services</masterLabel>
+        <translation><!-- Student Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRIO Program</masterLabel>
+        <translation><!-- TRIO Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veterans Affairs</masterLabel>
+        <translation><!-- Veterans Affairs --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

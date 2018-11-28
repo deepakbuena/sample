@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conference_Chair_s__c</fullName>
+    <description>The person to contact regarding Sessions/Booth/Information regarding the Conference, could be mutliple people</description>
+    <externalId>false</externalId>
+    <label>Conference Committee Contact (s)</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

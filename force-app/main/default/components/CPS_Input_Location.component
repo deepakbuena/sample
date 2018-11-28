@@ -1,0 +1,156 @@
+<apex:component controller="CPSInputLocationCode">
+   <c:CPS_CSS_Component ></c:CPS_CSS_Component>
+   <head>
+      <apex:slds />
+      <style>
+          .slds_wrap {
+             width:40%;
+             margin:0 auto;
+             border-radius:5px;
+        }
+        .slds-scope .slds-required {
+             color: #fff !important;
+        }
+        
+      </style>
+   </head>
+   <body>
+       <div class="slds-grid slds-wrap">
+          <!-- Desktop header -->
+          <div class="desktop_header_bg">
+             <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/cps_logo.png')}"/>
+          </div>
+          <!-- Desktop header -->
+          <apex:form id="cpsLocationForm" styleClass="cpsLocationForm" forceSSL="true">
+             <div class="slds_wrap slds-m-top_xx-large">
+                <!-- mobile header -->
+                <div class="mobile_header_bg">
+                   <apex:image url="{!URLFOR($Resource.cps_components,'/cps_components/images/mobile_logo.png')}"/>
+                </div>
+                <!-- mobile header -->
+                <apex:outputPanel rendered="{!renderPgMsgBox}">
+                   <div class="slds-notify_container slds-is-relative" id="bb">
+                      <div class="slds-notify slds-notify_toast slds-theme_warning" role="alert" style="width:100%">
+                         <span class="slds-assistive-text">warning</span>
+                         <span class="slds-icon_container slds-icon-utility-warning slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.slds_icons, 'utility-sprite/svg/symbols.svg#warning')}"></use>
+                            </svg>
+                         </span>
+                         <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small ">
+                               <apex:pageMessages ></apex:pageMessages>
+                            </h2>
+                         </div>
+                      </div>
+                      <!--  <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close" id="aa">
+                         <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($jResource.slds_icons, 'utility-sprite/svg/symbols.svg#close')}"></use>
+                         </svg>   
+                         <span class="slds-assistive-text">Close</span>
+                         </button>  -->
+                   </div>
+                </apex:outputPanel>
+                <div class="slds-page-header slds-mobile-width">
+                   <div class="slds-media mobile_heading_margin">
+                      <div class="slds-media__figure"></div>
+                      <div class="slds-media__body">
+                         <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Rohde Corp - 80,000 Widgets">Welcome!</h1>
+                         <p>Thanks for visiting an American Student Assistance® (ASA) College Planning Center. To help us meet your needs today, please provide a little information about yourself.</p>
+                         <p style="margin-top: 2%">Start by entering this center’s location code, which is our program’s abbreviation
+                            followed by a space and our location, e.g., “ABC Boston” or “XYZ Brockton.” Ask a staff member if you’re unsure what to enter.
+                         </p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="slds_wrap slds_mobile_wrap slds-m-top_xx-large rounded_corner mobile_heading_margin">
+                <div class="slds-m-top_small slds-m-bottom_small form_heading form_rounded_corner">
+                   <h1>Location Code <abbr class="slds-required" title="required">*</abbr></h1>
+                </div>
+                <div class="slds-form-element slds-p-around_medium slds-p-vertical_x-large slds-p-horizontal_xx-large">
+                   <div class="slds-form-element__control">
+                      <apex:inputText id="locationcode" value="{!cpsLocationCode}" styleClass="slds-input" maxlength="12"/>
+                   </div>
+                   <apex:inputHidden value="{!preserveSatelliteLoc}" id="preservevalue"/>
+                   <apex:actionfunction name="passIntakeLocToController" action="{!fetchIntakeLocation}" rerender="satellitePicklistDiv">
+                      <apex:param value="" name="inpval"/>
+                   </apex:actionFunction>
+                   <apex:pageMessages ></apex:pageMessages>
+                   <apex:outputPanel id="satellitePicklistDiv">
+                     <!-- <apex:outputPanel rendered="{!if(showSatellitePicklist != Null || satelliteLoc != Null,true,false)}"> -->
+                     
+                      <apex:outputPanel rendered="{!showSatellitePicklist}"> 
+                      <div class="slds-form-element slds-m-top_medium">
+                            <label class="slds-form-element__label mobile_label" for="Preferred Language">Center or Satellite Location<abbr class="slds-required" style="color:#900 !important;">*</abbr></label>
+                            <div class="slds-form-element__control">
+                               <apex:selectList value="{!satelliteLocation}" id="satelliteLoc" multiselect="false" size="1" styleClass="custom_select">
+                                  <apex:selectOptions value="{!satelliteLocOptions}"></apex:selectOptions>
+                               </apex:selectList>
+                            </div>
+                         </div>
+                      </apex:outputPanel>
+                   </apex:outputPanel>
+                </div>
+             </div>
+             <div class="slds_wrap slds_mobile_wrap slds-m-top_x-large slds-mobile-width mobile_heading_margin">
+                <div class="slds-form-element slds-p-top_none">
+                   <apex:commandButton value="Enter" action="{!fetchLocationName}" id="submitbtn" styleClass="custom_btn"/>
+                </div>
+             </div>
+          </apex:form>
+        </div>
+    </body>
+   <script type="text/javascript"> 
+      var $j = jQuery.noConflict();
+      $j('[id$=cpsLocationForm]').validate();             
+           errorclass: "myerrorclass";
+           
+            $j('[id$=locationcode]').rules("add",{
+             required: true,
+             maxlength: 12,               
+             messages:{
+               required:"<br/>Required field",
+               maxlength: jQuery.validator.format("<br/>Maximum allowed code length is 12 characters"),
+            }                           
+         });
+         
+         
+         $j(document).ready(function() {
+             $j(document).on('blur', "[id$='locationcode']", function() {
+                var intakeLoc = $j('[id$="locationcode"]').val();
+                if(intakeLoc != '')
+                {
+                    //alert('intakeLoc@@@'+intakeLoc);
+                    passIntakeLocToController(intakeLoc);
+                }
+            });
+         });
+         
+         $j(window).on('load', function(){
+            var intakeLoc = $j('[id$="locationcode"]').val();
+            var varSatellite = $j('[id$="preservevalue"]').val();
+            if(intakeLoc != '' || varSatellite != '')
+            {
+                //alert('intakeLoc@@@'+intakeLoc);
+                passIntakeLocToController(intakeLoc);
+            }
+        });
+         
+         $j('[id$=cpsLocationForm]').submit(function() {
+             
+             var varSatelliteLoc = $j('[id$="satelliteLoc"]').val();
+             var intakeLoc = $j('[id$="locationcode"]').val();
+            
+             if (varSatelliteLoc == 'None' || varSatelliteLoc == '' || typeof varSatelliteLoc === 'undefined')
+             {
+                 if(intakeLoc.indexOf('EOC')!=-1 || intakeLoc.indexOf('eoc')!=-1)
+                 {
+                     event.preventDefault();
+                     passIntakeLocToController(intakeLoc);
+                 }
+             }
+         });
+         
+   </script>
+</apex:component>

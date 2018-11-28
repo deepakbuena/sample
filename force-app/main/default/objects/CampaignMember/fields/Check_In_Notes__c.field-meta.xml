@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_In_Notes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This corresponds to the field on the CPS Event check-in form where the Client is asked to note any recent updates to their Contact information.  The Advisor will later review these notes and make any Contact record updates, as needed.</inlineHelpText>
+    <label>Check In Notes</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Annual Sales Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Annual Sales Plans</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Generate_PDF --></label>
+        <name>Generate_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RAE_Target_List_by_Tier --></label>
+        <name>RAE_Target_List_by_Tier</name>
+    </webLinks>
+</CustomObjectTranslation>

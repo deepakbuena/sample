@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specific_Rating_Requirements</fullName>
+    <active>false</active>
+    <description>This validation rule forces the user to enter an At Risk Volume value in the At Risk Volume field.</description>
+    <errorConditionFormula>AND (
+
+OR (ISPICKVAL (Rating, &quot;On Watch&quot;),
+
+          ISPICKVAL (Rating, &quot;At Risk&quot;),
+
+          ISPICKVAL (Rating, &quot;Partial Loss&quot;)), ISNULL(At_Risk_Volume__c))</errorConditionFormula>
+    <errorMessage>You must supply an At Risk Volume amount in the appropriate field.</errorMessage>
+</ValidationRule>

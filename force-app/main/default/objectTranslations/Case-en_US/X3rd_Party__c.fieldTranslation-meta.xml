@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 3rd Party --></label>
+    <name>X3rd_Party__c</name>
+    <picklistValues>
+        <masterLabel>ELM</masterLabel>
+        <translation><!-- ELM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global</masterLabel>
+        <translation><!-- Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nteract</masterLabel>
+        <translation><!-- Nteract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OpenNet (FMS)</masterLabel>
+        <translation><!-- OpenNet (FMS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OpenNet (Web)</masterLabel>
+        <translation><!-- OpenNet (Web) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ScholarNet</masterLabel>
+        <translation><!-- ScholarNet --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

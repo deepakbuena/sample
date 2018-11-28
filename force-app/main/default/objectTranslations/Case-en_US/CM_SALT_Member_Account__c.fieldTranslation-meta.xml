@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A check in this field indicates the Client Manager has established a SALT account for this client. --></help>
+    <label><!-- CM SALT Member Account --></label>
+    <name>CM_SALT_Member_Account__c</name>
+</CustomFieldTranslation>

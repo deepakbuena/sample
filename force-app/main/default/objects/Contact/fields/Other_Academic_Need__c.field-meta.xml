@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Academic_Need__c</fullName>
+    <externalId>false</externalId>
+    <label>Other Academic Need</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low educational aspirations</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lack of opportunity, support, or guidance</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Lack of career goals and/or accurate info</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Limited English proficiency</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low confidence/self-esteem/social skills</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low-income community</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Rural isolation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Interest in careers in math or science</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Diagnosed learning disability</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Low GPA and/or achievement test scores</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>More than one</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

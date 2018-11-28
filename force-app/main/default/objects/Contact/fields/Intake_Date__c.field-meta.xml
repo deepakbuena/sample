@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intake_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>For EOC/TS, this is the date the Client fills out the Intake form (set one-time for TS, and updated yearly for EOC).  For UB, this is the date of first service.</inlineHelpText>
+    <label>Intake Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

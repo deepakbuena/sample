@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Laundry_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Laundry_f__c  +  Laundry_m__c  +  Laundry_t__c  +  Laundry_w__c  +  Laundry_th__c  +  Laundry_sa__c  +  Laundry_Su__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Laundry Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

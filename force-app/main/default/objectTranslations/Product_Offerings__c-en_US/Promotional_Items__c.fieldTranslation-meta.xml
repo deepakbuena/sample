@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Promotional Items --></label>
+    <name>Promotional_Items__c</name>
+    <picklistValues>
+        <masterLabel>Access to PDFs / eDocs</masterLabel>
+        <translation><!-- Access to PDFs / eDocs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALT Store</masterLabel>
+        <translation><!-- SALT Store --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

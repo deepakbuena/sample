@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MasterMatrixLenderAccounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OE_Code__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>startsWith</operation>
+        <value>Lender - ASA</value>
+    </filters>
+    <label>Master Matrix Lender Accounts</label>
+    <sharedTo>
+        <role>MasterLevel</role>
+        <role>TopLevel</role>
+    </sharedTo>
+</ListView>

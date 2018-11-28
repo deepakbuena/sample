@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field contains the strategy used to integrate a communication plan that works for all parties. --></help>
+    <label><!-- Comms External --></label>
+    <name>Comms_External__c</name>
+</CustomFieldTranslation>

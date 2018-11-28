@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_Activation_Status_Reports_to_Keep__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>4 - 1 Month 
+12 - 1 Year 
+18 - 1.5 Years 
+24 - 2 Years 
+36 - 3 Years</inlineHelpText>
+    <label>Number Activation Status Reports to Keep</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>18</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>24</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>36</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

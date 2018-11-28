@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Accepted --></label>
+    <name>Accepted__c</name>
+    <picklistValues>
+        <masterLabel>Assigned</masterLabel>
+        <translation><!-- Assigned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No thank you</masterLabel>
+        <translation><!-- No thank you --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On deck</masterLabel>
+        <translation><!-- On deck --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

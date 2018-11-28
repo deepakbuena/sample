@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Term_of_Contract__c</fullName>
+    <description>What is the term of the contracts renewal policy?</description>
+    <externalId>false</externalId>
+    <label>Term of Contract</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto-Renewal (same term)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conversion to Monthly</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Conversion to Annual</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Options (explain below)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other (explain below)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>This is the source of the file received.</description>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ACS-Perkins</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AES/PHEAA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Aspire</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Campus Partners</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Cornerstone (UT)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>COSTEP</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DELQ</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Demographic File</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DER</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ECSI</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EdFinancial</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EDGEucation Loans.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EdManage (SC)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Granite State (NH)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes Higher Education</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>KHESLC (KY)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MOHELA (MO)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Nelnet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>OSLA (OK)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sallie Mae</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>UAS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>VSAC (VT)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

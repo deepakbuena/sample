@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Send_Email_From</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status, &#39;3&#39;),NOT(ISNULL(ParentId)),LOWER(FromAddress) &lt;&gt; &quot;askasa@asa.org&quot;, LOWER(FromAddress) &lt;&gt; &quot;salt@saltmoney.org&quot;, LOWER(FromAddress) &lt;&gt; &quot;support@asa.org&quot;)</errorConditionFormula>
+    <errorDisplayField>BccAddress</errorDisplayField>
+    <errorMessage>Please select the correct From address, which must be one of the following: askasa@asa.org, salt@saltmoney.org, or support@asa.org</errorMessage>
+</ValidationRule>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Year End Review --></label>
+    <name>Year_End_Review__c</name>
+</CustomFieldTranslation>

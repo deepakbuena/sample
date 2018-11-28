@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Education_Status_at_End_Senior__c</fullName>
+    <externalId>false</externalId>
+    <label>Education Status at End (Senior)</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grad in standard num yrs (non-rigorous)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Grad in standard num yrs (rigorous)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Grad in non-standard num yrs</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Received alt. credential</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Neither grad nor received alt. credential</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (prior participant) (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Diploma/rigorous course of study (UB)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Diploma/nonrigorous course of study (UB)</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

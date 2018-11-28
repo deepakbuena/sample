@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elidgable_Report_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISPICKVAL(Eligibility__c , &quot;Low-Income and First-Gen College&quot;) ||
+ISPICKVAL(Eligibility__c , &quot;Low-income-first-gen-academic risk (UB)&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Meets LIFG requirements</label>
+    <type>Checkbox</type>
+</CustomField>

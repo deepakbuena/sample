@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Expected Contract 2 Recv&apos;d/Closed? --></label>
+    <name>Expected_Contract_2_Recv_d_Closed__c</name>
+</CustomFieldTranslation>

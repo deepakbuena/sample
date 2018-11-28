@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- NSLDS Files --></label>
+    <name>NSLDS_Files__c</name>
+    <picklistValues>
+        <masterLabel>Access Granted</masterLabel>
+        <translation><!-- Access Granted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Access Lost</masterLabel>
+        <translation><!-- Access Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>School Provides</masterLabel>
+        <translation><!-- School Provides --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

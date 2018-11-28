@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_of_Expertise__c</fullName>
+    <description>The ASA Associates area of expertise for help direction questions concerning School/Lender set up.</description>
+    <externalId>false</externalId>
+    <label>Area of Expertise</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA Direct</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Collateral Materials</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Default Fee Policy</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DL</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Electronic Processing</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ELM</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAMS - Banner</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAMS - Colleague</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAMS - PeopleSoft</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAMS - Powerfaids</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FFH/CAM</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Mapping Your Future</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>OpenNet</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Profile Set Up</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Regulations - HERA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>School as Lender</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Regulations - FERPA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Regulations - GLB Act</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAMS - General</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

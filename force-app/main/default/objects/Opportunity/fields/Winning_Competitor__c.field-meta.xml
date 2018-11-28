@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Winning_Competitor__c</fullName>
+    <description>If the primary loss reason is competitor please choice who the winning competitor is.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the primary loss reason is competitor please choice who the winning competitor is.</inlineHelpText>
+    <label>Winning Competitor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Primary_Loss_Reason__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AES</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>AlaQuest International, Inc.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Champion College Solutions</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CSLF (CT)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Dave Ramsey</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Decision Partners, Inc.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>ECMC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Ed America</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Ed Financial Services</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EdFund</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>EverFi</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAME</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>FAME, Inc (FL)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Aid TV</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Financial Footprint</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>General Revenue Corp/Sallie Mae</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>GL Advisors</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Grad Ready</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Greenwood &amp; Hall</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Guarantec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>HigherOne</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Horizon Educational Resources, Inc.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>i3 Group, LLC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>iGrad</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Imagine America Foundation</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Inceptia (NSLP)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>KHEAA (Kentucky)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Loanwise, LLC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>McKenzie Financial Inc.</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>MoneyU</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>NELA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>NHEAF</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>NY HESC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>OSFA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PGPresents</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Repay Ready</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>RIHEAA</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Safe Start</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Loan Assistance/PEAC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Student Loan Chaperone</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Sunrise Credit Service</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TG</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>TSAC (Tennessee)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>USA Funds</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Wright International Student Services</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>ACS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>AES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>AlaQuest International, Inc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Champion College Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>CSLF (CT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Dave Ramsey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Decision Partners, Inc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>ECMC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Ed America</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Ed Financial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>EdFund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>EverFi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>FAME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>FAME, Inc (FL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Financial Aid TV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Financial Footprint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>General Revenue Corp/Sallie Mae</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>GL Advisors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Grad Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Great Lakes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Greenwood &amp; Hall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Guarantec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>HigherOne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Horizon Educational Resources, Inc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>i3 Group, LLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>iGrad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Imagine America Foundation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Inceptia (NSLP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>KHEAA (Kentucky)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Loanwise, LLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>McKenzie Financial Inc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>MoneyU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>NELA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>NHEAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>NY HESC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>OSFA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>PGPresents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Repay Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>RIHEAA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Safe Start</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Student Loan Assistance/PEAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Student Loan Chaperone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Sunrise Credit Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>TG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>TSAC (Tennessee)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>USA Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Currently under contract</controllingFieldValue>
+            <valueName>Wright International Student Services</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

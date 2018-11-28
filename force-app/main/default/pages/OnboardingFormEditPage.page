@@ -1,0 +1,174 @@
+<apex:page standardController="Onboarding_Form__c" extensions="OnboardingFormEditcls" tabStyle="Onboarding_Form__c" docType="html-5.0">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS_ASA,'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+        </head>
+        
+        <body>
+            <div class = "SLDS_ASA">
+                <apex:form >
+                    <apex:sectionHeader title="Onboarding Form Edit" subtitle="New Onboarding Form"/>     
+                    <apex:pageBlock title="Onboarding Form Edit" mode="edit" >
+                    
+                        <!--<apex:pageBlockButtons >
+                            <apex:commandButton action="{!saveoff}" value="Save"/>
+                            <apex:commandButton action="{!cancel}" value="Cancel"/>
+                        </apex:pageBlockButtons>-->
+                        <h3 class="slds-section-title--divider">School Information</h3>
+                        <!--<div class="slds-modal__header slds-align--absolute-center">
+                            <apex:CommandButton value="Save" action="{!saveoff}" styleClass="slds-button slds-button--brand"/>
+                            <apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button--brand"/>                        
+                        </div>-->
+                        
+                        <!--<apex:pageBlockSection title="School Information"    collapsible="false" columns="2"  >
+                            <apex:inputField value="{!oObject.Name}"  required="true" />
+                            <apex:inputField value="{!Onboarding_Form__c.Print_Name_BPMS__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.Today_s_Date__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.Alias__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.School_Name__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.Short_Name__c}"/>
+                            <apex:inputField value="{!oObject.Type__c}" />
+                            <apex:inputField value="{!Onboarding_Form__c.Phonetic_Name__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.Years_in_Repayment__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.ED_School_Type__c}"/>
+                            <apex:inputField value="{!Onboarding_Form__c.ED_School_Program_Length__c}"/>
+                        </apex:pageBlockSection>-->
+                        
+                        <div class="slds-form--compound" id="theForm">
+                        
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row slds-m-top--large">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">Onboarding Form Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="onboard" value="{!oObject.Name}" required="true"/>
+                                            <div role="dialog" id="OnboardName-popover"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-m-left--xx-large">
+                                        <label class="slds-form-element__label" for="input-02">Print Name (BPMS)</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="Print" value="{!Onboarding_Form__c.Print_Name_BPMS__c}"/>
+                                            <div role="dialog" id="PrintName-popover"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">Today s Date:</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="date" value="{!Onboarding_Form__c.Today_s_Date__c}"/>
+                                            <div role="dialog" id="OnboardName-popover"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-m-left--xx-large">
+                                        <label class="slds-form-element__label" for="input-02">Alias</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="alias" value="{!Onboarding_Form__c.Alias__c}"/>
+                                            <div role="dialog" id="PrintName-popover"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">Organization Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-lookup"  id="org" value="{!Onboarding_Form__c.School_Name__c}"/>
+                                            <div role="dialog" id="OnboardName-popover"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <!--<div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large slds-form-element slds-lookup" data-select="single">
+                                        <label class="slds-form-element__label" for="lookup-63">Organization Name</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-input-has-icon slds-input-has-icon--right">
+                                                <svg class="slds-input__icon" aria-hidden="true">
+                                                    <use xlink:href="{!URLFOR($Resource.SLDS_ASA,'/assets/icons/utility-sprite/svg/symbols.svg#search')}"></use>
+                                                </svg>
+                                                <input type="search" id="lookup-63" class="slds-lookup__search-input slds-input" placeholder="" aria-owns="lookup-63" role="combobox" aria-activedescendant="" aria-expanded="false" aria-autocomplete="list" />
+                                            </div>
+                                        </div>
+                                        <div class="slds-lookup__menu" id="lookup-63">
+                                            <div class="slds-lookup__item--label slds-text-body--small">{!Onboarding_Form__c.School_Name__c}</div>
+                                        </div>
+                                    </div>-->
+                                    
+                                    
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-m-left--xx-large">
+                                        <label class="slds-form-element__label" for="input-02">Short Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="short" value="{!Onboarding_Form__c.Short_Name__c}"/>
+                                            <div role="dialog" id="PrintName-popover"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">Type</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="Type" value="{!oObject.Type__c}"/>
+                                            <div role="dialog" id="OnboardName-popover"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-m-left--xx-large">
+                                        <label class="slds-form-element__label" for="input-02">Phonetic Name</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="Phonetic" value="{!Onboarding_Form__c.Phonetic_Name__c}"/>
+                                            <div role="dialog" id="PrintName-popover"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">Years in Repayment</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="Years" value="{!Onboarding_Form__c.Years_in_Repayment__c}"/>
+                                            <div role="dialog" id="Years"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-m-left--xx-large">
+                                        <label class="slds-form-element__label" for="input-02">ED School Type</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="SchoolType" value="{!Onboarding_Form__c.ED_School_Type__c}"/>
+                                            <div role="dialog" id="PrintName-popover"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-p-horizontal--small slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--4-of-12 slds-p-left--xx-large slds-m-right--xx-large">
+                                        <label class="slds-form-element__label" for="input-01">ED School Program Length</label>
+                                        <div class="slds-form-element__control">
+                                            <apex:inputField styleclass="slds-input"  id="SchoolProgram" value="{!Onboarding_Form__c.ED_School_Program_Length__c}"/>
+                                            <div role="dialog" id="Years"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-modal__header slds-align--absolute-center">
+                            <apex:CommandButton value="Save" action="{!saveoff}" styleClass="slds-button slds-button--brand"/>
+                            <apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button--brand"/>                        
+                        </div>
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+        </body>
+    </html>
+</apex:page>

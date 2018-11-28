@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Partner_Abbreviation__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the abbreviation name for the Engagement Partner - to be used within Proposal merge process.</inlineHelpText>
+    <label>Engagement Partner Abbreviation</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

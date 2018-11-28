@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPS_Retrict_CM_Edits_By_Profile</fullName>
+    <active>true</active>
+    <description>For TS, only users with profile &#39;CPS - TS Admin&#39; can edit campaign member. For EOC/UB, any EOC/UB profile can edit their own TRIO record type.</description>
+    <errorConditionFormula>AND ($Profile.Name != &#39;System Administrator&#39;, 
+OR ( 
+AND ($Profile.Name != &#39;CPS - TS Admin&#39;, 
+Campaign.RecordType.Name = &#39;CPS - TS&#39;), 
+
+AND (LEFT($Profile.Name,9) != &#39;CPS - EOC&#39;, 
+Campaign.RecordType.Name = &#39;CPS - EOC&#39;), 
+
+AND (LEFT($Profile.Name,8) != &#39;CPS - UB&#39;, 
+Campaign.RecordType.Name = &#39;CPS - UB&#39;) 
+))</errorConditionFormula>
+    <errorMessage>You do not have permission to make edits to a TRIO Campaign Member. Please contact your manager if you need this permission.</errorMessage>
+</ValidationRule>

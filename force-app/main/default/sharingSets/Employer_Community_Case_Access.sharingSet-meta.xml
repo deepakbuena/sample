@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Case</object>
+        <objectField>Contact</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <name>Employer Community Case Access</name>
+    <profiles>community (employer b):hr manager</profiles>
+    <profiles>community-(employer a):employee</profiles>
+    <profiles>community-(employer a):hr manager</profiles>
+    <profiles>community-(employer b):employee</profiles>
+</SharingSet>

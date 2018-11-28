@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Account.Category__c  , &quot;Christian Colleges &amp; Universities&quot; ), &quot;Christian Colleges &amp; Universities; &quot;,null ) &amp; 
+IF ( INCLUDES ( Account.Category__c  , &quot;Historical Black Colleges &amp; Universities&quot; ), &quot;Historical Black Colleges &amp; Universities; &quot;,null ) &amp; 
+IF ( INCLUDES ( Account.Category__c  , &quot;Law School&quot; ), &quot;Law School; &quot;,null ) &amp; 
+IF ( INCLUDES ( Account.Category__c  , &quot;Medical School&quot; ), &quot;Medical School; &quot;,null ) &amp; 
+IF ( INCLUDES ( Account.Category__c  , &quot;Corporate Account&quot; ), &quot;Corporate Account; &quot;,null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

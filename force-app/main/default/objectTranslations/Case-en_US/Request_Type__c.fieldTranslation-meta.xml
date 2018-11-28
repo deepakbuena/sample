@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Request Type --></label>
+    <name>Request_Type__c</name>
+    <picklistValues>
+        <masterLabel>Dashboards</masterLabel>
+        <translation><!-- Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Cleanup</masterLabel>
+        <translation><!-- Data Cleanup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development</masterLabel>
+        <translation><!-- Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Question</masterLabel>
+        <translation><!-- General Question --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mass transfer of Accounts</masterLabel>
+        <translation><!-- Mass transfer of Accounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Object Edits</masterLabel>
+        <translation><!-- Object Edits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process Change</masterLabel>
+        <translation><!-- Process Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process Creation</masterLabel>
+        <translation><!-- Process Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports</masterLabel>
+        <translation><!-- Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

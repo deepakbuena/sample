@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Audience --></label>
+    <name>Audience__c</name>
+    <picklistValues>
+        <masterLabel>Academic</masterLabel>
+        <translation><!-- Academic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Admissions</masterLabel>
+        <translation><!-- Admissions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Advancement</masterLabel>
+        <translation><!-- Advancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alumni</masterLabel>
+        <translation><!-- Alumni --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Career Services</masterLabel>
+        <translation><!-- Career Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment Management</masterLabel>
+        <translation><!-- Enrollment Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Aid</masterLabel>
+        <translation><!-- Financial Aid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registrar</masterLabel>
+        <translation><!-- Registrar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Student Life</masterLabel>
+        <translation><!-- Student Life --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veterans Affairs</masterLabel>
+        <translation><!-- Veterans Affairs --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Project Stage --></label>
+    <name>Project_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Cancelled</masterLabel>
+        <translation><!-- Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed &amp; Accepted</masterLabel>
+        <translation><!-- Completed &amp; Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evaluating offers</masterLabel>
+        <translation><!-- Evaluating offers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live - Design</masterLabel>
+        <translation><!-- Live - Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live - Implemented</masterLabel>
+        <translation><!-- Live - Implemented --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open for offers</masterLabel>
+        <translation><!-- Open for offers --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

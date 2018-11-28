@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Borrower Populations: Entered Repayment --></label>
+    <name>Borrower_Population__c</name>
+    <picklistValues>
+        <masterLabel>Existing: Prior to 10/1/2009</masterLabel>
+        <translation><!-- Existing: Prior to 10/1/2009 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New: 10/1/2009 - 9/30/2010 or later</masterLabel>
+        <translation><!-- New: 10/1/2009 - 9/30/2010 or later --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

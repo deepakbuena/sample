@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled</fullName>
+    <columns>PS_Attendee__c</columns>
+    <columns>Organization__c</columns>
+    <columns>PS_Offering__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Cancelled/Will Not Attend</value>
+    </filters>
+    <label>Cancelled</label>
+</ListView>

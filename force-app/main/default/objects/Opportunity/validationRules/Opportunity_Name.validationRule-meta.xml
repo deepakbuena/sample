@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(
+     OR(    
+              CONTAINS(Name, &quot;2018&quot;),
+              CONTAINS(Name, &quot;2017&quot;),
+              CONTAINS(Name, &quot;2016&quot;),
+              CONTAINS(Name, &quot;2015&quot;),
+              CONTAINS(Name, &quot;2014&quot;),
+              CONTAINS(Name, &quot;2013&quot;),
+              CONTAINS(Name, &quot;2012&quot;),
+              CONTAINS(Name, &quot;2011&quot;)
+                                )
+         )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Opportunity Name MUST contain 2017 or 2018.</errorMessage>
+</ValidationRule>

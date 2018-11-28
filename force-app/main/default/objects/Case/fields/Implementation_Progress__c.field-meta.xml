@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Progress__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Logo_Specs_Status__c, &#39;Published&#39;) , 0.2, 0) 
++ 
+IF( ISBLANK( EDMS_Activated__c ) , 0, 0.2) 
++ 
+IF( ISPICKVAL( Demog_File_Status__c , &#39;Complete&#39;) , 0.2, 
+IF(ISPICKVAL(Demog_File_Status__c , &#39;Validated&#39;), 0.13, 
+IF(ISPICKVAL(Demog_File_Status__c , &#39;Testing&#39;), 0.07, 
+IF(ISPICKVAL(Demog_File_Status__c , &#39;WIP&#39;), 0,0)))) 
++ 
+IF( ISPICKVAL(NSLDS_Access_Status__c, &#39;6 - Received SAIG Access&#39;) , 0.2, 
+IF(ISPICKVAL(NSLDS_Access_Status__c , &#39;1 - School Provided&#39;), 0.2, 
+IF(ISPICKVAL(NSLDS_Access_Status__c , &#39;5 - ASA Returns to SAIG&#39;), 0.16, 
+IF(ISPICKVAL(NSLDS_Access_Status__c , &#39;4 - ASA Rcvd User Docs&#39;), 0.12, 
+IF(ISPICKVAL(NSLDS_Access_Status__c , &#39;3 - Bus Analysis NPI Provided&#39;), 0.08, 
+IF(ISPICKVAL(NSLDS_Access_Status__c , &#39;2 - Confidentiality Auth Form Rcvd&#39;), 0.04,0)))))) 
++ 
+IF( AND( NOT(ISBLANK( SALT_Profile_Creation_Date__c )) ,ISPICKVAL( MM_101_Customization_Set_Up_Status__c , &#39;Complete&#39;)) , 0.2, 
+IF( OR( NOT(ISBLANK( SALT_Profile_Creation_Date__c )) ,ISPICKVAL( MM_101_Customization_Set_Up_Status__c , &#39;Complete&#39;)), 0.10, 0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Implementation Progress</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

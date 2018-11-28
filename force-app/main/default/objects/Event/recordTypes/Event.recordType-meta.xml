@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event</fullName>
+    <active>true</active>
+    <description>Event i.e. In person campus meeting, online meeting, conference meeting or substantive call</description>
+    <label>Event</label>
+    <picklistValues>
+        <picklist>Ad_Size__c</picklist>
+        <values>
+            <fullName>1%2F2 Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4 Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F4 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Black%2FWhite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Color</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Audience__c</picklist>
+        <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bursar%2FSFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intemediate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Rep%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Students</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery_Typer__c</picklist>
+        <values>
+            <fullName>Electronic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Graduation_Periods__c</picklist>
+        <values>
+            <fullName>Apr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nov</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sept</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Length__c</picklist>
+        <values>
+            <fullName>1%2F2 Day Afternoon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2F2 Day Morning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 Min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Day</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requested_Materials__c</picklist>
+        <values>
+            <fullName>Budget Worksheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferment%2FForbearance Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entr%2FExit Counsel Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-paid return envels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repayment Worksheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Compl Directions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Master Prom Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF Master Prom Notes - Imprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAFF School Cert Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signage__c</picklist>
+        <values>
+            <fullName>Banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>describe event</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Time_Frame__c</picklist>
+        <values>
+            <fullName>30-60 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60-90 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASAP %28next 30 days%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Booth Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collateral Drop Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Person Meeting</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Online Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substantive Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>x2nd_Trainer__c</picklist>
+        <values>
+            <fullName>Brad Finger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brendan Furey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duane Quinn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gina Lucente-Cole</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gretchen Bonfardine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nancy Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sabrina Mainini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shawn Monk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LenderContract_Complete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will be checked/yes when Lender Contracts have been executed/and activated in the contract Custom Object</description>
+    <externalId>false</externalId>
+    <label>Contract Completed?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

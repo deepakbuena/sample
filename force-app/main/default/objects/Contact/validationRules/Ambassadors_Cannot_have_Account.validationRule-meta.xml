@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassadors_Cannot_have_Account</fullName>
+    <active>true</active>
+    <description>S-54-16: Prevent Ambassador record type from having value for Account. Workaround for http://help.salesforce.com/HTViewSolution?id=000212491</description>
+    <errorConditionFormula>AND(OR($RecordType.Name = &quot;SALT Ambassador&quot;, $RecordType.Name = &quot;SALT Member&quot;),
+NOT(isblank( AccountId )))</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>SALT Ambassadors or Members cannot use this field</errorMessage>
+</ValidationRule>

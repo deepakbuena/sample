@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_program_participation__c</fullName>
+    <externalId>false</externalId>
+    <label>Additional program participation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boston Scholar-Athlete</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Bottom line</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>DYS</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Freedom House</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Gear Up</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Internship</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>PIC</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Project GRAD</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Roxx Map</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Summer Search</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Talented &amp; Gifted</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Tenacity</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>uAspire</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Upward Bound</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Youth Build</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

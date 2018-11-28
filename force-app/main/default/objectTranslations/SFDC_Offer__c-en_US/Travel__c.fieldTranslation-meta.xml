@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Travel --></label>
+    <name>Travel__c</name>
+    <picklistValues>
+        <masterLabel>Cannot travel</masterLabel>
+        <translation><!-- Cannot travel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No restrictions</masterLabel>
+        <translation><!-- No restrictions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Some restrictions</masterLabel>
+        <translation><!-- Some restrictions --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

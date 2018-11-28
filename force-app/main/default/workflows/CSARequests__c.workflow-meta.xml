@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CSA_Salesforce_Sys_Admin_Request</fullName>
+        <description>CSA Salesforce Sys Admin Request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adyke@asa.org.prod</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bsullivan@asa.org.prod</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jsloboda@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mobrien@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sbabcock@asa.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow/SPA_Request</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Assign_to_Caroline</fullName>
+        <description>CSA request assigned to Caroline Barry. Temp assign to Jonathan Sparling until perm is determined.</description>
+        <field>Assigned_to__c</field>
+        <lookupValue>anorwood@asa.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assign to Caroline</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assign_to_SysAdmin</fullName>
+        <field>Assigned_to__c</field>
+        <lookupValue>jsloboda@asa.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>CSA Assign to Salesforce Admin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Assigned_to_Della_Ryan</fullName>
+        <field>Assigned_to__c</field>
+        <lookupValue>kwindley@asa.org</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Assigned to Della/Ryan</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CSA Admin Request</fullName>
+        <actions>
+            <name>CSA_Salesforce_Sys_Admin_Request</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Assign_to_SysAdmin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>CSARequests__c.CSA_Request__c</field>
+            <operation>equals</operation>
+            <value>Salesforce Admininstrator Request</value>
+        </criteriaItems>
+        <description>Admin: Anything related to the admin of SFDC and assigned to SysAdmin</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

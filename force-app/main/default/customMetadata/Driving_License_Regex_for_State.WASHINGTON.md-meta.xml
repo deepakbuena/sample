@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>WASHINGTON</label>
+    <protected>false</protected>
+    <values>
+        <field>High_False_Positive_Rate__c</field>
+        <value xsi:type="xsd:string">No</value>
+    </values>
+    <values>
+        <field>Pattern_Length__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Regex_for_DL_Masking__c</field>
+        <value xsi:type="xsd:string">[ ,.,,,\n,:][0-9]{12}[ ,.,,,\n,:]</value>
+    </values>
+    <values>
+        <field>State_Abbreviation_Regex__c</field>
+        <value xsi:type="xsd:string">[ ,.,,,\n,:][Ww]{1}?[Aa]{1}[ ,.,,,\n,:]</value>
+    </values>
+    <values>
+        <field>State_Abbreviation__c</field>
+        <value xsi:type="xsd:string">WA</value>
+    </values>
+    <values>
+        <field>State_Name__c</field>
+        <value xsi:type="xsd:string">WASHINGTON</value>
+    </values>
+</CustomMetadata>

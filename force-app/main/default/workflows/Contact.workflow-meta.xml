@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Preferred_Phone_Mobile</fullName>
+        <field>Phone</field>
+        <formula>MobilePhone</formula>
+        <name>Preferred Phone = Mobile</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Preferred_Phone_Other</fullName>
+        <field>Phone</field>
+        <formula>OtherPhone</formula>
+        <name>Preferred Phone = Other</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contact_BirthDate_Lead_Mapped</fullName>
+        <field>Birthdate</field>
+        <formula>Birthdate_Lead_Mapped__c</formula>
+        <name>Update Contact BirthDate Lead Mapped</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contact_BirthDate_Text</fullName>
+        <field>BirthDate_Text__c</field>
+        <formula>TEXT(Birthdate)</formula>
+        <name>Update Contact BirthDate Text</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Home_Phone_on_Lead_Conversion</fullName>
+        <field>HomePhone</field>
+        <formula>IF( ISPICKVAL( Preferred_Phone_Type__c , &#39;Home&#39;),Phone,&#39;&#39;)</formula>
+        <name>Update Home Phone on Lead Conversion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Home_with_Home_for_WF</fullName>
+        <field>HomePhone</field>
+        <formula>Home_Phone_FOR_WF__c</formula>
+        <name>Update Home with Home for WF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Lead_Conversion_Field</fullName>
+        <field>Is_Converted_from_Lead__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Lead Conversion Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Mobile_Phone_on_Lead_Conversion</fullName>
+        <field>MobilePhone</field>
+        <formula>IF( ISPICKVAL(  Preferred_Phone_Type__c , &#39;Mobile&#39;),Phone,&#39;&#39;)</formula>
+        <name>Update Mobile Phone on Lead Conversion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Mobile_with_Mobile_for_WF</fullName>
+        <field>MobilePhone</field>
+        <formula>Mobile_Phone_FOR_WF__c</formula>
+        <name>Update Mobile with Mobile for WF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_Phone_on_Lead_Conversion</fullName>
+        <field>OtherPhone</field>
+        <formula>IF( ISPICKVAL( Preferred_Phone_Type__c , &#39;Other&#39;),Phone,&#39;&#39;)</formula>
+        <name>Update Other Phone on Lead Conversion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Other_with_Other_for_WF</fullName>
+        <field>OtherPhone</field>
+        <formula>Other_Phone_FOR_WF__c</formula>
+        <name>Update Other with Other for WF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Phone_to_Home_Phone</fullName>
+        <field>Phone</field>
+        <formula>HomePhone</formula>
+        <name>Update Phone to Home Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CPS - Update Contact BirthDate Text</fullName>
+        <actions>
+            <name>Update_Contact_BirthDate_Text</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Birthdate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Add Home Phone on Create</fullName>
+        <actions>
+            <name>Update_Home_with_Home_for_WF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Home_Phone_FOR_WF__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.HomePhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Add Mobile Phone on Create</fullName>
+        <actions>
+            <name>Update_Mobile_with_Mobile_for_WF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Mobile_Phone_FOR_WF__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.MobilePhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Add Other Phone on Create</fullName>
+        <actions>
+            <name>Update_Other_with_Other_for_WF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Other_Phone_FOR_WF__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.OtherPhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Lead Convert Phone Mapping</fullName>
+        <actions>
+            <name>Update_Home_Phone_on_Lead_Conversion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Lead_Conversion_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Mobile_Phone_on_Lead_Conversion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Other_Phone_on_Lead_Conversion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND ( 2 OR 3 OR 4 )</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Is_Converted_from_Lead__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - TS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - EOC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - UB</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Preferred Phone %3D Home</fullName>
+        <actions>
+            <name>Update_Phone_to_Home_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND ( 2 OR 3 OR 4 ) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Preferred_Phone_Type__c</field>
+            <operation>equals</operation>
+            <value>Home</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - TS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - EOC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - UB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Is_Converted_from_Lead__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Preferred Phone %3D Mobile</fullName>
+        <actions>
+            <name>Preferred_Phone_Mobile</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND ( 2 OR 3 OR 4 ) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Preferred_Phone_Type__c</field>
+            <operation>equals</operation>
+            <value>Mobile</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - TS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - EOC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - UB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Is_Converted_from_Lead__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Preferred Phone %3D Other</fullName>
+        <actions>
+            <name>Preferred_Phone_Other</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND ( 2 OR 3 OR 4 ) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Preferred_Phone_Type__c</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - TS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - EOC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CPS - UB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Is_Converted_from_Lead__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Update Contact BirthDate Lead Mapped</fullName>
+        <actions>
+            <name>Update_Contact_BirthDate_Lead_Mapped</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Birthdate_Lead_Mapped__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CPS Update Mobile from Lead Conversion</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.MobilePhone</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

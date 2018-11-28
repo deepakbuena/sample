@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DB_EOC_6A_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+Active__c = True &amp;&amp; 
+ISPICKVAL( Post_Secondary_Enrollment_Status__c , &#39;Earned sec dipl. &amp; enrolled PSE (UB/EOC)&#39;), &#39;Goal # achieved&#39; ,
+IF( 
+Active__c = True &amp;&amp; ISPICKVAL( Obj_A_Secondary_School_Diploma__c, &quot;Rec&#39;d secondary school diploma/equiv.&quot;),&#39;Goal # not achieved&#39;,&#39;&#39; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DB - EOC - 6A Support</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

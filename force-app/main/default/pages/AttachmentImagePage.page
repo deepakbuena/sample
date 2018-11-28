@@ -1,0 +1,31 @@
+<apex:page controller="ImageController" applyBodyTag="false" readonly="true" renderAs="pdf" >
+   
+    <head>
+        <style>
+            table { border-collapse: collapse;}
+            table, th, td { border: 1px solid black; border-collapse:collapse; font-family: 'Times New Roman', serif; font: 12px; }
+            th { font:bold 14px;  background-color: #E8E8E8;}
+        </style>
+    </head>
+    
+    <apex:pageBlock >
+        <table width="100%">
+            <tr>
+                <th><center>Name</center></th>
+                <!--<th><center>View image in SF</center></th>-->
+                <th><center>Size(in bytes)</center></th>
+                <th><center>Image</center></th> 
+                <!--<th><center>Created Date</center></th>-->
+            </tr>
+            <apex:repeat value="{!attList}" var="att">
+                <tr>
+                    <td><center><a href="{!sfdcBaseURL}/{!att.Id}" target="_blank">{!att.Name}</a></center></td>
+                    <!--<td><center><a href="{!imageURL}{!att.Id}" target="_blank">View</a></center></td>-->
+                    <td><center>{!att.BodyLength}</center></td>
+                    <td><center><apex:image url="{!URLFOR($Action.Attachment.Download, att.Id)}" width="80" height="80"/></center></td> 
+                    <!--<td><center><apex:outputText value=" {!att.CreatedDate}"/></center></td>-->
+                </tr>
+            </apex:repeat>
+        </table>
+    </apex:pageBlock>    
+</apex:page>

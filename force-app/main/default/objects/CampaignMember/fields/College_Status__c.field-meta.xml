@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>College_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>College Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accepted into postsec, not yet enrolled</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>First Year Postsec student</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Postsec student beyond first year</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Completed and continuing postsec</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Not enrolled, completed postsec prior yr</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Left postsec (incomplete) prior year</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (did not yet complete HS)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>n/a (completed HS, not in postsec)</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Accepted postsec, deferred next semester</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
