@@ -51,6 +51,5 @@ public class CPSQRCodeReaderTest
         CPSQRCodeReader objQRReader = new CPSQRCodeReader();
         objQRReader.redirectToQRLink();
         Test.StopTest();
-
-    } 
+    } //line removed
 }
